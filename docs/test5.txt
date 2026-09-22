@@ -1,0 +1,2600 @@
+Question 1
+Incorrect
+A team is preparing an AI document-review tool for business users. Which TWO actions best support transparency? (Select TWO.)
+
+Your selection is incorrect
+A. Rotate storage keys weekly
+
+Correct selection
+B. Explain known limitations to users
+
+C. Increase document batch size
+
+Your selection is correct
+D. Share how outputs should be interpreted
+
+E. Move the app to another region
+
+Overall explanation
+Transparency is about helping people understand an AI system well enough to use it appropriately. Explaining known limitations and sharing guidance on how to interpret outputs both directly support user understanding and reduce the chance that people overtrust the system.
+
+
+
+Microsoft’s transparency-note guidance goes beyond model internals and includes choices system owners make, system performance factors, and the broader deployment context. That is why user-facing explanation and interpretation guidance are strong transparency practices, while infrastructure or scaling changes are not.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. Rotate storage keys weekly. This is a good operational security practice, which makes it a believable distractor. But it belongs under privacy and security, not transparency. It protects access to resources without helping users understand what the AI tool does or where it may fail.
+
+
+
+• C. Increase document batch size. Changing throughput or scale can improve performance for some workloads. However, users still would not better understand the tool’s capabilities, limitations, or intended use. Transparency is about clarity and interpretability, not batch-processing efficiency.
+
+
+
+• E. Move the app to another region. Regional placement may matter for compliance, latency, or availability. But it does not directly explain system behavior to the people using or being affected by the system. The question asks about transparency, and this choice is mostly operational.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 2
+Correct
+For each of the following statements, determine whether the statement is correct.
+
+
+
+Statement 1: In chat-based prompting, the system message usually provides the highest-level instructions for the conversation.
+
+Statement 2: A user prompt is the best place to define permanent app-wide boundaries for every conversation.
+
+Statement 3: Few-shot prompting can use example user and assistant interactions.
+
+
+
+Select the correct combination.
+
+A. Yes / Yes / No
+
+Your answer is correct
+B. Yes / No / Yes
+
+C. No / Yes / Yes
+
+D. No / No / Yes
+
+Overall explanation
+Statement 1 is correct. Microsoft Learn explains that in chat-based APIs, the system message typically appears first and acts as the highest-level set of instructions. That is why system prompting is central to controlling role, scope, tone, and output expectations.
+
+
+
+Statement 2 is incorrect because permanent behavior rules usually belong in the system message, not the user prompt. Statement 3 is correct because Microsoft’s prompt engineering guidance explains that few-shot learning in chat can be expressed through example user and assistant interactions that help condition the model for the current inference.
+
+
+
+Why the other options are incorrect:
+
+• A. This option fails because Statement 2 is not correct. A user message is usually the current task input, not the long-term control layer for the app. Treating user prompts as the permanent policy source weakens consistency across conversations.
+
+• C. This option incorrectly marks Statement 1 as false and Statement 2 as true. That reverses the Microsoft guidance on role hierarchy in chat prompting. It also keeps Statement 3 correct, but the combination still fails because the first two judgments are wrong.
+
+• D. This option gets Statement 2 right but misses Statements 1 and 3. The system message is indeed the high-level instruction layer, and few-shot prompting can indeed be represented with example user/assistant exchanges. Because two judgments are wrong, the whole combination is incorrect.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 3
+Correct
+For each of the following statements, determine whether the statement is correct.
+
+
+
+Statement 1: Generative AI is commonly used to create new text or images from prompts.
+
+
+
+Statement 2: Agentic AI is limited to returning one response and cannot use tools or multistep actions.
+
+
+
+Statement 3: Computer vision is the best fit for analyzing spoken audio from a microphone.
+
+
+
+Select the correct combination.
+
+Your answer is correct
+A. Yes / No / No
+
+B. Yes / Yes / No
+
+C. No / No / Yes
+
+D. No / Yes / No
+
+Overall explanation
+Statement 1 is correct. Microsoft Learn describes generative AI as powering applications that create content, and Microsoft Learn’s image-generation guidance also describes generating original images from natural-language prompts. That makes “create new text or images from prompts” an accurate characterization of a generative AI workload.
+
+
+
+Statement 2 is incorrect because Microsoft Learn explains that agents can call tools, access external data, and take autonomous actions across multiple steps. Statement 3 is also incorrect because microphone audio is a speech workload, not a vision workload; computer vision analyzes images and visual features instead. Therefore the correct combination is Yes / No / No.
+
+
+
+Why the other options are incorrect:
+
+• B. This option incorrectly marks Statement 2 as Yes. That would contradict Microsoft Learn’s description of agents as systems that can take actions, use tools, and work through multiple steps. Since Statement 2 denies those agent capabilities, it must be marked No.
+
+• C. This option incorrectly marks Statement 1 as No and Statement 3 as Yes. Statement 1 is clearly true because generative AI creates content from prompts, while Statement 3 is false because spoken audio should be handled by speech capabilities rather than computer vision. The combination therefore fails on two separate statements.
+
+• D. This option incorrectly marks Statement 1 as No and Statement 2 as Yes. Both of those evaluations reverse the facts: generative AI does create new content, and agentic AI is not limited to a single reply without tools. Because the first two judgments are both wrong, the full combination cannot be correct.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 4
+Incorrect
+You want to use a few-shot pattern so the model returns short labels for support sentiment.
+
+Snippet
+
+messages = [
+    {"role": "system", "content": "Classify sentiment as Positive, Neutral, or Negative."},
+    {"role": "user", "content": "The setup was easy and the support team helped immediately."},
+    {"role": "assistant", "content": "Positive"},
+    # missing section
+]
+Which code should replace the missing section?
+
+Correct answer
+A. {"role": "user", "content": "The app kept crashing and nobody replied for two days."}
+
+Explanation
+This choice provides a user message with negative sentiment, which contrasts with the positive sentiment mentioned in the system message. It helps the model learn to classify sentiment accurately by providing a clear example of a negative response.
+B. {"role": "assistant", "content": "Negative"}
+
+Explanation
+This choice provides an assistant message with a negative sentiment, which does not align with the positive sentiment mentioned in the system message. It may confuse the model and hinder its ability to accurately classify sentiment based on the provided examples.
+C. {"role": "system", "content": "Negative"}
+
+Explanation
+This choice provides a system message with a negative sentiment, which contradicts the positive sentiment mentioned in the system message. It does not contribute to the few-shot learning pattern for sentiment classification and may introduce inconsistency in the model's training data.
+Your answer is incorrect
+D. {"role": "assistant", "content": "Classify sentiment"}
+
+Explanation
+This choice provides an assistant message that does not contribute to the sentiment classification task. It lacks sentiment labels and does not provide any additional information for the model to learn from in terms of sentiment analysis.
+Overall explanation
+Few-shot prompting in chat is commonly represented as example user and assistant interactions after the system message. To continue that pattern, the next missing element should be a new user example or the real user input to classify, which is why A is the strongest answer.
+
+
+
+Option A preserves the natural sequence of the conversation roles and gives the model a new text item to classify. The system message sets the rules, the example pair demonstrates the expected behavior, and the new user message provides the next item for inference.
+
+
+
+Why the other options are incorrect:
+
+• B. Adding another assistant label without a new user input breaks the pattern of example followed by task. The model would see consecutive assistant messages without a fresh item to classify. That makes the prompt structure less coherent and less useful.
+
+• C. A system message at this point would not represent the next example or the next task item. System messages are for high-level instructions, not for injecting a label as if it were a role definition. This option confuses control instructions with example content.
+
+• D. This is another assistant message and it repeats the instruction poorly instead of supplying the next text to classify. Few-shot prompting works by showing input-output examples, not by stacking assistant-side reminders without new user content. The model still needs a fresh user message to act on.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 5
+Correct
+Users must know they are interacting with AI and understand where the system may be unreliable. Which responsible AI principle does this describe?
+
+A. Inclusiveness
+
+Explanation
+Inclusiveness in responsible AI pertains to ensuring that diverse perspectives and voices are represented in the development and deployment of AI systems. While important for ethical considerations, it does not directly address the need for users to be informed about their interactions with AI and its potential limitations.
+B. Reliability and safety
+
+Explanation
+Reliability and safety in responsible AI focus on building AI systems that can perform consistently and securely. While understanding the system's limitations is crucial for safety, this principle does not specifically address the aspect of user awareness and comprehension of AI interactions.
+C. Accountability
+
+Explanation
+Accountability in responsible AI emphasizes the importance of ensuring that AI systems can be explained and justified for their decisions and actions. While crucial for ethical AI practices, this principle does not directly relate to the concept of users being aware of their interactions with AI and recognizing potential unreliability.
+Your answer is correct
+D. Transparency
+
+Explanation
+Transparency in responsible AI principles highlights the necessity of making AI systems understandable and explainable to users. This principle aligns with the idea that users should be informed about their interactions with AI and be aware of where the system may be unreliable, fostering trust and informed decision-making.
+Overall explanation
+This scenario is about helping users understand the nature and limits of the system. Microsoft’s transparency principle says AI systems should be understandable and asks how people can correctly understand system capabilities, which maps directly to disclosing AI use and likely failure points.
+
+
+
+Reliability and safety matter too, but the wording here is centered on explanation and user understanding rather than on performance quality alone. That is why transparency is the best answer, while the other principles capture different kinds of concerns.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. Inclusiveness. Inclusiveness is a real responsible AI principle, so it is a credible distractor. However, inclusiveness focuses on empowering everyone and designing for people of varied backgrounds and abilities. The question is specifically about explaining AI use and limitations, which is transparency.
+
+
+
+• B. Reliability and safety. This option is tempting because unreliable behavior is mentioned in the stem. But the action described is telling users about potential unreliability, which is a communication and understanding task rather than the reliability principle itself. Reliability and safety concern whether the system performs safely and consistently, while transparency concerns how well people understand that behavior.
+
+
+
+• C. Accountability. Accountability is about human oversight and control. While organizations should remain accountable for the AI system, the stem does not focus on governance roles or decision rights. It focuses on user understanding, which fits transparency more directly.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 6
+Correct
+You are building a small demo that takes a text prompt and produces a brand-new promotional image.
+Snippet
+
+prompt = "Create a winter sale poster with skis and snow"
+goal = "produce a brand-new image"
+ 
+# missing section
+workload = ________
+ 
+print(workload)
+Which code should replace the missing section?
+
+A. "OCR"
+
+Explanation
+"OCR" stands for Optical Character Recognition, which is used to convert different types of documents, such as scanned paper documents, PDF files, or images captured by a digital camera, into editable and searchable data. However, in this scenario, the goal is to produce a brand-new image, not to extract text from an existing image or document.
+B. "Speech to Text"
+
+Explanation
+"Speech to Text" is a technology that converts spoken language into written text. It is commonly used in applications where users can dictate text instead of typing. However, in this case, the task is to generate a brand-new promotional image based on a text prompt, not to convert spoken language into text.
+Your answer is correct
+C. "Image generation"
+
+Explanation
+"Image generation" is the correct choice in this scenario because the goal is to produce a brand-new image based on the text prompt provided. Image generation techniques, such as using AI models like Generative Adversarial Networks (GANs), can be employed to create images based on textual descriptions.
+D. "Entity recognition"
+
+Explanation
+"Entity recognition" is a natural language processing task that involves identifying and categorizing entities within text, such as people, organizations, locations, etc. While entity recognition can be useful for extracting information from text, it is not directly related to the task of generating a brand-new promotional image based on a text prompt.
+Overall explanation
+“Image generation” is correct because the requested output is a new image created from a text prompt. Microsoft Learn describes image-generation models as creating original images from natural-language prompts, which is exactly the behavior described in the snippet.
+
+
+
+The question is testing workload recognition rather than SDK syntax. Because the input is a prompt and the output is a newly created image, the scenario maps to a generative AI image-generation workload rather than analysis, transcription, or entity extraction.
+
+
+
+Why the other options are incorrect:
+
+• A. OCR extracts readable text from existing images or documents. It does not create new visuals from a text instruction. If the scenario involved reading text on a sign or form image, OCR would be relevant, but not for producing a new poster image.
+
+• B. Speech to Text converts spoken audio into written text. There is no audio source in the snippet, and there is no transcription requirement. Because the desired output is a newly generated image, Speech to Text is unrelated to the task.
+
+• D. Entity recognition is a text analysis capability for identifying entities in written language. It can find names, places, dates, and similar items inside text, but it does not create original images. The presence of a text prompt does not make the core workload text analysis when the output required is a new image.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 7
+Correct
+A transparency document should explain how the system works and its ________.
+
+
+
+Which answer best completes the sentence?
+
+A. office location
+
+Explanation
+The office location is not relevant to explaining how the system works and its capabilities and limitations. It does not provide valuable information for understanding the system's functionality.
+Your answer is correct
+B. capabilities and limitations
+
+Explanation
+Explaining the system's capabilities and limitations is essential in a transparency document to provide users with a clear understanding of what the system can and cannot do. This information helps users make informed decisions and manage expectations.
+C. sales target
+
+Explanation
+Sales targets are unrelated to explaining how the system works and its capabilities and limitations. They are more focused on the business goals and objectives rather than the technical aspects of the system.
+D. rack position
+
+Explanation
+Rack position is not relevant to explaining how the system works and its capabilities and limitations. It does not contribute to the understanding of the system's functionality or performance.
+Overall explanation
+Microsoft’s transparency guidance repeatedly emphasizes understanding how AI technology works and helping people understand its capabilities and limitations. That makes “capabilities and limitations” the best completion because it captures the practical information users and affected people need.
+
+
+
+Transparency documents are useful precisely because they move beyond vague claims and give grounded information about behavior, performance factors, and the broader system context. Office location, sales targets, and rack position may matter in other business contexts, but they do not define transparency in an AI solution.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. office location. This could matter for logistics or administration. However, it does not help a user or affected person understand how the AI behaves, where it works well, or where it might fail. Transparency is about system understanding, not workplace geography.
+
+
+
+• C. sales target. Commercial goals can influence product direction, but they are not the core content of a transparency document. A transparent AI document focuses on technology behavior, system-owner choices, and relevant limitations. Sales objectives do not directly explain AI capabilities or appropriate use.
+
+
+
+• D. rack position. Physical infrastructure details may be important for datacenter operations. But a rack position does not tell end users or affected people what the AI can do or how to interpret its outputs responsibly. Transparency requires meaningful information about the system, not low-level hardware placement.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 8
+Correct
+Which scenario is the best example of transparency in an AI solution?
+
+Your answer is correct
+A. An invoice app tells users that low-quality scans can reduce extraction accuracy
+
+Explanation
+Transparency in an AI solution refers to providing users with clear and honest information about how the AI system works and its limitations. In this scenario, the invoice app informs users that low-quality scans can reduce extraction accuracy, which helps manage user expectations and promotes transparency in the AI solution.
+B. An AI team increases GPU quota for faster throughput
+
+Explanation
+Increasing GPU quota for faster throughput is related to performance optimization and resource allocation, not transparency in an AI solution. Transparency involves providing users with information about how the AI system functions, not backend technical improvements.
+C. A chatbot is deployed without telling users it is AI-generated
+
+Explanation
+Deploying a chatbot without informing users that it is AI-generated goes against transparency in an AI solution. Users should be aware that they are interacting with an AI system to build trust and manage expectations.
+D. A team disables user feedback collection
+
+Explanation
+Disabling user feedback collection does not directly relate to transparency in an AI solution. User feedback collection is important for improving the AI system and enhancing user experience, but transparency involves providing clear information about how the AI system operates.
+Overall explanation
+Transparency is strongest when users are clearly informed about what the system does and when it may perform poorly. Telling users that low-quality scans can reduce extraction accuracy is a concrete example of communicating a limitation so people can correctly interpret outputs and apply review where needed.
+
+
+
+Microsoft’s transparency notes are designed for exactly this kind of understanding: how the technology works, what operational factors affect performance, and how the broader system should be considered responsibly. Option A aligns with that approach, while the other options are operational or even anti-transparency.
+
+
+
+Why the other options are incorrect:
+
+
+
+• B. An AI team increases GPU quota for faster throughput. This is a realistic engineering action, so it looks credible. But it changes infrastructure capacity rather than improving user understanding of the system. Transparency requires explanation of behavior and limitations, not just more compute.
+
+
+
+• C. A chatbot is deployed without telling users it is AI-generated. This directly conflicts with transparency. If users do not know they are interacting with AI, they cannot properly judge capabilities, limitations, or the need for verification. The absence of disclosure weakens trust and informed use.
+
+
+
+• D. A team disables user feedback collection. Feedback can be useful for quality improvement and governance, but turning it off does not make the system more transparent. In fact, it may reduce opportunities to detect misunderstanding or misuse. The option does not explain the system to users or affected people.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 9
+Correct
+For each of the following statements, determine whether the statement is correct.
+
+
+
+Statement 1: Transparency means teams should hide model limitations to avoid confusing users.
+
+Statement 2: Transparency includes communicating capabilities and limitations clearly.
+
+Statement 3: Transparency notes consider the people who use or are affected by the system.
+
+
+
+Select the correct combination.
+
+A. Yes / Yes / No
+
+B. Yes / No / Yes
+
+Your answer is correct
+C. No / Yes / Yes
+
+D. No / No / Yes
+
+Overall explanation
+Statement 1 is incorrect. Microsoft’s transparency guidance points in the opposite direction: teams should help people understand capabilities and limitations, not conceal them. Hiding limitations prevents informed use and weakens trust.
+
+
+
+Statement 2 is correct because clear communication of capabilities and limitations is central to understandability. Statement 3 is also correct because Microsoft says the AI system includes the technology, the people who use it, the people affected by it, and the environment where it is deployed. That makes No / Yes / Yes the right combination.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. Yes / Yes / No. This option gets Statement 2 right, which makes it look plausible at first. But Statement 1 is wrong because transparency does not support hiding limitations, and Statement 3 is wrong because Microsoft explicitly includes affected people in its transparency framing. Since two judgments are wrong, the whole combination fails.
+
+
+
+• B. Yes / No / Yes. This option still incorrectly marks Statement 1 as Yes and flips Statement 2 to No. That contradicts Microsoft’s description of transparency as helping people understand capabilities and limitations. Even though Statement 3 is correctly marked Yes, the combination remains incorrect.
+
+
+
+• D. No / No / Yes. This one correctly rejects Statement 1 and correctly accepts Statement 3, so it is a close distractor. However, Statement 2 must be Yes because transparency includes clearly communicating capabilities and limitations. Missing that point makes the full option wrong.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 10
+Correct
+A product owner wants a document that most directly improves transparency for users and affected people. What should the team prepare?
+
+A. Compute budget sheet
+
+Explanation
+A compute budget sheet is a financial document that outlines the costs associated with computing resources. While important for budgeting and cost management, it does not directly improve transparency for users and affected people as it focuses on financial aspects rather than communication and clarity.
+B. Virtual network diagram
+
+Explanation
+A virtual network diagram is a visual representation of the network infrastructure, showing how virtual machines, servers, and other network components are connected. While useful for understanding network architecture, it does not directly improve transparency for users and affected people as it is more technical in nature.
+C. Region failover runbook
+
+Explanation
+A region failover runbook is a document that outlines the steps to be taken in the event of a region failure to ensure business continuity. While important for disaster recovery and resilience, it does not directly improve transparency for users and affected people as it focuses on technical procedures rather than communication and clarity.
+Your answer is correct
+D. Transparency note
+
+Explanation
+A transparency note is a document that directly improves transparency for users and affected people by providing clear and concise information about processes, decisions, or changes that may impact them. It helps build trust and understanding by keeping stakeholders informed and involved in the decision-making process.
+Overall explanation
+A transparency note is designed to improve understanding of an AI system. Microsoft states that transparency notes help people understand how the technology works, what choices system owners can make that affect behavior, and why the broader system context matters.
+
+
+
+That kind of document directly supports transparency for both users and affected people. By contrast, budgeting, networking, and failover materials may be useful operational artifacts, but they do not primarily explain capabilities, limitations, and responsible use of the AI system.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. Compute budget sheet. Budgeting is important for planning and cost control. However, a compute budget sheet does not explain how the AI works or how users should interpret outputs. It is a financial artifact, not a transparency artifact.
+
+
+
+• B. Virtual network diagram. A network diagram can support architecture reviews and security planning. But it does not directly help end users or affected people understand system capabilities, limitations, or operational factors that influence AI behavior. Transparency requires user-relevant explanation, not just infrastructure mapping.
+
+
+
+• C. Region failover runbook. This document supports reliability, continuity, and operations. While those areas matter in a production system, they do not directly satisfy the need to explain AI behavior and limitations to people. The question asks for the artifact most directly tied to transparency, which is the transparency note.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 11
+Correct
+Your app must read printed text from a storefront photo by using Azure Vision Image Analysis.
+
+
+
+Which visual feature should you request?
+
+Your answer is correct
+A. Read (OCR)
+
+Explanation
+Requesting the "Read (OCR)" visual feature will enable the Azure Vision Image Analysis to perform Optical Character Recognition (OCR) on the storefront photo, allowing your app to extract and read printed text from the image. This feature is specifically designed for text recognition tasks.
+B. People
+
+Explanation
+The "People" visual feature is not relevant to the task of reading printed text from a storefront photo. This feature is used for detecting and analyzing human faces in images, which is different from the requirement of extracting text.
+C. SmartCrops
+
+Explanation
+The "SmartCrops" visual feature is used for automatically cropping images to focus on the most important parts. While this feature may be useful for image processing tasks, it is not directly related to reading printed text from a storefront photo.
+D. Tags
+
+Explanation
+The "Tags" visual feature is used for generating descriptive tags or labels for objects detected in images. While this feature can provide additional context about the content of the image, it is not designed for reading printed text, which is the primary requirement in this scenario.
+Overall explanation
+Read (OCR) is the correct answer because Microsoft lists Read as the visual feature used to extract printed or handwritten text from an image. If the application needs to read text in a photo, the OCR-oriented visual feature is the one that matches the requirement.
+
+
+
+This is a direct workload-to-capability mapping question. A lightweight vision application often needs just one targeted feature, and choosing the correct visual feature keeps the request aligned with the job the app actually needs to perform.
+
+
+
+Why the other options are incorrect:
+
+• B. People is used to detect people in the image and return their location, not to extract visible text. It is a plausible distractor because it is one of the supported visual features in the same API family. But the scenario is about reading storefront text, so people detection does not solve the requirement.
+
+• C. SmartCrops is related to identifying representative crop regions for thumbnail generation. That makes it useful in some visual-layout workflows, so it sounds technical enough to mislead learners. However, cropping is not OCR, and it does not extract the printed words from the image.
+
+• D. Tags can label general image content, which is why it seems close to image understanding. But tags do not return the printed storefront wording itself. When the application needs the actual visible text, Microsoft’s documented visual feature is Read (OCR).
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 12
+Correct
+A marketing team enters a natural-language prompt to create several brand-new poster images for a campaign.
+
+
+
+Which workload is the best fit?
+
+A. Computer vision
+
+Explanation
+Computer vision involves analyzing and interpreting visual data from images or videos. While it can be used to process images, it is not the best fit for generating new images based on a natural-language prompt, as it focuses more on image recognition and understanding rather than image creation.
+Your answer is correct
+B. Generative AI
+
+Explanation
+Generative AI is the best fit for creating brand-new poster images based on a natural-language prompt. Generative AI models, such as Generative Adversarial Networks (GANs), are specifically designed to generate new content, such as images, based on input data or prompts. In this scenario, a generative AI model can be trained to create unique poster images for the marketing campaign.
+C. Text analysis
+
+Explanation
+Text analysis involves processing and extracting insights from textual data. While it can be used to analyze the natural-language prompt entered by the marketing team, it is not the best fit for generating new poster images. Text analysis focuses on understanding and extracting information from text, rather than creating visual content like poster images.
+D. Information extraction
+
+Explanation
+Information extraction involves identifying and extracting specific pieces of information from unstructured data. While it can be used to extract relevant information from the natural-language prompt, it is not the best fit for generating brand-new poster images. Information extraction focuses on extracting structured data, such as entities or relationships, rather than creating visual content like images.
+Overall explanation
+Generative AI is the best fit because the scenario is about creating brand-new content from a prompt. Microsoft Learn describes generative AI as powering applications that create content, answer questions, and assist with tasks, and Microsoft Learn’s image-generation guidance specifically describes creating original images from natural-language prompts.
+
+
+
+This is not primarily about interpreting existing content. The key clue is “create several brand-new poster images,” which points to content generation rather than analysis, extraction, transcription, or detection.
+
+
+
+Why the other options are incorrect:
+
+• A. Computer vision is used to analyze visual input, such as detecting objects, generating captions, or reading text from images. In this scenario, there is no existing image to inspect first. The requirement is to generate new images from a prompt, which is a generative workload rather than a vision-analysis workload.
+
+• C. Text analysis focuses on understanding text, such as sentiment, entities, key phrases, and summarization. That kind of workload analyzes language that already exists instead of creating original poster images. Even if a text prompt is involved, the output being requested is a new image, so the core workload is generative AI.
+
+• D. Information extraction is about pulling structured data from content such as documents, images, audio, or video. The scenario does not ask for fields, values, tables, or transcript data to be extracted. It asks for original creative output, which is outside the primary purpose of information extraction services.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 13
+Correct
+An internal assistant checks policy documents, looks up order status, and then decides whether to refund or escalate a request.
+
+
+
+Which workload is the best fit?
+
+A. Text analysis
+
+Explanation
+Text analysis is the process of analyzing and extracting insights from text data. In this scenario, the internal assistant is primarily working with policy documents and order status, which involve text-based information. Therefore, text analysis would be the best fit for this workload.
+B. Computer vision
+
+Explanation
+Computer vision involves analyzing and interpreting visual information from images or videos. Since the internal assistant is primarily dealing with text-based information such as policy documents and order status, computer vision is not the best fit for this workload.
+C. Generative AI
+
+Explanation
+Generative AI refers to AI models that can generate new content, such as text, images, or music. In this scenario, the internal assistant is not tasked with generating new content but rather with checking policy documents, looking up order status, and making decisions based on existing information. Therefore, generative AI is not the best fit for this workload.
+Your answer is correct
+D. Agentic AI
+
+Explanation
+Agentic AI refers to AI systems that can act autonomously and make decisions on behalf of users. In this scenario, the internal assistant is checking policy documents, looking up order status, and making decisions on whether to refund or escalate requests. This aligns with the capabilities of agentic AI, making it the best fit for this workload.
+Overall explanation
+Agentic AI is the best fit because the assistant is not just generating text. It is using information, making decisions, and carrying out multistep actions, which Microsoft Learn describes as core characteristics of an agent that can call tools, access external data, and act across multiple steps.
+
+
+
+A plain generative AI experience might draft a reply, but this scenario goes further by checking policies, retrieving order status, and deciding on an action path. That kind of tool use and autonomous step-by-step behavior aligns with agentic AI rather than simple content generation.
+
+
+
+Why the other options are incorrect:
+
+• A. Text analysis can classify or understand text, but it does not by itself represent a system that retrieves order status and chooses next actions. It is a capability within language processing, not the end-to-end workload described here. The scenario centers on orchestration and action-taking, which is why agentic AI is the better answer.
+
+• B. Computer vision is for analyzing images and visual features such as objects, captions, or OCR. Nothing in the scenario depends on understanding image input. The assistant is reasoning over policies and operational data, so vision is not the relevant workload.
+
+• C. Generative AI is plausible because the assistant may produce natural-language responses. However, Microsoft Learn distinguishes agents from simple chatbots because agents can take actions, use tools, and make decisions across steps. The scenario emphasizes those agent behaviors, not just generation.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 14
+Correct
+An app reads customer reviews and labels each review as positive, neutral, or negative. This is an example of ________.
+
+
+
+Which answer best completes the sentence?
+
+Your answer is correct
+A. Sentiment analysis
+
+Explanation
+Sentiment analysis is the process of analyzing text data to determine the sentiment expressed within it, such as positive, neutral, or negative. In this scenario, the app is analyzing customer reviews to classify them into these sentiment categories, making it a clear example of sentiment analysis.
+B. OCR
+
+Explanation
+OCR (Optical Character Recognition) is the process of converting different types of documents, such as scanned paper documents, PDF files, or images captured by a digital camera, into editable and searchable data. It is not relevant to the scenario described in the question, which involves analyzing and labeling customer reviews based on sentiment.
+C. Speech synthesis
+
+Explanation
+Speech synthesis involves the artificial production of human speech. It is not related to the scenario described in the question, which focuses on analyzing text data from customer reviews to determine sentiment categories.
+D. Image generation
+
+Explanation
+Image generation refers to the process of creating new images based on existing data or patterns. It is not applicable to the scenario described in the question, which involves analyzing text data from customer reviews to classify them as positive, neutral, or negative based on sentiment.
+Overall explanation
+Sentiment analysis is the correct answer because the app is determining the emotional tone or opinion expressed in text. Microsoft Learn lists sentiment analysis as one of the core natural language processing capabilities available in Azure Language.
+
+
+
+The scenario is focused on understanding written reviews, not processing images, audio, or generating new content. That makes this a text analysis workload, with sentiment analysis being the most precise capability name.
+
+
+
+Why the other options are incorrect:
+
+• B. OCR extracts printed or handwritten text from images or documents. If the task involved reading a scanned review image before analyzing it, OCR could be part of the pipeline, but it still would not label the opinion as positive or negative. The core task described is interpreting sentiment in text, not reading characters from an image.
+
+• C. Speech synthesis converts text into spoken audio. That capability produces audio output, but it does not classify customer opinion. The scenario stays entirely in written text and asks for tone labeling, which is why speech synthesis is not the right fit.
+
+• D. Image generation creates new visuals from prompts or optional image input. There is no requirement to create an image here. The workload is about understanding review text, so text analysis is the correct family and sentiment analysis is the correct capability.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 15
+Correct
+A warehouse app analyzes photos from cameras to detect forklifts, pallets, and damaged boxes.
+
+
+
+Which workload is the best fit?
+
+A. Agentic AI
+
+Explanation
+Agentic AI refers to AI systems that can act autonomously and make decisions on behalf of humans. In the context of analyzing photos from cameras to detect forklifts, pallets, and damaged boxes, Agentic AI is not the best fit as it focuses more on autonomous decision-making rather than image analysis tasks.
+Your answer is correct
+B. Computer vision
+
+Explanation
+Computer vision is the best fit for the workload described in the question. Computer vision involves the use of AI algorithms to interpret and analyze visual information from images or videos. In this case, analyzing photos from cameras to detect forklifts, pallets, and damaged boxes aligns perfectly with the capabilities of computer vision technology.
+C. Speech
+
+Explanation
+Speech technology focuses on processing and understanding spoken language. It is not the best fit for the workload described in the question, which involves analyzing visual information from photos to detect objects like forklifts, pallets, and damaged boxes. Speech technology is more suitable for tasks related to speech recognition and natural language processing.
+D. Text analysis
+
+Explanation
+Text analysis involves processing and analyzing text data to extract insights or patterns. It is not the best fit for the workload described in the question, which involves analyzing visual information from photos to detect objects like forklifts, pallets, and damaged boxes. Text analysis is more suitable for tasks related to processing and understanding textual information.
+Overall explanation
+Computer vision is the best fit because the app is analyzing image content to identify visual features and objects. Microsoft Learn describes Image Analysis as extracting visual information from images, including features such as object-related insights and other image understanding tasks.
+
+
+
+The scenario is not about language, audio, or field extraction from documents. The decisive clue is that the input is camera photos and the application needs to detect visual elements in those images, which is exactly what a computer vision workload is for.
+
+
+
+Why the other options are incorrect:
+
+• A. Agentic AI refers to systems that reason about requests, use tools, and take multistep actions. While an agent might use vision as one component, the question asks which workload best fits the core analysis being done. The core task here is image understanding, so computer vision is the more precise answer.
+
+• C. Speech workloads handle spoken audio tasks such as transcription, synthesis, and speech translation. This scenario contains no microphone, call recording, or spoken language input. Because the app is analyzing photos, speech is unrelated to the central requirement.
+
+• D. Text analysis is used to understand written text, including sentiment, key phrases, and entities. It does not detect forklifts or damaged boxes in camera images. If the app were processing incident notes instead of photos, text analysis could be relevant, but not for this scenario.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 16
+Correct
+You want to validate prompts and model behavior for a vision-enabled workflow before writing production code.
+
+
+
+Which Foundry environment should you use first?
+
+Your answer is correct
+A. Model playground
+
+Explanation
+The Model playground environment is the most suitable option for validating prompts and model behavior for a vision-enabled workflow before writing production code. It allows you to experiment with different models, parameters, and inputs in a controlled environment to understand how the vision models will behave in real-world scenarios.
+B. Azure AI Search index
+
+Explanation
+Azure AI Search index is not the most appropriate environment for validating prompts and model behavior for a vision-enabled workflow. It is primarily used for creating indexes of searchable content and enabling search capabilities within applications, rather than for testing and validating vision models.
+C. Content Safety dashboard
+
+Explanation
+The Content Safety dashboard is not designed for validating prompts and model behavior for a vision-enabled workflow. It is typically used for monitoring and managing content safety features, such as identifying and filtering inappropriate content, rather than for testing vision models and workflows.
+D. Managed online endpoint
+
+Explanation
+Managed online endpoint is not the ideal environment for validating prompts and model behavior for a vision-enabled workflow. It is typically used for deploying and managing production-ready models for real-time inference, rather than for testing and experimenting with different model behaviors and inputs.
+Overall explanation
+Model playground is the best answer because Microsoft describes Foundry playgrounds as an on-demand, instant environment for rapid prototyping, API exploration, and technical validation before writing production code. Microsoft also identifies the Model playground as the place for prompt engineering, model comparison, and parameter tuning.
+
+
+
+This matters for lightweight app development because you can validate prompts, test behavior, and compare outputs before wiring up the final integration. That reduces trial-and-error in the application code and helps you move from experiment to implementation more efficiently.
+
+
+
+Why the other options are incorrect:
+
+• B. Azure AI Search index is useful when you need search and retrieval over content, but it is not the primary Foundry environment for rapid prompt testing. It is a plausible distractor because some real applications combine search with model calls. Still, the question is specifically about validating prompts and model behavior before coding, which is what the playground is designed to do.
+
+• C. Content Safety tools are important for moderation and governance, so they sound relevant in an AI workflow. However, Microsoft’s playground documentation specifically frames prompt testing and rapid model validation as playground tasks, not as the job of a moderation dashboard. Safety tooling supports the application, but it is not the best first environment for this question.
+
+• D. A managed online endpoint sounds production-oriented, which makes it a tempting answer in a deployment context. But the question asks what to use before writing production code. Microsoft positions the playground as the lower-friction place to experiment and validate ideas before committing to a production workflow.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 17
+Correct
+You need to process scanned invoices and return the invoice number, vendor name, and due date as structured data.
+
+
+
+Which option is the best fit?
+
+A. Azure AI Speech
+
+Explanation
+Azure AI Speech is primarily used for speech recognition and converting spoken language into text. It is not the best fit for processing scanned invoices and extracting structured data such as invoice number, vendor name, and due date.
+B. Azure AI Vision
+
+Explanation
+Azure AI Vision is suitable for tasks like image recognition, object detection, and optical character recognition (OCR). While it can extract text from images, it may not be the best fit for processing scanned invoices and extracting structured data like invoice number, vendor name, and due date.
+C. Azure AI Search
+
+Explanation
+Azure AI Search is a service that provides AI-powered search capabilities for applications. It is not specifically designed for processing scanned invoices and extracting structured data like invoice number, vendor name, and due date.
+Your answer is correct
+D. Azure Document Intelligence
+
+Explanation
+Azure Document Intelligence is the best fit for processing scanned invoices and extracting structured data like invoice number, vendor name, and due date. It includes capabilities for document understanding, OCR, and extracting key information from documents, making it ideal for this task.
+Overall explanation
+Azure Document Intelligence is the best fit because Microsoft Learn describes it as a service for intelligent document processing that extracts text, tables, structure, and key/value pairs from documents. Microsoft Learn also documents a prebuilt invoice model that extracts key invoice fields and line items from invoices and returns structured data.
+
+
+
+This is an information extraction scenario rather than a general image-analysis or search scenario. The requirement is not just to read visible text, but to understand the document structure and return specific business fields such as invoice number and due date.
+
+
+
+Why the other options are incorrect:
+
+• A. Azure AI Speech is designed for spoken audio tasks such as speech-to-text, text-to-speech, and translation. It does not specialize in invoice field extraction from scanned documents. Since the input is a scanned invoice rather than speech audio, Speech is not the appropriate service.
+
+• B. Azure AI Vision can analyze images and perform OCR, and that makes it a plausible distractor. However, this question requires structured invoice fields like vendor name and due date, which is more than general image analysis. Document Intelligence is the better fit because it is purpose-built for intelligent document processing and field extraction from forms and invoices.
+
+• C. Azure AI Search helps create searchable content and retrieval experiences. It can work with extracted or enriched content, but it is not the primary service for extracting invoice fields from a scanned document. The first need here is document understanding and structured data extraction, which points to Document Intelligence.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 18
+Incorrect
+Which THREE pairs are correctly matched? (Select THREE.)
+
+Correct selection
+A. Generative AI — creates original marketing copy
+
+Your selection is incorrect
+B. Speech synthesis — converts microphone audio to text
+
+Your selection is correct
+C. Computer vision — detects objects in warehouse photos
+
+D. Information extraction — generates new banner images
+
+Your selection is correct
+E. Agentic AI — uses tools and multistep actions
+
+F. Text analysis — converts text into spoken audio
+
+Overall explanation
+A, C, and E are the correct matches. Generative AI creates new content, computer vision analyzes visual input such as objects in photos, and agentic AI involves reasoning, tool use, and multistep actions rather than a single generated reply.
+
+
+
+The incorrect pairs swap workload families in ways that are intentionally close but wrong. Speech synthesis produces audio from text, not text from microphone audio; information extraction pulls structured data from content instead of creating new images; and text analysis interprets written language instead of speaking it aloud.
+
+
+
+Why the other options are incorrect:
+
+• B. Speech synthesis is text-to-speech, which means written text becomes audio output. The option describes the reverse direction by saying microphone audio becomes text. That reverse direction is speech recognition or Speech to Text, so the pair is mismatched.
+
+• D. Information extraction is used to pull fields, structure, or other organized data out of documents, images, audio, or video. It does not create original banner images from a prompt. Creating new visuals is a generative AI task, so the pair is incorrect.
+
+• F. Text analysis helps understand text through capabilities such as sentiment analysis, key phrase extraction, and entity recognition. It does not convert text into spoken audio. Converting text into audio is speech synthesis, so this pair crosses two different workload families.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 19
+Correct
+You are building a Foundry chat app that must always return customer details in a fixed JSON shape. Which instruction is best placed in the system prompt?
+
+A. List the customer names from this file
+
+Explanation
+This instruction does not directly address the requirement of always returning customer details in a fixed JSON shape. It focuses on listing customer names from a file, which is not relevant to the system prompt's purpose.
+B. Explain the answer in a friendly tone
+
+Explanation
+While explaining the answer in a friendly tone is important for user experience, it does not specify the requirement of returning customer details in a fixed JSON shape. It is more about the tone of communication rather than the content of the response.
+Your answer is correct
+C. Return only JSON with fixed keys
+
+Explanation
+This instruction directly addresses the requirement of always returning customer details in a fixed JSON shape by specifying to return only JSON with fixed keys. It aligns with the system prompt's purpose and ensures consistency in the output format.
+D. Summarize the request in one sentence
+
+Explanation
+Summarizing the request in one sentence is helpful for clarity, but it does not specifically address the requirement of returning customer details in a fixed JSON shape. It focuses on summarizing the request rather than ensuring the output format.
+Overall explanation
+A system prompt is the right place to define durable rules for the assistant, such as role, boundaries, tone, and output format. Microsoft’s guidance specifically calls out that a system message can specify output formats such as JSON and act as the highest-level instruction in the conversation.
+
+
+
+The user prompt should usually carry the current task or request, not the app-wide contract. If your application always needs structured output, putting that requirement in the system message makes the behavior more consistent across many user requests.
+
+
+
+Why the other options are incorrect:
+
+• A. This is a task-specific request, so it fits better as a user prompt than as a permanent system instruction. It tells the model what to do for one turn, but it does not establish a reusable behavior contract for the assistant. If you put too many one-off tasks into the system message, the instruction set becomes harder to maintain.
+
+• B. Tone can belong in a system message, but this option does not address the stated requirement of producing a fixed JSON structure. It might improve style consistency, yet it would not reliably enforce the output contract the app needs. The stronger answer is the option that directly defines the required response format.
+
+• D. This is another task-level instruction, not a foundational system behavior for all requests. It also conflicts with the requirement to return structured customer details as JSON. Effective prompt design avoids hidden or competing requirements when the real need is a stable format rule.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 20
+Incorrect
+You are creating a Foundry chat request for a support assistant. The app must ask a clarifying question when the user leaves out key information.
+
+Snippet
+
+messages = [
+    {
+        "role": "system",
+        "content": "You are a support assistant. If key details are missing, ask one clarifying question before answering."
+    },
+    # missing section
+]
+ 
+response = client.chat.completions.create(
+    model="gpt-4.1-mini",
+    messages=messages
+)
+Which code should replace the missing section?
+
+Your answer is incorrect
+A. {"role": "assistant", "content": "Please provide more details."}
+
+Explanation
+This choice suggests the assistant should ask the user to provide more details, which aligns with the requirement to ask a clarifying question when key information is missing. It prompts the user to provide additional information before proceeding with the support request.
+B. {"role": "system", "content": "The user forgot the product name."}
+
+Explanation
+This choice indicates that the user forgot the product name, which is not directly related to asking a clarifying question when key details are missing. It does not fulfill the requirement of prompting the user for more information before responding.
+C. {"role": "assistant", "content": "I am a support assistant."}
+
+Explanation
+This choice states that the assistant is a support assistant, which is not necessary as the role of the assistant is already defined in the initial message. It does not address the need to ask a clarifying question when key information is missing from the user's request.
+Correct answer
+D. {"role": "user", "content": "My printer keeps failing after the update."}
+
+Explanation
+This choice correctly addresses the requirement by providing a response from the user indicating that their printer keeps failing after the update. This response helps the assistant understand the issue and ask a clarifying question to gather more details before proceeding with the support request.
+Overall explanation
+A chat completion request is built from role-based messages, and the current request belongs in a user message. Microsoft Learn shows the basic chat format as a system message for instructions followed by a user message containing the actual request.
+
+
+
+The system prompt in this snippet already defines the desired fallback behavior. The missing section should therefore be the user’s input, which gives the model something to act on while still letting the system instruction control how the model behaves if information is incomplete.
+
+
+
+Why the other options are incorrect:
+
+• A. This adds an assistant message before the model has produced any answer, which is not the right way to represent the current user request. Assistant messages are typically generated by the model or included intentionally as prior examples in a transcript. Here, the app needs a real user prompt, not a prewritten assistant reply.
+
+• B. A second system message could add more instructions, but it would not supply the actual task input needed for this turn. The main missing element in the request is the user’s problem statement. Effective prompting separates behavioral instructions from the current request data.
+
+• C. This is also an assistant message, and it repeats information that is already better expressed in the system prompt. Repetition can sometimes help, but using an assistant role here still fails to provide the model with the user’s actual problem. It also wastes prompt space without advancing the task.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 21
+Correct
+Which TWO practices help make a system prompt more effective for a Foundry generative AI app? (Select TWO.)
+
+Your selection is correct
+A. Keep instructions unambiguous
+
+B. Hide the output format requirement
+
+Your selection is correct
+C. Make fallback behavior explicit
+
+D. Add conflicting rules for flexibility
+
+E. Leave boundaries open to interpretation
+
+Overall explanation
+Microsoft recommends keeping system instructions unambiguous and making fallback behavior explicit. That means the model should know what to do when information is missing, the request is out of scope, or it cannot comply safely.
+
+
+
+These choices improve consistency and reduce avoidable errors. Clear scope, explicit behavior when unsure, and testable instructions are core parts of effective system message design in Foundry-based chat experiences.
+
+
+
+Why the other options are incorrect:
+
+• B. Microsoft guidance says that if the output format matters, you should state it explicitly rather than hide it. Hidden requirements make prompts harder to maintain and evaluate, and they often reduce consistency. A good system prompt makes the desired contract visible and direct.
+
+• D. Conflicting instructions are called out as a common pitfall. Telling the model to follow competing rules creates ambiguity and makes behavior less reliable rather than more flexible. Effective prompts narrow interpretation instead of increasing contradiction.
+
+• E. Open-ended boundaries usually produce less predictable behavior. Microsoft recommends defining role and scope clearly, including what the assistant is not allowed to do and what to do at the edges of the scenario. Leaving those details vague weakens prompt quality.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 22
+Correct
+You want a model to classify customer feedback into one label. Which user prompt is most effective?
+
+A. Tell me something about this feedback
+
+Explanation
+This prompt is too vague and open-ended, leaving room for interpretation and potentially leading to confusion about the specific task of classifying the feedback into one label. It does not provide clear guidance on the desired outcome.
+B. Read this and respond
+
+Explanation
+This prompt simply instructs the user to read the feedback and respond without specifying the required action of classifying it into one label. It lacks clarity and direction on the task at hand, making it less effective for achieving the goal of classifying customer feedback.
+C. Analyze the text however you want
+
+Explanation
+While this prompt allows for flexibility in how the text is analyzed, it does not explicitly state the requirement of classifying the feedback into one label. Without clear instructions on the desired outcome, it may result in varied interpretations and potentially inconsistent classifications.
+Your answer is correct
+D. Classify this feedback as Positive, Neutral, or Negative. Return one label only.
+
+Explanation
+This prompt is the most effective as it clearly and specifically instructs the user to classify the feedback as Positive, Neutral, or Negative and return only one label. It provides clear guidance on the task at hand, ensuring a focused and consistent approach to classifying customer feedback.
+Overall explanation
+Effective user prompts are specific about the task and expected output. Microsoft’s prompt engineering guidance recommends being specific, reducing ambiguity, and clearly stating what kind of response you want from the model.
+
+
+
+Option D works because it defines the task, constrains the answer space, and states the desired output format. That combination generally produces more reliable results than vague prompts that leave too much to interpretation.
+
+
+
+Why the other options are incorrect:
+
+• A. This prompt is too vague and does not identify the classification task or the expected answer shape. The model might summarize, explain, or infer sentiment in a long paragraph instead of returning a single label. Effective prompting reduces that operational ambiguity.
+
+• B. This instruction tells the model to process input, but it does not define what success looks like. Without a clear task, output constraint, or label set, results can vary widely across runs. For AI-901-style prompt quality, the better choice is the prompt that restricts interpretation.
+
+• C. This option is intentionally open-ended and therefore the least controlled. Microsoft guidance emphasizes giving clear instructions rather than inviting the model to choose its own method and output. That makes this prompt weaker for predictable classification.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 23
+Correct
+Which THREE pairs are correctly matched? (Select THREE.)
+
+Your selection is correct
+A. System message — defines role and boundaries
+
+B. Few-shot examples — permanently retrain the model
+
+Your selection is correct
+C. User prompt — carries the current request
+
+D. Conflicting rules — improve reliability
+
+Your selection is correct
+E. Fallback instruction — tells the model what to do when unsure
+
+F. Assistant message — replaces the need for user input
+
+Overall explanation
+A, C, and E align with Microsoft’s prompt guidance. The system message defines high-level instructions such as role and boundaries, the user prompt carries the current task, and fallback instructions help the model respond more safely and predictably when it lacks information or the request is out of scope.
+
+
+
+Good prompt design separates stable control instructions from per-turn task input and includes explicit behavior for uncertain cases. That structure helps improve consistency without confusing the model with hidden expectations or conflicting priorities.
+
+
+
+Why the other options are incorrect:
+
+• B. Few-shot examples help condition the model during the current inference, but they do not permanently retrain the model. Microsoft explicitly describes few-shot prompting as a way to show desired behavior within the prompt, not as a training operation that changes the model itself. The pair sounds plausible because examples do influence behavior, but only temporarily for that request.
+
+• D. Conflicting rules are listed as a common pitfall, not as a reliability improvement. When instructions compete, the model has to guess which one matters most, and output quality often becomes less predictable. Effective prompts reduce, rather than add, instruction conflict.
+
+• F. Assistant messages can be part of a conversation history or a few-shot pattern, but they do not eliminate the need for actual user input. The task still depends on what the user is asking in the current turn. This option mixes one role in the transcript with the purpose of the whole conversation.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 24
+Incorrect
+A user prompt currently says: “Write about our Q1 results.”
+
+
+
+Which revision is most effective?
+
+A. Write something useful about Q1
+
+Explanation
+Choice A is vague and does not provide specific guidance on how to revise the user prompt effectively. It lacks clarity and does not offer any direction on how to improve the prompt regarding Q1 results.
+Your answer is incorrect
+B. Explain Q1 results in any format you prefer
+
+Explanation
+Choice B is too broad and open-ended. It does not provide clear instructions on how to revise the user prompt to make it more effective. It lacks specificity and does not offer guidance on the content or format of the response.
+Correct answer
+C. Summarize the Q1 results for executives in 3 bullet points. Limit the response to 80 words. If revenue is missing, say “data not provided.”
+
+Explanation
+Choice C is the most effective revision as it provides clear and specific instructions on how to revise the user prompt. It specifies summarizing the Q1 results for executives in 3 bullet points, limiting the response to 80 words, and providing a specific instruction in case revenue data is missing. This revision offers clear guidance on the content and format of the response.
+D. Tell me whether Q1 was good
+
+Explanation
+Choice D is too simplistic and lacks detail. It does not provide specific instructions on how to revise the user prompt effectively. It does not offer guidance on the content, format, or level of detail required in the response regarding Q1 results.
+Overall explanation
+Option C is best because it is specific about audience, format, length, and fallback behavior. Microsoft’s guidance emphasizes clear instructions, limiting ambiguity, and giving the model an explicit “out” when required information is missing.
+
+
+
+This revision is also more effective because it combines several strong prompt design elements without becoming overly vague: a concrete task, an executive audience, a short bullet format, a length constraint, and a missing-data policy. Those details make the prompt more predictable and more useful in a business app.
+
+
+
+Why the other options are incorrect:
+
+• A. This prompt is too open-ended to produce consistent output. It does not define the audience, output format, or level of detail, and “useful” is subjective. Strong user prompts reduce that kind of interpretation gap.
+
+• B. Letting the model choose any format gives away too much control when the goal is predictable output. Microsoft guidance recommends specifying the output format plainly when it matters. This option therefore weakens consistency.
+
+• D. This prompt narrows the task, but it still leaves the answer shape and evidence expectations unclear. It could produce a vague opinion instead of a structured summary that is useful to executives. Compared with C, it is much less constrained and less informative.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 25
+Incorrect
+You are building a lightweight Python app in Microsoft Foundry that reads customer reviews and returns whether each review is positive or negative. Which service should you use?
+
+Correct answer
+A. Azure Language in Foundry Tools
+
+Explanation
+Azure Language in Foundry Tools provides natural language processing capabilities that can be used to analyze and classify text data, such as customer reviews, to determine sentiment. This service is specifically designed for tasks like sentiment analysis, making it the most suitable choice for your lightweight Python app that reads customer reviews.
+B. Azure AI Speech
+
+Explanation
+Azure AI Speech is focused on speech recognition and synthesis, not text analysis. While it can be used for tasks like transcribing spoken reviews, it is not the ideal choice for analyzing written text for sentiment.
+C. Azure AI Vision
+
+Explanation
+Azure AI Vision is designed for tasks related to image recognition and processing, not text analysis. It would not be the appropriate service to use for analyzing the text content of customer reviews in your Python app.
+Your answer is incorrect
+D. Azure AI Search
+
+Explanation
+Azure AI Search is a service that enables full-text search capabilities within applications, but it is not specifically designed for sentiment analysis or text classification tasks. It would not be the best choice for determining whether customer reviews are positive or negative in your lightweight Python app.
+Overall explanation
+Azure Language in Foundry Tools is the Microsoft service for understanding and analyzing text. Microsoft Learn describes it as a cloud-based NLP service for understanding and analyzing text, and the AI-901 learning module specifically ties it to building a lightweight Python client application that analyzes text.
+
+
+
+Sentiment analysis is one of the text analysis capabilities available through Azure Language. For a lightweight application that needs to classify review sentiment, Azure Language is the most direct fit, while the other options target speech, vision, or search scenarios instead.
+
+
+
+Why the other options are incorrect:
+
+
+
+• B. Azure AI Speech. This is a plausible distractor because it is another AI service commonly used in Foundry-based solutions. However, Azure AI Speech is for speech-to-text, text-to-speech, translation, and related audio scenarios rather than written-text sentiment analysis. In this question, the input is already text, so Speech is not the primary service to choose.
+
+
+
+• C. Azure AI Vision. This option is believable because Vision also analyzes content, but it focuses on images and visual input rather than customer review text. The scenario does not involve image understanding, OCR, or visual prompts. The requested task is written-language analysis, which belongs to Azure Language.
+
+
+
+• D. Azure AI Search. Azure AI Search is useful for search and retrieval scenarios, and it can be combined with AI enrichment, so it sounds close. But the question asks for the primary service to analyze review sentiment in a lightweight app, not to build an index or retrieval layer. Azure Language is the direct text-analysis choice here.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 26
+Incorrect
+You are creating a lightweight Python client that will call Azure Language in Foundry Tools.
+
+Snippet
+
+import os
+from azure.core.credentials import AzureKeyCredential
+from azure.ai.textanalytics import TextAnalyticsClient
+ 
+endpoint = os.environ["AZURE_LANGUAGE_ENDPOINT"]
+key = os.environ["AZURE_LANGUAGE_KEY"]
+ 
+________
+reviews = ["The support team was very helpful."]
+result = text_analytics_client.analyze_sentiment(reviews)
+Which code should replace the missing section?
+
+A. text_analytics_client = TextAnalyticsClient(key, AzureKeyCredential(endpoint))
+
+Explanation
+This choice is incorrect because the order of the parameters is incorrect. The TextAnalyticsClient constructor expects the endpoint as the first parameter and the AzureKeyCredential object as the second parameter.
+Correct answer
+B. text_analytics_client = TextAnalyticsClient(endpoint, AzureKeyCredential(key))
+
+Explanation
+This choice is correct because it correctly initializes the TextAnalyticsClient object with the endpoint and AzureKeyCredential object, which is the correct order of parameters for the TextAnalyticsClient constructor.
+Your answer is incorrect
+C. text_analytics_client = TextAnalyticsClient(AzureKeyCredential(key), endpoint)
+
+Explanation
+This choice is incorrect because it swaps the order of the parameters, passing the AzureKeyCredential object as the first parameter and the endpoint as the second parameter, which is not the correct order for initializing the TextAnalyticsClient object.
+D. text_analytics_client = AzureKeyCredential(endpoint, key)
+
+Explanation
+This choice is incorrect because it incorrectly initializes the AzureKeyCredential object with the endpoint and key parameters, which is not the correct way to initialize the TextAnalyticsClient object.
+Overall explanation
+Microsoft’s Python client library shows that a TextAnalyticsClient is created by providing the service endpoint and a credential such as AzureKeyCredential(key). That exact client pattern is used before calling text-analysis methods such as analyze_sentiment, recognize_entities, extract_key_phrases, and detect_language.
+
+
+
+This matches the AI-901 skill objective well because the question is about building a lightweight client application, not just identifying a capability. In a small Python app, the client setup is one of the first practical implementation steps before sending text for analysis.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. text_analytics_client = TextAnalyticsClient(key, AzureKeyCredential(endpoint)). This is close enough to look correct, which makes it a fair exam-style distractor. However, it swaps the endpoint and key positions, so the constructor receives the wrong values in the wrong places. The client needs the endpoint URL first and the key wrapped in AzureKeyCredential as the credential.
+
+
+
+• C. text_analytics_client = TextAnalyticsClient(AzureKeyCredential(key), endpoint). This option also contains the right pieces, which is why it feels plausible. But the parameter order is still reversed from the documented usage pattern. Passing the credential where the endpoint belongs does not correctly initialize the client.
+
+
+
+• D. text_analytics_client = AzureKeyCredential(endpoint, key). This option confuses the credential object with the service client. AzureKeyCredential is used to hold the key, but it is not the client that sends analysis requests. You still need a TextAnalyticsClient built with the endpoint and credential.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 27
+Correct
+In Microsoft’s Responsible AI principles, transparency means AI systems should be ________.
+
+
+
+Which answer best completes the sentence?
+
+Your answer is correct
+A. understandable
+
+Explanation
+Transparency in Microsoft's Responsible AI principles refers to the requirement that AI systems should be understandable. This means that the decisions and processes of the AI system should be clear and interpretable to users and stakeholders, promoting trust and accountability.
+B. autonomous
+
+Explanation
+Autonomy is not the correct completion for the sentence regarding transparency in Microsoft's Responsible AI principles. While autonomy can be a desirable trait in AI systems, it is not directly related to the transparency requirement that focuses on making the system's operations understandable.
+C. hidden
+
+Explanation
+Transparency in AI systems does not mean that they should be hidden. On the contrary, transparency emphasizes the need for openness and clarity in the functioning of AI systems to ensure that their decisions and behaviors can be scrutinized and understood.
+D. randomized
+
+Explanation
+Randomization is not the correct completion for the sentence regarding transparency in Microsoft's Responsible AI principles. Randomization does not align with the principle of transparency, which emphasizes clarity and interpretability in AI systems.
+Overall explanation
+Microsoft describes transparency with a simple core idea: AI systems should be understandable. The goal is not just technical accuracy, but making sure people can correctly understand the capabilities of a system and where its boundaries are.
+
+
+
+Transparency also appears in Microsoft’s transparency-note guidance, which explains that responsible use includes understanding how the technology works, what choices influence behavior, and how the whole deployed system affects people. That framing supports “understandable” as the best completion.
+
+
+
+Why the other options are incorrect:
+
+
+
+• B. autonomous. This sounds plausible because many AI discussions focus on automation and agent behavior. However, autonomy is not the defining idea of the transparency principle in Microsoft’s Responsible AI framework. Transparency is specifically about understandability and helping people correctly interpret system capabilities and limits.
+
+
+
+• C. hidden. This is the opposite of what transparency requires. A hidden system, or one with concealed limitations, makes it harder for users to judge reliability and appropriate use. Microsoft’s guidance points toward explaining the technology and its operational context, not concealing it.
+
+
+
+• D. randomized. Randomization can exist in technical systems, but it is not a responsible AI principle here. A system could have randomized elements and still be opaque to users. The transparency principle is about understandable behavior and clear communication, not randomness.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 28
+Correct
+A lightweight app must identify the main talking points in support tickets. The best text-analysis capability is ________.
+
+
+
+Which answer best completes the sentence?
+
+A. OCR
+
+Explanation
+OCR (Optical Character Recognition) is used to convert different types of documents, such as scanned paper documents, PDF files, or images captured by a digital camera, into editable and searchable data. However, OCR is not specifically designed for identifying main talking points in text data, making it less suitable for the given scenario.
+B. Speech to Text
+
+Explanation
+Speech to Text is a technology that converts spoken language into written text. While it can be useful for transcribing spoken conversations or speeches, it is not the best choice for identifying main talking points in written support tickets, as it focuses on converting audio to text rather than analyzing text content.
+C. Entity linking
+
+Explanation
+Entity linking is a natural language processing technique that involves identifying and linking named entities (such as people, organizations, or locations) mentioned in text to a knowledge base or database. While entity linking is valuable for extracting specific entities from text, it may not be the most suitable capability for identifying the main talking points in support tickets, as it focuses on entity recognition rather than overall content analysis.
+Your answer is correct
+D. Key phrase extraction
+
+Explanation
+Key phrase extraction is a text analysis technique that involves identifying and extracting the most relevant and meaningful phrases or keywords from a given text. In the context of identifying main talking points in support tickets, key phrase extraction is the best choice as it helps to summarize and highlight the most important topics or issues discussed in the text data. This capability can efficiently extract key information from support tickets to aid in understanding and addressing customer concerns.
+Overall explanation
+Key phrase extraction is used to identify the main concepts or talking points in text. Microsoft Learn describes it as a capability that quickly identifies the main concepts in text, which fits a support-ticket summarization-style use case where the application needs the most important phrases rather than full sentiment or entity categories.
+
+
+
+This is also a good lightweight-application scenario because the client can submit raw unstructured text and handle the response in the app. The Python client library includes an extract_key_phrases method specifically for this purpose.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. OCR. OCR extracts printed or handwritten text from images or documents, so it can sound related when documents are involved. However, the question already assumes the application is analyzing support-ticket text, not reading text out of images. The task is to identify main ideas in written text, which is key phrase extraction rather than OCR.
+
+
+
+• B. Speech to Text. This is another text-producing technology, which is why it can mislead learners. But speech to text converts audio into written text, while the scenario starts with support-ticket text that already exists. The missing requirement is topic extraction from text, not audio transcription.
+
+
+
+• C. Entity linking. Entity linking is a real text-analysis feature, so it is a fair distractor. However, it is used to disambiguate entities and connect them to known knowledge bases, not to surface the main talking points of a ticket. For identifying the core concepts in text, key phrase extraction is the better match.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 29
+Incorrect
+A lightweight app must find and redact email addresses and phone numbers in customer messages before storing them. Which capability should the app use?
+
+Your answer is incorrect
+A. Named entity recognition
+
+Explanation
+Named entity recognition is a natural language processing technique that identifies and categorizes named entities in text, such as names, locations, organizations, and more. While it can be used to identify email addresses and phone numbers, it may not specifically focus on sensitive information like PII (Personally Identifiable Information).
+Correct answer
+B. PII detection
+
+Explanation
+PII detection, or Personally Identifiable Information detection, is a capability that specifically focuses on identifying and redacting sensitive information like email addresses and phone numbers. It is designed to help applications comply with data privacy regulations and protect user data.
+C. Summarization
+
+Explanation
+Summarization is a natural language processing technique that condenses a piece of text into a shorter, more concise version while retaining the key information. While it can be useful for summarizing customer messages, it does not specifically address the need to redact email addresses and phone numbers for privacy reasons.
+D. Speech translation
+
+Explanation
+Speech translation is a capability that translates spoken language from one language to another. While it may be useful for translating customer messages in different languages, it does not directly address the requirement of finding and redacting email addresses and phone numbers in the messages.
+Overall explanation
+PII detection is the Azure Language capability designed to identify and redact sensitive personal information in text. Microsoft Learn describes it as a core capability that identifies and can redact sensitive information such as phone numbers, email addresses, and identification-related data.
+
+
+
+This makes it the strongest fit for a lightweight application that must protect customer data before storage. The requirement is not just to detect text patterns, but to identify sensitive personal information in a text-analysis workflow and redact it appropriately.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. Named entity recognition. NER can identify categories such as people, places, organizations, and quantities, so it can feel close to this requirement. However, the question specifically asks for finding and redacting sensitive personal information, which is the dedicated purpose of PII detection. NER is broader entity extraction, not the most direct privacy-focused capability for this task.
+
+
+
+• C. Summarization. Summarization reduces text into a shorter form, which is useful in many apps. But it does not exist to locate and redact email addresses or phone numbers before storage. A summary could even omit or preserve information unpredictably relative to the redaction goal, so it is not the correct control here.
+
+
+
+• D. Speech translation. This option belongs to speech workflows and is unrelated to written-message privacy filtering. The scenario is about analyzing written customer messages and masking sensitive text. That makes speech translation a capability mismatch.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 30
+Correct
+For each of the following statements, determine whether the statement is correct.
+
+
+
+Statement 1: Transparency includes helping people understand an AI system’s capabilities and limitations.
+
+Statement 2: Transparency is mainly about encrypting stored data.
+
+Statement 3: Transparency notes can be shared with people who use or are affected by the system.
+
+
+
+Select the correct combination.
+
+A. Yes / Yes / No
+
+Your answer is correct
+B. Yes / No / Yes
+
+C. No / Yes / Yes
+
+D. No / No / Yes
+
+Overall explanation
+Statement 1 is correct. Microsoft defines transparency as AI systems being understandable and asks how to ensure that people correctly understand the capabilities of a system. That makes capabilities and limitations central to transparency.
+
+
+
+Statement 2 is incorrect because encrypting stored data is primarily a privacy and security concern, not the main focus of transparency. Statement 3 is correct because Microsoft says transparency notes can be used during development or deployment and can be shared with the people who use or are affected by the system. That makes Yes / No / Yes the correct combination.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. Yes / Yes / No. This option gets Statement 1 right, which makes it tempting. But Statement 2 is still wrong because encryption belongs to privacy and security, not transparency, and Statement 3 is also wrong because Microsoft explicitly says transparency notes can be shared with users and affected people. Because two parts are wrong, the full combination cannot be correct.
+
+
+
+• C. No / Yes / Yes. This option reverses the meaning of Statement 1 and misclassifies Statement 2. Microsoft’s definition of transparency directly supports Statement 1, and nothing in that definition makes encryption the primary transparency concern. Although Statement 3 is true, the combination still fails because the first two judgments are wrong.
+
+
+
+• D. No / No / Yes. This option correctly rejects Statement 2 and correctly accepts Statement 3, so it may look close. However, Statement 1 must also be Yes because transparency includes helping people understand capabilities and limitations. Missing that first judgment makes the whole option incorrect.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 31
+Incorrect
+Which THREE pairs are correctly matched? (Select THREE.)
+
+Correct selection
+A. Transparency — AI systems should be understandable
+
+B. Privacy and security — explain model limitations to users
+
+Your selection is correct
+C. Transparency Note — explains how AI technology works
+
+D. Accountability — remove all human oversight
+
+Your selection is correct
+E. Transparency — helps users understand capabilities
+
+Your selection is incorrect
+F. Fairness — conceal system weaknesses
+
+Overall explanation
+The correct pairs all connect to the core Microsoft idea that transparency is about understandability. Microsoft explicitly describes transparency as ensuring that people correctly understand a system’s capabilities, and transparency notes are designed to explain how the technology works and what choices influence behavior.
+
+
+
+Option E is also correct because user understanding of capabilities is at the heart of transparency. By contrast, the incorrect pairs either swap in another responsible AI principle or describe behavior that contradicts Microsoft’s guidance, such as removing oversight or concealing weaknesses.
+
+
+
+Why the other options are incorrect:
+
+
+
+• B. Privacy and security — explain model limitations to users. This is plausible because responsible AI principles often work together in practice. However, explaining model limitations is more directly tied to transparency than to privacy and security. Privacy and security focus on protecting data and system access, while transparency focuses on understanding the system.
+
+
+
+• D. Accountability — remove all human oversight. This pair is incorrect because Microsoft frames accountability around humans being accountable and in control. Removing oversight would undermine accountability rather than support it. That makes this option the opposite of the principle it names.
+
+
+
+• F. Fairness — conceal system weaknesses. Fairness is about treating people fairly, not hiding information from them. Concealing weaknesses directly conflicts with transparent communication about system capabilities and limitations. So the pair is incorrect both because the principle is wrong and because the action itself is anti-transparency.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 32
+Correct
+You are building a quick demo that listens to live microphone audio and converts it into text.
+Snippet
+
+scenario = "live microphone audio"
+goal = "convert spoken words to text"
+ 
+# missing section
+workload = ________
+ 
+print(workload)
+Which code should replace the missing section?
+
+A. "Text to Speech"
+
+Explanation
+"Text to Speech" is not the correct choice for the missing section as it involves converting text into spoken words, which is the opposite of the goal mentioned in the scenario of converting spoken words to text.
+B. "Computer vision"
+
+Explanation
+"Computer vision" is not the correct choice for the missing section as it is related to processing and analyzing visual information from images or videos, not converting live microphone audio into text.
+Your answer is correct
+C. "Speech to Text"
+
+Explanation
+"Speech to Text" is the correct choice for the missing section as it accurately reflects the goal of converting spoken words from live microphone audio into text. This choice aligns with the scenario provided in the question.
+D. "OCR"
+
+Explanation
+"OCR" stands for Optical Character Recognition and is used for converting images of text into editable text. It is not the correct choice for the missing section, as the goal is to convert live microphone audio into text, not images.
+Overall explanation
+“Speech to Text” is correct because the scenario is about converting spoken audio into written text. Microsoft Learn describes Azure Speech as supporting speech-to-text capabilities for real-time and batch transcription, which directly matches live microphone transcription.
+
+
+
+The code is simple on purpose, but the decision being tested is the workload mapping. Because the input is spoken audio and the desired output is text, the correct workload is speech recognition, commonly expressed in Microsoft wording as Speech to Text.
+
+
+
+Why the other options are incorrect:
+
+• A. Text to Speech goes in the opposite direction by turning text into synthesized audio. Microsoft Learn uses that term for speech synthesis scenarios where an application speaks text aloud. Since this question starts with microphone audio and asks for written output, Text to Speech does not fit.
+
+• B. Computer vision analyzes image content such as objects, captions, and visible text. It is not the core workload for transcribing spoken audio from a microphone. Even if a multimodal system exists elsewhere, the specific scenario here is clearly a speech workload.
+
+• D. OCR extracts text that is visible in images or documents. It is useful when the input is a scan, screenshot, sign, or form. Here the input is audio rather than an image, so OCR is the wrong workload family.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 33
+Correct
+For each of the following statements, determine whether the statement is correct.
+
+
+
+Statement 1: Azure Language in Foundry Tools can be used from Microsoft Foundry and through client libraries.
+
+Statement 2: detect_language returns a language prediction with a confidence score.
+
+Statement 3: PII detection is the feature used to convert text into spoken audio.
+
+
+
+Select the correct combination.
+
+Your answer is correct
+A. Yes / Yes / No
+
+B. Yes / No / Yes
+
+C. No / Yes / Yes
+
+D. No / No / Yes
+
+Overall explanation
+Statement 1 is correct. Microsoft Learn says Azure Language in Foundry Tools can be used in the web-based Microsoft Foundry experience and also through REST APIs and client libraries, which is exactly the kind of implementation choice you make when building a lightweight app.
+
+
+
+Statement 2 is also correct because the Python documentation and language-detection documentation both describe language detection as returning a language prediction with a confidence score. Statement 3 is incorrect because converting text into spoken audio is a speech capability, while PII detection is for identifying and redacting sensitive information in text.
+
+
+
+Why the other options are incorrect:
+
+
+
+• B. Yes / No / Yes. This option keeps Statement 1 correct, which makes it look close. But it incorrectly marks Statement 2 as No even though language detection returns a confidence score, and it incorrectly marks Statement 3 as Yes even though PII detection is not a speech-synthesis feature. Because both of those judgments are reversed, the combination is not valid.
+
+
+
+• C. No / Yes / Yes. This option gets Statement 2 right, which gives it some appeal. However, Statement 1 should be Yes because Azure Language is available through Foundry and client libraries, and Statement 3 should still be No because text-to-speech belongs to speech services. With two incorrect judgments, this combination fails.
+
+
+
+• D. No / No / Yes. This choice reverses every key concept in the prompt. It denies the documented implementation paths for Azure Language, denies the confidence-score behavior of language detection, and wrongly assigns text-to-speech behavior to PII detection. That makes it the farthest from the correct understanding of the services involved.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 34
+Correct
+Which THREE pairs are correctly matched? (Select THREE.)
+
+A. Azure AI Speech — detects written language codes
+
+Your selection is correct
+B. detect_language — returns a language code
+
+C. Azure AI Search — primary text sentiment API
+
+Your selection is correct
+D. recognize_entities — identifies people and organizations
+
+E. OCR — assigns positive or negative sentiment
+
+Your selection is correct
+F. PII detection — identifies sensitive text such as email addresses
+
+Overall explanation
+The correctly matched pairs map directly to Azure Language capabilities used in lightweight text-analysis apps. detect_language returns language information for text, recognize_entities identifies categorized entities such as people and organizations, and PII detection identifies sensitive information such as email addresses and other personal data.
+
+
+
+These are exactly the sorts of tasks a small text-analysis application can perform by sending written text to Azure Language and processing the structured response. They also represent capability-level distinctions that AI-901 frequently tests: choosing the right text-analysis feature instead of a nearby but different AI service.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. Azure AI Speech — detects written language codes. Azure AI Speech handles speech-related tasks such as speech recognition and synthesis, so it sounds adjacent to language work. But written language detection in this context is an Azure Language text-analysis capability, not the primary purpose of Azure AI Speech. The pair therefore mixes a speech service with a text-analysis function.
+
+
+
+• C. Azure AI Search — primary text sentiment API. Azure AI Search can incorporate enrichment and AI-powered indexing, which is why this distractor feels reasonable. However, the direct text sentiment capability tested here belongs to Azure Language rather than Azure AI Search as the primary analysis API. Search is about retrieval and indexing, not the main standalone sentiment-analysis service for a lightweight app.
+
+
+
+• E. OCR — assigns positive or negative sentiment. OCR is used to recognize text in images or files, not to classify the emotional tone of written content. Sentiment analysis is a language-analysis task that assigns positive, neutral, negative, or mixed labels. So this pair confuses text extraction from images with text understanding.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 35
+Incorrect
+Your app must extract entities such as organizations and locations from text.
+
+Snippet
+
+messages = ["Contoso opened an office in Sydney on Monday."]
+________
+for doc in result:
+    for entity in doc.entities:
+        print(entity.text, entity.category)
+Which code should replace the missing section?
+
+A. result = text_analytics_client.detect_language(messages)
+
+Explanation
+The detect_language method is used to identify the language of the text, not to extract entities such as organizations and locations. It is not the correct choice for the given task of extracting entities from text.
+B. result = text_analytics_client.extract_key_phrases(messages)
+
+Explanation
+The extract_key_phrases method is used to identify key phrases in the text, not to extract entities such as organizations and locations. It is not the correct choice for the given task of extracting entities from text.
+Your answer is incorrect
+C. result = text_analytics_client.analyze_sentiment(messages)
+
+Explanation
+The analyze_sentiment method is used to determine the sentiment of the text, not to extract entities such as organizations and locations. It is not the correct choice for the given task of extracting entities from text.
+Correct answer
+D. result = text_analytics_client.recognize_entities(messages)
+
+Explanation
+The recognize_entities method is specifically designed to extract entities such as organizations and locations from text. It is the correct choice for the given task of extracting entities from the text snippet provided in the question.
+Overall explanation
+The recognize_entities method is the correct call when the app needs to identify and categorize entities in text. Microsoft’s Python documentation states that recognize_entities identifies entities such as people, places, organizations, date/time values, quantities, currencies, and more.
+
+
+
+That also matches the code pattern in the snippet because the loop expects doc.entities, which is the kind of structured output returned by entity recognition. A lightweight application can use this directly to enrich text, flag known entity types, or display extracted information in a UI.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. result = text_analytics_client.detect_language(messages). This is a legitimate method, so it is a credible distractor. However, language detection returns the language of the text and a confidence score, not a collection of named entities. The snippet clearly expects entity objects with text and category values.
+
+
+
+• B. result = text_analytics_client.extract_key_phrases(messages). Key phrase extraction identifies major topics or talking points in a passage. It does not produce entity records categorized as organization or location, so it would not satisfy the output structure used by the code. The scenario is asking for typed entities, not topical phrases.
+
+
+
+• C. result = text_analytics_client.analyze_sentiment(messages). Sentiment analysis returns sentiment labels and confidence data for the tone of the message. That is useful for review analysis, but it does not extract entities like Contoso or Sydney into a list of categorized entity results. The task is entity extraction, not sentiment scoring.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 36
+Incorrect
+You are building a small Python app that captions product photos and reads text from shelf labels. You want the SDK path that Microsoft positions for specific Vision workloads rather than agent orchestration or generic model compatibility.
+
+
+
+Which SDK choice is the best fit?
+
+Your answer is incorrect
+A. Agent Framework
+
+Explanation
+The Agent Framework is not specifically designed for Vision workloads or image processing tasks. It is more focused on agent orchestration and managing distributed systems, rather than providing specific tools for image captioning or text reading from images.
+B. OpenAI SDK
+
+Explanation
+The OpenAI SDK is a general-purpose SDK for working with OpenAI's artificial intelligence models and services. While it may have some capabilities for image processing, it is not specifically tailored for Vision workloads like image captioning and text extraction from images.
+Correct answer
+C. Foundry Tools SDKs
+
+Explanation
+Foundry Tools SDKs are designed by Microsoft for specific Vision workloads, such as image captioning and text extraction from images. These SDKs provide tools and functionalities that are optimized for these tasks, making them the best fit for the scenario described in the question.
+D. Foundry SDK
+
+Explanation
+The Foundry SDK is a generic term and does not specify its focus on Vision workloads or image processing tasks. Without further context or information, it is unclear whether the Foundry SDK is suitable for the specific requirements of the Python app described in the question.
+Overall explanation
+Foundry Tools SDKs are the best fit because Microsoft explicitly says to use Foundry Tools SDKs when working with specific AI services such as Vision, Speech, and Language. That matches a lightweight application focused on vision capabilities rather than agents or general chat completions compatibility.
+
+
+
+This question is about choosing the right development path before you write application code. If the app’s main job is image analysis, OCR, captions, or related vision features, Microsoft’s SDK guidance points you toward the Vision service path instead of the agent or general-purpose model path.
+
+
+
+Why the other options are incorrect:
+
+• A. Agent Framework is for building multi-agent systems in code, not for directly targeting a simple vision-first application. It is a plausible distractor because it is still part of the Foundry ecosystem. However, the scenario is about adding vision capabilities to a lightweight app, not orchestrating multiple agents or agent workflows.
+
+• B. OpenAI SDK is the better choice when you want maximum OpenAI compatibility or when you are using Foundry direct models through chat completions. That makes it plausible for multimodal chat scenarios. But the question specifically describes a vision-service-centered app, and Microsoft’s SDK overview points to Foundry Tools SDKs for Vision work.
+
+• D. Foundry SDK is used for Foundry-specific features such as agents and evaluations. It is relevant in the broader platform, so it sounds reasonable at first. Even so, Microsoft separates that from the SDK guidance for specific AI services like Vision, which is why it is not the best answer here.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 37
+Incorrect
+You are building a lightweight app that sends an image and a prompt to a multimodal model.
+Snippet
+
+from azure.ai.inference.models import UserMessage, TextContentItem, ImageContentItem, ImageUrl
+ 
+image_url = "https://contoso.com/shelf.jpg"
+ 
+messages = [
+    UserMessage(content=[
+        TextContentItem(text="Describe the products in this image."),
+        ________
+    ])
+]
+Which code should replace the missing section?
+
+Correct answer
+A. ImageContentItem(image_url=ImageUrl(image_url))
+
+Explanation
+Choice A is correct because it creates an ImageContentItem object with the specified image URL using the ImageUrl class, which is the appropriate way to include an image in the messages list for the multimodal model.
+Your answer is incorrect
+B. ImageContentItem(text=image_url)
+
+Explanation
+Choice B is incorrect because it tries to create an ImageContentItem object with the image URL provided as text, which is not the correct way to include an image in the messages list for the multimodal model.
+C. {"type": "audio_url", "url": image_url}
+
+Explanation
+Choice C is incorrect because it defines a dictionary with a type of "audio_url" and a URL, which is not relevant to sending an image to the multimodal model. It does not create an ImageContentItem object as required.
+D. TextContentItem(text=ImageUrl(image_url))
+
+Explanation
+Choice D is incorrect because it tries to create a TextContentItem object with the ImageUrl class and the image URL, which is not the correct way to include an image in the messages list for the multimodal model.
+Overall explanation
+The correct answer is ImageContentItem(image_url=ImageUrl(image_url)) because Microsoft’s multimodal chat examples show image input being added as an image content item inside the user message content list. The model request combines a text instruction with an image object, which is exactly what a lightweight vision-enabled app needs when sending an image prompt to a deployed multimodal model.
+
+
+
+This pattern matters because the application is not sending plain text alone. It is constructing a multimodal message where the model receives both text and image input together, allowing it to analyze what is in the picture and answer the accompanying prompt.
+
+
+
+Why the other options are incorrect:
+
+• B. ImageContentItem(text=image_url) is wrong because the image content item is not populated with a plain text property in Microsoft’s example pattern. It is a plausible mistake because developers often think “the URL is text, so I can pass it as text.” In practice, the SDK expects an image URL object for image input, not a text field pretending to be an image.
+
+• C. An audio_url style payload does not match the scenario because the application is sending an image, not audio. It is plausible because the same family of multimodal models can also accept other modalities. However, the question is explicitly about adding vision capability, so the missing item must be image input rather than audio input.
+
+• D. TextContentItem(text=ImageUrl(image_url)) is incorrect because text content items are for natural-language text, not image objects. This distractor is believable because the user message content list mixes different content item types. But Microsoft’s examples clearly separate text content items from image content items, and the image must be wrapped as image input.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 38
+Correct
+To add Azure Vision Image Analysis to a Python lightweight app, install ________.
+
+
+
+Which answer best completes the sentence?
+
+A. azure-ai-inference
+
+Explanation
+The package "azure-ai-inference" is not specifically related to Azure Vision Image Analysis. It is more focused on general inference tasks and may not provide the necessary functionality for adding Azure Vision Image Analysis to a Python lightweight app.
+B. openai
+
+Explanation
+The package "openai" is not related to Azure services or specifically to Azure Vision Image Analysis. It is a separate platform for artificial intelligence research and development, and it does not provide the required tools for integrating Azure Vision Image Analysis into a Python lightweight app.
+Your answer is correct
+C. azure-ai-vision-imageanalysis
+
+Explanation
+The package "azure-ai-vision-imageanalysis" is the correct choice for adding Azure Vision Image Analysis to a Python lightweight app. This package specifically focuses on image analysis tasks using Azure AI services and provides the necessary tools and functionalities for integrating Azure Vision Image Analysis into an application.
+D. azure-identity
+
+Explanation
+The package "azure-identity" is not directly related to Azure Vision Image Analysis or image analysis tasks. It is more focused on managing Azure identities and authentication processes within an application, and it does not provide the specific tools needed for integrating Azure Vision Image Analysis into a Python lightweight app.
+Overall explanation
+azure-ai-vision-imageanalysis is the correct package because Microsoft’s installation guidance for the Python Image Analysis SDK uses that exact package name. If you are building a lightweight application that uses Image Analysis features, that is the package Microsoft tells you to install.
+
+
+
+This is a foundational setup question. Before your application can call image analysis methods such as captioning, OCR, or object-related features, you need the Vision Image Analysis client library installed in the environment.
+
+
+
+Why the other options are incorrect:
+
+• A. azure-ai-inference is a real Azure package and is therefore a strong distractor. It is used in Microsoft examples for chat completions with multimodal models, so learners often confuse it with the Vision Image Analysis SDK. However, the question specifically asks about adding Azure Vision Image Analysis to a Python app, and Microsoft’s install instructions point to azure-ai-vision-imageanalysis.
+
+• B. openai is associated with Azure OpenAI chat completion scenarios and is relevant for some vision-enabled model patterns. That makes it plausible if the learner is thinking about multimodal chat rather than the Vision Image Analysis service. But Microsoft’s Python installation page for Image Analysis does not direct you to openai; it directs you to the dedicated vision package.
+
+• D. azure-identity is commonly used for authentication in Azure SDK-based applications, so it sounds reasonable in a setup question. Still, it is not the package that provides the Image Analysis client itself. Authentication support and the service SDK are different concerns, and the question asks for the package that adds vision analysis capability.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 39
+Correct
+Your lightweight app will send an image to a vision-enabled model. Which TWO input approaches are supported? (Select TWO.)
+
+Your selection is correct
+A. Provide a publicly accessible image URL
+
+B. Attach an Excel worksheet as image input
+
+C. Pass a local file path directly in the message body
+
+Your selection is correct
+D. Send a base64 data URL
+
+E. Replace the image with the deployment name
+
+Overall explanation
+A and D are correct because Microsoft’s multimodal documentation shows two supported image input approaches: passing a publicly accessible image URL and passing a base64-encoded data URL. Both are valid ways to provide image content to a vision-enabled model from a lightweight application.
+
+
+
+This is important for application design because it affects how your app handles incoming images. If the app already has public image hosting, a URL can be convenient. If the app receives a local image and wants to send it inline, converting it to a data URL is a supported pattern.
+
+
+
+Why the other options are incorrect:
+
+• B. An Excel worksheet is not the image input format described in Microsoft’s vision chat guidance. It sounds plausible because spreadsheets can contain charts or embedded images. However, the model input examples are based on actual image content provided as a URL or data URL, not spreadsheet files masquerading as images.
+
+• C. Passing a local file path directly in the message body is a common beginner assumption, especially in lightweight scripts. Microsoft’s examples do not show raw local paths being sent as the image content payload. Instead, the application must either expose the image through a public URL or convert the file into a data URL representation.
+
+• E. A deployment name identifies which model deployment to call, but it does not provide the image itself. This distractor is plausible because every model request also includes model or deployment information. Still, the question is asking for supported image input approaches, and the deployment name is not image data.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 40
+Correct
+Your lightweight app uses analyze_from_url to inspect an image.
+
+
+
+What must be true about the image URL?
+
+A. It must be stored in Azure AI Search
+
+Explanation
+The image URL does not need to be stored in Azure AI Search for the analyze_from_url function to work. This function is used to analyze images from a URL, regardless of where the image is stored.
+B. It must always end with .png
+
+Explanation
+The image URL does not have to always end with .png for the analyze_from_url function to work. This function can analyze images from various formats, not just PNG.
+Your answer is correct
+C. It must be publicly accessible
+
+Explanation
+The image URL must be publicly accessible for the analyze_from_url function to work. This is because the Azure AI service needs to access the image from the provided URL to perform the analysis.
+D. It must be the same as the model endpoint
+
+Explanation
+The image URL does not have to be the same as the model endpoint for the analyze_from_url function to work. The model endpoint is used for deploying and accessing machine learning models, while the image URL is specifically for accessing images for analysis.
+Overall explanation
+The image URL must be publicly accessible because Microsoft’s Python reference for analyze_from_url explicitly describes the image_url parameter as the publicly accessible URL of the image to analyze. That requirement is important for lightweight apps that rely on remote images instead of uploading raw bytes directly.
+
+
+
+This kind of requirement shapes application design. If the app receives internal or local files, the developer may need to expose them appropriately or use a different call pattern that works with image bytes instead of a remote URL.
+
+
+
+Why the other options are incorrect:
+
+• A. Azure AI Search is useful in search and retrieval scenarios, but it is not a requirement for Image Analysis URL input. This distractor is plausible because many AI app architectures include search somewhere in the stack. However, Microsoft’s analyze_from_url requirement is about the accessibility of the image URL itself, not about the image being indexed in Search.
+
+• B. The URL does not have to end with .png. That sounds believable because developers often associate image handling with common file extensions. But Microsoft’s reference requirement is about public accessibility, not a specific filename suffix.
+
+• D. The model endpoint and the image URL are different concepts. The endpoint identifies the service the app is calling, while the image URL identifies the content being analyzed. Confusing those two addresses is a common beginner mistake, but it does not match Microsoft’s API design.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 41
+Correct
+In a Foundry chat solution, the assistant’s role, boundaries, and response style usually belong in the ________ prompt.
+
+
+
+Which answer best completes the sentence?
+
+A. assistant
+
+Explanation
+The assistant's role, boundaries, and response style are typically defined and controlled by the system, not the assistant itself. Therefore, these aspects belong in the system prompt, not the assistant prompt.
+Your answer is correct
+B. system
+
+Explanation
+The system prompt is where the assistant's role, boundaries, and response style are usually defined and managed. It is responsible for guiding the assistant's behavior and interactions within the Foundry chat solution.
+C. user
+
+Explanation
+The user prompt typically refers to the interactions, inputs, and responses from the user interacting with the assistant. It does not encompass the assistant's role, boundaries, or response style, which are more appropriately categorized under the system prompt.
+D. deployment
+
+Explanation
+The deployment prompt relates to the process of deploying the Foundry chat solution, not to the assistant's role, boundaries, or response style. These aspects are better suited to the system prompt, where the assistant's behavior is configured and controlled.
+Overall explanation
+Microsoft Learn describes the system message as the place where you provide high-priority instructions and context that steer how the model responds. That includes role, scope, tone, and formatting, which is why the blank is completed by system.
+
+
+
+The user prompt is normally the current request for a specific turn, such as “Summarize this email” or “Extract the invoice number.” Effective prompting separates stable behavior in the system message from changing task input in the user message.
+
+
+
+Why the other options are incorrect:
+
+• A. Assistant messages represent model-generated replies in the conversation transcript. They are useful for preserving prior responses or for few-shot examples, but they are not where you normally define the assistant’s governing behavior. Using assistant messages for permanent rules would blur the role structure that chat models expect.
+
+• C. User messages are intended to carry the user’s current request or input. They can be very specific and detailed, but they are not the best home for persistent boundaries and role definitions for the whole app. If you rely on the user message for those rules, your behavior can become inconsistent across turns.
+
+• D. A deployment is a model hosting and access concept, not a prompt role. Prompt effectiveness depends on how you structure system and user messages inside the request, not on treating deployment as a prompt type. This option mixes prompt design with model deployment terminology.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 42
+Correct
+A team is deploying an AI assistant for employees. Which action best supports transparency?
+
+A. Add more training data
+
+Explanation
+Adding more training data can improve the accuracy and performance of the AI assistant, but it does not directly support transparency. Transparency is about providing clear information about how the AI system works, its capabilities, and limitations to the users.
+B. Enable private endpoint
+
+Explanation
+Enabling a private endpoint can enhance security and privacy by restricting access to the AI assistant, but it does not directly support transparency. Transparency involves openly communicating the capabilities and limitations of the AI system to the users.
+Your answer is correct
+C. Publish capabilities and limitations
+
+Explanation
+Publishing the capabilities and limitations of the AI assistant is essential for supporting transparency. By clearly communicating what the AI assistant can and cannot do, users can have a better understanding of its functionalities and make informed decisions about its usage.
+D. Increase token limit
+
+Explanation
+Increasing the token limit may improve the scalability and performance of the AI assistant, but it does not directly contribute to transparency. Transparency is about providing clear and understandable information about the AI system to the users, not just enhancing its technical capabilities.
+Overall explanation
+Transparency in Microsoft’s Responsible AI approach means AI systems should be understandable. A transparent solution helps people correctly understand what the system can do, what it cannot do well, and where human judgment is still needed.
+
+
+
+Microsoft’s transparency guidance also emphasizes documentation that explains how the technology works, the choices system owners can make, and the broader system context that includes users, affected people, and the deployment environment. Publishing capabilities and limitations is therefore the strongest transparency action in this scenario.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. Add more training data. This is plausible because improving data quality can improve model performance. However, better performance is not the same as transparency. The question asks how to help people understand the system, and publishing capabilities and limitations addresses that directly.
+
+
+
+• B. Enable private endpoint. This is a strong security control, so it is a believable distractor. But private endpoints address privacy and security concerns rather than user understanding of system behavior. Transparency is about clarity around capabilities, limitations, and intended use.
+
+
+
+• D. Increase token limit. This could affect how much content a generative system can process or produce. Even if that changes system behavior, it does not explain the behavior to users or affected people. Transparency requires communication and understanding, not just parameter changes.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 43
+Correct
+A team is designing a domain-specific Foundry assistant. Which TWO instructions are good additions to the system prompt? (Select TWO.)
+
+A. Answer every question, even if facts are missing
+
+Your selection is correct
+B. If the request is out of scope, say so
+
+C. Be brief and comprehensive with no priority
+
+Your selection is correct
+D. Use only the approved product glossary
+
+E. Change your rules based on the user’s mood
+
+Overall explanation
+Option B is strong because Microsoft recommends defining scope and making boundary behavior explicit, including what the assistant should do when a request is outside the intended scenario. Option D is also strong because system messages can include tool or data usage guidance, which helps constrain the assistant to approved sources or conventions.
+
+
+
+These instructions improve consistency and reduce the chance of unsupported or off-topic behavior. They are especially useful for domain-specific assistants, where clear boundaries and approved terminology matter more than general creativity.
+
+
+
+Why the other options are incorrect:
+
+• A. Telling the model to answer even when facts are missing is the opposite of a good fallback policy. Microsoft guidance recommends explicit behavior for uncertain cases, such as asking for clarification or indicating that the answer is not known. This option encourages hallucination rather than reliability.
+
+• C. “Be brief and comprehensive” can be a conflicting pair unless you clearly prioritize one requirement over the other. Microsoft lists conflicting instructions as a common prompt design pitfall because they force the model to guess which instruction matters more. Better prompts resolve that tension explicitly.
+
+• E. This instruction is vague, unstable, and hard to test. Good system prompts define clear, maintainable behavior rather than asking the model to invent shifting rules during runtime. It also weakens consistency across users and turns.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 44
+Correct
+You are preparing a lightweight Python client to call Azure Language in Foundry Tools. Which TWO items are required to create a TextAnalyticsClient? (Select TWO.)
+
+Your selection is correct
+A. Endpoint
+
+B. Index name
+
+Your selection is correct
+C. API key credential
+
+D. Voice name
+
+E. Image size
+
+Overall explanation
+The Python documentation shows that creating a TextAnalyticsClient requires the service endpoint and a credential. With key-based authentication, the credential is typically created with AzureKeyCredential(key), and then passed together with the endpoint when the client is initialized.
+
+
+
+This is a practical implementation detail for lightweight apps. Before the application can run text analysis tasks such as sentiment analysis, entity recognition, key phrase extraction, or language detection, it must first authenticate and connect to the Azure Language resource correctly.
+
+
+
+Why the other options are incorrect:
+
+
+
+• B. Index name. An index name is something you would expect in a search solution, which is why it sounds plausible. However, the TextAnalyticsClient is not created with an index name because it sends text directly to Azure Language for NLP analysis. The documented client initialization requires endpoint and credential, not search-index metadata.
+
+
+
+• D. Voice name. Voice names are associated with text-to-speech and other speech scenarios. This question is about building a text-analysis client with Azure Language, so audio voice configuration is unrelated. The lightweight text-analysis app does not need a speech voice to initialize the client.
+
+
+
+• E. Image size. This is a useful distractor because many AI services process images and require image-related settings. But Azure Language is focused on written text analysis, so image dimensions are not part of setting up a TextAnalyticsClient. The implementation step here is service authentication, not visual input configuration.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 45
+Correct
+Which TWO scenarios are examples of text analysis workloads? (Select TWO.)
+
+Your selection is correct
+A. Identify key phrases in support tickets
+
+B. Convert podcast audio into a transcript
+
+Your selection is correct
+C. Detect sentiment in product reviews
+
+D. Generate a photorealistic product image
+
+E. Extract invoice totals from scanned PDFs
+
+Overall explanation
+A and C are correct because both are classic text analysis tasks. Microsoft Learn lists key phrase extraction and sentiment analysis among the natural language processing capabilities available in Azure Language for understanding and analyzing text.
+
+
+
+The other scenarios belong to different workload families. Transcribing podcast audio is speech, generating a product image is generative AI, and extracting invoice totals from scanned PDFs is information extraction through document-processing capabilities.
+
+
+
+Why the other options are incorrect:
+
+• B. Converting podcast audio into a transcript is a speech recognition task, not a text analysis task. The system must first process spoken audio and convert it into text, which aligns with Speech to Text. Once a transcript exists, text analysis could be applied afterward, but that is not the primary workload named in the option.
+
+• D. Generating a photorealistic product image is a generative AI scenario. The requirement is to create new visual content instead of analyzing existing text. That places it in an image-generation workload, not a text-analysis workload.
+
+• E. Extracting invoice totals from scanned PDFs is an information extraction and document-processing scenario. The workload needs OCR plus document understanding to return business fields from forms or invoices. That is much closer to Document Intelligence or related extraction tooling than to text analysis.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 46
+Correct
+You are building a lightweight Python app that captions an image and reads text from it by using Azure Vision Image Analysis.
+Snippet
+
+from azure.ai.vision.imageanalysis.models import VisualFeatures
+ 
+image_url = "https://contoso.com/menu.jpg"
+ 
+result = client.________(
+    image_url=image_url,
+    visual_features=[VisualFeatures.CAPTION, VisualFeatures.READ]
+)
+Which code should replace the missing section?
+
+A. get_image
+
+Explanation
+The method get_image does not exist in the Azure Vision Image Analysis SDK. It is not a valid method for analyzing images and extracting visual features like captions and text.
+Your answer is correct
+B. analyze_from_url
+
+Explanation
+The correct method to analyze an image from a URL and extract visual features like captions and text in the Azure Vision Image Analysis SDK is analyze_from_url. This method is specifically designed for processing images from URLs and extracting the specified visual features.
+C. captions_from_url
+
+Explanation
+The method captions_from_url does not exist in the Azure Vision Image Analysis SDK. It is not a valid method for analyzing images from URLs and extracting visual features like captions and text.
+D. detect_visuals
+
+Explanation
+The method detect_visuals does not exist in the Azure Vision Image Analysis SDK. It is not a valid method for analyzing images and extracting visual features like captions and text.
+Overall explanation
+analyze_from_url is correct because Microsoft’s Python reference for ImageAnalysisClient documents analyze_from_url(image_url, visual_features, ...) as the method used for a single image analysis operation from a publicly accessible URL. The method is designed exactly for lightweight applications that analyze remote images without building a heavier ingestion pipeline.
+
+
+
+The snippet also correctly shows multiple visual features being requested together. Microsoft’s reference says you provide a list of visual features such as Caption and Read, which allows one call to return the specific image analysis outputs your app needs.
+
+
+
+Why the other options are incorrect:
+
+• A. get_image sounds like a utility method for retrieving image content, which makes it a believable distractor. But Microsoft’s Image Analysis client reference does not present it as the analysis method for remote URLs. The task is not to download the image manually; it is to invoke the vision analysis operation on the URL.
+
+• C. captions_from_url sounds plausible because the snippet includes captioning as one requested feature. Even so, Microsoft documents a single analysis method that takes the URL and a list of desired visual features rather than a caption-only method with that name. Since the same call can request OCR and captioning together, this option is not the correct API pattern.
+
+• D. detect_visuals looks believable because it sounds like a generic image-analysis action. However, it is not the method name Microsoft documents in the Python reference for URL-based analysis. The documented method for this scenario is analyze_from_url, so detect_visuals is an invented distractor.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 47
+Correct
+You are writing a lightweight Python application that will call Azure Language methods such as analyze_sentiment and recognize_entities. Which package is the most direct fit?
+
+A. azure-search-documents
+
+Explanation
+The 'azure-search-documents' package is primarily focused on enabling search capabilities within Azure services. It is not directly related to language methods such as sentiment analysis or entity recognition, making it an incorrect fit for calling Azure Language methods like analyze_sentiment and recognize_entities in a Python application.
+B. azure-ai-vision
+
+Explanation
+The 'azure-ai-vision' package is designed for vision-related AI tasks such as image recognition, object detection, and image analysis. It is not tailored for language processing tasks like sentiment analysis and entity recognition, making it an incorrect fit for calling Azure Language methods in a Python application.
+Your answer is correct
+C. azure-ai-textanalytics
+
+Explanation
+The 'azure-ai-textanalytics' package is specifically designed for text analytics tasks, including sentiment analysis, entity recognition, key phrase extraction, and language detection. It is the most direct fit for calling Azure Language methods like analyze_sentiment and recognize_entities in a lightweight Python application that focuses on language processing.
+D. azure-cognitiveservices-speech
+
+Explanation
+The 'azure-cognitiveservices-speech' package is intended for speech-related AI tasks such as speech-to-text conversion, speech recognition, and text-to-speech synthesis. It is not tailored for text analytics tasks like sentiment analysis and entity recognition, making it an incorrect fit for calling Azure Language methods in a Python application focused on language processing.
+Overall explanation
+Microsoft’s Python documentation for Azure Text Analytics shows that the direct package for these text-analysis operations is azure-ai-textanalytics. The same documentation also uses TextAnalyticsClient from that package for methods like analyze_sentiment, recognize_entities, extract_key_phrases, and detect_language.
+
+
+
+This makes azure-ai-textanalytics the best answer for a lightweight Python application that includes text analysis. It lines up directly with the AI-901 learning path objective to build a lightweight Python client that analyzes text by using Microsoft Foundry capabilities and Azure Language.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. azure-search-documents. This package is for Azure AI Search scenarios such as working with indexes and search documents. While search solutions can be enriched with AI capabilities, the package is not the direct client for calling Azure Language text-analysis methods like analyze_sentiment or recognize_entities. The question asks for the most direct package for text analysis itself.
+
+
+
+• B. azure-ai-vision. This package belongs to visual-analysis workloads, which makes it useful in image-focused apps. But the prompt is about written-text methods from Azure Language, not image or visual content processing. Using a vision package would not match the methods named in the question.
+
+
+
+• D. azure-cognitiveservices-speech. Speech SDKs support audio-based capabilities such as speech recognition and synthesis, so this is a realistic distractor in a Foundry exam context. However, it is not the package for Azure Language text-analysis methods. The app requirement is written-text analysis, not speech input or output.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 48
+Correct
+For each of the following statements, determine whether the statement is correct.
+
+
+
+Statement 1: The "detail" parameter is placed inside the "image_url" object in a vision chat request.
+
+
+
+Statement 2: "auto" is the default detail setting.
+
+
+
+Statement 3: "high" is the default detail setting.
+
+
+
+Select the correct combination.
+
+A. Yes / No / Yes
+
+Your answer is correct
+B. Yes / Yes / No
+
+C. No / Yes / Yes
+
+D. No / No / No
+
+Overall explanation
+Statement 1 is correct. Microsoft’s vision-enabled chat documentation shows the detail property being configured inside the image_url object, alongside the image URL itself. That placement is part of the request structure for image input.
+
+
+
+Statement 2 is also correct because Microsoft says auto is the default detail setting. Statement 3 is incorrect because high is not the default; it is an optional setting used when you want more detailed image interpretation. That makes the correct combination Yes / Yes / No.
+
+
+
+Why the other options are incorrect:
+
+• A. This option marks Statement 2 as No and Statement 3 as Yes, which reverses Microsoft’s documented defaults. That is a plausible confusion because high sounds like the premium or preferred setting. But Microsoft explicitly states that auto is the default and high is optional.
+
+• C. This option incorrectly says Statement 1 is No, even though Microsoft’s example places detail inside image_url. It also incorrectly marks Statement 3 as Yes. Because both the request structure and the default-setting logic are wrong here, the full combination cannot be correct.
+
+• D. This option marks all three statements as No, which does not match the documentation. Statement 1 and Statement 2 are both positively supported by Microsoft’s example and explanation. Only Statement 3 is false, so an all-No answer is clearly inconsistent with the documented behavior.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 49
+Correct
+Your lightweight app must return the main topics from a short ticket.
+
+Snippet
+
+tickets = ["Delivery was late but the driver was polite."]
+________
+for doc in result:
+    print(doc.key_phrases)
+Which code should replace the missing section?
+
+A. result = text_analytics_client.analyze_sentiment(tickets)
+
+Explanation
+The code provided in choice A is for analyzing the sentiment of the text in the tickets. It is not relevant to the task of extracting key phrases from the short ticket text.
+B. result = text_analytics_client.recognize_entities(tickets)
+
+Explanation
+The code provided in choice B is for recognizing entities in the text, such as people, organizations, and locations. It is not suitable for extracting key phrases from the short ticket text.
+Your answer is correct
+C. result = text_analytics_client.extract_key_phrases(tickets)
+
+Explanation
+The code provided in choice C is correct for extracting key phrases from the short ticket text. It will return the main topics or key phrases present in the text, which is the required functionality for the lightweight app.
+D. result = text_analytics_client.detect_language(tickets)
+
+Explanation
+The code provided in choice D is for detecting the language of the text in the tickets. It is not the appropriate function for extracting key phrases from the short ticket text.
+Overall explanation
+The Python client library provides an extract_key_phrases method for identifying the main talking points in text. Microsoft’s examples show that this method returns key phrases that the application can then print or process further, which matches the use of doc.key_phrases in the snippet.
+
+
+
+This is a classic lightweight text-analysis workflow: send raw text, get structured output, and handle the response in the app. The other methods analyze different aspects of the same text, but they do not return the key_phrases result expected by the code.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. result = text_analytics_client.analyze_sentiment(tickets). This is plausible because sentiment analysis is another common text-analysis task. However, sentiment analysis returns sentiment labels and confidence scores, not a key_phrases collection. The code that prints doc.key_phrases therefore would not match the intended result structure.
+
+
+
+• B. result = text_analytics_client.recognize_entities(tickets). Entity recognition is also a valid text-analysis method, so it makes a strong distractor. But it returns extracted entities and categories such as people, places, and organizations, not a list of key phrases. The snippet clearly expects the output of key phrase extraction.
+
+
+
+• D. result = text_analytics_client.detect_language(tickets). Language detection is useful when the application needs to know what language the input text is written in. However, it returns a detected language and confidence score, not topic phrases. That makes it incompatible with the doc.key_phrases access pattern shown in the snippet.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 50
+Incorrect
+Which THREE pairs are correctly matched? (Select THREE.)
+
+Your selection is correct
+A. Caption — generates a short description of an image
+
+B. People — extracts printed or handwritten text
+
+Your selection is correct
+C. Objects — returns detected physical objects and their location
+
+Your selection is incorrect
+D. SmartCrops — classifies audio sentiment
+
+E. Tags — translates captions into another language
+
+Correct selection
+F. Read (OCR) — extracts printed or handwritten text
+
+Overall explanation
+A, C, and F are correctly matched because they align with Microsoft’s documented vision features. Caption is used for describing image content, Objects is for detected physical objects and their location, and Read (OCR) is for extracting printed or handwritten text from an image.
+
+
+
+This question reflects a common skill needed in lightweight vision apps: choosing the right feature for the job. A small application often calls just one or two features, so accurate capability mapping is essential for getting the correct output without unnecessary complexity.
+
+
+
+Why the other options are incorrect:
+
+• B. People is not the OCR feature. It is related to detecting people in an image and returning their location, which makes it a plausible visual-analysis distractor. But Microsoft separates people detection from the Read feature, so it does not extract printed or handwritten text.
+
+• D. SmartCrops is about identifying crop regions for image framing, not about analyzing audio or sentiment. This option is intentionally wrong across modality boundaries, because audio sentiment is not a vision feature at all. A lightweight vision app would use SmartCrops for image composition, not speech or language sentiment tasks.
+
+• E. Tags labels aspects of image content, but it does not translate captions into another language. Translation belongs to a different workload family. The distractor is plausible because tags are still a valid image-analysis output, yet they are not a language translation feature.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 51
+Incorrect
+Refer to:
+
+https://docs.google.com/document/d/1S_PjKRQcRpgwu49cPnIPmwAszmGN6fKLqkFZb1clH6Q/edit?usp=sharing
+
+
+
+You need to satisfy E1, BR1, TR1, and C1.
+
+
+
+During pilot testing, Solstice records every model input in Application Insights. The records include customer names, addresses, account numbers, medical-device registrations, model latency, and predicted outage priority.
+
+
+
+The operations team needs the performance information but does not require the direct customer information.
+
+
+
+Which responsible AI practice should Solstice apply?
+
+A. Cohort fairness evaluation
+
+Your answer is incorrect
+B. Confidence threshold automation
+
+C. Public transparency note
+
+Correct answer
+D. Data minimisation
+
+Overall explanation
+Data minimisation requires an organisation to collect, process, and retain only the information necessary for the defined purpose. Solstice requires latency, errors, feature distributions, and model results for operational monitoring. It does not need customer names, addresses, account numbers, or detailed medical information in its telemetry.
+
+
+
+Solstice should remove unnecessary fields before telemetry is created and replace identifiers required for correlation with pseudonymous values. Access restrictions, encryption, retention controls, and auditing should supplement this design, but they do not remove the risk created by collecting unnecessary sensitive information. Privacy and security are core Microsoft responsible AI principles.
+
+
+
+Why the other options are incorrect:
+
+A. Cohort fairness evaluation compares model performance across relevant groups. It could help Solstice determine whether customers with similar outage conditions receive comparable priority recommendations. It does not address the unnecessary customer information stored in telemetry. A fair model can still create a privacy breach through excessive logging.
+
+B. Confidence threshold automation would automatically accept model recommendations above a defined score. It does not reduce the amount of customer data collected or retained. A higher confidence threshold also does not make sensitive telemetry safer. This control addresses decision automation rather than privacy.
+
+C. A transparency note explains a system’s intended purpose, capabilities, limitations, and appropriate use. It can help operators understand how the outage-priority model should be applied. Publishing documentation does not prevent direct identifiers and medical information from being written to logs. Transparency cannot replace data-protection controls.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 52
+Correct
+Refer to:
+
+https://docs.google.com/document/d/1S_PjKRQcRpgwu49cPnIPmwAszmGN6fKLqkFZb1clH6Q/edit?usp=sharing
+
+
+
+You need to satisfy E2, BR2, TR2, and C2.
+
+
+
+The MCP server already uses OAuth 2.0 and enforces each employee’s existing permissions. A control-room operator can read all active outages, while a customer-service employee can access only customer accounts assigned to that employee.
+
+
+
+When an employee invokes the MCP tool for the first time, the agent must request consent. Subsequent calls must execute by using that employee’s authorised identity.
+
+
+
+Which authentication method should you configure?
+
+Your answer is correct
+A. OAuth identity passthrough
+
+B. Project managed identity
+
+C. Agent identity
+
+D. API key connection
+
+Overall explanation
+OAuth identity passthrough preserves the identity and permissions of the individual user who interacts with the agent. On the first MCP tool invocation, Foundry can return a consent request that directs the employee through the OAuth authorisation process. After consent, the employee’s credentials are used only in the context of the agent communicating with the MCP server.
+
+
+
+This allows the MCP server to continue enforcing its existing user-level permissions. A customer-service employee therefore cannot gain the broader access assigned to a control-room operator merely because both employees use the same agent. Microsoft recommends OAuth identity passthrough when individual user context and permissions must persist.
+
+
+
+Why the other options are incorrect:
+
+B. A project managed identity is shared across the Foundry project. Every employee using the agent would cause MCP requests to execute under the same project identity. The downstream service would not receive the initiating employee’s identity. This would violate BR2 and C2.
+
+C. An agent identity gives the deployed agent its own Microsoft Entra identity. It is useful when every tool call should use one workload identity with assigned Azure permissions. It does not preserve the individual employee’s access context. All users would inherit the permissions assigned to the agent.
+
+D. An API key connection supplies the same shared credential whenever the MCP tool is invoked. It cannot represent which employee initiated the request or enforce that employee’s existing permissions. Project members might also be able to access a shared secret stored in a project connection. This directly conflicts with C2.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 53
+Incorrect
+Refer to:
+
+https://docs.google.com/document/d/1S_PjKRQcRpgwu49cPnIPmwAszmGN6fKLqkFZb1clH6Q/edit?usp=sharing
+
+
+
+You need to satisfy E3, BR3, TR3, and C3.
+
+
+
+A customer submits the following feedback:
+
+
+
+“The power returned earlier than expected, but the mobile-app notifications were confusing.”
+
+
+
+Solstice must identify positive sentiment associated with the restoration time and negative sentiment associated with the mobile-app notifications.
+
+
+
+Which Azure Language capability should you use?
+
+A. Key phrase extraction
+
+Your answer is incorrect
+B. Document sentiment analysis
+
+Correct answer
+C. Opinion mining
+
+D. Custom named entity recognition
+
+Overall explanation
+Opinion mining extends sentiment analysis by linking an expressed assessment to the specific target being discussed. For the example feedback, the service can associate the positive assessment with the restoration experience and the negative assessment with the mobile-app notifications.
+
+
+
+The output includes targets, assessments, sentiment labels, and confidence information. This is more granular than assigning one sentiment label to the complete message or to each sentence. Opinion mining can be enabled as part of a sentiment-analysis request without Solstice training a custom model.
+
+
+
+Why the other options are incorrect:
+
+A. Key phrase extraction identifies important concepts mentioned in a document. It might identify phrases such as “power,” “mobile-app notifications,” or “restoration.” It does not link those phrases to positive or negative assessments. Solstice would still need another capability to satisfy TR3.
+
+B. Document sentiment analysis returns positive, negative, neutral, or mixed sentiment labels for the document and its sentences. The example would probably produce mixed sentiment because it includes both positive and negative statements. It would not provide the required target-assessment relationships. The output would therefore be too broad for BR3.
+
+D. Custom named entity recognition extracts organisation-defined entities from text. Solstice could train it to recognise outage identifiers or infrastructure names. It does not inherently associate opinions with service aspects or return aspect-based sentiment. Training such a project would also add unnecessary work under C3.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 54
+Incorrect
+Refer to:
+
+https://docs.google.com/document/d/1S_PjKRQcRpgwu49cPnIPmwAszmGN6fKLqkFZb1clH6Q/edit?usp=sharing
+
+
+
+You need to satisfy E4, BR4, TR4, and C4.
+
+The application submits each drone photograph to the Image Analysis 4.0 endpoint.
+
+You must complete the request so the response contains a bounding box and confidence score for every detected person, together with structured OCR results for visible substation text.
+
+POST {endpoint}/computervision/imageanalysis:analyze
+    ?api-version=2024-02-01
+    &(MISSING CONFIG)
+Which configuration should replace (MISSING CONFIG)?
+
+Your answer is incorrect
+A. features=objects,read
+
+Correct answer
+B. features=people,read
+
+C. features=people,tags
+
+D. features=caption,read
+
+Overall explanation
+The people visual feature detects people in the submitted image and returns the bounding-box coordinates and confidence score for each detected person. The read visual feature performs OCR and returns visible printed or handwritten text as structured JSON.
+
+
+
+Image Analysis 4.0 permits several visual features to be requested in the same synchronous API operation. Supplying features=people,read therefore produces both required outputs without Solstice maintaining separate person-detection and OCR requests.
+
+
+
+Why the other options are incorrect:
+
+A. The objects feature detects supported general object categories and returns approximate locations. It is not the dedicated people-detection feature required by TR4. Although read would provide OCR, the response would not include the specified people result collection. This configuration does not precisely satisfy BR4.
+
+C. The people feature would correctly return bounding boxes for detected people. The tags feature returns descriptive keywords associated with the complete image. It does not extract the visible warning labels and equipment identifiers as structured text. This option satisfies only half of TR4.
+
+D. The caption feature generates a sentence describing the overall image. The read feature would return the required OCR results. A caption might mention that people are present, but it does not return a bounding box and confidence score for every person. This configuration therefore fails the localisation requirement.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 55
+Incorrect
+Refer to:
+
+https://docs.google.com/document/d/1S_PjKRQcRpgwu49cPnIPmwAszmGN6fKLqkFZb1clH6Q/edit?usp=sharing
+
+
+
+You need to satisfy E5, BR5, TR5, and C5.
+
+Solstice requires one reusable configuration that returns:
+
+A transcript with speaker identification and timing
+
+A call summary
+
+Overall sentiment
+
+Outage identifier
+
+Medical-equipment dependency
+
+Requested assistance
+
+Promised action
+
+The final four fields use Solstice-specific definitions.
+
+Which component should Solstice configure?
+
+Your answer is incorrect
+A. prebuilt-audioSearch
+
+B. prebuilt-callCenter
+
+C. Document-based custom analyzer
+
+Correct answer
+D. Audio-based custom analyzer
+
+Overall explanation
+An audio-based custom Content Understanding analyzer can inherit the foundational audio-processing behaviour from prebuilt-audio and add a user-defined field schema. Solstice can define fields for the outage identifier, medical-equipment dependency, requested assistance, and promised action while retaining transcript and timing information.
+
+
+
+Content Understanding analyzers combine content extraction, AI analysis, and structured field output in one reusable configuration. Audio processing supports transcription with speaker information, and custom analyzers can generate or extract domain-specific fields from the same recording. This avoids separate transcription, summarisation, sentiment, and utility-field pipelines.
+
+
+
+Why the other options are incorrect:
+
+A. prebuilt-audioSearch produces a conversation transcript and summary suitable for searching audio content. It does not contain Solstice’s custom field definitions for outage identifiers, assistance requests, and promised actions. Additional processing would be needed after the analyzer completes. This would violate TR5 and C5.
+
+B. prebuilt-callCenter provides useful call-centre outputs, including speaker-role detection, a summary, sentiment, and recognised people or organisations. It remains a strong starting point for generic call analytics. Its fixed output does not include Solstice’s complete utility-specific schema. A custom audio analyzer is required to define those fields explicitly.
+
+C. A document-based custom analyzer inherits document processing such as text, layout, tables, and document fields. It is not configured for audio transcription, speaker identification, or phrase timing. Converting the call into a document first would require a separate transcription pipeline. That design would directly conflict with C5.

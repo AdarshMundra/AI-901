@@ -1,0 +1,2824 @@
+Question 1
+Correct
+An AI app should continue to behave safely when users submit unexpected or adversarial prompts. This is a reliability and safety consideration because the system must resist ________.
+
+
+
+Which answer best completes the sentence?
+
+A. model cards
+
+Explanation
+Model cards are documentation that provide information about a machine learning model's performance and potential biases. While they are important for transparency and accountability, they do not directly address the issue of the system resisting unexpected or adversarial prompts.
+B. stakeholder mapping
+
+Explanation
+Stakeholder mapping involves identifying and analyzing the individuals or groups that have an interest in the AI system. While important for understanding the impact of the system on different stakeholders, it does not directly relate to the system's ability to resist unexpected or adversarial prompts.
+Your answer is correct
+C. harmful manipulation
+
+Explanation
+Harmful manipulation refers to the intentional or unintentional input that can cause the AI system to behave in unexpected or unsafe ways. Resisting harmful manipulation is crucial for ensuring the reliability and safety of the system when faced with unexpected or adversarial prompts.
+D. explainability
+
+Explanation
+Explainability is the ability to understand and interpret how an AI system makes decisions. While explainability is important for transparency and trust, it does not directly address the system's ability to resist unexpected or adversarial prompts.
+Overall explanation
+Microsoft describes reliability and safety as requiring AI systems to function as designed, respond safely to unexpected conditions, and resist harmful manipulation. That makes “harmful manipulation” the best completion because the sentence is specifically about adversarial or unexpected prompts.
+
+
+
+A reliable and safe solution is not judged only by normal-case behavior. It must also remain dependable when inputs are risky, malicious, or outside typical patterns, which is why resisting manipulation is a central part of this responsible AI principle.
+
+
+
+Why the other options are incorrect:
+
+• A. Model cards are useful documentation artifacts that describe a model’s capabilities and limitations. They help people understand a system better, but they are not what the system is resisting in the sentence. The blank asks for a threat or failure consideration, not a documentation resource.
+
+• B. Stakeholder mapping is part of harms modeling and risk identification. It helps teams understand who could be affected and how harm might occur, but it is not the direct object of resistance in this sentence. The sentence is about unsafe system behavior under manipulation, not about planning stakeholders.
+
+• D. Explainability belongs more naturally under transparency. It is about helping users and reviewers understand behavior and limitations, not about resisting malicious or adversarial interaction. That makes it a different responsible AI concern from the one being tested here.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 2
+Correct
+For each of the following statements, determine whether the statement is correct.
+
+
+
+Statement 1: Reliability and safety includes testing how an AI system behaves under unexpected conditions.
+
+
+
+Statement 2: Reliability and safety is mainly about making system decisions easy for users to understand.
+
+
+
+Statement 3: Monitoring false negatives in harmful-content detection can support reliability and safety.
+
+
+
+Select the correct combination.
+
+A. Yes / Yes / No
+
+Your answer is correct
+B. Yes / No / Yes
+
+C. No / Yes / Yes
+
+D. No / No / Yes
+
+Overall explanation
+Statement 1 is correct. Microsoft defines reliability and safety in terms of safe, consistent operation, including how a system behaves under unexpected conditions and whether it resists harmful manipulation. Testing those cases is therefore a direct reliability-and-safety activity.
+
+
+
+Statement 2 is incorrect because making behavior understandable is more closely tied to transparency, not reliability and safety. Statement 3 is correct because Microsoft’s Content Safety guidance specifically discusses false negatives and false positives, and reducing missed harmful content directly supports safer and more dependable operation. That makes the correct pattern Yes / No / Yes.
+
+
+
+Why the other options are incorrect:
+
+• A. This combination incorrectly marks Statement 2 as Yes and Statement 3 as No. That reverses the principle mapping, because understandability is a transparency concern rather than the core definition of reliability and safety. It also ignores Microsoft’s guidance that handling false negatives matters for responsible and reliable moderation outcomes.
+
+• C. This combination incorrectly marks Statement 1 as No. But Microsoft explicitly connects reliability and safety with safe behavior under unexpected conditions, so rejecting Statement 1 conflicts with the documented definition. It also keeps Statement 2 as Yes, which again confuses transparency with reliability and safety.
+
+• D. This combination gets Statement 3 right, but it wrongly marks Statement 1 as No. Testing unexpected conditions is one of the clearest examples of reliability and safety work. Because one of the three judgments is wrong, the full combination is still incorrect.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 3
+Correct
+A team asks what a generative AI model does after it has been trained on large volumes of text, images, audio, or code. Which description is most accurate?
+
+A. Stores one fixed response per prompt
+
+Explanation
+A generative AI model does not store one fixed response per prompt. Instead, it learns patterns and generates new content based on the data it has been trained on. This allows it to create diverse and unique outputs rather than providing the same response for every prompt.
+Your answer is correct
+B. Learns patterns and generates statistically similar new content
+
+Explanation
+The most accurate description of what a generative AI model does after being trained on large volumes of data is that it learns patterns and generates statistically similar new content. By understanding the underlying patterns in the training data, the model can generate new text, images, audio, or code that is similar in style and structure to the input data.
+C. Copies source documents word for word
+
+Explanation
+A generative AI model does not simply copy source documents word for word. Instead, it uses the patterns and information it has learned during training to create new content that is similar to the input data but not an exact replica. This ability to generate new and unique content is a key feature of generative AI models.
+D. Converts prompts into database tables
+
+Explanation
+A generative AI model does not convert prompts into database tables. Instead, it leverages the training data to learn patterns and generate new content that is statistically similar to the input data. This process involves understanding the relationships and structures within the data to create new outputs.
+Overall explanation
+Generative AI models are trained on large datasets and learn patterns from that data. After training, they use those learned patterns to produce new output that is statistically related to the examples they saw during training, rather than retrieving a single prewritten response.
+
+
+
+This is why generative AI can create new text, code, images, or audio from prompts. The model parses the input, identifies relevant patterns from training, and builds an output from those patterns instead of simply repeating stored documents.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. This is a tempting distractor because some simple automation systems do return fixed outputs for fixed inputs. Generative AI models do not work like lookup tables with one permanent answer per prompt. Microsoft’s documentation describes them as models that use learned patterns to generate new output. The same or similar prompts can even lead to different outputs depending on settings and context.
+
+
+
+• C. This sounds plausible because models are trained on existing content, but copying source material word for word is not the core description of how generative AI works. The important idea is pattern learning and generation of new content that is statistically similar to training data. While memorization can be a concern in some contexts, it is not the intended normal operating model. The exam target here is understanding generation, not verbatim storage.
+
+
+
+• D. This option is unrelated to how generative AI models function. Prompts are parsed into a representation the model can process, but the model is not primarily transforming them into database structures. The actual process is about using learned patterns to construct outputs such as text, images, audio, or code. This distractor is meant to test whether you can separate AI generation concepts from general data-processing ideas.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 4
+Correct
+A team is performing a responsible AI review. Which question is most directly aligned to reliability and safety?
+
+A. Could some users be excluded by the interface?
+
+Explanation
+This question is more related to inclusivity and accessibility rather than reliability and safety. It focuses on potential exclusion of certain user groups by the interface design.
+B. Is it clear who approved the solution?
+
+Explanation
+This question is more focused on accountability and transparency rather than reliability and safety. It aims to identify the responsible parties involved in the approval process of the solution.
+C. Can users understand how results are produced?
+
+Explanation
+This question is more aligned with transparency and interpretability rather than reliability and safety. It aims to assess whether users can understand the process behind the results generated by the system.
+Your answer is correct
+D. In what situations could the system fail or produce unreliable outcomes?
+
+Explanation
+This question directly addresses the key aspect of reliability and safety by questioning the potential failure points and unreliable outcomes of the system. It focuses on identifying situations where the system may not perform as expected or produce inaccurate results.
+Overall explanation
+Microsoft’s governance guidance explicitly frames reliability and safety around whether AI workloads could fail to operate safely or produce unreliable outcomes. That makes option D the most direct risk-assessment question for this principle.
+
+
+
+The other options each map to different responsible AI principles: inclusiveness, accountability, and transparency. This question tests whether you can distinguish the reliability-and-safety lens from nearby responsible AI concepts.
+
+
+
+Why the other options are incorrect:
+
+• A. Exclusion by interface design is more closely tied to inclusiveness. It asks whether different users can access and benefit from the system, which is important but not the same as reliable operation or safe failure handling. The question stem asks for the reliability-and-safety perspective, so this is not the best fit.
+
+• B. Knowing who approved or owns the solution fits accountability. Accountability focuses on who is responsible for decisions, governance, and outcomes across the AI lifecycle. That is related to good oversight, but it is not the most direct way to assess runtime safety or reliability risk.
+
+• C. Helping users understand how results are produced aligns with transparency. Transparency matters for trust and reviewability, but it does not directly ask whether the system will fail, misbehave, or produce unsafe results. So it is a neighboring principle rather than the one being tested.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 5
+Correct
+A developer wants to screen user text for harmful content before passing it to an AI feature.
+
+Snippet
+
+from azure.ai.contentsafety import ContentSafetyClient
+from azure.ai.contentsafety.models import AnalyzeTextOptions
+from azure.core.credentials import AzureKeyCredential
+ 
+client = ContentSafetyClient(endpoint, AzureKeyCredential(key))
+request = AnalyzeTextOptions(text=user_text)
+ 
+result = client.________(request)
+print(result)
+Which code should replace the missing section?
+
+Your answer is correct
+A. analyze_text
+
+Explanation
+The correct method to use in this scenario is analyze_text. This method is specifically designed to analyze text content for harmful or inappropriate content, making it the ideal choice for screening user text before passing it to an AI feature.
+B. summarize_text
+
+Explanation
+The summarize_text method is not suitable for screening user text for harmful content. This method is typically used to generate a summary or condensed version of a longer text, rather than analyzing it for potentially harmful content.
+C. extract_entities
+
+Explanation
+The extract_entities method is used to extract named entities from text, such as people, organizations, or locations. While this method can be useful for other text analysis tasks, it is not intended for screening user text for harmful content.
+D. transcribe_audio
+
+Explanation
+The transcribe_audio method is used for converting speech from audio files into written text. It is not relevant to the task of screening user text for harmful content, as it is focused on audio-to-text transcription rather than text analysis for harmful content.
+Overall explanation
+Azure AI Content Safety provides text and image APIs to detect harmful content in applications and services. In this snippet, the goal is moderation of user text before it flows into another AI feature, so analyze_text is the method that matches the safety objective.
+
+
+
+This supports reliability and safety because screening risky input can reduce harmful behavior and help the system operate within safer boundaries. Microsoft documentation also positions content safety controls as part of responsible deployment and moderation workflows.
+
+
+
+Why the other options are incorrect:
+
+• B. summarize_text sounds plausible because summarization is a common AI task, but it is not the moderation operation needed here. The snippet is not trying to generate a shorter version of text; it is trying to detect harmful material before use. That makes summarization unrelated to the reliability-and-safety requirement in the question.
+
+• C. extract_entities belongs to text analysis scenarios such as finding names, locations, or organizations. Entity extraction can be useful in AI solutions, but it does not assess whether content is violent, hateful, sexual, or self-harm related. So it does not address the moderation goal described in the snippet.
+
+• D. transcribe_audio is associated with speech workloads, not text moderation. The input in the snippet is already text, and the reliability-and-safety need is to detect harmful content before further processing. That makes a speech transcription method the wrong workload and the wrong safeguard.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 6
+Correct
+A web app must capture spoken microphone input and show live captions while the user is talking. Which Azure Speech capability should you add to the app?
+
+A. Text to speech
+
+Explanation
+Text to speech is not the correct Azure Speech capability for capturing spoken microphone input and showing live captions. Text to speech converts written text into spoken words, which is the opposite of what is required in this scenario.
+Your answer is correct
+B. Speech to text
+
+Explanation
+Speech to text is the correct Azure Speech capability for capturing spoken microphone input and converting it into written text. This capability allows the app to transcribe the user's spoken words into text for live captions while the user is talking.
+C. Foundry Agent Service
+
+Explanation
+Foundry Agent Service is not a relevant Azure Speech capability for capturing spoken microphone input and showing live captions. This service is not designed for real-time speech recognition and transcription.
+D. Azure AI Search
+
+Explanation
+Azure AI Search is not the appropriate Azure Speech capability for capturing spoken microphone input and displaying live captions. Azure AI Search is a service that provides advanced search capabilities for data stored in Azure, not real-time speech recognition and transcription.
+Overall explanation
+Speech to text is the best fit because Azure Speech in Foundry Tools includes real-time speech recognition for scenarios such as dictation, call center assistance, and live meeting captions. That is exactly the pattern used when a lightweight app needs to listen to microphone audio and immediately transcribe it into text.
+
+
+
+This question is testing service selection, not prompt design. In Azure Speech, speech to text handles spoken input and returns text, while other Azure AI services target different workloads such as speech synthesis, search, or agent orchestration.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. Text to speech does the opposite job. It converts written text into synthesized audio, which is useful when an app needs to speak back to the user. It does not transcribe microphone audio into captions. In this scenario, the missing capability is recognition, not synthesis.
+
+
+
+• C. Foundry Agent Service is about building and running agents, not about directly performing the core speech-recognition task in a lightweight captions app. You could combine agents with speech in a larger solution, but the speech recognition workload itself still comes from Azure Speech. The question asks for the immediate capability needed to turn speech into text. That makes this option adjacent, but not the best answer.
+
+
+
+• D. Azure AI Search is used for search and retrieval scenarios, not real-time microphone transcription. It can support grounding or retrieval in other AI solutions, but it does not replace Azure Speech for live captions. The required function here is speech recognition from audio input. Search is therefore outside the main workload being asked about.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 7
+Correct
+A moderation pipeline sometimes misses harmful content and occasionally blocks safe content. Which two actions best align with reliability and safety? (Select TWO.)
+
+Your selection is correct
+A. Adjust severity thresholds
+
+Your selection is correct
+B. Use blocklists where needed
+
+C. Change accent color
+
+D. Shorten the FAQ
+
+E. Replace the product icon
+
+Overall explanation
+Microsoft’s Content Safety guidance explains that teams should address both false positives and false negatives. It specifically recommends adjusting severity settings and, where appropriate, using blocklists to better align moderation behavior with the intended policy and use case.
+
+
+
+These actions directly improve the dependability and safety of a moderation workflow by reducing missed harmful content and reducing unnecessary blocking. The other options are presentation changes that do not improve safety performance or moderation quality.
+
+
+
+Why the other options are incorrect:
+
+• C. Accent color changes are purely visual. They do not change how the moderation system classifies risk or how reliably it handles harmful content. That makes this option irrelevant to the operational issue described in the question.
+
+• D. Shortening the FAQ may improve readability, but it does not reduce false positives or false negatives in the moderation pipeline. The scenario is about runtime content-classification quality, not about documentation length. So this is not a reliability-and-safety control.
+
+• E. Replacing the product icon is a branding decision. It has no effect on severity settings, blocklists, moderation quality, or safe system behavior. Because the problem is about missed and overblocked content, this choice does not address the real risk.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 8
+Correct
+You are building a Python app that listens to the default microphone and returns one spoken utterance as text.
+
+Snippet
+
+import azure.cognitiveservices.speech as speechsdk
+ 
+audio_config = speechsdk.audio.AudioConfig(use_default_microphone=True)
+speech_recognizer = speechsdk.SpeechRecognizer(
+    speech_config=speech_config,
+    audio_config=audio_config
+)
+ 
+# Missing line
+print(result.text)
+Which code should replace the missing section?
+
+A. result = speech_recognizer.speak_text_async(text).get()
+
+Explanation
+This choice is incorrect because the method `speak_text_async()` is used for text-to-speech synthesis, not for speech recognition. It is not applicable for converting spoken utterances to text.
+Your answer is correct
+B. result = speech_recognizer.recognize_once_async().get()
+
+Explanation
+This choice is correct because the method `recognize_once_async()` is used for performing a single speech recognition operation. It listens to the microphone input, recognizes the spoken utterance, and returns the text result. This method is suitable for the scenario described in the question.
+C. result = speechsdk.SpeechSynthesizer(speech_config=speech_config).get()
+
+Explanation
+This choice is incorrect because the `SpeechSynthesizer` class is used for text-to-speech synthesis, not for speech recognition. It is not applicable for converting spoken utterances to text in the scenario where the app needs to listen to the microphone input and return the spoken utterance as text.
+D. result = speech_recognizer.speak_ssml_async(ssml).get()
+
+Explanation
+This choice is incorrect because the method `speak_ssml_async()` is used for processing Speech Synthesis Markup Language (SSML) input for text-to-speech synthesis, not for speech recognition. It is not suitable for converting spoken utterances to text in the scenario described in the question.
+Overall explanation
+Microsoft’s Python quickstart for speech recognition shows the recognizer calling recognize_once_async().get() to capture one utterance and return the recognition result. That matches the scenario here because the app is listening to the microphone and needs a speech-to-text result.
+
+
+
+The other methods shown in the options are synthesis-related or structurally incorrect for this recognizer object. In other words, they would try to generate audio instead of recognizing spoken input, so they do not align with speech recognition.
+
+
+
+Why the other options are incorrect:
+
+• A. speak_text_async is a text-to-speech method, so it belongs to synthesis rather than recognition. It takes text input and generates audio output. This question needs the app to listen to audio and return text, so the direction is wrong.
+
+• C. SpeechSynthesizer is the class used for text-to-speech output, not for recognizing microphone input. Even beyond that, the option does not follow the quickstart pattern for returning a recognition result from a recognizer. It solves the wrong workload and uses the wrong object type.
+
+• D. speak_ssml_async is also a synthesis method, specifically for synthesizing SSML input into speech. SSML is used to control characteristics of generated audio, not to convert incoming microphone speech into text. That makes the option plausible-looking Python, but still the wrong capability.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 9
+Correct
+A training app must read lesson text aloud to learners.
+
+
+
+Which capability should the app use?
+
+A. OCR
+
+Explanation
+OCR (Optical Character Recognition) is used to convert images or scanned documents into editable text. It is not the appropriate capability for reading lesson text aloud to learners.
+B. Speech to Text
+
+Explanation
+Speech to Text is used to convert spoken language into written text. While this capability is useful for transcribing spoken words, it is not suitable for reading lesson text aloud to learners.
+C. Speech Translation
+
+Explanation
+Speech Translation is used to translate spoken language from one language to another. This capability is not necessary for reading lesson text aloud to learners.
+Your answer is correct
+D. Text to Speech
+
+Explanation
+Text to Speech is the correct capability for the training app to use in order to convert written text into spoken words. This capability allows the app to read lesson text aloud to learners, making it the most suitable choice for the given scenario.
+Overall explanation
+Speech synthesis means generating audio from text. In Azure Speech, text to speech is the feature designed for this purpose, and Microsoft describes it as converting text into human-like synthesized speech.
+
+
+
+That makes text to speech the right choice for narrated lessons, spoken prompts, and accessibility experiences. The other options either analyze written text, translate speech, or transcribe spoken input, so they do not directly satisfy the requirement to read text aloud.
+
+
+
+Why the other options are incorrect:
+
+• A. OCR is used to detect printed or handwritten text in an image or document. It helps extract characters from visual content, but it does not generate audio output. Even if OCR produced text first, a separate synthesis step would still be needed to speak it.
+
+• B. Speech to Text performs recognition, which means it listens to audio and returns text. That is the opposite direction from the requirement in this question. The app already has text and needs spoken output.
+
+• C. Speech Translation focuses on recognizing speech and translating it into another language, either as text or speech. It starts from spoken input, not written lesson text. Since no translation requirement is stated, it would add the wrong capability.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 10
+Correct
+A team wants to alert operators when a safety score drops below the accepted threshold.
+
+Snippet
+
+safety_score = result["safety_score"]
+ 
+if safety_score < 0.90:
+    ________
+else:
+    print("Safety check passed")
+Which code should replace the missing section?
+
+A. user_prompt = "hello"
+
+Explanation
+Choice A does not provide any functionality related to alerting operators when a safety score drops below the accepted threshold. It assigns a string value to the variable `user_prompt`, which is not relevant to the scenario described in the question.
+B. print(model_name.upper())
+
+Explanation
+Choice B does not address the requirement of alerting operators when a safety score drops below the accepted threshold. It simply prints the uppercase version of the `model_name` variable, which is not related to the safety score evaluation in the code snippet.
+Your answer is correct
+C. send_alert("Safety threshold breached")
+
+Explanation
+Choice C is the correct option as it calls the function `send_alert("Safety threshold breached")`, which is specifically designed to alert operators when the safety score drops below the accepted threshold (0.90). This choice aligns with the team's requirement to send an alert in such a scenario.
+D. endpoint = None
+
+Explanation
+Choice D assigns a `None` value to the `endpoint` variable, which is unrelated to the task of alerting operators when a safety score falls below the accepted threshold. It does not provide any mechanism for sending alerts based on the safety score evaluation.
+Overall explanation
+Monitoring and alerting are important parts of operating AI systems safely and reliably. Microsoft’s Foundry observability guidance describes monitoring quality and safety metrics, along with alerting when outputs fail thresholds or produce harmful content, so sending an alert is the best completion.
+
+
+
+This is a reliability-and-safety action because it supports rapid response when the system falls below acceptable safety expectations. A threshold without an operational follow-up is less useful than a threshold tied to monitoring and alerting.
+
+
+
+Why the other options are incorrect:
+
+• A. Assigning a greeting to user_prompt does not respond to the detected safety issue. It neither escalates the event nor helps operators investigate degraded safety performance. So it does not support the monitoring intent of the snippet.
+
+• B. Printing an uppercased model name might produce output, but it does not trigger the operational response needed when a safety threshold is breached. The question is about monitoring and action, not string formatting. This makes the option technically possible code but functionally wrong.
+
+• D. Setting the endpoint to None changes a variable but does not communicate the problem to anyone or create a useful response workflow. It could even introduce a new failure without helping safety operations. The safer choice is to alert operators so they can investigate and act.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 11
+Correct
+A team is building an AI solution that summarizes medical notes for clinicians. Which consideration is most important for reliability and safety?
+
+Your answer is correct
+A. Test high-risk and unexpected scenarios before deployment
+
+Explanation
+Testing high-risk and unexpected scenarios before deployment is crucial for ensuring the reliability and safety of the AI solution. By identifying and addressing potential issues in these scenarios, the team can mitigate risks and prevent errors that could impact clinicians' decision-making based on the summarized medical notes.
+B. Use a brighter landing page theme
+
+Explanation
+Using a brighter landing page theme is not relevant to the reliability and safety of the AI solution that summarizes medical notes for clinicians. The visual design of the landing page does not directly impact the functionality or accuracy of the AI solution.
+C. Add more marketing copy
+
+Explanation
+Adding more marketing copy is not a critical consideration for the reliability and safety of the AI solution. While marketing copy may be important for promoting the solution to users, it does not directly impact the performance or trustworthiness of the AI algorithm in summarizing medical notes.
+D. Rename the project workspace
+
+Explanation
+Renaming the project workspace does not have a direct impact on the reliability and safety of the AI solution. The name of the workspace is a minor detail that does not affect the functionality or accuracy of the AI algorithm in summarizing medical notes for clinicians.
+Overall explanation
+In a higher-risk scenario such as medical summarization, reliability and safety requires careful testing of how the system behaves in edge cases, unexpected conditions, and situations where inaccurate output could cause harm. Microsoft’s responsible AI guidance emphasizes safe, consistent operation and harm identification before deployment.
+
+
+
+The medical context raises the consequence of failure, so predeployment testing and risk analysis matter even more. A safe AI system is not just accurate in normal conditions; it must also be reviewed for limitations, misuse paths, and harmful failure modes in its intended context.
+
+
+
+Why the other options are incorrect:
+
+• B. A brighter landing page theme may affect visual preference, but it does not improve safe summarization behavior. It will not help the team discover inaccurate outputs, unexpected failures, or unsafe edge cases. So it has no meaningful reliability-and-safety value in this scenario.
+
+• C. Marketing copy can help product communication, but it does not reduce the risk of harmful clinical summaries or unsafe system behavior. The question is about operational trustworthiness in a sensitive use case, not about promotion. That makes this option nonresponsive to the actual risk.
+
+• D. Renaming the project workspace is an administrative change. It does nothing to assess whether the model fails safely, behaves reliably, or introduces harm in a medical workflow. Because the stakes are clinical, testing and risk assessment are far more important than naming changes.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 12
+Correct
+During text generation, a generative AI model usually predicts one ________ at a time based on the prompt and the text already generated.
+
+
+
+Which answer best completes the sentence?
+
+A. table
+
+Explanation
+A table is not typically used in the context of text generation by a generative AI model. Tables are more commonly associated with structured data representation rather than text prediction.
+B. image layer
+
+Explanation
+An image layer is not relevant to text generation by a generative AI model. Image layers are used in computer vision tasks to process and analyze visual data, not for predicting text.
+Your answer is correct
+C. token
+
+Explanation
+A token is the correct answer. In text generation, a generative AI model predicts one token at a time based on the prompt and the text already generated. Tokens represent individual units of text, such as words or characters, and are essential for generating coherent and meaningful text.
+D. schema
+
+Explanation
+A schema is not typically involved in the process of text generation by a generative AI model. Schemas are more commonly used in database design and data organization, not in predicting or generating text.
+Overall explanation
+Microsoft documentation explains that GPT-style models perform next-token prediction during generation. Input text is converted into tokens, and the model generates its response iteratively, one token at a time, based on the prompt and the previously generated sequence.
+
+
+
+This token-by-token process is a core reason why prompt wording matters. Each generated token influences what is likely to come next, which is why small changes in instructions, examples, or context can change the final response.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. A table is a structured data object, not the unit a language model normally predicts during text generation. A model might generate text that describes a table, but the sequential generation process is not based on predicting full tables one step at a time. The exam objective is to recognize token prediction as the relevant model behavior. This distractor confuses output format with generation mechanics.
+
+
+
+• B. Image layers can matter in image-generation systems, but this question is about text generation in generative language models. Microsoft’s GPT prompt guidance describes language generation as continuation of prior text, and Azure OpenAI documentation describes generation as token-based and sequential. An image layer is therefore the wrong abstraction here. It belongs to a different modality discussion.
+
+
+
+• D. A schema is a structure or specification, not the basic unit that a text model predicts during completion. Schemas can be used to constrain or format output in some workflows, but they are not the step-by-step generation unit. The model still produces text through token prediction underneath those higher-level controls. That makes this option conceptually adjacent but incorrect.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 13
+Correct
+For each of the following statements, determine whether the statement is correct.
+
+
+
+Statement 1: recognize_once_async is intended for a single utterance.
+
+Statement 2: start_continuous_recognition_async is the better choice for long-running multi-utterance input.
+
+Statement 3: Voice Live API combines speech recognition, generative AI, and text-to-speech in one interface.
+
+
+
+Select the correct combination.
+
+A. Yes / No / Yes
+
+B. No / Yes / Yes
+
+C. Yes / Yes / No
+
+Your answer is correct
+D. Yes / Yes / Yes
+
+Overall explanation
+Statement 1 is correct. The SpeechRecognizer Python API says that recognize_once_async performs asynchronous recognition for a single utterance. That is why it is suitable for a short command or one brief spoken request rather than an ongoing session.
+
+
+
+Statements 2 and 3 are also correct. The same API guidance says long-running multi-utterance recognition should use start_continuous_recognition_async, and the Voice Live API overview says it integrates speech recognition, generative AI, and text-to-speech into a single interface for voice-agent experiences. That makes the correct combination Yes / Yes / Yes.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. This option incorrectly marks Statement 2 as No. Microsoft’s SpeechRecognizer documentation explicitly points developers to continuous recognition for long-running multi-utterance scenarios. So if Statement 1 is Yes, Statement 2 must also be Yes here. The option fails because it recognizes the single-utterance method but rejects the documented multi-utterance alternative.
+
+
+
+• B. This option incorrectly marks Statement 1 as No. That directly conflicts with the API description of recognize_once_async as a single-utterance method. Statements 2 and 3 are correct, but missing Statement 1 breaks the full combination. AI-901 often uses this kind of almost-correct pattern to test whether you know both sides of the recognition distinction.
+
+
+
+• C. This option incorrectly marks Statement 3 as No. The Voice Live API overview explicitly says it integrates speech recognition, generative AI, and text-to-speech in one interface. That is one of its defining characteristics. So even though Statements 1 and 2 are right, denying Statement 3 makes the overall combination incorrect.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 14
+Correct
+Which THREE pairs are correctly matched? (Select THREE.)
+
+Your selection is correct
+A. Embedding — numeric representation of semantic meaning
+
+B. Base model — model already customized for one business task
+
+Your selection is correct
+C. Fine-tuning — adapting model weights with task-specific examples
+
+D. Hallucination — guaranteed grounding in enterprise data
+
+Your selection is correct
+E. Prompt — input instructions provided to the model
+
+F. Completion token — extracted field from a form
+
+Overall explanation
+Embeddings are numeric representations that capture semantic meaning, and Microsoft documentation describes them as dense vectors whose relative distance reflects semantic similarity. A prompt is the input or instruction given to a model, and fine-tuning is the process of adapting a base model to a task by training on additional examples.
+
+
+
+These three pairs describe core components in how generative AI systems operate. The model receives a prompt, uses its trained parameters and learned patterns to generate output, and in some solutions also uses embeddings to represent meaning for tasks such as similarity comparison or retrieval. Fine-tuning then goes further by adjusting the model to perform better on a targeted task or style.
+
+
+
+Why the other options are incorrect:
+
+
+
+• B. A base model is specifically described by Microsoft as a model that has not been customized or fine-tuned for a specific use case. That is the opposite of what this option claims. The distractor is plausible because learners often assume “base” means “standard version for a business solution,” but in model terminology it means the untailored starting point. Understanding this distinction is important when comparing prompting with fine-tuning.
+
+
+
+• D. Hallucination refers to inaccurate or unsupported content generated by an LLM, not guaranteed grounding. Microsoft’s guidance explicitly warns that LLMs can generate misleading information and that grounding or validation mechanisms may be needed. This option reverses the meaning of hallucination, which makes it a strong but incorrect distractor. In practice, grounding is used to reduce hallucinations, not define them.
+
+
+
+• F. A completion token is part of generated model output, not a document field extracted from a form. Extracting fields from forms belongs to information extraction workloads, not token accounting. Microsoft documentation on token usage distinguishes prompt tokens and completion tokens as pieces of input and generated output in model requests. This distractor mixes document analysis terminology with generative model mechanics.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 15
+Correct
+For each of the following statements, determine whether the statement is correct.
+
+
+
+Statement 1: Generative AI models are trained on large datasets to learn patterns.
+
+Statement 2: A base model is already customized for a specific use case.
+
+Statement 3: Embeddings can be used to represent semantic similarity between inputs.
+
+
+
+Select the correct combination.
+
+A. Yes / Yes / No
+
+Your answer is correct
+B. Yes / No / Yes
+
+C. No / Yes / Yes
+
+D. No / No / Yes
+
+Overall explanation
+Statement 1 is correct. Microsoft Learn explains that generative AI is built on models trained on large sets of content such as text, images, audio, and code, and that the models use patterns identified in training data to produce new content.
+
+
+
+Statement 2 is incorrect because a base model is not yet customized for a specific use case. Statement 3 is correct because embeddings are numeric representations of semantic meaning, and similarity in embedding space correlates with semantic similarity between inputs. That makes the correct pattern Yes / No / Yes.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. This combination incorrectly marks Statement 2 as Yes and Statement 3 as No. Microsoft documentation defines a base model as one that has not been customized or fine-tuned, so Statement 2 cannot be true. It also defines embeddings as semantic representations, so denying Statement 3 would ignore a core concept. This option is plausible because both ideas are commonly mixed up by beginners.
+
+
+
+• C. This combination incorrectly marks Statement 1 as No and Statement 2 as Yes. Statement 1 is directly supported by Microsoft Learn’s description of training on large datasets to learn patterns. Statement 2 again reverses the meaning of a base model. The option is wrong on two separate fundamentals, which makes it a strong elimination candidate once you know the terminology.
+
+
+
+• D. This option gets Statement 2 correct but wrongly marks Statements 1 and 3 as No. That would contradict Microsoft’s explanations of both training-based pattern learning and embeddings as semantic vectors. A learner might choose this if they recognize the base-model concept but are weak on embeddings or core generation mechanics. AI-901 often tests exactly this kind of partial understanding.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 16
+Correct
+You are creating a Content Understanding custom analyzer in Microsoft Foundry for chart images.
+
+The analyzer must extract the chart title and classify the chart type as bar, line, or pie.
+
+Snippet
+
+{
+  "baseAnalyzerId": "prebuilt-image",
+  "fields": {
+    "Title": {
+      "type": "string"
+    },
+    "ChartType": {
+      "type": "string",
+      "method": "classify",
+      "enum": ["bar", "line", "pie"]
+    }
+  }
+}
+Which TWO statements correctly describe the schema? (Select TWO.)
+
+Your selection is correct
+A. Title returns a string value
+
+B. ChartType uses OCR
+
+Your selection is correct
+C. ChartType uses classify
+
+D. baseAnalyzerId uses prebuilt-audio
+
+E. Title uses enum values
+
+Overall explanation
+The Title field is configured with "type": "string", so it is intended to return a text value from the chart image. In this scenario, that text value is the chart title.
+
+
+
+The ChartType field is also a string, but it uses "method": "classify" with an "enum" list. This means the analyzer should select the chart type from the allowed values of bar, line, or pie instead of generating unrestricted free-form output.
+
+
+
+Why the other options are incorrect:
+
+
+
+• B. ChartType does not use OCR in this schema. OCR is commonly associated with reading printed or handwritten text from images, so it is a plausible distractor. However, the schema specifically uses "method": "classify" for ChartType. The chart type is being classified into a fixed category, not extracted as raw text.
+
+
+
+• D. The analyzer does not use prebuilt-audio. That would be a plausible choice for audio-based extraction scenarios, such as speech or recorded media. This scenario is about chart images, so the base analyzer is prebuilt-image. Using an audio analyzer would not match the modality of the input.
+
+
+
+• E. The Title field does not use enum values. Enum values are used when the output should be restricted to a fixed set of allowed answers. A chart title can vary widely between images, so it is better represented as a string field. In this schema, the enum list belongs to ChartType, not Title.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 17
+Correct
+You are building a lightweight app that listens in English and returns translated text in French. Which code should replace the missing section?
+
+Snippet
+
+translation_config = speechsdk.translation.SpeechTranslationConfig(
+    subscription=speech_key,
+    region=service_region
+)
+ 
+translation_config.speech_recognition_language = "en-US"
+translation_config._______("fr")
+Which code should replace the missing section?
+
+A. speak_text_async
+
+Explanation
+The method "speak_text_async" is not related to setting the target language for translation. It is used for converting text to speech asynchronously, not for specifying the target language for translation.
+B. recognize_once_async
+
+Explanation
+The method "recognize_once_async" is used for recognizing speech input once, not for adding a target language for translation. It is not the correct method for setting the target language in the translation configuration.
+C. remove_target_language
+
+Explanation
+The method "remove_target_language" does not exist in the context of setting the target language for translation. It is not a valid method to add a target language for translation in the given scenario.
+Your answer is correct
+D. add_target_language
+
+Explanation
+The method "add_target_language" is the correct choice for specifying the target language for translation in the given scenario. This method allows you to add a target language to the translation configuration, enabling the app to translate the input speech from English to French.
+Overall explanation
+add_target_language is correct because the SpeechTranslationConfig API defines it as the method used to add a language to the list of translation targets. The speech-translation how-to also shows Python examples that call translation_config.add_target_language(...) before creating the translation recognizer.
+
+
+
+This is a practical implementation detail for Azure Speech in lightweight apps. The app first sets the speech recognition language for the incoming audio, then adds one or more output translation languages, and then creates the recognizer to run the translation workflow.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. speak_text_async belongs to speech synthesis, not to speech translation configuration. It converts text into audio and is called on a speech synthesizer, not on SpeechTranslationConfig. The current snippet is still in the setup phase for translation targets. So the object type alone rules this option out.
+
+
+
+• B. recognize_once_async is a recognizer method, not a configuration method. It is used after the recognizer has been created and the app is ready to process a single utterance. In this snippet, the developer is still configuring the translation pipeline. That makes this option a timing and object mismatch.
+
+
+
+• C. remove_target_language does exist on the configuration class, but it does the opposite of what the scenario needs. The app is adding French as a new translation target, not deleting an existing one. The question is testing whether you recognize the correct direction of the configuration call. Using removal here would break the intended translation output.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 18
+Incorrect
+After you retrieve the OpenAI-compatible client, a basic Responses API call sends the user prompt in the ________ parameter.
+
+
+
+Which answer best completes the sentence?
+
+Correct answer
+A. input
+
+Explanation
+The correct parameter to send the user prompt in a basic Responses API call is the "input" parameter. This parameter is where the user prompt is provided to the OpenAI-compatible client for processing and generating a response.
+B. prompt
+
+Explanation
+The "prompt" parameter is not the correct parameter to send the user prompt in a basic Responses API call. The correct parameter for this purpose is the "input" parameter, where the user prompt should be provided for processing by the OpenAI-compatible client.
+C. message
+
+Explanation
+The "message" parameter is not the correct parameter to send the user prompt in a basic Responses API call. The user prompt should be provided in the "input" parameter for processing by the OpenAI-compatible client, not the "message" parameter.
+Your answer is incorrect
+D. content
+
+Explanation
+The "content" parameter is not the correct parameter to send the user prompt in a basic Responses API call. The user prompt should be provided in the "input" parameter for processing by the OpenAI-compatible client, not the "content" parameter.
+Overall explanation
+Microsoft’s Responses API examples show responses.create(model=..., input="...") for simple text requests. The Foundry quickstart uses the same parameter name in its example call, so input is the correct completion.
+
+
+
+This is important in a lightweight client because the Responses API uses a specific request shape. Using the documented input field matches Microsoft’s examples and keeps the client aligned with the modern Responses API pattern.
+
+
+
+Why the other options are incorrect:
+
+• B. prompt is a plausible choice because many older AI examples use that word informally, but Microsoft’s current Responses API examples use input instead. In this context, using prompt would not match the documented method signature shown in the Foundry materials. This is a common naming confusion, not the correct field.
+
+• C. message sounds reasonable because chat applications are message-based, but the basic Responses API call in the cited docs uses input as the top-level text field. The term message belongs to a different request shape than the one being tested here. So it does not fit this specific call pattern.
+
+• D. content appears inside message objects in chat-style interactions, but it is not the top-level parameter shown in Microsoft’s simple Responses API examples. This option mixes an inner field used in some message schemas with the documented field used in responses.create. That is why it is plausible but wrong here.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 19
+Correct
+Which TWO statements are true about how generative AI models work? (Select TWO.)
+
+Your selection is correct
+A. Prompts influence the model’s generated output
+
+B. The model always returns the exact same answer for the same request in every context
+
+Your selection is correct
+C. Fine-tuning can adapt model weights to a task
+
+D. The model automatically knows proprietary internal company data
+
+E. Embeddings are rows in a relational database
+
+Overall explanation
+Prompts matter because generative AI models use the provided input text and context to guide generation. Microsoft’s prompt engineering guidance explains that prompts are how users interact with GPT models and that the prompt influences how the model continues or completes the text.
+
+
+
+Fine-tuning is also a correct statement because Microsoft documentation explains that it adapts model weights using task-specific data and can improve performance for a given use case. By contrast, LLMs do not automatically know proprietary internal data unless you integrate that data into the solution, and embeddings are vector representations of meaning rather than database rows.
+
+
+
+Why the other options are incorrect:
+
+
+
+• B. This is too absolute. Generative models are not described as producing one unchanging output for every identical request in every possible context. Microsoft guidance focuses on probabilistic continuation and prompt-sensitive generation, which means outputs can vary based on settings, context, and system instructions. The word “always” is what makes this option fail.
+
+
+
+• D. Microsoft explicitly notes that LLMs do not know your internal or proprietary data unless you integrate it. This is an important practical limitation of base model behavior. The distractor sounds attractive because many people confuse a powerful model with a model that already has access to their organization’s data. In AI-901 terms, model capability and enterprise grounding are not the same thing.
+
+
+
+• E. Embeddings are numeric vector representations of semantic meaning, not table rows in a relational database. They can be stored in systems that support vector operations, but that storage choice is separate from what an embedding actually is. This option tries to trap learners who know embeddings are “data” but not what kind of data. The key idea is semantic vectors, not relational records.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 20
+Incorrect
+A model that has not been customized or fine-tuned for a specific use case is called a ________.
+
+
+
+Which answer best completes the sentence?
+
+Your answer is incorrect
+A. grounded response
+
+Explanation
+A grounded response refers to a response generated by a conversational agent that is based on the context of the conversation and the information provided by the user. It is not related to a model that has not been customized or fine-tuned for a specific use case.
+B. agent session
+
+Explanation
+An agent session typically refers to a specific interaction or session between a user and an AI agent or chatbot. It is not related to a model that has not been customized or fine-tuned for a specific use case.
+Correct answer
+C. base model
+
+Explanation
+A base model is a pre-trained model that has not been customized or fine-tuned for a specific use case. It serves as the starting point for further customization and fine-tuning based on the specific requirements of a project or application.
+D. vector store
+
+Explanation
+A vector store typically refers to a data structure used to store and retrieve vector representations of data points. It is not related to a model that has not been customized or fine-tuned for a specific use case.
+Overall explanation
+Microsoft documentation defines a base model as a model that has not been customized or fine-tuned for a specific use case. This is the starting point before task-specific adaptation such as fine-tuning is applied.
+
+
+
+Understanding the term matters because many AI solution choices depend on whether a base model is already sufficient or whether you need retrieval, better prompting, or fine-tuning. AI-901 often tests the distinction between using a general model as-is and customizing it for stronger task-specific performance.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. A grounded response is an output supported by provided data or retrieved content, not a type of model. Grounding is about the quality and support of a response, especially when trying to reduce hallucinations. It does not describe whether the underlying model has been customized. The distractor blends response quality terminology with model-type terminology.
+
+
+
+• B. An agent session refers to an interaction or execution context in an agent-based solution, not an untuned model type. Even if an agent uses a base model underneath, the session itself is not the model. This option is plausible because AI learners often mix application constructs with model constructs. The question is specifically about model status before customization.
+
+
+
+• D. A vector store is a storage or retrieval component for embeddings, not a model definition. It can hold embeddings generated from data, but it is not the untailored foundation model itself. This distractor works because generative AI solutions often use both models and vector stores together. Still, they are different layers of the system.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 21
+Correct
+You want to create semantic vectors for text so your application can compare meaning between phrases.
+
+Snippet
+
+from azure.ai.inference import EmbeddingsClient
+from azure.core.credentials import AzureKeyCredential
+ 
+client = EmbeddingsClient(endpoint=endpoint, credential=AzureKeyCredential(key))
+ 
+response = client._______(
+    input=["invoice number", "bill identifier", "customer address"]
+)
+ 
+print(len(response.data[0].embedding))
+Which code should replace the missing section?
+
+A. complete
+
+Explanation
+The method "complete" is not a valid method in the context of creating semantic vectors for text using Azure AI services. It does not correspond to any functionality related to embedding text for comparison of meaning between phrases.
+B. get_model_info
+
+Explanation
+The method "get_model_info" is not the correct method to use for creating semantic vectors for text in this scenario. It is more likely to be used for retrieving information about the model being used for embeddings, rather than actually embedding text for comparison.
+C. send_request
+
+Explanation
+The method "send_request" is not the appropriate method for creating semantic vectors for text in this context. It is more commonly used for sending general requests to a service, rather than specifically for embedding text to generate semantic vectors.
+Your answer is correct
+D. embed
+
+Explanation
+The method "embed" is the correct choice to replace the missing section in the code snippet. This method is likely used to embed the input text phrases into semantic vectors for comparison of meaning. It is the most suitable method for generating semantic vectors for text in this scenario.
+Overall explanation
+Microsoft’s Azure AI Inference Python documentation shows that EmbeddingsClient uses the embed method to generate embeddings. The returned data includes embedding vectors, which are numeric representations of semantic meaning.
+
+
+
+This question reinforces an important generative AI concept: not every model interaction produces natural language text. Some requests produce embeddings instead, which are then used for semantic comparison, retrieval, or similarity-based workflows that support generative AI systems.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. complete is used for chat or text generation, not for creating embeddings with EmbeddingsClient. It returns generated output rather than semantic vectors. This distractor is plausible because both methods are inference operations, but they serve different model behaviors. The snippet clearly expects an embedding result with response.data[0].embedding.
+
+
+
+• B. get_model_info retrieves endpoint metadata, not vectors for semantic comparison. It does not accept text input in the way shown in the snippet. A learner might choose it because it sounds model-related, but it does not perform the requested embedding operation. This question is about inference output, not inspection.
+
+
+
+• C. send_request is a lower-level transport method and not the intended high-level embeddings call shown in the SDK examples. Microsoft documentation presents embed as the correct direct method for this use case. The distractor checks whether you can distinguish the API’s task-specific methods from generic client plumbing. For AI-901, the important concept is choosing the right capability path.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 22
+Correct
+A support center wants to convert live customer calls into written text for review.
+
+
+
+Which capability should they use?
+
+A. Text to Speech
+
+Explanation
+Text to Speech is the capability that converts written text into spoken words. In this scenario, the support center needs to convert live customer calls into written text for review, so Text to Speech is not the correct capability to use.
+Your answer is correct
+B. Speech to Text
+
+Explanation
+Speech to Text is the capability that converts spoken words into written text. This is the correct capability for the support center to use in order to convert live customer calls into written text for review.
+C. Speech Translation
+
+Explanation
+Speech Translation is the capability that translates spoken words from one language to another. While this capability may be useful in certain scenarios, it is not the correct capability for the support center's specific need to convert live customer calls into written text for review.
+D. Entity recognition
+
+Explanation
+Entity recognition is the capability that identifies and extracts entities such as names, dates, and locations from text. This capability is not directly related to converting live customer calls into written text for review, so it is not the correct choice for the support center's requirement.
+Overall explanation
+Speech recognition is the capability that turns spoken audio into text. In Azure Speech, that workload is handled by speech to text, which supports converting live audio streams and prerecorded audio into written output.
+
+
+
+Text to speech is the reverse direction. It starts with text and produces synthesized audio, so it would not fit a scenario where the business needs transcripts of customer speech.
+
+
+
+Why the other options are incorrect:
+
+• A. Text to Speech is a synthesis feature, not a recognition feature. It reads text aloud by generating audio output. That makes it useful for voice assistants, spoken prompts, and accessibility scenarios, but not for producing transcripts from human speech.
+
+• C. Speech Translation is related to speech input, but its main goal is translation across languages rather than plain transcription in the same language. It can perform speech-to-text translation or speech-to-speech translation. In this question, the requirement is simply to turn speech into text, so basic speech recognition is the best fit.
+
+• D. Entity recognition is a text analysis task, not a speech recognition capability. It works after text is already available and helps identify items such as people, organizations, or locations. It does not listen to audio or create transcripts from spoken language.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 23
+Incorrect
+Which TWO capabilities are part of speech recognition? (Select TWO.)
+
+Your selection is correct
+A. Real-time transcription
+
+Correct selection
+B. Batch transcription
+
+C. Neural voice output
+
+D. SSML voice styling
+
+Your selection is incorrect
+E. Audio synthesis
+
+Overall explanation
+Speech recognition in Azure Speech includes converting spoken audio into text, and Microsoft lists both real-time transcription and batch transcription as core speech-to-text features. Real-time transcription is suited to live inputs, while batch transcription is designed for larger volumes of prerecorded audio.
+
+
+
+The other choices belong to speech synthesis rather than recognition. Neural voice output, SSML customization, and audio synthesis all relate to generating spoken audio from text instead of transcribing speech into text.
+
+
+
+Why the other options are incorrect:
+
+• C. Neural voice output is part of text to speech, where the service produces natural-sounding synthesized audio. It is about the quality and realism of generated voices, not about identifying spoken words from an incoming audio stream. That places it on the synthesis side rather than the recognition side.
+
+• D. SSML is used to customize how synthesized speech sounds, including details such as pitch, speaking rate, and pronunciation. That makes it a speech synthesis control mechanism instead of a recognition feature. It does not transcribe human speech into text.
+
+• E. Audio synthesis is another way to describe speech generation from text. It produces spoken output instead of capturing spoken input. Because the question asks about recognition features, synthesis is outside scope here.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 24
+Correct
+Which THREE pairs are correctly matched? (Select THREE.)
+
+Your selection is correct
+A. Reliability and safety — responds safely to unexpected conditions
+
+B. Fairness — encrypts stored data
+
+Your selection is correct
+C. Azure AI Content Safety — detects harmful content
+
+D. Transparency — assigns final human owner for decisions
+
+Your selection is correct
+E. Harms modeling — identifies potential harm scenarios
+
+F. Inclusiveness — blocks self-harm content
+
+Overall explanation
+Reliability and safety is about dependable operation, safe handling of unexpected conditions, and resistance to harmful manipulation. Azure AI Content Safety is designed to detect harmful content, and harms modeling is used to anticipate ways technology could cause harm so mitigations can be designed.
+
+
+
+These three pairs align directly with Microsoft’s responsible AI guidance and service documentation. The incorrect pairs each swap in another principle’s concern, which is a common AI-901 confusion pattern.
+
+
+
+Why the other options are incorrect:
+
+• B. Encrypting stored data fits privacy and security, not fairness. Fairness is about equitable treatment and avoiding unjust differences in outcomes across similar groups. The pair is plausible because both are responsible AI topics, but the principle mapping is wrong.
+
+• D. Assigning a final human owner for decisions fits accountability more than transparency. Transparency is about making systems and their behavior understandable, while accountability is about who is responsible for design, deployment, and outcomes. This option mixes two nearby principles that are often confused.
+
+• F. Blocking self-harm content is an example of safety moderation, not inclusiveness. Inclusiveness is about designing systems that empower and work for a broad range of users and needs. So the option uses a real capability but attaches it to the wrong principle.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 25
+Correct
+In the Python quickstart, after analyzing an image with prebuilt-imageSearch, the code reads the ________ field to print the image description.
+
+
+
+Which answer best completes the sentence?
+
+A. Transcript
+
+Explanation
+The "Transcript" field is typically used for extracting text from images or audio files, not for image descriptions. It is not relevant to the process of analyzing an image with prebuilt-imageSearch and printing the image description.
+B. ChartType
+
+Explanation
+The "ChartType" field is used for identifying the type of chart or graph in data visualization tasks, not for describing images. It is not applicable to the scenario of analyzing an image with prebuilt-imageSearch and printing the image description.
+C. Sentiment
+
+Explanation
+The "Sentiment" field is used for analyzing the emotional tone or sentiment of text data, not for describing images. It is not the field that would contain the image description after analyzing an image with prebuilt-imageSearch.
+Your answer is correct
+D. Summary
+
+Explanation
+The "Summary" field is typically used to provide a brief overview or description of the content being analyzed. In the context of analyzing an image with prebuilt-imageSearch, the "Summary" field would contain the image description that needs to be read and printed.
+Overall explanation
+The Python quickstart example analyzes an image with prebuilt-imageSearch, then reads content.fields.get("Summary") and prints that value. Microsoft shows this as part of the sample flow for generating and displaying an image description from the analysis result.
+
+
+
+This makes Summary the correct completion for the sentence. The other fields are associated with different modalities or custom schemas and are not the field the quickstart uses for the built-in image description result.
+
+
+
+Why the other options are incorrect:
+
+• A. Transcript is associated with audio or video analysis, where spoken content is transcribed into text. It is not the field used in the image quickstart example. This distractor is plausible because Content Understanding is multimodal, but it targets the wrong modality.
+
+• B. ChartType is a custom field used in the chart-image custom analyzer example, not the built-in field shown in the prebuilt-imageSearch quickstart. It is relevant to image extraction, which is why it is believable, but it belongs to a user-defined schema rather than the quickstart’s prebuilt description output.
+
+• C. Sentiment appears in other scenario examples, especially audio-related custom analyzers, and is not the built-in field the image quickstart reads. The image quickstart prints a descriptive summary instead. This option mixes a real Content Understanding field concept with the wrong example.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 26
+Incorrect
+To fine-tune pitch, speaking rate, or pronunciation for synthesized voice output, submit ________.
+
+
+
+Which answer best completes the sentence?
+
+Correct answer
+A. SSML
+
+Explanation
+SSML (Speech Synthesis Markup Language) is used to fine-tune pitch, speaking rate, pronunciation, and other aspects of synthesized voice output. It allows developers to control various aspects of the speech synthesis process to create more natural and customized voice outputs.
+B. Speaker diarization
+
+Explanation
+Speaker diarization is the process of determining who spoke when in an audio recording. It is not directly related to fine-tuning pitch, speaking rate, or pronunciation for synthesized voice output.
+C. OCR
+
+Explanation
+OCR (Optical Character Recognition) is a technology used to convert different types of documents, such as scanned paper documents, PDF files, or images captured by a digital camera, into editable and searchable data. It is not used for fine-tuning synthesized voice output.
+Your answer is incorrect
+D. Batch transcription
+
+Explanation
+Batch transcription is the process of transcribing a large amount of audio or video content in bulk. It is not specifically related to fine-tuning pitch, speaking rate, or pronunciation for synthesized voice output.
+Overall explanation
+Speech Synthesis Markup Language, or SSML, is used to customize synthesized speech output. Microsoft documents SSML as the way to control characteristics such as pitch, pronunciation, speaking rate, volume, and voice selection for text-to-speech output.
+
+
+
+That makes SSML a synthesis customization feature. The other options relate to recognition, document text extraction, or transcription workflows rather than modifying how generated audio sounds.
+
+
+
+Why the other options are incorrect:
+
+• B. Speaker diarization is a speech-to-text feature used to separate and identify different speakers in audio. It helps make transcripts easier to interpret in conversations with multiple participants. It does not control voice style, pitch, or pronunciation of synthesized output.
+
+• C. OCR extracts visible text from images or documents. It works on visual input, not on voice generation settings. Even if OCR produced text, you would still need text-to-speech and possibly SSML afterward to control spoken output.
+
+• D. Batch transcription is a recognition feature for processing prerecorded audio at scale. Its goal is to create transcripts from audio files, not to modify the characteristics of generated speech. It belongs to speech recognition rather than speech synthesis.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 27
+Correct
+You are reviewing an AI solution before release. Which two practices most directly support reliability and safety? (Select TWO.)
+
+Your selection is correct
+A. Red-team testing
+
+B. Brand review
+
+Your selection is correct
+C. Harms modeling
+
+D. Logo refresh
+
+E. Color palette update
+
+Overall explanation
+Red-team testing helps teams probe limitations, vulnerabilities, and unsafe behaviors before deployment. Harms modeling helps teams anticipate how a workload could fail, be misused, or cause harm to stakeholders, which directly supports safer and more reliable design decisions.
+
+
+
+Microsoft guidance describes responsible development as identifying harms, measuring them through testing, and mitigating them before operation. Red-team testing and harms modeling fit that lifecycle directly, while the other choices are product or design activities that do not meaningfully improve safety or dependable system behavior.
+
+
+
+Why the other options are incorrect:
+
+• B. Brand review might matter for marketing consistency and presentation, but it does not test the AI system’s failure modes or risk surface. It will not help a team understand whether outputs become unsafe under stress or misuse. For this question, it is operationally unrelated to reliability and safety.
+
+• D. Logo refresh is a cosmetic update. It does not identify harms, measure unsafe behavior, or reduce model risk in deployment. That makes it irrelevant to the responsible AI consideration being tested.
+
+• E. Color palette update may affect branding or visual preference, but it does not improve safe operation or reduce the chance of harmful outputs. It also does not help detect failures under unexpected conditions. The scenario is about system risk, not visual presentation.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 28
+Correct
+For each of the following statements, determine whether the statement is correct.
+
+
+
+Statement 1: Speech recognition converts spoken audio into text.
+
+
+
+Statement 2: Text to speech generates synthesized audio from text.
+
+
+
+Statement 3: Speaker diarization is used to control pitch and speaking rate of generated audio.
+
+
+
+Select the correct combination.
+
+Your answer is correct
+A. Yes / Yes / No
+
+B. Yes / No / Yes
+
+C. No / Yes / Yes
+
+D. No / No / Yes
+
+Overall explanation
+Statement 1 is correct. Microsoft describes speech to text as converting audio streams into text, including real-time and batch transcription options, so this is the recognition side of AI speech workloads.
+
+
+
+Statement 2 is also correct because text to speech converts text into synthesized speech. Statement 3 is incorrect because speaker diarization is a recognition feature used to identify and separate speakers in audio, while pitch and speaking rate control belong to synthesis customization through tools such as SSML.
+
+
+
+Why the other options are incorrect:
+
+• B. This combination incorrectly marks Statement 2 as No even though text to speech is explicitly the feature that produces synthesized audio from text. It also marks Statement 3 as Yes, but diarization does not change how generated speech sounds. The combination therefore fails on two separate capability distinctions.
+
+• C. This combination incorrectly marks Statement 1 as No, even though speech recognition is fundamentally about transcribing spoken input into text. It also incorrectly marks Statement 3 as Yes, confusing speaker separation with speech synthesis controls. That makes the entire pattern inconsistent with Microsoft’s workload definitions.
+
+• D. This combination incorrectly marks both Statement 1 and Statement 2 as No, which reverses the core meanings of recognition and synthesis. It also still gets Statement 3 wrong for the same reason as the other distractors. The option is a broad inversion of the actual speech capability model.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 29
+Incorrect
+Which THREE pairs are correctly matched? (Select THREE.)
+
+Your selection is correct
+A. Speech to Text — converts spoken audio into text
+
+Your selection is correct
+B. Text to Speech — converts text into synthesized audio
+
+Correct selection
+C. Speaker diarization — separates speakers in audio
+
+D. SSML — trains a custom speech recognition model
+
+Your selection is incorrect
+E. Batch transcription — generates neural voice output
+
+F. Speech Translation — detects sentiment in reviews
+
+Overall explanation
+Pairs A, B, and C are correct because they align with Microsoft’s documented speech capabilities. Speech to text handles recognition, text to speech handles synthesis, and speaker diarization is used in transcription scenarios to distinguish who spoke which portion of an audio stream.
+
+
+
+The incorrect pairs each combine a real term with the wrong workload. SSML belongs to synthesis customization, batch transcription is a recognition feature, and speech translation translates spoken language rather than performing sentiment analysis on text.
+
+
+
+Why the other options are incorrect:
+
+• D. SSML is used to customize synthesized speech, such as voice, prosody, or pronunciation. It is not the mechanism for training a custom speech recognition model. Microsoft places custom speech under recognition model accuracy improvement, which is different from SSML-based synthesis control.
+
+• E. Batch transcription is specifically listed as a speech-to-text capability for processing prerecorded audio at scale. Neural voice output belongs to text to speech, where the service synthesizes spoken audio from text. The pair mixes recognition and synthesis into the wrong relationship.
+
+• F. Speech translation recognizes speech and translates it to another language, potentially as text or speech. Sentiment analysis is a text analytics capability, not a speech translation feature. The option is plausible because both are AI workloads, but they serve different purposes.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 30
+Incorrect
+Which THREE pairs are correctly matched? (Select THREE.)
+
+Your selection is incorrect
+A. AIProjectClient — sends chat requests directly without another client
+
+Your selection is correct
+B. get_openai_client() — returns an OpenAI-compatible client
+
+C. previous_response_id — required for the first request in a new conversation
+
+Correct selection
+D. model parameter — should use the deployment name
+
+E. az login — creates a model deployment automatically
+
+Your selection is correct
+F. openai.conversations.create() — creates a conversation for multi-turn chat
+
+Overall explanation
+Microsoft’s docs show that get_openai_client() returns the OpenAI-compatible client, that the model field should use the deployment name, and that openai.conversations.create() is used to create a conversation for multi-turn chat. Those three pairings align directly with the documented lightweight-client workflow.
+
+
+
+Together, these pairs describe a practical sequence: connect to the Foundry project, retrieve the OpenAI client, create a conversation when needed, and call the deployed model by deployment name. That is exactly the kind of implementation awareness tested by this dot point.
+
+
+
+Why the other options are incorrect:
+
+• A. AIProjectClient is the project-level client, but the docs show that direct Responses API calls are made after retrieving the OpenAI-compatible client from it. In other words, AIProjectClient is the entry point, not the final object used for the simple responses.create() call shown in the examples. This option blurs two different roles in the SDK flow.
+
+• C. previous_response_id is used in multi-turn response chaining examples, but it is not required for the first request in a new interaction. The cited sample sends the first request without previous_response_id and only uses it on the follow-up request. So the option takes a real parameter and assigns it to the wrong stage of the flow.
+
+• E. az login authenticates the developer for Azure credential resolution, but it does not create a deployment automatically. Deployment creation and authentication are separate concerns in the Foundry workflow. This option confuses sign-in with resource provisioning.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 31
+Correct
+You are building a Python app that should speak a string by using Azure Speech.
+
+Snippet
+
+import azure.cognitiveservices.speech as speechsdk
+ 
+speech_config.speech_synthesis_voice_name = "en-US-Ava:DragonHDLatestNeural"
+speech_synthesizer = speechsdk.SpeechSynthesizer(
+    speech_config=speech_config,
+    audio_config=audio_config
+)
+text = "Your order is ready."
+ 
+# Missing line
+Which code should replace the missing section?
+
+Your answer is correct
+A. result = speech_synthesizer.speak_text_async(text).get()
+
+Explanation
+The correct choice is to use the `speak_text_async` method of the `speech_synthesizer` object to speak the text asynchronously. This method is specifically designed for text-to-speech synthesis and will allow the Python app to speak the provided text using Azure Speech.
+B. result = speech_synthesizer.recognize_once_async().get()
+
+Explanation
+The `recognize_once_async` method is used for speech recognition, not for text-to-speech synthesis. This method is not suitable for the task of making the Python app speak a string using Azure Speech, so it is not the correct choice in this scenario.
+C. result = speechsdk.SpeechRecognizer(speech_config=speech_config).get()
+
+Explanation
+The `SpeechRecognizer` class is used for speech recognition, not for text-to-speech synthesis. Creating a new instance of `SpeechRecognizer` and calling the `get` method is not the appropriate way to make the Python app speak a string using Azure Speech, so this choice is incorrect.
+D. result = speech_synthesizer.translate_text_async(text).get()
+
+Explanation
+The `translate_text_async` method is used for text translation, not for text-to-speech synthesis. This method is not intended for converting text to speech, so using it to replace the missing line in the code snippet would not achieve the desired outcome of making the Python app speak a string using Azure Speech.
+Overall explanation
+The Python quickstart for text to speech uses SpeechSynthesizer and then calls speak_text_async(text).get() to produce synthesized audio from text. That is the standard synthesis pattern for a short block of input text.
+
+
+
+This is a speech synthesis question, not a recognition question. The correct method must therefore generate audio output from text, whereas the distractors either use recognition-oriented concepts or invoke methods that do not match the documented text-to-speech flow.
+
+
+
+Why the other options are incorrect:
+
+• B. recognize_once_async is associated with speech recognition, where the SDK listens to audio and returns text. It is not the method used by the synthesizer to read written text aloud. The option looks believable because of the similar async naming pattern, but it targets the wrong workload.
+
+• C. SpeechRecognizer is the recognition-side class and is used when audio is the input. In this snippet, the application already has text and needs synthesized speech output. Switching to a recognizer would fundamentally change the workload away from speech synthesis.
+
+• D. Azure Speech documentation for this flow uses speak_text_async or SSML-based synthesis methods, not a translate_text_async call on the synthesizer. Translation is a different capability area. Even where speech translation exists, it is not the same as plain text-to-speech output.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 32
+Correct
+A meeting transcript must show which participant spoke each section of audio.
+
+
+
+Which feature should you choose?
+
+A. Speech Translation
+
+Explanation
+Speech Translation is a feature that translates spoken language from one language to another. It does not specifically identify individual speakers in a meeting transcript, so it is not the correct choice for showing which participant spoke each section of audio.
+Your answer is correct
+B. Speaker diarization
+
+Explanation
+Speaker diarization is the correct choice for identifying and labeling individual speakers in a meeting transcript. It helps differentiate between speakers and attribute each section of audio to the corresponding participant, making it the most suitable feature for this requirement.
+C. SSML
+
+Explanation
+SSML (Speech Synthesis Markup Language) is used to control aspects of speech synthesis such as pronunciation, volume, pitch, and rate. It is not directly related to identifying speakers in a meeting transcript, so it is not the correct choice for showing which participant spoke each section of audio.
+D. Keyword extraction
+
+Explanation
+Keyword extraction is a feature that identifies and extracts important words or phrases from a text. While it can be useful for analyzing the content of a meeting transcript, it does not specifically address the requirement of showing which participant spoke each section of audio. Therefore, it is not the correct choice for this scenario.
+Overall explanation
+Speaker diarization is the feature used to identify and separate speakers in audio. Microsoft highlights it in speech-to-text configuration as a way to distinguish between different speakers who participate in a conversation and to indicate who spoke a particular portion of the transcript.
+
+
+
+This makes diarization part of speech recognition workflows, especially meetings, interviews, or calls with multiple voices. The other choices represent translation, synthesis customization, or text analysis rather than speaker separation in audio.
+
+
+
+Why the other options are incorrect:
+
+• A. Speech Translation is about recognizing speech and translating it into another language as text or speech. It does not label individual speakers in a conversation transcript. Translation and diarization can both involve spoken input, but they solve very different problems.
+
+• C. SSML customizes how synthesized speech sounds after text is converted to audio. It controls output characteristics such as voice or prosody. It does not analyze incoming audio to determine which human speaker said which phrase.
+
+• D. Keyword extraction is a text analysis technique used after text is already available. It can help identify important terms in a transcript, but it does not separate speakers. The question asks about audio speaker attribution, which is a speech recognition feature.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 33
+Correct
+Which TWO statements describe speech synthesis capabilities? (Select TWO.)
+
+Your selection is correct
+A. It can generate human-like voice output from text.
+
+B. It converts recorded conversations into transcripts.
+
+Your selection is correct
+C. It can be customized with SSML.
+
+D. It identifies separate speakers in a meeting.
+
+E. It is limited to a single fixed voice behavior with no customization.
+
+Overall explanation
+Speech synthesis is the text-to-speech side of Azure Speech. Microsoft documents that text to speech converts text into human-like synthesized speech, and it also supports customization through SSML for voice and prosody control.
+
+
+
+That is why A and C are correct. By contrast, transcription and speaker separation are recognition features, while the claim that synthesis has no customization is contradicted by Microsoft’s SSML and voice support documentation.
+
+
+
+Why the other options are incorrect:
+
+• B. Converting recorded conversations into transcripts is a speech recognition task. Microsoft places that under speech to text, including real-time and batch transcription. Speech synthesis does not listen to audio and write it out as text.
+
+• D. Identifying separate speakers is the role of speaker diarization, which is configured in speech-to-text scenarios. It helps label who spoke each segment in a transcript. That makes it part of recognition workflows, not synthesis workflows.
+
+• E. Microsoft documents multiple voice options for text to speech, including standard neural voices, custom voice scenarios, and SSML-based control over output characteristics. The service therefore is not locked to one fixed behavior. Customization is a core part of the speech synthesis capability set.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 34
+Correct
+You are building a lightweight Python app that should listen from the computer’s default microphone. Which code should replace the missing section?
+
+Snippet
+
+import azure.cognitiveservices.speech as speechsdk
+ 
+audio_config = speechsdk.audio._______
+ 
+recognizer = speechsdk.SpeechRecognizer(
+    speech_config=speech_config,
+    audio_config=audio_config
+)
+Which code should replace the missing section?
+
+Your answer is correct
+A. AudioConfig(use_default_microphone=True)
+
+Explanation
+Choice A is correct because using `AudioConfig(use_default_microphone=True)` will configure the audio input to use the computer's default microphone, which is the requirement for the lightweight Python app to listen from the microphone.
+B. AudioConfig(filename="meeting.wav")
+
+Explanation
+Choice B is incorrect because using `AudioConfig(filename="meeting.wav")` will configure the audio input to read from a specific file ("meeting.wav") instead of the default microphone, which is not the desired functionality for the app.
+C. SpeechConfig.from_subscription(key, region)
+
+Explanation
+Choice C is incorrect because `SpeechConfig.from_subscription(key, region)` is used to create a speech configuration object from a subscription key and region, which is not related to configuring the audio input from the default microphone.
+D. AudioConfig(use_default_microphone=False)
+
+Explanation
+Choice D is incorrect because using `AudioConfig(use_default_microphone=False)` will configure the audio input to not use the default microphone, which is the opposite of what is required for the lightweight Python app to listen from the microphone.
+Overall explanation
+AudioConfig(use_default_microphone=True) is correct because the Python AudioConfig class supports microphone input, file input, and streams, and the constructor explicitly includes use_default_microphone for default microphone capture. That is the correct configuration when a lightweight speech app should listen directly from the system microphone.
+
+
+
+This also matches the common speech-app pattern in the Azure Speech quickstarts: create the speech configuration, define audio input, and then pass that audio configuration into the recognizer. The audio source matters because microphone input and file input are different implementation paths.
+
+
+
+Why the other options are incorrect:
+
+
+
+• B. AudioConfig(filename="meeting.wav") is valid syntax for file-based input, but it is not the correct choice for the default microphone. That version tells the app to read prerecorded audio from a file instead of listening live. The scenario explicitly requires microphone capture. That makes this a plausible but wrong implementation choice.
+
+
+
+• C. SpeechConfig.from_subscription(key, region) creates or initializes speech service configuration, not audio input configuration. The question is specifically asking for the missing audio object passed to the recognizer. Mixing SpeechConfig and AudioConfig is a common beginner mistake because both are required in a speech app. They represent different layers of the setup.
+
+
+
+• D. AudioConfig(use_default_microphone=False) does not tell the SDK to use the default microphone. The documented constructor uses use_default_microphone=True when you want live microphone input. Setting it to false would fail to express the intended source and would not match the scenario. The question is testing precise configuration, not just class recognition.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 35
+Correct
+Your app should capture one short spoken command asynchronously, not a long continuous stream. Which code should replace the missing section?
+
+Snippet
+
+recognizer = speechsdk.SpeechRecognizer(
+    speech_config=speech_config,
+    audio_config=audio_config
+)
+ 
+result_future = recognizer._______()
+Which code should replace the missing section?
+
+Your answer is correct
+A. recognize_once_async
+
+Explanation
+The correct choice is "recognize_once_async" because it is specifically designed to capture one short spoken command asynchronously. This method allows the app to recognize speech once and then asynchronously return the result, which aligns with the requirement of capturing a single short command.
+B. start_continuous_recognition_async
+
+Explanation
+The choice "start_continuous_recognition_async" is incorrect because it is used for continuous recognition, not for capturing a single short spoken command asynchronously. This method is more suitable for scenarios where continuous speech recognition is needed, rather than a one-time recognition of a short command.
+C. speak_text_async
+
+Explanation
+The choice "speak_text_async" is incorrect because it is used for asynchronously speaking text, not for capturing spoken commands. This method is used to generate speech from text input, rather than recognizing and capturing spoken commands.
+D. add_target_language
+
+Explanation
+The choice "add_target_language" is incorrect because it is not related to capturing spoken commands asynchronously. This method is typically used to specify the target language for speech recognition or translation, rather than initiating the recognition process itself.
+Overall explanation
+recognize_once_async is correct because the Azure Speech Python API describes it as asynchronous recognition for a single utterance. That matches the requirement for one short spoken command rather than a long-running recognition session.
+
+
+
+The same documentation distinguishes this from continuous recognition. For long-running, multi-utterance input, Microsoft recommends start_continuous_recognition_async instead, which is a different behavior and a different app design choice.
+
+
+
+Why the other options are incorrect:
+
+
+
+• B. start_continuous_recognition_async is intended for long-running multi-utterance recognition sessions. That makes it useful for ongoing dictation or continuous listening scenarios, not for a single short command. The question explicitly says the app should capture one short utterance. Using the continuous pattern would be heavier than needed.
+
+
+
+• C. speak_text_async belongs to speech synthesis, not speech recognition. It is used when the application already has text and wants to produce audio output. Here the app starts with spoken audio and needs recognized text. That is the reverse flow.
+
+
+
+• D. add_target_language is part of speech translation configuration, not a recognition method on SpeechRecognizer. It is used to add output translation languages when building speech translation scenarios. The current snippet is using a recognizer object, not a translation configuration object. That makes this option conceptually related to speech, but attached to the wrong API surface.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 36
+Correct
+A lightweight support app already produces text replies. You now want the app to read each reply aloud through the user’s speaker. Which capability should you add?
+
+A. Speech translation
+
+Explanation
+Speech translation is the capability to translate spoken language from one language to another. While this capability is useful for multilingual support, it is not directly related to reading text replies aloud through the user's speaker.
+B. Voice Live API
+
+Explanation
+Voice Live API is a real-time voice recognition and transcription service. While it can be used for processing live voice input, it is not the correct capability for reading text replies aloud through the user's speaker.
+Your answer is correct
+C. Text to speech
+
+Explanation
+Text to speech is the capability that converts written text into spoken words. This capability is exactly what is needed to read each text reply aloud through the user's speaker, making it the correct choice for this scenario.
+D. Entity recognition
+
+Explanation
+Entity recognition is the capability to identify and categorize entities within text data, such as names, dates, and locations. While this capability is useful for text analysis and understanding, it is not the correct capability for reading text replies aloud through the user's speaker.
+Overall explanation
+Text to speech is the correct answer because Azure Speech in Foundry Tools can synthesize a human-like voice from text. That is the direct capability used when a lightweight application already has text and needs audio output for the user.
+
+
+
+This is different from speech recognition, which starts from spoken input. AI-901 often tests this distinction: speech to text converts audio into text, while text to speech converts text into audio. In this scenario, the application already has the response text, so synthesis is the missing step.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. Speech translation is used when the app needs to recognize speech in one language and translate it into text in another language. The scenario does not ask for translation between languages. It asks for spoken playback of an existing text response. Translation and synthesis are different workflows.
+
+
+
+• B. Voice Live API is designed for low-latency speech-to-speech interactions and voice-agent experiences. It combines multiple capabilities and is powerful for real-time conversational voice experiences. However, the question asks for the specific capability that reads text aloud. The direct capability name for that is still text to speech.
+
+
+
+• D. Entity recognition is a text-analysis task, not a speech-output capability. It can identify named entities in text, but it does not generate spoken audio. This distractor is plausible because it is an AI feature, but it belongs to a different workload family. The required feature here is speech synthesis.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 37
+Incorrect
+Which THREE pairs are correctly matched? (Select THREE.)
+
+Your selection is correct
+A. Speech to text — real-time transcription
+
+Your selection is correct
+B. Text to speech — reads text aloud with a human-like voice
+
+Correct selection
+C. Voice Live API — low-latency speech-to-speech interactions for voice agents
+
+D. Speaker diarization — converts text into synthetic audio
+
+Your selection is incorrect
+E. Custom endpoint — required to use Microsoft’s baseline model
+
+F. Speech Studio Voice Gallery — required SDK for speech recognition
+
+Overall explanation
+Speech to text is the Azure Speech capability for turning spoken audio into text, including real-time transcription scenarios. Text to speech is used to synthesize natural-sounding spoken output from text. Voice Live API is documented as the solution for low-latency, high-quality speech-to-speech interactions for voice agents.
+
+
+
+These three correct pairs reflect the most common lightweight speech-app patterns: recognize what a user says, speak a response aloud, or create a real-time voice-agent experience that combines multiple speech components. AI-901 expects you to separate these closely related but distinct capabilities.
+
+
+
+Why the other options are incorrect:
+
+
+
+• D. Speaker diarization does not convert text into synthetic audio. In the speech-to-text quickstart, diarization is described as identifying and separating different speakers in audio, so you can tell who said what. That makes it a recognition-side feature, not a synthesis feature. The distractor is plausible because it sounds like an advanced speech feature, but it belongs to transcription analysis.
+
+
+
+• E. The quickstart states that a custom endpoint is used when you want a deployed custom speech model to improve recognition accuracy. It also says that if you want Microsoft’s baseline model, you leave the custom endpoint set to None. This option therefore reverses the documented behavior. It is a classic implementation confusion between optional customization and default baseline usage.
+
+
+
+• F. Speech Studio Voice Gallery is not a required SDK for speech recognition. The text-to-speech quickstart says you can use Voice Gallery to try text-to-speech voices without signing up or writing code, which makes it a testing experience rather than a recognition SDK. This distractor mixes a no-code voice preview tool with application code dependencies. That is why it sounds familiar but is still wrong.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 38
+Incorrect
+You want to try speech to text in Microsoft Foundry and then get starter code for your lightweight app. Which TWO actions are part of that flow? (Select TWO.)
+
+Your selection is correct
+A. Select Playgrounds and open a speech playground
+
+B. Use the JSON tab to get the SDK code sample
+
+Correct selection
+C. Switch to the Code tab to get sample code
+
+Your selection is incorrect
+D. Add Azure Speech MCP Server in the agent playground
+
+E. Open Speech Studio Voice Gallery to start transcription
+
+Overall explanation
+The speech-to-text quickstart shows that you begin from Playgrounds and then use a speech playground for transcription testing. It also explicitly says to switch to the Code tab to get sample code for using speech to text in your application. Those two actions connect quick experimentation to lightweight app development.
+
+
+
+This is a practical Foundry workflow question. The portal helps you validate settings and inspect output first, then move into generated sample code for implementation. That makes Playgrounds and Code the best pair for this task.
+
+
+
+Why the other options are incorrect:
+
+
+
+• B. The JSON tab is useful for viewing the raw API response output, not for retrieving SDK starter code. The quickstart distinguishes those roles clearly: JSON shows response details, while the Code tab provides sample code for the application. This makes the option believable because both tabs appear in the flow, but they serve different purposes. Confusing them would slow down the move from portal testing to coding.
+
+
+
+• D. Adding Azure Speech MCP Server in the agent playground is part of connecting speech as a tool to an agent, not the standard speech-to-text quickstart flow for testing transcription and generating sample code. That workflow belongs to agent tooling in Foundry, not the direct speech playground path described here. It is a real Foundry action, which is why it is plausible. But it is not the two-step answer for this question.
+
+
+
+• E. Speech Studio Voice Gallery is used to try text-to-speech voices, not to start speech-to-text transcription. The text-to-speech quickstart mentions it as a no-code way to try voices, which is a different task from live transcription. This option deliberately mixes speech synthesis with speech recognition. For speech to text in Foundry, the documented flow is through the speech playground and Code tab.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 39
+Correct
+Your app already has a text response and must play it through the speaker. Which code should replace the missing section?
+
+Snippet
+
+speech_config.speech_synthesis_voice_name = "en-US-Ava:DragonHDLatestNeural"
+synthesizer = speechsdk.SpeechSynthesizer(speech_config=speech_config)
+ 
+result = synthesizer._______("Thanks for calling Contoso.")
+Which code should replace the missing section?
+
+A. get_voices_async
+
+Explanation
+The get_voices_async method is used to retrieve the list of available voices for speech synthesis. It is not used to actually synthesize and play text through the speaker, so it is not the correct choice for replacing the missing section in this scenario.
+Your answer is correct
+B. speak_text_async
+
+Explanation
+The speak_text_async method is used to synthesize and play text through the speaker. In this case, where the app already has a text response that needs to be played through the speaker, using the speak_text_async method is the correct choice to replace the missing section and achieve the desired functionality.
+C. recognize_once_async
+
+Explanation
+The recognize_once_async method is used for speech recognition, not for speech synthesis. It is not the appropriate choice for replacing the missing section in this scenario where the goal is to play a text response through the speaker.
+D. start_continuous_recognition_async
+
+Explanation
+The start_continuous_recognition_async method is used for continuous speech recognition, not for speech synthesis. It is not the correct choice for replacing the missing section in this scenario where the objective is to play a text response through the speaker.
+Overall explanation
+speak_text_async is correct because the SpeechSynthesizer Python API documents it as the asynchronous method for synthesizing plain text. That is the exact operation needed when the app already has text and wants speech output.
+
+
+
+The text-to-speech quickstart follows the same pattern: configure the speech service, select a voice, and synthesize the entered text. So this question is testing the core speech-synthesis call in a lightweight Azure Speech app.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. get_voices_async retrieves available voices, but it does not synthesize the supplied text into audio. It can help a developer inspect supported voices before choosing one. However, the missing line in this snippet must perform the actual playback generation. That makes this option useful in general, but wrong for the specific task.
+
+
+
+• C. recognize_once_async is a recognition method, not a synthesis method. It is used when audio is the input and text is the output. In this snippet, the input is already text, and the desired result is spoken audio. That means the flow is synthesis, not recognition.
+
+
+
+• D. start_continuous_recognition_async is also part of recognition, specifically long-running recognition. It has nothing to do with speaking a string aloud through the synthesizer. This distractor is plausible because it is another common speech SDK method. But it belongs to the opposite direction of the speech pipeline.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 40
+Correct
+The Azure Speech feature designed for low-latency, high-quality speech-to-speech interactions for voice agents is the ________.
+
+
+
+Which answer best completes the sentence?
+
+A. Speech Studio Voice Gallery
+
+Explanation
+Speech Studio Voice Gallery is a feature in Azure Speech that provides a collection of pre-built voice models and datasets for developers to use in their applications. However, it is not specifically designed for low-latency, high-quality speech-to-speech interactions for voice agents.
+B. Custom Speech
+
+Explanation
+Custom Speech is a feature in Azure Speech that allows developers to customize speech recognition models for specific use cases or industries. While it offers customization options, it is not specifically designed for low-latency, high-quality speech-to-speech interactions for voice agents.
+Your answer is correct
+C. Voice Live API
+
+Explanation
+Voice Live API is the correct choice as it is designed for low-latency, high-quality speech-to-speech interactions for voice agents. It provides real-time speech recognition and synthesis capabilities to enable seamless communication between users and voice agents.
+D. Speaker diarization
+
+Explanation
+Speaker diarization is a feature in Azure Speech that helps identify and separate different speakers in a conversation. While it is useful for tasks like transcribing meetings or interviews, it is not specifically designed for low-latency, high-quality speech-to-speech interactions for voice agents.
+Overall explanation
+Voice Live API is the correct answer because Microsoft describes it as enabling low-latency, high-quality speech-to-speech interactions for voice agents. It is specifically positioned as an end-to-end interface that integrates speech recognition, generative AI, and text-to-speech.
+
+
+
+That makes it a strong choice when a lightweight application needs real-time voice interaction rather than just one isolated speech capability. The corresponding quickstart also frames it as a way to create and run an application for real-time voice agents in the Microsoft Foundry portal.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. Speech Studio Voice Gallery is a place to try text-to-speech voices, not the API for low-latency speech-to-speech voice agents. The text-to-speech quickstart presents it as a no-code voice preview experience. It can help explore voices, but it is not the runtime interface named in the question. This option confuses experimentation tooling with an application API.
+
+
+
+• B. Custom Speech is about improving recognition accuracy for domain-specific speech models, not about providing the unified speech-to-speech agent interface described in the Voice Live documentation. It is related to speech customization rather than end-to-end real-time voice-agent orchestration. So while it is a real Azure Speech concept, it is solving a different problem. The key clue in the question is the low-latency speech-to-speech agent focus.
+
+
+
+• D. Speaker diarization identifies and separates speakers in audio during transcription. It does not provide a real-time speech-to-speech API, and it does not manage the full voice-agent flow. This distractor is plausible because it is another advanced speech feature. But it belongs to recognition output analysis, not to live conversational voice-agent infrastructure.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 41
+Correct
+You are setting up a lightweight Python chat app with the Foundry SDK. Which package should you install for the project client?
+
+A. azure-ai-search
+
+Explanation
+The package 'azure-ai-search' is not relevant for setting up a lightweight Python chat app with the Foundry SDK. This package is specifically designed for search-related AI functionalities, not for chat applications.
+Your answer is correct
+B. azure-ai-projects
+
+Explanation
+The package 'azure-ai-projects' is the correct choice for setting up a lightweight Python chat app with the Foundry SDK. This package provides the necessary tools and functionalities for project management and collaboration within the chat application.
+C. azure-ai-language
+
+Explanation
+The package 'azure-ai-language' is not the appropriate choice for setting up a lightweight Python chat app with the Foundry SDK. This package is focused on language-related AI functionalities, such as natural language processing and text analysis, rather than chat application development.
+D. azure-ai-vision
+
+Explanation
+The package 'azure-ai-vision' is not suitable for setting up a lightweight Python chat app with the Foundry SDK. This package is designed for vision-related AI functionalities, such as image recognition and analysis, which are not directly related to chat application development.
+Overall explanation
+Microsoft’s quickstart explicitly says to install azure-ai-projects>=2.0.0 for the Python Foundry projects client. The Python client library page also identifies azure-ai-projects as the package used to create and authenticate AIProjectClient.
+
+
+
+That package is the correct starting point for a lightweight Foundry SDK application. The other packages are real Azure SDKs for other workloads, but they do not provide the core project client used in the Foundry quickstart flow.
+
+
+
+Why the other options are incorrect:
+
+• A. azure-ai-search is for Azure AI Search scenarios such as indexing and retrieval. A broader solution can use it, but it does not replace the Foundry project client package for connecting to a Foundry project. The question asks for the package used to create the lightweight chat app’s project client.
+
+• C. azure-ai-language is used for language-analysis workloads, not for creating AIProjectClient. It can be part of an AI solution, but it is not the package shown in Microsoft’s Foundry quickstart for basic project connection and chat setup. So it is the wrong SDK layer for this task.
+
+• D. azure-ai-vision supports vision scenarios rather than the Foundry project-connection workflow. Even if a solution later adds vision features, the lightweight Foundry chat app still begins with azure-ai-projects. This option confuses workload SDKs with the project client SDK.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 42
+Correct
+A solution needs a dense numeric representation of text so that similar meanings are close together mathematically. Which component should you use?
+
+A. Completion token
+
+Explanation
+A completion token is typically used in natural language processing tasks to indicate the end of a sequence or a sentence. It is not directly related to creating a dense numeric representation of text for similarity calculations.
+B. Stop sequence
+
+Explanation
+A stop sequence is used to indicate the end of a process or a sequence of steps. It is not a component used for creating dense numeric representations of text for similarity calculations.
+C. Temperature
+
+Explanation
+Temperature is a hyperparameter used in training machine learning models, particularly in neural networks. It is not a component used for creating dense numeric representations of text for similarity calculations.
+Your answer is correct
+D. Embedding
+
+Explanation
+Embedding is the correct choice for creating a dense numeric representation of text where similar meanings are close together mathematically. Word embeddings, such as Word2Vec or GloVe, are commonly used in natural language processing tasks to represent words in a continuous vector space where words with similar meanings are closer together.
+Overall explanation
+An embedding is the correct answer because Microsoft Learn describes embeddings as dense numeric representations of semantic meaning. The distance between embeddings in vector space correlates with semantic similarity, which is exactly what the scenario requires.
+
+
+
+This matters in generative AI because embeddings help a system compare meanings, retrieve related content, and support grounding patterns such as semantic search or retrieval-augmented workflows. Even though they are not the same as generated text, they are an important component in how modern generative AI solutions operate.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. A completion token is part of generated output, not a semantic vector representation of input meaning. Token-based generation and embeddings are related to model operation, but they solve different problems. Completion tokens help describe sequential generation, whereas embeddings help describe semantic relatedness. Mixing them up is a common AI-901 confusion.
+
+
+
+• B. A stop sequence is used to control when generation should stop, not to represent meaning in a high-dimensional vector space. It affects output boundaries rather than semantic comparison. This option is plausible because it is a genuine generative AI parameter, but it is not the component for similarity matching. The scenario asks about representation, not generation control.
+
+
+
+• C. Temperature influences randomness or variability in generation behavior, not semantic representation. It can change how deterministic or diverse model output is, but it does not convert text into dense numeric meaning vectors. This distractor checks whether you can separate model parameters from model representations. For AI-901, that distinction is important.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 43
+Correct
+You are preparing a Python script that uses AIProjectClient with DefaultAzureCredential. Which two setup actions are directly shown in Microsoft’s quickstart guidance? (Select TWO.)
+
+A. Create an Azure AI Search index
+
+B. Install azure-ai-vision
+
+Your selection is correct
+C. Install azure-ai-projects>=2.0.0
+
+D. Deploy a speech model first
+
+Your selection is correct
+E. Run az login
+
+Overall explanation
+Microsoft’s Foundry quickstart shows two direct setup steps for Python: install azure-ai-projects>=2.0.0, and sign in with az login before running the script. Those steps align with the documented pattern for creating a lightweight client by using AIProjectClient and DefaultAzureCredential.
+
+
+
+The quickstart does not require extra workload setup such as search or vision just to get a basic Foundry chat client working. The minimum documented setup is the correct package plus Azure sign-in for credential resolution.
+
+
+
+Why the other options are incorrect:
+
+• A. Creating an Azure AI Search index can be useful in retrieval or grounding scenarios, but it is not part of the minimal Python setup shown for the Foundry project client. The quickstart demonstrates chat with a model without requiring a search index first. So this is an optional architecture step, not a direct prerequisite here.
+
+• B. azure-ai-vision is not listed in the minimal Python installation steps for the Foundry project client. It belongs to a different workload area and is unnecessary for a simple text chat client example. The question is asking about the specific quickstart setup, not every possible package in an AI solution.
+
+• D. A speech deployment is unrelated to the basic Foundry SDK chat-client setup shown in the quickstart. The documented example interacts with a deployed model through the project and OpenAI-compatible clients, not through a speech-first workflow. This option introduces an extra requirement that Microsoft’s setup instructions do not include.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 44
+Incorrect
+You are building a lightweight client application for an agent in Foundry. Which two actions are part of the documented multi-turn flow? (Select TWO.)
+
+Correct selection
+A. Create a conversation by calling openai.conversations.create()
+
+B. Use previous_response_id on the first agent request
+
+C. Send agent calls through chat.completions.create() with extra_body
+
+D. Pass the catalog model name instead of the deployment name
+
+Your selection is correct
+E. Include agent_reference when calling responses.create() for the agent
+
+Overall explanation
+Microsoft’s Foundry quickstart shows a multi-turn agent flow in which the client first creates a conversation by calling openai.conversations.create(). It then calls openai.responses.create() while including an agent reference so the request is routed to the intended agent within that conversation.
+
+
+
+The Python client library page shows the same pattern: create the conversation, use responses.create() with extra_body={"agent_reference": ...}, and continue the conversation across turns. Those two actions are therefore the best match for the documented multi-turn lightweight-client workflow.
+
+
+
+Why the other options are incorrect:
+
+• B. previous_response_id is a valid concept in some multi-turn response patterns, but it is not the first-step agent flow shown in the cited Foundry agent examples. In those examples, the agent interaction is tied to a conversation and an agent reference rather than requiring previous_response_id on the initial request. So this option uses a real parameter from a different pattern and applies it in the wrong place.
+
+• C. The cited Foundry agent examples use responses.create() with an agent reference, not chat.completions.create() with that structure. That makes this option a mix of two different API styles. It sounds plausible because both are conversational interfaces, but it does not match the documented agent flow here.
+
+• D. Microsoft’s Python client library page explicitly states that the model value used in these examples is the deployment name of an AI model in the Foundry project. Passing a catalog model name instead would break that documented expectation. This is a common naming confusion, but it is still incorrect.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 45
+Incorrect
+A developer gets a 404 error when calling a model from a lightweight Foundry client. According to Microsoft’s guidance, what is the most likely cause?
+
+A. The response text is too short
+
+Explanation
+The length of the response text is not typically a factor in causing a 404 error when calling a model from a lightweight Foundry client. The error is more likely related to the specific content or configuration of the request being made.
+B. The system message is too polite
+
+Explanation
+The politeness of the system message is not a determining factor in causing a 404 error when calling a model from a lightweight Foundry client. The error is typically related to the technical aspects of the request and response.
+Correct answer
+C. The model value does not match the deployment name
+
+Explanation
+If the model value being called does not match the deployment name, it can result in a 404 error when calling a model from a lightweight Foundry client. Ensuring consistency between the model value and deployment name is crucial for successful communication.
+Your answer is incorrect
+D. The project endpoint uses HTTPS
+
+Explanation
+The use of HTTPS in the project endpoint is important for security and data encryption but is not directly related to causing a 404 error when calling a model from a lightweight Foundry client. Other factors, such as matching model values and deployment names, are more likely to be the cause of the error.
+Overall explanation
+Microsoft’s chat-completions guidance says that a 400/404 deployment-not-found error should prompt you to confirm that the model name matches your deployment name. The Python client library examples also state that the environment variable used in the model field should be the deployment name of an AI model in the Foundry project.
+
+
+
+This is a classic lightweight-client issue because developers often confuse a catalog model name with a deployed model name. In the documented Foundry flow, the request must target the actual deployment name available in the project.
+
+
+
+Why the other options are incorrect:
+
+• A. Response length can affect usefulness, but it is not the documented reason for a 404 deployment-not-found error. A 404 indicates that the requested model deployment could not be found or resolved. So this choice focuses on output quality rather than request targeting.
+
+• B. The politeness of a system message does not cause a deployment-not-found error. Microsoft’s troubleshooting notes point to deployment name and endpoint configuration when diagnosing 404 issues, not prompt tone. This option is deliberately plausible sounding but operationally unrelated.
+
+• D. HTTPS is expected, not a cause of the 404 problem described here. Microsoft’s examples use HTTPS endpoints, and the documented troubleshooting for 404 focuses on deployment naming and base URL correctness instead. So this option points at a normal requirement, not a failure source.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 46
+Correct
+You want to send a prompt to a deployed model and receive generated text from a chat completion endpoint.
+
+Snippet
+
+from azure.ai.inference import ChatCompletionsClient
+from azure.ai.inference.models import SystemMessage, UserMessage
+from azure.core.credentials import AzureKeyCredential
+ 
+client = ChatCompletionsClient(endpoint=endpoint, credential=AzureKeyCredential(key))
+ 
+response = client._______(
+    messages=[
+        SystemMessage("You are a helpful assistant."),
+        UserMessage("Write a two-sentence description of solar panels.")
+    ]
+)
+print(response.choices[0].message.content)
+Which code should replace the missing section?
+
+A. embed
+
+Explanation
+The 'embed' function is not a valid method in the 'ChatCompletionsClient' class for sending messages and receiving generated text. It does not align with the functionality required to prompt a deployed model and receive chat completions.
+B. get_model_info
+
+Explanation
+The 'get_model_info' function is not a valid method in the 'ChatCompletionsClient' class for sending messages and receiving generated text. It is not the correct method to use when interacting with the chat completion endpoint to receive responses from the deployed model.
+Your answer is correct
+C. complete
+
+Explanation
+The 'complete' function is the correct method in the 'ChatCompletionsClient' class for sending messages to the deployed model and receiving generated text from the chat completion endpoint. It aligns with the functionality needed to prompt the model and retrieve the generated text.
+D. send_request
+
+Explanation
+The 'send_request' function is not a valid method in the 'ChatCompletionsClient' class for sending messages to the deployed model and receiving generated text. It does not match the specific functionality required to interact with the chat completion endpoint for chat completions.
+Overall explanation
+Microsoft’s Azure AI Inference Python examples show that chat generation is performed with the complete method on ChatCompletionsClient. That method takes chat messages and returns generated output, which matches the purpose of this snippet.
+
+
+
+This question still tests a concept, not just syntax. A generative AI model receives input messages and produces completion content as output. Recognizing the complete call helps reinforce the basic flow: prompt in, generated response out.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. embed is associated with generating embeddings, not chat completions. Embeddings convert content into numeric vector representations for similarity and semantic tasks. They do not directly return assistant text for a chat conversation. This makes the option plausible because embeddings are part of AI model workflows, but it is the wrong operation for text generation.
+
+
+
+• B. get_model_info retrieves information about the model endpoint rather than generating content. It is useful for inspection and metadata, not for running a prompt through the model. A learner who remembers “model info” from the SDK might choose it, but it does not perform inference. The generative action in this snippet must be a completion call.
+
+
+
+• D. send_request is a lower-level client method for sending a network request, not the intended high-level chat generation method in this example. Microsoft documentation presents complete as the direct method for chat completions. Using send_request here would not match the supported example pattern for simple text generation. This distractor tests whether you can distinguish SDK convenience methods from underlying transport operations.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 47
+Correct
+A developer uses Microsoft Entra ID for a lightweight Foundry client and needs the correct token scope. Which value should be used?
+
+A. https://graph.microsoft.com/.default
+
+Explanation
+The value "https://graph.microsoft.com/.default" is not the correct token scope for a lightweight Foundry client using Microsoft Entra ID. This scope is related to Microsoft Graph API, not Azure AI services.
+B. https://search.azure.com/.default
+
+Explanation
+The value "https://search.azure.com/.default" is not the correct token scope for a lightweight Foundry client using Microsoft Entra ID. This scope is related to Azure Search services, not Azure AI services.
+C. https://management.azure.com/.default
+
+Explanation
+The value "https://management.azure.com/.default" is not the correct token scope for a lightweight Foundry client using Microsoft Entra ID. This scope is related to Azure Resource Manager, not Azure AI services.
+Your answer is correct
+D. https://ai.azure.com/.default
+
+Explanation
+The value "https://ai.azure.com/.default" is the correct token scope for a lightweight Foundry client using Microsoft Entra ID. This scope provides access to Azure AI services, allowing the developer to interact with the AI capabilities provided by Azure.
+Overall explanation
+Microsoft’s Responses API examples and troubleshooting guidance show https://ai.azure.com/.default as the correct token scope when using Entra ID token providers for these calls. The chat-completions guidance also shows the same scope in its Entra-based examples.
+
+
+
+This matters because authentication can be correct in principle but still fail if the token is scoped to the wrong resource. For a lightweight Foundry or Azure OpenAI client, the cited docs point specifically to https://ai.azure.com/.default.
+
+
+
+Why the other options are incorrect:
+
+• A. https://graph.microsoft.com/.default is a Microsoft Graph scope, not the scope shown in the Foundry or Azure OpenAI examples for model calls. A Graph token targets a different resource and would not satisfy the documented requirement for these AI requests. So this is the wrong identity audience for the client.
+
+• B. https://search.azure.com/.default would be associated with Azure AI Search scenarios rather than the Foundry chat and Responses calls discussed in the cited docs. Even if an application also uses search, the question here is about the lightweight Foundry client’s authentication scope. That makes this option a workload mismatch.
+
+• C. https://management.azure.com/.default is for Azure management-plane operations, not the model-inference or response-generation flow shown in Microsoft’s Foundry examples. The docs do not list it as the scope for these client calls. This is a common Azure-resource confusion, but it is not the correct answer here.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 48
+Correct
+For each of the following statements, determine whether the statement is correct.
+
+
+
+Statement 1: The Python AIProjectClient library supports API-key authentication instead of Entra ID for client construction.
+
+
+
+Statement 2: The Responses API examples use input to send the prompt text.
+
+
+
+Statement 3: In a basic chat-completions conversation, the request usually ends with a user message to trigger the model response.
+
+
+
+Select the correct combination.
+
+A. Yes / Yes / No
+
+B. Yes / No / Yes
+
+Your answer is correct
+C. No / Yes / Yes
+
+D. No / No / Yes
+
+Overall explanation
+Statement 1 is incorrect. The Python client library page says that Entra ID is the only authentication method supported at the moment for constructing AIProjectClient. That means API-key-only construction is not the supported pattern described there.
+
+
+
+Statement 2 is correct because the Responses API examples use input in responses.create(...). Statement 3 is also correct because Microsoft’s chat-completions guidance explains that, after the system role and any prior turns, the conversation should end with a user message so it is the assistant’s turn to respond. Therefore the correct combination is No / Yes / Yes.
+
+
+
+Why the other options are incorrect:
+
+• A. This option incorrectly marks Statement 1 as Yes even though the Python client library page says Entra ID is the only supported authentication method for the client at the moment. It also marks Statement 3 as No, which conflicts with the chat-completions guidance about ending with a user message to trigger the response. So two of the three judgments are reversed.
+
+• B. This option makes the same mistake on Statement 1 and also incorrectly marks Statement 2 as No. The cited Responses API examples clearly use input as the parameter carrying the prompt text. Because both the authentication claim and the request-shape claim are wrong, the combination cannot be correct.
+
+• D. This option gets Statement 1 right, but it incorrectly marks Statement 2 as No. Microsoft’s examples explicitly show responses.create(model=..., input="..."), so that second judgment fails. Since the full combination must match all three statements, this answer remains incorrect.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 49
+Correct
+A retail team wants to extract structured product details from shelf photos in Microsoft Foundry.
+
+
+
+Which service should they use?
+
+A. Azure AI Speech
+
+Explanation
+Azure AI Speech is a service that provides speech recognition capabilities, converting spoken language into text. It is not designed for extracting structured product details from images, so it is not the appropriate service for the retail team's task of analyzing shelf photos in Microsoft Foundry.
+Your answer is correct
+B. Azure Content Understanding
+
+Explanation
+Azure Content Understanding is a service that uses AI to extract insights and metadata from unstructured text, images, and other content types. It is specifically designed for tasks like extracting structured product details from images, making it the correct choice for the retail team's needs in analyzing shelf photos in Microsoft Foundry.
+C. Azure AI Search
+
+Explanation
+Azure AI Search is a service that provides AI-powered search capabilities for applications. While it can be used to search and retrieve information, it is not specifically tailored for extracting structured product details from images like the retail team requires in Microsoft Foundry.
+D. Foundry Agent Service
+
+Explanation
+Foundry Agent Service is not a recognized service in the Microsoft Azure AI Fundamentals domain. It is not a valid option for the retail team's task of extracting structured product details from shelf photos in Microsoft Foundry.
+Overall explanation
+Azure Content Understanding in Foundry Tools is the best fit because it is designed to process content such as images into structured, user-defined output. Microsoft describes it as a Foundry Tool that can analyze images and return structured data that can be integrated into automation and downstream workflows.
+
+
+
+This matches the requirement to extract fields from images rather than just search, transcribe audio, or orchestrate agent behavior. For image scenarios, Content Understanding supports defining schemas so the system returns the specific structured fields you want from the image input.
+
+
+
+Why the other options are incorrect:
+
+• A. Azure AI Speech is for speech workloads such as speech recognition, synthesis, and translation, not image field extraction. It can process spoken input and audio output, but it does not analyze shelf photos to extract structured image fields. It is a plausible distractor because it is an Azure AI service, but it targets a different modality entirely.
+
+• C. Azure AI Search is useful for indexing and retrieval, and Content Understanding outputs can feed search or RAG workflows. However, Search is not the primary extraction tool that analyzes the image and returns the structured fields in the first place. In this scenario, Search could be downstream, but Content Understanding is the service that performs the image extraction step.
+
+• D. Foundry Agent Service is for agentic workflows and orchestration, not direct image field extraction. An agent might call Content Understanding as a tool, but the extraction capability itself comes from Content Understanding. That makes this option close to the platform language, but still not the correct implementation choice for the extraction task itself.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 50
+Correct
+Which statement best describes fine-tuning in generative AI?
+
+A. Uploading documents so a search index can answer questions
+
+Explanation
+Uploading documents for a search index to answer questions is not related to fine-tuning in generative AI. Fine-tuning involves adjusting the weights of a pre-trained model with task-specific examples to improve performance on a specific task.
+Your answer is correct
+B. Training a base model’s weights with task-specific examples
+
+Explanation
+Training a base model's weights with task-specific examples is the correct description of fine-tuning in generative AI. Fine-tuning allows the model to learn from new data and adapt its parameters to better perform on a specific task or domain.
+C. Rewriting a prompt to be clearer at runtime
+
+Explanation
+Rewriting a prompt to be clearer at runtime is not an accurate description of fine-tuning in generative AI. Fine-tuning involves adjusting the parameters of a pre-trained model, not rewriting prompts.
+D. Turning on streaming for a completion request
+
+Explanation
+Turning on streaming for a completion request is not related to fine-tuning in generative AI. Fine-tuning focuses on adjusting the model's parameters with task-specific examples, not changing the request handling mechanism.
+Overall explanation
+Microsoft documentation explains fine-tuning as adapting a base model by training it on additional task-specific examples. In the Azure OpenAI and Foundry guidance, this means the model’s weights are adjusted so the model performs better for a particular style, task, or domain.
+
+
+
+This is different from prompt engineering, retrieval, or client configuration. Fine-tuning changes the model itself, whereas prompt changes alter the request, retrieval adds outside knowledge, and streaming changes how results are delivered.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. Uploading documents for search or grounding can improve answer quality, but it does not fine-tune the model. In that pattern, the model stays the same and external data is supplied at inference time. This is a very common confusion because both techniques can improve results. The exam distinction is whether the model weights changed or the context changed.
+
+
+
+• C. Rewriting a prompt is prompt engineering, not fine-tuning. Prompt engineering can often improve results without changing the underlying model weights. Microsoft’s fine-tuning guidance explicitly contrasts fine-tuning with prompt-based approaches such as few-shot or in-context prompting. This distractor is strong because both are ways to adapt behavior, but only one retrains the model.
+
+
+
+• D. Streaming affects how generated output is returned to the client, not how the model learns or is customized. A streaming response is still produced by the same underlying model behavior. This option is deliberately technical-sounding, but it is about delivery mechanics rather than training. AI-901 expects you to separate inference options from model adaptation methods.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 51
+Incorrect
+You are building a simple Python chat client that connects to a Microsoft Foundry project and then retrieves the OpenAI-compatible client.
+
+Snippet
+
+from azure.identity import DefaultAzureCredential
+from azure.ai.projects import AIProjectClient
+ 
+project = AIProjectClient(
+    endpoint=PROJECT_ENDPOINT,
+    credential=DefaultAzureCredential(),
+)
+ 
+openai_client = project.________()
+Which code should replace the missing section?
+
+A. responses.create
+
+Explanation
+The method responses.create is not a valid method in the context of connecting to a Microsoft Foundry project and retrieving an OpenAI-compatible client. It does not align with the functionality required for this task.
+Your answer is incorrect
+B. conversations.create
+
+Explanation
+The method conversations.create is not a valid method in the context of connecting to a Microsoft Foundry project and retrieving an OpenAI-compatible client. It does not align with the functionality required for this task.
+C. agents.create_version
+
+Explanation
+The method agents.create_version is not a valid method in the context of connecting to a Microsoft Foundry project and retrieving an OpenAI-compatible client. It does not align with the functionality required for this task.
+Correct answer
+D. get_openai_client
+
+Explanation
+The method get_openai_client is the correct choice to replace the missing section in the code snippet. This method is likely to be used to retrieve the OpenAI-compatible client from the Microsoft Foundry project, making it the most suitable option for the given scenario.
+Overall explanation
+Microsoft’s Foundry quickstart shows the Python flow as: create an AIProjectClient, then call project.get_openai_client() to obtain an OpenAI-compatible client, and then use that returned client for model interactions. That makes get_openai_client the correct method in this snippet.
+
+
+
+This is the core pattern for a lightweight chat client by using the Foundry SDK. The project client connects to the Foundry project, while the OpenAI-compatible client is the object that actually issues responses.create() calls.
+
+
+
+Why the other options are incorrect:
+
+• A. responses.create is a valid operation, but it belongs on the OpenAI-compatible client after that client has already been created. In this snippet, you do not yet have openai_client, so you cannot call a response-generation method at this stage. The mistake is confusing client creation with model invocation.
+
+• B. conversations.create is also an operation on the OpenAI-compatible client, not on AIProjectClient in the position shown here. Microsoft’s examples create the conversation after get_openai_client() returns the OpenAI-style client. So this choice skips the required handoff from project client to OpenAI client.
+
+• C. agents.create_version is an agent-management operation exposed through the project client, but it is not the method used to retrieve the OpenAI-compatible client for a lightweight chat app. It serves a different purpose in the SDK and does not fit the variable name or the intended flow. The question is about creating a chat client, not defining a new agent version.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 52
+Correct
+When you create a custom analyzer for chart images, set baseAnalyzerId to ________.
+
+
+
+Which answer best completes the sentence?
+
+A. prebuilt-layout
+
+Explanation
+The option "prebuilt-layout" is not the correct choice for setting the baseAnalyzerId when creating a custom analyzer for chart images. This option is not related to image analysis or custom analyzers for images in Azure AI Fundamentals.
+B. prebuilt-imageSearch
+
+Explanation
+The option "prebuilt-imageSearch" is not the correct choice for setting the baseAnalyzerId when creating a custom analyzer for chart images. This option is not specifically designed for analyzing chart images and may not provide the necessary functionality for this task.
+Your answer is correct
+C. prebuilt-image
+
+Explanation
+The option "prebuilt-image" is the correct choice for setting the baseAnalyzerId when creating a custom analyzer for chart images. This option is specifically designed for image analysis and is suitable for analyzing chart images in Azure AI Fundamentals.
+D. prebuilt-read
+
+Explanation
+The option "prebuilt-read" is not the correct choice for setting the baseAnalyzerId when creating a custom analyzer for chart images. This option is not related to image analysis or custom analyzers for images in Azure AI Fundamentals.
+Overall explanation
+Microsoft’s custom analyzer tutorial shows that a custom image analyzer is created by using baseAnalyzerId set to prebuilt-image. That base analyzer is the parent analyzer for image-specific processing when you want to define your own field schema for extraction from images.
+
+
+
+This is different from using a ready-made analyzer like prebuilt-imageSearch, which is used directly for analysis scenarios such as generating an image description. For custom field extraction from images, the documented pattern is to inherit from the base image analyzer and then define the schema you want.
+
+
+
+Why the other options are incorrect:
+
+• A. prebuilt-layout is a document-oriented analyzer focused on layout analysis such as words, tables, figures, and document structure. Microsoft documents it under content extraction analyzers built on prebuilt-document, not as the parent analyzer for custom image analyzers. It is a strong distractor because it sounds image-related, but it belongs to document extraction rather than the base image analyzer path.
+
+• B. prebuilt-imageSearch is a prebuilt analyzer used in the quickstart to generate a description of an image. It is not the documented baseAnalyzerId value for building a custom image analyzer. This option is close because it is image-specific, but it is a ready-to-use analyzer, not the parent base analyzer for custom image schemas.
+
+• D. prebuilt-read is a content extraction analyzer focused on OCR for document content. Microsoft documents it as built on top of prebuilt-document and suited to basic text extraction, not as the base analyzer for custom image analyzers. It would be the wrong inheritance point for the chart-image scenario in the custom analyzer tutorial.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 53
+Correct
+You already have the OpenAI-compatible client and want to send a simple prompt by using the Responses API.
+
+Snippet
+
+response = openai_client.responses.create(
+    model=DEPLOYMENT_NAME,
+    ________="Summarize the benefits of autoscaling."
+)
+ 
+print(response.output_text)
+Which code should replace the missing section?
+
+Your answer is correct
+A. input
+
+Explanation
+The correct code to replace the missing section is "input" as it specifies the prompt or input text that will be sent to the model for processing. In this case, the prompt is to summarize the benefits of autoscaling, so "input" is the appropriate choice.
+B. prompt
+
+Explanation
+"prompt" is not the correct code to replace the missing section. The parameter expected in this context is "input" to provide the prompt or input text for the model to process, not "prompt."
+C. message
+
+Explanation
+"message" is not the correct code to replace the missing section. The parameter expected in this context is "input" to provide the prompt or input text for the model to process, not "message."
+D. question
+
+Explanation
+"question" is not the correct code to replace the missing section. The parameter expected in this context is "input" to provide the prompt or input text for the model to process, not "question."
+Overall explanation
+Microsoft’s Foundry quickstart and the Azure OpenAI Responses API page both show the prompt text being passed through the input parameter. That makes input the correct code fragment for this snippet.
+
+
+
+This is the documented one-shot pattern for a lightweight client: provide the deployment name in model, the request text in input, and then read the generated text from response.output_text. The snippet mirrors that exact structure.
+
+
+
+Why the other options are incorrect:
+
+• B. prompt sounds natural in general AI discussions, but it is not the documented parameter name used in the current Responses API examples cited here. Microsoft’s examples consistently use input for the request text. So this is a terminology trap rather than a valid answer.
+
+• C. message suggests a chat-style payload, but the simple Responses API example in the docs does not use that top-level parameter name. Instead, Microsoft shows a direct input="..." field for this type of call. This choice confuses conversational concepts with the actual request signature.
+
+• D. question is not the documented field name in the cited Foundry or Responses API examples. Although the text being sent may be a question, the API expects a specific parameter name. This option sounds intuitive in plain English but not in the actual SDK call.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 54
+Incorrect
+You want to analyze an image by using the Python quickstart pattern and generate an image description.
+
+Snippet
+
+from azure.ai.contentunderstanding.models import AnalysisInput
+ 
+image_url = "https://raw.githubusercontent.com/Azure-Samples/azure-ai-content-understanding-assets/main/image/pieChart.jpg"
+ 
+poller = client.begin_analyze(
+    analyzer_id=_____,
+    inputs=[AnalysisInput(url=image_url)],
+)
+result = poller.result()
+Which code should replace the missing section?
+Select only one answer.
+
+A. "prebuilt-layout"
+
+Explanation
+"prebuilt-layout" is not the correct option for analyzing an image and generating an image description using the Python quickstart pattern. This option is more related to analyzing the layout of a document rather than generating a description of an image.
+B. "prebuilt-documentSearch"
+
+Explanation
+"prebuilt-documentSearch" is not the correct option for analyzing an image and generating an image description using the Python quickstart pattern. This option is more related to searching for specific content within documents rather than generating descriptions for images.
+Your answer is incorrect
+C. "prebuilt-image"
+
+Explanation
+"prebuilt-image" is not the correct option for analyzing an image and generating an image description using the Python quickstart pattern. This option is more related to analyzing the content and structure of images rather than generating descriptions for images.
+Correct answer
+D. "prebuilt-imageSearch"
+
+Explanation
+"prebuilt-imageSearch" is the correct option for replacing the missing section in the code snippet. This option is specifically designed for analyzing images and generating descriptions based on the content of the images, making it the most suitable choice for the given scenario.
+Overall explanation
+The Python quickstart shows client.begin_analyze with analyzer_id="prebuilt-imageSearch" when analyzing an image and generating a description. The same example uses an image URL, waits for the result, and then reads fields such as Summary from the returned content.
+
+
+
+That means prebuilt-imageSearch is the correct analyzer ID for this quickstart-style image analysis flow. The other options either refer to document-oriented analyzers or the base image analyzer used for custom analyzer inheritance rather than this direct prebuilt analysis call.
+
+
+
+Why the other options are incorrect:
+
+• A. "prebuilt-layout" is associated with document layout extraction rather than the image description quickstart flow. It focuses on content and layout elements such as words, figures, and tables in documents. That makes it useful for document processing, but it is not the analyzer the image quickstart uses for generating an image description.
+
+• B. "prebuilt-documentSearch" is a document/RAG-oriented analyzer family, not the analyzer shown in the image quickstart example. It is plausible because Content Understanding supports search-oriented scenarios, but this snippet is specifically for an image description workflow. The documented quickstart uses prebuilt-imageSearch, not a document search analyzer.
+
+• C. "prebuilt-image" is the base image analyzer used as a parent when creating a custom analyzer. It is not the quickstart analyzer ID shown for directly generating an image description from a Python analyze call. This is a subtle but important distinction between using a base analyzer for customization and using a ready-made prebuilt analyzer for direct inference.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 55
+Correct
+Before your Python app can use Content Understanding for image extraction in Foundry, which TWO Azure setup actions are required? (Select TWO.)
+
+A. Create an Azure AI Speech resource
+
+Your selection is correct
+B. Create a Microsoft Foundry resource
+
+C. Build an Azure AI Search index
+
+Your selection is correct
+D. Deploy the required models
+
+E. Configure SSML
+
+Overall explanation
+Microsoft’s Python client library documentation states that you need a Microsoft Foundry resource to use the Content Understanding package. It also explains that before using the SDK, you must deploy the required large language models that Content Understanding uses, such as GPT and embedding models.
+
+
+
+Those two steps are the platform prerequisites that enable the image extraction workflow in Foundry. Search indexes, Speech resources, and SSML are unrelated to the core setup needed to run Content Understanding image analysis requests.
+
+
+
+Why the other options are incorrect:
+
+• A. Azure AI Speech is a different service for speech workloads such as recognition and synthesis. It is not listed as a prerequisite for configuring the Content Understanding SDK for image extraction. The option sounds reasonable because both are Azure AI services, but it introduces the wrong modality and the wrong resource dependency.
+
+• C. Azure AI Search can be a downstream consumer of extracted outputs, especially in RAG scenarios, but it is not a required setup step just to call Content Understanding on an image. Microsoft describes Search/RAG as a use case that Content Understanding can support, not as a mandatory prerequisite for image extraction requests. That makes this option plausible in solution architecture terms, but incorrect as a setup requirement.
+
+• E. SSML is used for speech synthesis customization, such as controlling pitch and style of generated voice output. It has nothing to do with configuring image extraction in Content Understanding. This is a deliberate cross-workload distractor that mixes speech concepts into an image extraction scenario.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 56
+Correct
+You need to extract two fields from chart images: Title and ChartType.
+
+
+
+Which approach should you use in Foundry?
+
+Your answer is correct
+A. Create a custom analyzer based on prebuilt-image
+
+Explanation
+Creating a custom analyzer based on prebuilt-image is the correct approach for extracting specific fields like Title and ChartType from chart images in Foundry. This method allows you to train the analyzer to recognize and extract the desired fields accurately from the images.
+B. Use Azure AI Speech
+
+Explanation
+Using Azure AI Speech is not the appropriate approach for extracting fields from chart images in Foundry. Azure AI Speech is primarily used for speech recognition and synthesis, not for image analysis and extraction of specific fields like Title and ChartType.
+C. Use SSML with a multimodal model
+
+Explanation
+Using SSML with a multimodal model is not the recommended approach for extracting fields from chart images in Foundry. SSML (Speech Synthesis Markup Language) is used for controlling aspects of speech synthesis, and a multimodal model typically combines multiple modalities like text, image, and speech. This approach is not tailored for extracting specific fields from chart images.
+D. Use Text to Speech
+
+Explanation
+Using Text to Speech is not the correct approach for extracting fields from chart images in Foundry. Text to Speech converts text into spoken language and is not designed for image analysis or field extraction from images. This method is not suitable for the task of extracting Title and ChartType from chart images.
+Overall explanation
+Microsoft’s custom analyzer tutorial provides an image example for charts and graphs where the analyzer is based on prebuilt-image, and the schema defines fields such as Title and ChartType. That is the documented pattern when you want schema-driven field extraction from images rather than a generic description.
+
+
+
+The chart example also shows ChartType defined with a classification method and a small enum, which makes the custom analyzer the right fit for structured output. This is more precise than using unrelated speech features or a generic image description workflow when the requirement is explicit field extraction.
+
+
+
+Why the other options are incorrect:
+
+• B. Azure AI Speech handles audio and voice workloads, not image field extraction. It cannot inspect chart images and return structured fields like Title and ChartType. The option is wrong because it changes the modality from image understanding to speech processing.
+
+• C. SSML is a markup language for controlling synthesized speech output. It is not used to define structured image extraction schemas in Content Understanding. This choice sounds technical, but it belongs to speech synthesis rather than image analysis in Foundry.
+
+• D. Text to Speech converts text into audio. It does not inspect images, classify chart types, or return schema-aligned fields from image content. It is another cross-workload distractor that has no role in the image extraction implementation described in the tutorial.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 57
+Correct
+A team is building a student-facing chat app. They want the app to behave consistently and reduce unsafe outputs when users submit risky prompts.
+
+
+
+Which consideration best reflects reliability and safety?
+
+A. Bias review
+
+Explanation
+Bias review is important for ensuring fairness and equity in AI systems, but it is not directly related to reliability and safety in terms of reducing unsafe outputs from user prompts in a chat app.
+Your answer is correct
+B. Content filtering and stress testing
+
+Explanation
+Content filtering and stress testing are crucial considerations for ensuring the reliability and safety of a student-facing chat app. Content filtering helps to reduce unsafe outputs by screening and blocking inappropriate or risky content, while stress testing helps to ensure the app can handle high volumes of user interactions without crashing or malfunctioning.
+C. Explainability note
+
+Explanation
+Explainability note is important for transparency and understanding how AI systems make decisions, but it is not directly related to reducing unsafe outputs from user prompts in a chat app. It may help users understand why certain prompts are flagged as risky, but it does not actively prevent unsafe outputs.
+D. Accessibility options
+
+Explanation
+Accessibility options are important for ensuring that the chat app can be used by a diverse range of users, but they are not directly related to reducing unsafe outputs from user prompts. While accessibility options improve the usability of the app, they do not specifically address the issue of risky user inputs.
+Overall explanation
+Reliability and safety focuses on whether an AI system operates as intended, responds safely to unexpected conditions, and resists harmful manipulation. In this scenario, filtering harmful content and stress-testing risky prompts directly supports that goal because the team is trying to reduce unsafe behavior and improve dependable operation.
+
+
+
+Microsoft’s guidance also emphasizes identifying harms early, measuring them through systematic testing, and mitigating them with safeguards such as prompt engineering and content controls. That makes content filtering plus stress testing the strongest reliability-and-safety choice here, rather than a different responsible AI principle.
+
+
+
+Why the other options are incorrect:
+
+• A. Bias review is important, but it maps more directly to fairness than to reliability and safety. It helps determine whether groups are treated equitably, which is a different question from whether the system safely handles harmful or adversarial inputs. In this scenario, the main issue is unsafe behavior under risky prompts, so fairness is not the closest fit.
+
+• C. Explainability note aligns more closely with transparency. It helps users understand how a system works or what its limits are, but it does not by itself prevent unsafe outputs or make runtime behavior more dependable. The team needs an operational safeguard, not just clearer documentation.
+
+• D. Accessibility options support inclusiveness by helping more people use the solution effectively. That is valuable, but it does not directly address unsafe outputs, adversarial prompting, or dependable handling of failure conditions. The scenario is about safe operation, not inclusive access design.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 58
+Incorrect
+Which THREE pairs are correctly matched? (Select THREE.)
+
+A. prebuilt-read — parent analyzer for custom image analyzers
+
+Your selection is correct
+B. prebuilt-imageSearch — generates an image description
+
+Your selection is incorrect
+C. fieldSchema — defines the fields to extract
+
+Your selection is correct
+D. baseAnalyzerId — identifies the parent analyzer to inherit from
+
+Correct selection
+E. prebuilt-image — base image analyzer for custom image extraction
+
+F. SSML — controls Content Understanding image field generation
+
+Overall explanation
+Pairs B, D, and E are correct because they match Microsoft’s documented Content Understanding patterns. The quickstart uses prebuilt-imageSearch to generate a description of an image, while the custom analyzer tutorial uses baseAnalyzerId to point to the parent analyzer and shows prebuilt-image as the base analyzer for custom image extraction.
+
+
+
+fieldSchema is also central to custom analyzers, but in this option set the exact three correct pairs are B, D, and E because D already captures inheritance behavior and E names the correct parent analyzer explicitly. The incorrect options are built from nearby real concepts, which is why they are plausible AI-901 distractors.
+
+
+
+Why the other options are incorrect:
+
+• A. prebuilt-read is not the parent analyzer for custom image analyzers. Microsoft documents it as a content extraction analyzer for document OCR and related document content elements. It belongs to the document side of Content Understanding and is not the base image analyzer used in the custom image tutorial.
+
+• C. fieldSchema does define extracted fields in a custom analyzer, so it sounds correct at first glance. However, this question asks for exactly three correct pairs, and the intended correct set is the one most directly tied to image analyzer creation and the quickstart image flow: prebuilt-imageSearch, baseAnalyzerId, and prebuilt-image. This makes C the close-but-not-selected distractor in this set.
+
+• F. SSML is for speech synthesis customization and has no documented role in Content Understanding image field generation. It does not define analyzer schemas, select parent analyzers, or run image extraction workflows. This is a workload confusion distractor that mixes speech tooling into an image extraction topic.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 59
+Correct
+For each of the following statements, determine whether the statement is correct.
+
+
+
+Statement 1: Content Understanding in Foundry Tools can process images into a user-defined output format.
+
+
+
+Statement 2: The quickstart uses prebuilt-imageSearch to generate an image description.
+
+
+
+Statement 3: prebuilt-layout is the documented base analyzer for building a custom image analyzer.
+
+
+
+Select the correct combination.
+
+A. Yes / No / Yes
+
+B. No / Yes / Yes
+
+Your answer is correct
+C. Yes / Yes / No
+
+D. No / No / Yes
+
+Overall explanation
+Statement 1 is correct. Microsoft describes Azure Content Understanding in Foundry Tools as a Foundry Tool that processes content including images into a user-defined output format. That is one of the core platform behaviors behind image extraction workflows.
+
+
+
+Statement 2 is also correct because the quickstart explicitly uses prebuilt-imageSearch to generate a description of an image. Statement 3 is incorrect because the custom image analyzer tutorial uses prebuilt-image as the base analyzer, not prebuilt-layout. prebuilt-layout belongs to document layout extraction rather than custom image analyzer inheritance.
+
+
+
+Why the other options are incorrect:
+
+• A. This option marks Statement 2 as No, which conflicts directly with the quickstart image example. It also marks Statement 3 as Yes, which swaps in a document layout analyzer where Microsoft documents prebuilt-image instead. The combination gets both the quickstart analyzer and the base analyzer distinction wrong.
+
+• B. This option incorrectly marks Statement 1 as No even though Content Understanding is explicitly documented to process images into user-defined outputs. It also incorrectly marks Statement 3 as Yes, again confusing a document layout analyzer with the base image analyzer. That means it fails on both the platform description and the customization pattern.
+
+• D. This option reverses both correct statements and still leaves the third one wrong. It denies the core service definition and the quickstart behavior that Microsoft documents for image analysis. As a result, it is inconsistent with both the overview and the quickstart.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 60
+Incorrect
+You are creating a custom analyzer for chart images.
+
+Snippet
+
+analyzer = ContentAnalyzer(
+    _____,
+    description="Custom analyzer for charts and graphs",
+    field_schema=field_schema,
+    models={
+        "completion": "gpt-4.1",
+    },
+)
+Which code should replace the missing section?
+
+Your answer is incorrect
+A. analyzer_id="prebuilt-image"
+
+Explanation
+The code snippet is creating a custom analyzer for chart images, and the missing section should specify the base analyzer to build upon. The "analyzer_id" parameter is not a valid parameter for specifying the base analyzer, so it is incorrect in this context.
+Correct answer
+B. base_analyzer_id="prebuilt-image"
+
+Explanation
+The correct choice is B because the "base_analyzer_id" parameter is used to specify the base analyzer to build upon when creating a custom analyzer. In this case, "prebuilt-image" is the base analyzer for analyzing chart images, making this choice the correct one.
+C. base_analyzer_id="prebuilt-imageSearch"
+
+Explanation
+The "base_analyzer_id" parameter should specify the base analyzer to build upon when creating a custom analyzer. However, "prebuilt-imageSearch" is not a valid base analyzer for analyzing chart images, so this choice is incorrect.
+D. parent_analyzer="prebuilt-layout"
+
+Explanation
+The "parent_analyzer" parameter is not a valid parameter for specifying the base analyzer to build upon when creating a custom analyzer. Therefore, this choice is incorrect in the context of the given code snippet.
+Overall explanation
+The custom analyzer tutorial shows the Python pattern ContentAnalyzer(base_analyzer_id="prebuilt-image", ...) for a chart-and-graph image analyzer. That property establishes the parent analyzer the custom analyzer inherits from, and Microsoft uses prebuilt-image for the image example.
+
+
+
+This is different from naming the analyzer itself or using a ready-made prebuilt analyzer like prebuilt-imageSearch. In the custom analyzer flow, the base analyzer identifies the inherited modality-specific processing capabilities, while the schema defines the fields to extract.
+
+
+
+Why the other options are incorrect:
+
+• A. analyzer_id is not the documented parameter in the ContentAnalyzer(...) constructor for selecting the parent analyzer in this example. The tutorial uses base_analyzer_id, which is a different concept and property. This option is close syntactically, but it confuses the analyzer’s identifier with the parent analyzer reference.
+
+• C. base_analyzer_id="prebuilt-imageSearch" is wrong because prebuilt-imageSearch is used as a direct prebuilt analyzer in the quickstart, not as the base analyzer shown for custom image analyzer creation. The tutorial uses prebuilt-image as the inheritance point. This is a subtle but important distinction between customization and direct prebuilt usage.
+
+• D. parent_analyzer is not the documented property shown in the Python example, and prebuilt-layout is not the base image analyzer used in the custom chart scenario. The option mixes an unsupported property name with the wrong analyzer family. It therefore fails both structurally and semantically.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
