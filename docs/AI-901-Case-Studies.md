@@ -22,7 +22,32 @@ All case study / scenario-based questions from Tests 1–6.
 
 Verdant Arc is an agribusiness that uses AI models to manage greenhouse operations, crop management, and farm recommendations. The company has multiple requirements spanning monitoring, agent tools, document translation, image processing, and structured data extraction from photographs.
 
-**Requirements referenced:** E1–E5, BR1–BR5, TR1–TR5, C1–C5
+### Requirements
+
+*(Reconstructed from question explanations — original Google Doc is private)*
+
+| Code | Category | Requirement |
+|------|----------|-------------|
+| **E1** | Environment | Sensor-based model inputs from multiple farms; new sensors may replace old ones |
+| **BR1** | Business Req | The system must detect when production sensor data no longer matches the model's training data (reliability risk) |
+| **TR1** | Technical Req | A drift alert must be triggered before recommendations are presented |
+| **C1** | Constraint | Human approval is required before recommendations are acted upon |
+| **E2** | Environment | An existing Azure Function uses queue-based triggers (input queue → processing → output queue) |
+| **BR2** | Business Req | The agent must invoke the existing nutrient calculation and continue the conversation with the result |
+| **TR2** | Technical Req | No custom API wrapper or additional orchestration service should be created |
+| **C2** | Constraint | Custom orchestration is prohibited — reuse existing infrastructure |
+| **E3** | Environment | Dutch DOCX agricultural guides need translation with domain glossary |
+| **BR3** | Business Req | Return the translated guide directly, preserving structure and formatting |
+| **TR3** | Technical Req | Single-document, inline response — no batch processing |
+| **C3** | Constraint | Must avoid using source and target Azure Blob Storage containers |
+| **E4** | Environment | Product/crop photographs need thumbnail generation |
+| **BR4** | Business Req | Thumbnails must preserve the most important crop region |
+| **TR4** | Technical Req | No manual crop coordinates — automatic region detection |
+| **C4** | Constraint | No custom crop-selection logic allowed |
+| **E5** | Environment | Control-panel and crop-card photographs with varying layouts (digital displays, printed labels, handwritten) |
+| **BR5** | Business Req | Return specific JSON fields: greenhouseId, cropBatch, pH, electricalConductivity, temperature, recordedAction, observationTime |
+| **TR5** | Technical Req | One reusable extraction configuration with structured, machine-readable output |
+| **C5** | Constraint | No custom text-association or normalisation logic — the component must handle schema mapping |
 
 ---
 
@@ -167,7 +192,31 @@ The scenario requires **structured JSON output with specific named fields** from
 
 Cedarbridge is an educational institution building an AI-based intelligent tutoring assistant. The system needs to handle accessibility, event data analysis, PII redaction, campus image analysis, and grant document processing.
 
-**Requirements referenced:** E5, BR1, TR1 and others
+### Requirements
+
+*(Reconstructed from question explanations — original Google Doc is private)*
+
+| Code | Category | Requirement |
+|------|----------|-------------|
+| **E5** | Environment | The assistant interface has automated accessibility checks with labels for interactive controls |
+| **BR1** | Business Req | Students using assistive technologies must be able to complete the full workflow successfully |
+| **TR1** | Technical Req | Evidence of real-user accessibility must be collected beyond automated checks |
+| **E1** | Environment | Event coordinators upload CSV files with room/attendance/capacity data |
+| **BR2** | Business Req | The agent must perform statistical analysis (percentiles, comparisons) and generate visual charts |
+| **TR2** | Technical Req | No custom execution service, container, or notebook should be hosted |
+| **C2** | Constraint | Use managed compute environments only |
+| **E2** | Environment | Completed support conversations are converted to raw text strings |
+| **BR3** | Business Req | Return a redacted version of the text and metadata for every detected sensitive entity |
+| **TR3** | Technical Req | The redaction must occur synchronously and inline |
+| **C3** | Constraint | Redaction must happen before text is written to logs or passed to other AI components |
+| **E3** | Environment | Campus photographs include signs, room numbers, and building features |
+| **BR4** | Business Req | Return one sentence describing each photo plus structured OCR for visible text |
+| **TR4** | Technical Req | Use a single synchronous Image Analysis request |
+| **C4** | Constraint | Gender-neutral captions must be enabled |
+| **E4** | Environment | Grant submissions with varying layouts and file formats |
+| **BR5** | Business Req | Extract applicant details, funding, budgets, ethics info, milestones, and evidence from tables/narrative |
+| **TR5** | Technical Req | One reusable extraction configuration producing Markdown and a JSON schema |
+| **C5** | Constraint | Must handle varied layouts without fixed page coordinates |
 
 ---
 
@@ -317,7 +366,32 @@ The requirements demand **structured field extraction** (specific named fields),
 
 SignalFrame is a broadcast production system that uses AI for emergency announcement detection, real-time research, live studio interaction, image generation, and video content analysis.
 
-**Requirements referenced:** E1–E5, BR1–BR5, TR1–TR5, C1–C5
+### Requirements
+
+*(Reconstructed from question explanations — original Google Doc is private)*
+
+| Code | Category | Requirement |
+|------|----------|-------------|
+| **E1** | Environment | An urgency model identifies emergency announcements with 98% accuracy |
+| **BR1** | Business Req | Human approval is required before interrupting live broadcasts — no automatic publication |
+| **TR1** | Technical Req | The reviewer and final decision must be recorded for governance evidence |
+| **C1** | Constraint | Automatic broadcast interruption is prohibited regardless of model confidence |
+| **E2** | Environment | Researchers need real-time public government information (e.g., cyclone warnings) |
+| **BR2** | Business Req | Return current, source-backed answers with inline citations |
+| **TR2** | Technical Req | No custom crawler, ingestion pipeline, or search index maintenance |
+| **C2** | Constraint | No custom search implementation allowed |
+| **E3** | Environment | Live studio programme with a presenter asking spoken questions |
+| **BR3** | Business Req | Stream spoken response before the complete response is generated (low-latency) |
+| **TR3** | Technical Req | Single interface for speech-in, reasoning, and speech-out — no separate STT/TTS stages |
+| **C3** | Constraint | No multi-component audio processing pipeline |
+| **E4** | Environment | A designer provides a logo and text instructions for broadcast graphics |
+| **BR4** | Business Req | Generate a new lower-third graphic with transparent background |
+| **TR4** | Technical Req | Return the result as a PNG file with transparency support |
+| **C4** | Constraint | Must use a dedicated image generation model |
+| **E5** | Environment | Recorded broadcasts must be divided into individual news stories |
+| **BR5** | Business Req | Return per-story: start/end time, speaker-labelled transcript, headline, summary, people, locations, editorial risk rating |
+| **TR5** | Technical Req | Custom field schema populated per story segment (not just whole recording) |
+| **C5** | Constraint | No separate multi-component processing pipeline (transcript + segmentation + extraction must be unified) |
 
 ---
 
@@ -454,6 +528,33 @@ The requirements demand **video segmentation** with **custom fields** (editorial
 ### Background
 
 Solstice is a utility/energy company using AI for outage management, customer service, and field operations. The system handles customer data, agent authentication, feedback analysis, drone image analysis, and call center audio processing.
+
+### Requirements
+
+*(Reconstructed from question explanations — original Google Doc is private)*
+
+| Code | Category | Requirement |
+|------|----------|-------------|
+| **E1** | Environment | Pilot testing records every model input in Application Insights (includes customer PII + performance data) |
+| **BR1** | Business Req | Operations team needs performance information but not customer personal data |
+| **TR1** | Technical Req | Remove unnecessary fields before telemetry is created; use pseudonymous values for correlation |
+| **C1** | Constraint | Privacy and security principles — collect only what is necessary |
+| **E2** | Environment | An MCP server uses OAuth 2.0 with per-employee permissions (operators vs. customer-service roles) |
+| **BR2** | Business Req | Agent must use the individual employee's identity and permissions, not a shared identity |
+| **TR2** | Technical Req | First invocation requests consent; subsequent calls use the employee's authorised identity |
+| **C2** | Constraint | A customer-service employee must not gain the broader access of a control-room operator |
+| **E3** | Environment | Customer feedback contains mixed sentiment about different service aspects |
+| **BR3** | Business Req | Identify which sentiment is associated with which specific target (aspect-level) |
+| **TR3** | Technical Req | Return targets, assessments, sentiment labels, and confidence — not just one overall label |
+| **C3** | Constraint | No custom model training — use built-in capabilities |
+| **E4** | Environment | Drone photographs of substations with people and visible text labels |
+| **BR4** | Business Req | Detect every person with bounding box and confidence score |
+| **TR4** | Technical Req | Also return structured OCR results for visible substation text |
+| **C4** | Constraint | Single synchronous API request — no separate person-detection and OCR calls |
+| **E5** | Environment | Customer service calls need structured analysis with domain-specific fields |
+| **BR5** | Business Req | Return transcript (speaker ID + timing), summary, sentiment, plus 4 custom fields (outage ID, medical-equipment dependency, requested assistance, promised action) |
+| **TR5** | Technical Req | One reusable configuration — no separate transcription, summarisation, and extraction pipelines |
+| **C5** | Constraint | No multi-component processing pipeline allowed |
 
 ---
 
