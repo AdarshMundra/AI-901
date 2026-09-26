@@ -53,6 +53,8 @@ Verdant Arc is an agribusiness that uses AI models to manage greenhouse operatio
 
 ### Q1. Sensor data has shifted — which monitoring signal detects this? 🔴
 
+**Must satisfy:** E1, BR1, TR1, C1
+
 **Scenario:**  
 Verdant Arc replaces the electrical-conductivity sensors at one farm. The new sensors consistently report values that are **18% higher** than the values produced by the sensors represented in the training data. The model continues to return high-confidence recommendations. Verdant Arc must detect this change before recommendations are presented for approval.
 
@@ -76,6 +78,8 @@ The new sensors produce values that are systematically different from the traini
 
 ### Q2. An Azure Function calculates nutrient recipes — which agent tool?
 
+**Must satisfy:** E2, BR2, TR2, C2
+
 **Scenario:**  
 The existing Azure Function uses an Azure Storage queue trigger. It reads the farm, crop, growth stage, and sensor values from an input message. When processing finishes, the function writes the calculated nutrient recipe to an output queue. The agent must submit the calculation request and continue the conversation after the result becomes available.
 
@@ -98,6 +102,8 @@ The scenario explicitly describes an **existing Azure Function** with queue trig
 ---
 
 ### Q3. Translate a Dutch DOCX to English — which operation? 🔴
+
+**Must satisfy:** E3, BR3, TR3, C3
 
 **Scenario:**  
 An employee uploads one Dutch DOCX guide. The application must:
@@ -129,6 +135,8 @@ The key requirement is **"avoid using source and target storage containers"** an
 
 ### Q4. Smart-crop a thumbnail — which API parameter? 🔴
 
+**Must satisfy:** E4, BR4, TR4, C4
+
 **Scenario:**  
 The application calls the Azure Vision Generate Thumbnail API:
 ```
@@ -158,6 +166,8 @@ The returned image must preserve the most important crop region without requirin
 ---
 
 ### Q5. Extract structured JSON from varied photographs — which component? 🔴
+
+**Must satisfy:** E5, BR5, TR5, C5
 
 **Scenario:**  
 The control-panel and crop-card photographs vary in layout. Some field values appear on digital displays, some beside printed labels, and others are handwritten. The application must return these JSON fields:
@@ -222,6 +232,8 @@ Cedarbridge is an educational institution building an AI-based intelligent tutor
 
 ### Q6. Accessibility checks pass but need more evidence — which activity?
 
+**Must satisfy:** E5, BR1, TR1
+
 **Scenario:**  
 Automated accessibility checks confirm that the assistant interface includes labels for interactive controls. The project manager wants **additional evidence** that students using supported assistive technologies can complete the full workflow successfully.
 
@@ -244,6 +256,8 @@ Automated checks verify that labels exist, but they can't confirm real users wit
 ---
 
 ### Q7. An event coordinator needs data analysis and a chart — which agent tool?
+
+**Must satisfy:** E1, BR2, TR2, C2
 
 **Scenario:**  
 An event coordinator uploads a CSV file containing room capacity, registrations, actual attendance, and accessibility-seat usage. The coordinator asks the agent to:
@@ -274,6 +288,8 @@ The task requires **computational analysis** (percentile calculations, compariso
 
 ### Q8. Redact PII from support conversation text — which capability? 🔴
 
+**Must satisfy:** E2, BR3, TR3, C3
+
 **Scenario:**  
 Each completed support conversation is converted into **one raw text string** before being passed to the processing application. The application must synchronously return a redacted version of that string and metadata describing every detected sensitive entity.
 
@@ -298,6 +314,8 @@ The input is described as **"one raw text string"** — not a structured convers
 ---
 
 ### Q9. Caption + OCR from campus photos — which API features? 🔴
+
+**Must satisfy:** E3, BR4, TR4, C4
 
 **Scenario:**  
 The application already sets language to English and enables gender-neutral captions. It must complete the Image Analysis 4.0 request so that it returns:
@@ -327,6 +345,8 @@ The application already sets language to English and enables gender-neutral capt
 ---
 
 ### Q10. Process grant documents with varying layouts — which component? 🔴
+
+**Must satisfy:** E4, BR5, TR5, C5
 
 **Scenario:**  
 The extraction component must process grant files with varying layouts and return:
@@ -397,6 +417,8 @@ SignalFrame is a broadcast production system that uses AI for emergency announce
 
 ### Q11. A model is 98% accurate — should it auto-publish at 95% confidence? 🔴
 
+**Must satisfy:** E1, BR1, TR1, C1
+
 **Scenario:**  
 SignalFrame's urgency model correctly identifies 98% of emergency announcements. Management proposes **automatically interrupting broadcasts** when model confidence exceeds 95%.
 
@@ -421,6 +443,8 @@ Even at 98% accuracy, automatically interrupting live broadcasts is **high-risk*
 ---
 
 ### Q12. Agent needs real-time public government warnings — which tool?
+
+**Must satisfy:** E2, BR2, TR2, C2
 
 **Scenario:**  
 A researcher asks the agent: "What public warnings has the Australian Government issued about the current cyclone, and when was each warning published?" The agent must retrieve **recently published public information** and include citations.
@@ -447,6 +471,8 @@ The query asks for **recently published public information** from a government w
 
 ### Q13. Stream spoken Q&A during live broadcast — which interface? 🔴
 
+**Must satisfy:** E3, BR3, TR3, C3
+
 **Scenario:**  
 During a live programme, a presenter asks the studio assistant a spoken question. The application must **stream microphone audio** to the deployed model and **begin playing the model's spoken response before the complete response has been generated**.
 
@@ -472,6 +498,8 @@ The scenario requires **speech-in → speech-out in real-time** with streaming (
 
 ### Q14. Create a transparent PNG graphic from a logo — which model?
 
+**Must satisfy:** E4, BR4, TR4, C4
+
 **Scenario:**  
 A designer provides a programme logo and the instruction: "Create a new lower-third graphic using the supplied logo, a transparent background, and space for a presenter's name." The result must be returned as a PNG file.
 
@@ -494,6 +522,8 @@ The task requires **image generation** with a transparent background and PNG out
 ---
 
 ### Q15. Analyze recorded broadcasts into structured segments — which component?
+
+**Must satisfy:** E5, BR5, TR5, C5
 
 **Scenario:**  
 Each recorded broadcast must be divided according to individual news stories. For every story, the solution must return:
@@ -560,6 +590,8 @@ Solstice is a utility/energy company using AI for outage management, customer se
 
 ### Q16. Telemetry logs contain customer PII — which practice? 🔴
 
+**Must satisfy:** E1, BR1, TR1, C1
+
 **Scenario:**  
 During pilot testing, Solstice records every model input in Application Insights. The records include customer names, addresses, account numbers, medical-device registrations, model latency, and predicted outage priority. The operations team needs the performance information but does **not** require the direct customer information.
 
@@ -585,6 +617,8 @@ During pilot testing, Solstice records every model input in Application Insights
 
 ### Q17. MCP server uses OAuth with per-employee permissions — which auth?
 
+**Must satisfy:** E2, BR2, TR2, C2
+
 **Scenario:**  
 The MCP server uses OAuth 2.0 and enforces each employee's existing permissions. A control-room operator can read all active outages, while a customer-service employee can only access assigned accounts. When invoked for the first time, the agent must request consent. Subsequent calls use that employee's authorised identity.
 
@@ -609,6 +643,8 @@ The scenario requires the agent to act **as the employee** — using their speci
 ---
 
 ### Q18. Identify positive and negative sentiment about specific targets — which capability? 🔴
+
+**Must satisfy:** E3, BR3, TR3, C3
 
 **Scenario:**  
 A customer submits feedback: "The power returned earlier than expected, but the mobile-app notifications were confusing." Solstice must identify:
@@ -636,6 +672,8 @@ A customer submits feedback: "The power returned earlier than expected, but the 
 ---
 
 ### Q19. Detect people + OCR text from drone photos — which API features? 🔴
+
+**Must satisfy:** E4, BR4, TR4, C4
 
 **Scenario:**  
 The application submits each drone photograph to the Image Analysis 4.0 endpoint. The response must contain:
@@ -670,6 +708,8 @@ POST {endpoint}/computervision/imageanalysis:analyze
 ---
 
 ### Q20. Process calls with custom fields + transcript — which component? 🔴
+
+**Must satisfy:** E5, BR5, TR5, C5
 
 **Scenario:**  
 Solstice requires one reusable configuration that returns:
