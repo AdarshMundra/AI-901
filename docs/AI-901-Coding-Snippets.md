@@ -1,6 +1,6 @@
 # AI-901 Coding Snippet Questions
 
-All code-based questions from Tests 1–6, organized by SDK/service area.  
+All code-based questions from Tests 1–7, organized by SDK/service area.  
 Format: Question → Snippet → Options → Answer → Why  
 🔴 = You answered incorrectly
 
@@ -166,6 +166,62 @@ for doc in result:
 **Answer:** C) `text_analytics_client.extract_key_phrases(tickets)`
 
 **Why:** Only `extract_key_phrases` populates `doc.key_phrases`. Sentiment returns labels, entities returns entity objects, detect_language returns language codes.
+
+---
+
+### Q53. Which method returns the overall sentiment for each review?
+
+**Source:** Test 7 — Q27
+
+```python
+from azure.core.credentials import AzureKeyCredential
+from azure.ai.textanalytics import TextAnalyticsClient
+
+client = TextAnalyticsClient(endpoint=endpoint, credential=AzureKeyCredential(key))
+documents = ["The room was clean, but check-in was slow."]
+
+result = client.________(documents)
+for doc in result:
+    print(doc.sentiment)
+```
+
+**Options:**
+- A) extract_key_phrases
+- B) recognize_entities
+- C) analyze_sentiment
+- D) detect_language
+
+**Answer:** C) analyze_sentiment
+
+**Why:** Code prints `doc.sentiment` — only `analyze_sentiment` returns sentiment labels (positive/negative/neutral). Match the output property to the correct method.
+
+---
+
+### Q54. Which method returns the main talking points from text?
+
+**Source:** Test 7 — Q58
+
+```python
+from azure.core.credentials import AzureKeyCredential
+from azure.ai.textanalytics import TextAnalyticsClient
+
+client = TextAnalyticsClient(endpoint=endpoint, credential=AzureKeyCredential(key))
+documents = ["The hotel lobby was elegant and the breakfast buffet was excellent."]
+
+result = client.________(documents)
+for doc in result:
+    print(doc.key_phrases)
+```
+
+**Options:**
+- A) extract_key_phrases
+- B) analyze_sentiment
+- C) recognize_entities
+- D) detect_language
+
+**Answer:** A) extract_key_phrases
+
+**Why:** Code prints `doc.key_phrases` — only `extract_key_phrases` returns key phrases. Match the output property to the method.
 
 ---
 
@@ -709,6 +765,93 @@ analyzer = ContentAnalyzer(
 
 ---
 
+### Q55. Which generation method for extracting an InvoiceNumber field? 🔴
+
+**Source:** Test 7 — Q29
+
+```python
+from azure.ai.contentunderstanding.models import (
+    ContentFieldDefinition,
+    ContentFieldType,
+    GenerationMethod,
+)
+
+field = ContentFieldDefinition(
+    type=ContentFieldType.STRING,
+    ______,
+    description="Invoice number on the document",
+)
+```
+
+**Options:**
+- A) method=GenerationMethod.GENERATE
+- B) method=GenerationMethod.CLASSIFY
+- C) method=GenerationMethod.EXTRACT
+- D) enum=["Invoice"]
+
+**Answer:** C) method=GenerationMethod.EXTRACT
+
+**Why:** InvoiceNumber is a concrete value pulled from the document — use EXTRACT. GENERATE = derived/summary. CLASSIFY = categorize into classes. enum defines allowed categories.
+
+---
+
+### Q56. Which base_analyzer_id for a custom business forms analyzer? 🔴
+
+**Source:** Test 7 — Q36
+
+```python
+from azure.ai.contentunderstanding.models import ContentAnalyzer
+
+analyzer = ContentAnalyzer(
+    base_analyzer_id="_____",
+    description="Custom analyzer for vendor forms",
+    field_schema=field_schema,
+    models={"completion": "gpt-4.1"}
+)
+```
+
+**Options:**
+- A) prebuilt-document
+- B) prebuilt-image
+- C) prebuilt-audio
+- D) prebuilt-documentFields
+
+**Answer:** A) prebuilt-document
+
+**Why:** `prebuilt-document` is the base for custom document/form analyzers. `prebuilt-image` = image base. `prebuilt-documentFields` is a utility (extracts key-value pairs), NOT a base for custom analyzers.
+
+---
+
+### Q57. Which analyzer_id for invoice field extraction?
+
+**Source:** Test 7 — Q55
+
+```python
+from azure.ai.contentunderstanding import ContentUnderstandingClient
+from azure.ai.contentunderstanding.models import AnalysisInput
+from azure.core.credentials import AzureKeyCredential
+
+client = ContentUnderstandingClient(endpoint=endpoint, credential=AzureKeyCredential(key))
+
+poller = client.begin_analyze(
+    ______,
+    inputs=[AnalysisInput(url=file_url)]
+)
+result = poller.result()
+```
+
+**Options:**
+- A) analyzer_id="prebuilt-documentFieldSchema"
+- B) analyzer_id="prebuilt-documentFields"
+- C) analyzer_id="prebuilt-invoice"
+- D) analyzer_id="prebuilt-document"
+
+**Answer:** C) analyzer_id="prebuilt-invoice"
+
+**Why:** For invoice extraction, use the domain-specific `prebuilt-invoice`. `prebuilt-document` = base for custom analyzers. `prebuilt-documentFieldSchema` = propose schemas. `prebuilt-documentFields` = generic key-value extraction.
+
+---
+
 ## 5. Foundry SDK (AIProjectClient + Agents)
 
 ### Q26. How do you get the OpenAI-compatible client from a project? 🔴
@@ -937,6 +1080,29 @@ response = client.chat.completions.create(
 
 ---
 
+### Q58. What is the correct payload key for the deployment name?
+
+**Source:** Test 7 — Q35
+
+```python
+payload = {
+    # missing fragment
+    "input": "Summarize this support ticket."
+}
+```
+
+**Options:**
+- A) "model": deployment_name,
+- B) "endpoint": deployment_name,
+- C) "deployment_type": deployment_name,
+- D) "project": deployment_name,
+
+**Answer:** A) "model": deployment_name,
+
+**Why:** Deployment name goes in the `"model"` field during inference. Same pattern across all API calls — `model` routes to the specific deployment.
+
+---
+
 ## 7. Responses API
 
 ### Q34. What parameter name sends the prompt in the Responses API?
@@ -990,6 +1156,29 @@ follow_up = client.responses.create(
 **Answer:** D) previous_response_id=response.id
 
 **Why:** Links follow-up to prior response for conversation continuity. NOT `tool_choice` (tool behavior), `store` (persistence), or `instructions=response.id` (wrong usage).
+
+---
+
+### Q59. What parameter targets a specific deployment in responses.create()?
+
+**Source:** Test 7 — Q8
+
+```python
+response = client.responses.create(
+    # missing fragment
+    input="Summarize this incident."
+)
+```
+
+**Options:**
+- A) endpoint="ops-assistant",
+- B) deployment_type="ops-assistant",
+- C) project="ops-assistant",
+- D) model="ops-assistant",
+
+**Answer:** D) model="ops-assistant",
+
+**Why:** Deployment name maps to `model` parameter during inference. Same pattern as chat completions — `model` routes to the specific deployment.
 
 ---
 
@@ -1108,6 +1297,60 @@ ________
 **Answer:** C) `ImageUrl.load(image_file="receipt.jpg", image_format="jpeg")`
 
 **Why:** Documented helper that converts local file into a data URL. NOT `ImageUrl(image_file=...)` (no `.load()`). NOT `TextContentItem` or `AudioContentItem`.
+
+---
+
+### Q60. How do you send inline audio data in a chat completion request? 🔴
+
+**Source:** Test 7 — Q40
+
+```python
+messages = [
+    {
+        "role": "user",
+        "content": [
+            {"type": "text", "text": "Answer the spoken request."},
+            # Missing line
+        ],
+    }
+]
+```
+
+**Options:**
+- A) {"type": "audio", "data": encoded_string}
+- B) {"type": "speech_input", "format": "wav", "data": encoded_string}
+- C) {"type": "audio_url", "audio_url": {"url": encoded_string}}
+- D) {"type": "input_audio", "input_audio": {"data": encoded_string, "format": "wav"}}
+
+**Answer:** D) {"type": "input_audio", "input_audio": {"data": encoded_string, "format": "wav"}}
+
+**Why:** Inline audio uses `input_audio` type with nested `data` + `format`. `audio_url` is for cloud-hosted files by URL. `audio` and `speech_input` are fake types.
+
+---
+
+### Q61. How do you request spoken audio output from a model?
+
+**Source:** Test 7 — Q47
+
+```python
+completion = client.chat.completions.create(
+    model="gpt-4o-mini-audio-preview",
+    # Missing line
+    messages=[
+        {"role": "user", "content": "Reply aloud to this request."}
+    ],
+)
+```
+
+**Options:**
+- A) modalities=["text"]
+- B) modalities=["text", "audio"], audio={"voice": "alloy", "format": "wav"},
+- C) audio={"format": "wav"},
+- D) response_format="audio/wav",
+
+**Answer:** B) modalities=["text", "audio"], audio={"voice": "alloy", "format": "wav"},
+
+**Why:** Spoken output requires `modalities=["text", "audio"]` AND `audio` config with voice + format. `modalities=["text"]` = text-only. `audio` alone without modalities is incomplete.
 
 ---
 
@@ -1475,6 +1718,36 @@ else:
 
 ---
 
+### Q62. How do you preserve an audit record before deployment?
+
+**Source:** Test 7 — Q42
+
+```python
+audit_log = []
+
+review = {
+    "model": "claims-priority-v2",
+    "approved_by": reviewer,
+    "reason": change_reason
+}
+
+# Missing line
+
+deploy_model("claims-priority-v2")
+```
+
+**Options:**
+- A) print(review)
+- B) audit_log.append(review)
+- C) reviewer = "system"
+- D) change_reason = None
+
+**Answer:** B) audit_log.append(review)
+
+**Why:** Accountability requires traceability — appending to audit log preserves who approved and why. `print()` is temporary. Other options erase governance data.
+
+---
+
 ## 15. Cheat Sheets
 
 ### SDK Method Quick Reference
@@ -1525,6 +1798,9 @@ ImageAnalysisClient(endpoint=EP, credential=AzureKeyCredential(key))
 | `prebuilt-image` | Base for custom image analyzers |
 | `prebuilt-invoice` | Invoice field extraction |
 | `prebuilt-procurement` | Mixed procurement docs |
+| `prebuilt-document` | Base for custom document analyzers |
+| `prebuilt-documentFields` | Extract key-value pairs from documents |
+| `prebuilt-documentFieldSchema` | Propose field schema for new doc types |
 | `prebuilt-documentSearch` | Document RAG/search ingestion |
 
 ### Key Parameter Names
@@ -1539,6 +1815,10 @@ ImageAnalysisClient(endpoint=EP, credential=AzureKeyCredential(key))
 | `instructions` | PromptAgentDefinition | Agent behavior rules |
 | `smartCropping` | Generate Thumbnail API | Content-aware crop |
 | `base_analyzer_id` | Custom analyzer | Parent prebuilt analyzer |
+| `method` | ContentFieldDefinition | EXTRACT/GENERATE/CLASSIFY |
+| `modalities` | Chat completions | Request output modalities (text, audio) |
+| `input_audio` | Chat completions | Inline encoded audio input |
+| `audio_url` | Chat completions | Cloud-hosted audio input by URL |
 
 ### Chat Completions vs Responses API — Image Input
 

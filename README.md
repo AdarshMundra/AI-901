@@ -39,13 +39,14 @@ Each test file processed into Q/A/Why format with incorrect answers marked with 
 | [docs/test4-QA-Notes.md](docs/test4-QA-Notes.md) | Test 4 (60 questions) | 82% |
 | [docs/test5-QA-Notes.md](docs/test5-QA-Notes.md) | Test 5 (55 questions) | 69% |
 | [docs/test6-QA-Notes.md](docs/test6-QA-Notes.md) | Test 6 (65 questions) | 66% |
+| [docs/test7-QA-Notes.md](docs/test7-QA-Notes.md) | Test 7 (60 questions) | 63% |
 
 ## Focused Review Files
 
 | File | Description |
 |------|-------------|
-| [docs/AI-901-Coding-Snippets.md](docs/AI-901-Coding-Snippets.md) | ~50 coding questions from all 6 tests, organized by SDK/service (Text Analytics, Speech, Vision, Content Understanding, Foundry SDK, Chat Completions, Responses API, Image Generation, Embeddings, etc.) with cheat sheets |
-| [docs/AI-901-YesNo-Questions.md](docs/AI-901-YesNo-Questions.md) | 35 Yes/No statement combo questions from all 6 tests, organized by topic (Responsible AI, GenAI concepts, Speech, Vision, Agents, Deployment) with a common traps cheat sheet |
+| [docs/AI-901-Coding-Snippets.md](docs/AI-901-Coding-Snippets.md) | ~62 coding questions from all 7 tests, organized by SDK/service (Text Analytics, Speech, Vision, Content Understanding, Foundry SDK, Chat Completions, Responses API, Image Generation, Embeddings, etc.) with cheat sheets |
+| [docs/AI-901-YesNo-Questions.md](docs/AI-901-YesNo-Questions.md) | 42 Yes/No statement combo questions from all 7 tests, organized by topic (Responsible AI, GenAI concepts, Speech, Vision, Agents, Deployment, Audio) with a common traps cheat sheet |
 | [docs/AI-901-Case-Studies.md](docs/AI-901-Case-Studies.md) | 20 case study questions from 4 scenarios (Verdant Arc, Cedarbridge, SignalFrame, Solstice) with full context, options, answers, and detailed explanations |
 
 ## Raw Practice Tests
@@ -58,3 +59,4 @@ Each test file processed into Q/A/Why format with incorrect answers marked with 
 | [docs/test4.txt](docs/test4.txt) |
 | [docs/test5.txt](docs/test5.txt) |
 | [docs/test6.txt](docs/test6.txt) |
+| [docs/test7.txt](docs/test7.txt) |

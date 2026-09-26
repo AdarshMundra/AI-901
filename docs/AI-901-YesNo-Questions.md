@@ -1,6 +1,6 @@
 # AI-901 Yes/No Statement Combination Questions
 
-All Yes/No statement combo questions extracted from Tests 1–6.  
+All Yes/No statement combo questions extracted from Tests 1–7.  
 Organized by topic. Duplicates between tests noted.  
 🔴 = You answered incorrectly
 
@@ -89,6 +89,48 @@ Organized by topic. Duplicates between tests noted.
 - S1: Understanding capabilities/limitations is core transparency.
 - S2: Encryption is **privacy/security**, not transparency.
 - S3: Transparency notes are designed to be shared with users and affected people.
+
+---
+
+### Fairness (Test 7 — Q11)
+| # | Statement | Answer |
+|---|-----------|--------|
+| 1 | Fairness concerns can appear when training data underrepresents part of the population. | **Yes** |
+| 2 | Fairness and inclusiveness are identical terms in Microsoft's responsible AI principles. | **No** |
+| 3 | Comparing model behavior across demographic groups can help identify fairness issues. | **Yes** |
+
+**Why:**
+- S1: Underrepresentation = biased outcomes. Microsoft emphasizes representative data.
+- S2: Fairness and inclusiveness are **separate** responsible AI principles, not synonyms.
+- S3: Subgroup comparison is a standard fairness assessment method.
+
+---
+
+### Accountability (Test 7 — Q17) 🔴
+| # | Statement | Answer |
+|---|-----------|--------|
+| 1 | In an accountable AI solution, the AI system should be the final authority for decisions that affect people's lives. | **No** |
+| 2 | Logging who published a model and why it changed supports accountability. | **Yes** |
+| 3 | Governance sign-off before deployment supports accountability. | **Yes** |
+
+**Why:**
+- S1: Microsoft says AI should **not** be the final authority — humans must maintain control.
+- S2: Logging changes and publishers = traceability = accountability.
+- S3: Governance sign-off = formal responsibility and oversight.
+
+---
+
+### Fairness (Test 7 — Q56)
+| # | Statement | Answer |
+|---|-----------|--------|
+| 1 | Fairness means an AI system should avoid affecting similar groups differently. | **Yes** |
+| 2 | Using real-world evaluation data can help assess fairness. | **Yes** |
+| 3 | Fairness is mainly about making model internals visible to end users. | **No** |
+
+**Why:**
+- S1: Core fairness definition — equitable treatment across groups.
+- S2: Real-world data is critical for fairness evaluation (Microsoft Learn).
+- S3: Making internals visible = **transparency**, not fairness.
 
 ---
 
@@ -340,6 +382,34 @@ Organized by topic. Duplicates between tests noted.
 
 ---
 
+### Text Analytics (Test 7 — Q50)
+| # | Statement | Answer |
+|---|-----------|--------|
+| 1 | Keyword extraction identifies main concepts in text. | **Yes** |
+| 2 | Entity detection can categorize items such as people and organizations. | **Yes** |
+| 3 | Summarization is the best technique for assigning positive, neutral, or negative labels. | **No** |
+
+**Why:**
+- S1: Key phrase extraction finds main talking points/concepts.
+- S2: Named entity recognition categorizes people, orgs, locations, etc.
+- S3: **Sentiment analysis** assigns polarity labels — not summarization.
+
+---
+
+### Content Understanding (Test 7 — Q60) 🔴
+| # | Statement | Answer |
+|---|-----------|--------|
+| 1 | prebuilt-documentFieldSchema can propose a field schema for a new document type. | **Yes** |
+| 2 | estimateFieldSourceAndConfidence can return page number, bounding box, and confidence for extracted fields. | **Yes** |
+| 3 | prebuilt-documentFields is mainly used to transcribe audio recordings. | **No** |
+
+**Why:**
+- S1: documentFieldSchema is the schema-proposal utility analyzer.
+- S2: estimateFieldSourceAndConfidence returns source location + confidence for fields.
+- S3: documentFields extracts key-value pairs from **documents** — not audio transcription.
+
+---
+
 ## Agents & Foundry
 
 ### Agent Capabilities (Test 1 Q22 = Test 6 Q22)
@@ -372,6 +442,20 @@ Organized by topic. Duplicates between tests noted.
 
 ---
 
+### Foundry Portal (Test 7 — Q37) 🔴
+| # | Statement | Answer |
+|---|-----------|--------|
+| 1 | Every Foundry model requires an Azure Marketplace subscription before deployment. | **No** |
+| 2 | After deployment, you can type a prompt and see outputs in the playground. | **Yes** |
+| 3 | The Code tab shows details about programmatic access to the deployment. | **Yes** |
+
+**Why:**
+- S1: Only **partner/community** models need Marketplace subscription — not all models.
+- S2: Playground lets you type prompts and see outputs after deployment.
+- S3: Code tab shows programmatic access details — documented post-deployment step.
+
+---
+
 ### Agent SDK (Test 4 — Q44)
 | # | Statement | Answer |
 |---|-----------|--------|
@@ -397,6 +481,22 @@ Organized by topic. Duplicates between tests noted.
 - S1: Python AIProjectClient uses **Entra ID only** — no API-key auth.
 - S2: Responses API uses `responses.create(..., input="...")`.
 - S3: Chat-completions should end with a user message so the model knows it's the assistant's turn.
+
+---
+
+## Multimodal Audio
+
+### Audio Capabilities (Test 7 — Q44)
+| # | Statement | Answer |
+|---|-----------|--------|
+| 1 | Audio-enabled models introduce the audio modality into the existing /chat/completions API. | **Yes** |
+| 2 | In the Foundry Chat playground, you can record audio prompts and attach audio files. | **Yes** |
+| 3 | The documented place to test gpt-4o-mini-audio-preview is the Audio playground, not the Chat playground. | **No** |
+
+**Why:**
+- S1: Audio extends the existing chat completions API — no separate API needed.
+- S2: Chat playground supports audio recording and file attachment.
+- S3: Audio playground does **not** support gpt-4o-mini-audio-preview — use **Chat playground** instead.
 
 ---
 
@@ -476,3 +576,8 @@ Match the property to its correct description. Select 3 correct pairs:
 | AIProjectClient = Entra ID only | No API-key auth for Python AIProjectClient |
 | Serverless = regional only | Serverless API endpoints cannot be global |
 | Content Understanding audio ≠ TTS | Audio extraction = analyze speech. TTS = generate speech |
+| Fairness ≠ Inclusiveness | Separate principles — fairness=equitable treatment, inclusiveness=accessible design |
+| AI ≠ final authority | Accountability requires humans maintain control over high-impact decisions |
+| Not all models need Marketplace | Only partner/community models require Azure Marketplace subscription |
+| Audio playground ≠ gpt-4o-mini-audio | Use Chat playground for gpt-4o-mini-audio-preview, NOT Audio playground |
+| documentFields ≠ documentFieldSchema | Fields=extract key-value pairs. FieldSchema=propose schema for new doc types |
