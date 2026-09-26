@@ -48,6 +48,7 @@ Each test file processed into Q/A/Why format with incorrect answers marked with 
 | [docs/AI-901-Coding-Snippets.md](docs/AI-901-Coding-Snippets.md) | ~62 coding questions from all 7 tests, organized by SDK/service (Text Analytics, Speech, Vision, Content Understanding, Foundry SDK, Chat Completions, Responses API, Image Generation, Embeddings, etc.) with cheat sheets |
 | [docs/AI-901-YesNo-Questions.md](docs/AI-901-YesNo-Questions.md) | 42 Yes/No statement combo questions from all 7 tests, organized by topic (Responsible AI, GenAI concepts, Speech, Vision, Agents, Deployment, Audio) with a common traps cheat sheet |
 | [docs/AI-901-Case-Studies.md](docs/AI-901-Case-Studies.md) | 20 case study questions from 4 scenarios (Verdant Arc, Cedarbridge, SignalFrame, Solstice) with full context, options, answers, and detailed explanations |
+| [docs/AI-901-Master-Cheatsheet.md](docs/AI-901-Master-Cheatsheet.md) | Comprehensive master cheat sheet covering all 15 topic areas — Responsible AI, Text Analytics, Speech, Vision, Content Understanding, Foundry Portal, Agents, APIs, Audio, Prompt Engineering, SDK Patterns, and 25+ common traps |
 
 ## Raw Practice Tests
 
