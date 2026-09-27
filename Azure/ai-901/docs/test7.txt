@@ -1,0 +1,2796 @@
+To reduce bias in an AI solution, the training and evaluation data should be ________ of the people who will be affected by the system.
+
+
+
+Which answer best completes the sentence?
+
+
+
+Select only one answer.
+
+A. encrypted
+
+Explanation
+Encrypting the training and evaluation data does not directly address the issue of bias in an AI solution. Encryption is used to protect data during transmission and storage, but it does not ensure that the data is representative of the people who will be affected by the system.
+Your answer is correct
+B. representative
+
+Explanation
+The training and evaluation data should be representative of the people who will be affected by the system to reduce bias in an AI solution. By ensuring that the data accurately reflects the diversity and characteristics of the target population, the AI model is less likely to exhibit bias.
+C. compressed
+
+Explanation
+Compressing the training and evaluation data does not address the issue of bias in an AI solution. Compression is used to reduce the size of data for storage or transmission purposes and does not impact the representativeness of the data.
+D. anonymized
+
+Explanation
+Anonymizing the training and evaluation data may help protect the privacy of individuals, but it does not guarantee that the data is representative of the people who will be affected by the system. Anonymization focuses on removing personally identifiable information, rather than ensuring the data accurately reflects the target population.
+Overall explanation
+Representative is the correct answer because Microsoft guidance on responsible AI fairness emphasizes using diverse and representative data to reduce bias. If the data does not reflect the people who will be affected by the AI system, some groups can be underrepresented and receive worse outcomes.
+
+
+
+Microsoft Learn training on responsible AI also highlights the importance of using real-world data to evaluate fairness. For AI-901-style questions, representative data is a common fairness mitigation concept because fairness is strongly tied to how well the data reflects real users and impacted groups.
+
+
+
+Why the other options are incorrect:
+
+• A. Encrypted data helps protect confidentiality and supports privacy and security goals. However, encryption does not make a dataset balanced or representative of different groups. A dataset can be well protected and still produce unfair outcomes if it reflects bias or omits important populations.
+
+• C. Compressed data is a storage or transmission concern, not a fairness control. Reducing file size does not address whether the data reflects different demographics or real-world usage conditions. The question is about bias reduction, which depends more on representation than on storage efficiency.
+
+• D. Anonymized data can support privacy goals by reducing direct exposure of personal information. However, anonymization alone does not ensure that all affected groups are fairly represented in training or evaluation. A dataset can be anonymized and still produce biased or uneven outcomes across groups.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 2
+Incorrect
+After opening a deployed model in the playground, which TWO actions are explicitly described by Microsoft? (Select TWO.)
+
+Your selection is incorrect
+A. View endpoint keys from the deployment details page
+
+Your selection is incorrect
+B. Subscribe to Azure Marketplace offers
+
+Correct selection
+C. Type a prompt and see the outputs
+
+Correct selection
+D. Select the Code tab to see programmatic access details
+
+E. Reallocate TPM from other deployments in the chat pane
+
+Overall explanation
+C and D are correct because Microsoft’s deployment guide says that after opening the playground for the deployed model, you can type your prompt and see the outputs, and then select the Code tab to see details about how to access the model deployment programmatically. Those two actions are explicitly part of the playground workflow.
+
+
+
+This pairing is useful for AI-901 because it captures the two most practical post-deployment portal tasks: validate behavior interactively and then bridge into code if needed. That is exactly the kind of lightweight, hands-on portal question the exam objective invites.
+
+
+
+Why the other options are incorrect:
+
+• A. Viewing endpoint keys is real, but Microsoft says that happens from a deployment’s detail page under the management flow, not as one of the actions listed after opening the playground. The question is specifically about actions in the playground. This option is a true concept in the wrong location.
+
+• B. Azure Marketplace subscription can be part of deployment setup for partner and community models. However, Microsoft describes that as part of the deployment process when applicable, not as a step you perform after opening the deployed model in the playground. This option confuses prerequisite/subscription flow with runtime interaction.
+
+• E. Reallocating TPM is mentioned in the quota section as something you can do when you hit quota limits. Microsoft does not present it as an action in the playground chat pane after opening a deployed model. It belongs to quota management, not prompt interaction workflow.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 3
+Correct
+A team wants to evaluate whether a hiring model is fair before deployment. Which TWO actions best support that goal? (Select TWO.)
+
+A. Hide the model name from users
+
+Your selection is correct
+B. Test the model with representative real-world data
+
+C. Turn on encryption for stored files
+
+Your selection is correct
+D. Compare outcomes across demographic groups
+
+E. Increase the server timeout value
+
+Overall explanation
+B and D are correct because fairness evaluation depends on checking how the system performs across different groups and using data that reflects real-world populations. Microsoft Learn explicitly calls out the importance of real-world data for evaluating fairness, and Microsoft’s responsible AI guidance describes fairness in terms of avoiding different impacts on similar groups.
+
+
+
+In AI-901-style terms, fairness is not just a design intention; it must be assessed. Testing across relevant groups and using representative data helps uncover whether one group is disproportionately disadvantaged by the system’s behavior.
+
+
+
+Why the other options are incorrect:
+
+• A. Hiding the model name from users does not meaningfully assess or improve fairness. At most, that might relate weakly to user experience or branding, but it does not show whether the system treats groups equitably. A fairness review requires outcome analysis, not concealment of model identity.
+
+• C. Encrypting stored files is good security practice and supports privacy and security objectives. However, it does not reveal whether one demographic group receives systematically worse results than another. Fairness is about equitable treatment and outcomes, not just protecting stored data.
+
+• E. Increasing a server timeout value might affect performance or resilience, but it does not address bias, representation, or unequal treatment. That kind of change is closer to reliability or operational tuning than to fairness. It would not help the team determine whether the hiring model disadvantages a specific group.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 4
+Incorrect
+Which THREE pairs are correctly matched? (Select THREE.)
+
+Your selection is correct
+A. Accountability — assign owners for model behavior and review
+
+B. Transparency — encrypt data at rest
+
+Your selection is correct
+C. Privacy and security — role-based access control
+
+D. Inclusiveness — maintain model lineage
+
+Correct selection
+E. Accountability — document deployment approvals
+
+Your selection is incorrect
+F. Fairness — explain how predictions were produced
+
+Overall explanation
+Accountability is about ownership, answerability, and governance for AI system behavior, so assigning owners and documenting deployment approvals are correct matches. Microsoft also associates accountability with governance data, lineage, change history, and the ability to understand who approved or changed a model and when.
+
+
+
+Privacy and security includes controlling access to resources and data, so role-based access control is also a correct match. Microsoft distinguishes privacy and security from other responsible AI principles by focusing on protection of data, restricted access, encryption, and related controls.
+
+
+
+Why the other options are incorrect:
+
+• B. Transparency is not primarily about encrypting data at rest. Encryption is a privacy and security control used to protect information confidentiality. Transparency is instead about helping people understand how decisions are made, how data is used, and what the system is doing. That makes this pair a plausible but incorrect principle mix-up.
+
+• D. Inclusiveness is not about maintaining model lineage. Lineage and approval tracking relate to governance, traceability, and accountability. Inclusiveness is about designing experiences that support people with varied abilities, backgrounds, and interaction needs. So this pairing confuses accessibility-oriented design with oversight-oriented design.
+
+• F. Fairness is not mainly about explaining how predictions were produced. Explanation and clarity about model behavior align more closely with transparency. Fairness is concerned with whether comparable people or groups are treated equitably and whether harms are distributed unjustly. Therefore this pair swaps two responsible AI principles.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 5
+Incorrect
+You receive a new form type and want Foundry Tools to suggest an appropriate field schema before you build a custom analyzer. Use ________.
+
+
+
+Which answer best completes the sentence?
+
+A. prebuilt-documentSearch
+
+Explanation
+The option "prebuilt-documentSearch" does not directly relate to suggesting an appropriate field schema for a new form type in Foundry Tools. It is more focused on document search functionality rather than field schema suggestion.
+Your answer is incorrect
+B. prebuilt-documentFields
+
+Explanation
+The option "prebuilt-documentFields" does not specifically address the task of suggesting an appropriate field schema for a new form type in Foundry Tools. It may refer to prebuilt document fields, but it does not directly relate to schema suggestion.
+Correct answer
+C. prebuilt-documentFieldSchema
+
+Explanation
+The option "prebuilt-documentFieldSchema" is the correct choice as it aligns with the task of suggesting an appropriate field schema for a new form type in Foundry Tools. This option implies that there are prebuilt schemas available for document fields, which can be used as a reference before building a custom analyzer.
+D. prebuilt-invoice
+
+Explanation
+The option "prebuilt-invoice" does not seem relevant to the task of suggesting an appropriate field schema for a new form type in Foundry Tools. It appears to be specific to invoices and may not provide the general schema suggestion needed for a new form type.
+Overall explanation
+prebuilt-documentFieldSchema is the correct answer because Microsoft documents it as the utility analyzer that analyzes documents to propose an appropriate field schema. It is specifically described as useful for discovering structure in new document types.
+
+
+
+That makes it the strongest fit when the task is not yet extraction of known fields, but schema discovery for a new form type. The question is testing the difference between proposing a schema and extracting values with an already chosen schema.
+
+
+
+Why the other options are incorrect:
+
+• A. prebuilt-documentSearch is intended for rich document content extraction and markdown output, especially in search or RAG workflows. It is useful for understanding document content, but Microsoft does not describe it as the analyzer that proposes a field schema for a new document type. That makes it close, but still not the best answer.
+
+
+
+• B. prebuilt-documentFields extracts key-value pairs from documents. That is helpful when you want actual field-like content out of a document, but this question is asking for a proposed schema before building the analyzer. Schema suggestion and key-value extraction are related, but they are not the same step.
+
+
+
+• D. prebuilt-invoice is a domain-specific analyzer for invoice-style documents. It is the right choice when the document type is already known to be an invoice, but the question says the team has received a new form type. In that situation, a schema-proposal analyzer is the more appropriate starting point.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 6
+Correct
+A team is building a custom analyzer for scanned expense forms. The solution must read image-based PDFs and return page location and confidence for extracted fields.
+
+
+
+Which TWO configuration choices best fit this requirement? (Select TWO.)
+
+Your selection is correct
+A. enableOcr
+
+Your selection is correct
+B. estimateFieldSourceAndConfidence
+
+C. disableFaceBlurring
+
+D. locales
+
+E. enableSegment
+
+Overall explanation
+enableOcr is appropriate because Microsoft documents it as the option that enables optical character recognition for images and scanned documents. That directly matches image-based PDFs and scanned forms.
+
+
+
+estimateFieldSourceAndConfidence is also appropriate because it returns source location information, such as page number and bounding box, along with confidence for extracted field values. Microsoft specifically calls out validation, quality assurance, debugging, and UI highlighting as reasons to use it.
+
+
+
+Why the other options are incorrect:
+
+• C. disableFaceBlurring is not part of the document-extraction requirement being tested here. The analyzer reference associates it with image and video-style scenarios rather than document field extraction from forms. This question is about scanned PDFs, OCR, and field provenance, so face-blurring is a distractor, not a requirement.
+
+
+
+• D. locales is used primarily for language-specific processing in audio and video transcription scenarios. Microsoft documents it under audio and video options, not as the main control for scanned document OCR and field-source validation. Because this question is about document forms, it is not one of the two best answers.
+
+
+
+• E. enableSegment can be useful in classification and routing workflows, but it is not the direct answer to the two requirements given. The question asks for reading scanned PDFs and returning source locations and confidence for fields, which are better addressed by OCR and field-source estimation. Segmentation does not replace either of those capabilities.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 7
+Correct
+A recruiting model consistently scores candidates from one age group lower, even when qualifications are similar.
+
+
+
+Which action is the best fairness-focused response?
+
+
+
+Select only one answer.
+
+A. Increase the number of model endpoints
+
+Explanation
+Increasing the number of model endpoints will not directly address the fairness issue related to age group scoring discrepancies. It may improve scalability or performance but will not specifically target the fairness concern.
+B. Remove the audit trail
+
+Explanation
+Removing the audit trail is not a recommended action for addressing fairness concerns in a recruiting model. The audit trail is essential for transparency, accountability, and tracking model decisions, which are crucial for ensuring fairness.
+C. Publish the source code publicly
+
+Explanation
+Publishing the source code publicly may promote transparency and accountability, but it alone may not effectively address the specific fairness issue of age group scoring discrepancies. While transparency is important, evaluating model results across age-based groups is more directly related to addressing the fairness concern.
+Your answer is correct
+D. Evaluate model results across age-based groups
+
+Explanation
+Evaluating model results across age-based groups is the best fairness-focused response in this scenario. By analyzing how the model performs across different age groups, it can help identify and address any biases or discrepancies in scoring candidates based on age. This approach is essential for ensuring fairness and mitigating potential discrimination in the recruiting process.
+Overall explanation
+Evaluating model results across age-based groups is the best fairness-focused response because fairness issues are identified by checking whether similar people or groups are being affected differently. Microsoft’s responsible AI guidance points to fairness assessment across sensitive groups as an important way to understand model behavior.
+
+
+
+This answer also fits the exam objective better than broader operational steps. The scenario is not about scale, publishing, or logging. It is about potential bias in outcomes, so the most relevant next step is to assess comparative performance and impact across the affected groups.
+
+
+
+Why the other options are incorrect:
+
+• A. Increasing the number of model endpoints may improve scale or availability, but it does not reveal whether the system is disadvantaging one age group. Capacity changes are operational decisions, not fairness evaluations. The question is about unequal scoring, so group-level assessment is more appropriate.
+
+• B. Removing the audit trail would reduce oversight rather than improve it. Auditability can support accountability and investigation, especially when a team is trying to understand whether bias exists. Eliminating records would make fairness review harder, not easier.
+
+• C. Publishing source code publicly may increase openness in some contexts, but it does not directly test whether the model treats age groups fairly. Transparency and fairness are related but different principles. The most direct fairness response is to compare outcomes across the relevant groups.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 8
+Correct
+You copied a Python sample from the playground Code tab after deploying a model named ops-assistant.
+
+Snippet
+
+response = client.responses.create(
+    # missing fragment
+    input="Summarize this incident."
+)
+Which code should replace the missing section?
+
+A. endpoint="ops-assistant",
+
+Explanation
+The 'endpoint' parameter is not applicable in this context as it is typically used to specify the endpoint URL for making API calls. It does not fit the context of creating responses for a deployed model named ops-assistant.
+B. deployment_type="ops-assistant",
+
+Explanation
+The 'deployment_type' parameter is not relevant for creating responses for a deployed model. It is more commonly used to specify the type of deployment environment or strategy, rather than the specific model being referenced.
+C. project="ops-assistant",
+
+Explanation
+The 'project' parameter is not suitable for replacing the missing section in the given code snippet. It does not align with the context of creating responses for a deployed model named ops-assistant.
+Your answer is correct
+D. model="ops-assistant",
+
+Explanation
+The 'model' parameter is the correct choice to replace the missing section in the code snippet. It specifies the model named ops-assistant that the client will use to generate a response for the input provided.
+Overall explanation
+model="ops-assistant", is correct because Microsoft documents that the deployment name is used in the model parameter during inference. The Code tab exists to show the programmatic access details for the deployment you created in the portal, so this is the correct argument to target that deployment.
+
+
+
+This question is narrow on purpose because the skill area is narrow. AI-901 often uses small implementation distinctions like this to test whether you understand how the portal deployment maps into the client call shown in the sample code.
+
+
+
+Why the other options are incorrect:
+
+• A. endpoint is plausible because Microsoft says you can view endpoint details and keys from the deployment details page. However, the deployment guide specifically says the deployment name is used in the model parameter during inference. Endpoint information is useful, but it is not the argument being tested here.
+
+• B. deployment_type sounds realistic because deployment types are part of the deployment configuration story. But Microsoft treats deployment type as a configuration choice, not as the field that identifies which deployed model should handle an inference request. That is why it is the wrong parameter here.
+
+• C. project is a valid Foundry concept because you work inside a selected project in the portal. Even so, Microsoft does not describe project name as the inference argument that routes a request to the deployed model. The routing field called out in the docs is model.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 9
+Correct
+Which statement best describes fairness in an AI solution?
+
+
+
+Select only one answer.
+
+A. The system stores data in encrypted form
+
+Explanation
+Storing data in encrypted form is related to data security and privacy, not fairness in an AI solution. While data encryption is important for protecting sensitive information, it does not directly address the concept of fairness in AI.
+B. The system explains every internal parameter to users
+
+Explanation
+Explaining every internal parameter to users is related to transparency and interpretability in AI systems, not fairness. While transparency is crucial for understanding how AI systems make decisions, it does not necessarily ensure fairness in the treatment of individuals or groups.
+Your answer is correct
+C. The system treats similar people fairly across groups
+
+Explanation
+Treating similar people fairly across groups is a key aspect of fairness in an AI solution. This principle ensures that individuals with similar characteristics or attributes receive similar treatment or outcomes from the AI system, regardless of their group membership. Fairness is essential for avoiding bias and discrimination in AI applications.
+D. The system responds within a fixed latency target
+
+Explanation
+Responding within a fixed latency target is related to performance and responsiveness of the AI system, not fairness. While meeting latency targets is important for user experience and system efficiency, it does not directly address the ethical considerations of fairness in AI solutions.
+Overall explanation
+Fairness is best described here as treating similar people fairly across groups. Microsoft’s current responsible AI material explains fairness in terms of avoiding different effects on similarly situated groups, which is the clearest match among the options.
+
+
+
+The other options describe different concerns such as security, transparency, or operational reliability. AI-901 fairness questions often test whether you can separate equitable treatment from explainability, privacy, and performance.
+
+
+
+Why the other options are incorrect:
+
+• A. Encrypting stored data is an important control, but it belongs to privacy and security rather than fairness. A secure system can still produce unfair outcomes if its training data or evaluation process is biased. Therefore, encryption does not define fairness.
+
+• B. Explaining internal parameters is more closely related to transparency, which is about making systems understandable and clarifying their limitations and behavior. While transparency can support trust and review, it is not the core meaning of fairness. Fairness is centered on equitable treatment and impact across groups.
+
+• D. Responding within a fixed latency target is a performance or reliability concern. It says nothing about whether people from different groups are treated equitably by the model’s decisions. A fast system can still be unfair, so latency is not the right definition.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 10
+Correct
+Which TWO situations are the strongest indicators of a fairness risk in an AI solution? (Select TWO.)
+
+Your selection is correct
+A. Similar applicants receive different outcomes across groups
+
+B. The model endpoint uses TLS
+
+Your selection is correct
+C. One affected group is barely represented in the test dataset
+
+D. The dashboard uses a dark theme
+
+E. The model card includes a version number
+
+Overall explanation
+A and C are correct because both situations point directly to fairness risk. Different outcomes for similar applicants suggest unequal treatment, and poor representation of an affected group in test data makes it harder to evaluate whether the system performs equitably in the real world.
+
+
+
+These are classic AI-901 fairness signals. Microsoft’s material ties fairness to treatment across groups and stresses the value of representative real-world data when evaluating AI systems.
+
+
+
+Why the other options are incorrect:
+
+• B. TLS is a security control used to protect data in transit. That is important for privacy and security, but it does not indicate whether an AI system is fair across different groups. A system can be highly secure and still show biased outcomes.
+
+• D. A dark theme is a user interface preference and not a fairness indicator in this context. It does not tell you anything about bias, representation, or unequal treatment of groups by the AI system. The option is operationally irrelevant to the fairness principle being tested.
+
+• E. A version number in a model card can support documentation and governance, but by itself it does not reveal unfair behavior. It may help with traceability or accountability, yet it is not evidence that the system treats groups equitably. The question asks for fairness risk indicators, and this option does not provide them.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 11
+Correct
+For each of the following statements, determine whether the statement is correct.
+
+
+
+Statement 1: Fairness concerns can appear when training data underrepresents part of the population.
+
+Statement 2: Fairness and inclusiveness are identical terms in Microsoft’s responsible AI principles.
+
+Statement 3: Comparing model behavior across demographic groups can help identify fairness issues.
+
+
+
+Select the correct combination.
+
+A. Yes / Yes / No
+
+Your answer is correct
+B. Yes / No / Yes
+
+C. No / Yes / Yes
+
+D. No / No / Yes
+
+Overall explanation
+Statement 1 is correct because underrepresentation in training data can contribute to biased or uneven outcomes. Microsoft’s responsible AI guidance and training material emphasize representative data and real-world evaluation as important fairness considerations.
+
+
+
+Statement 2 is incorrect because fairness and inclusiveness are separate responsible AI principles, even though they are related. Statement 3 is correct because comparing model behavior across demographic or sensitive groups is a practical fairness assessment step. That makes the correct combination Yes / No / Yes.
+
+
+
+Why the other options are incorrect:
+
+• A. This option wrongly marks Statement 2 as true and Statement 3 as false. Microsoft lists fairness and inclusiveness as distinct principles, not identical ones, and group comparison is a relevant fairness evaluation method. Because two statements are misclassified, this combination is incorrect.
+
+• C. This option incorrectly marks Statement 1 as false even though underrepresentation is a common fairness concern. It also incorrectly marks Statement 2 as true, even though fairness and inclusiveness are separate principles. With those errors, the combination cannot be right.
+
+• D. This option incorrectly marks Statement 1 as false and repeats the same mistake on Statement 2. It gets Statement 3 right, but that is not enough to make the overall combination correct. Microsoft’s guidance supports both representative data concerns and subgroup comparison as part of fairness evaluation.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 12
+Correct
+An AI team wants one practical step to improve fairness reviews before deployment.
+
+
+
+Which step is best?
+
+
+
+Select only one answer.
+
+A. Require a longer password policy for the portal
+
+Explanation
+Requiring a longer password policy for the portal is not directly related to improving fairness reviews before deployment. Fairness reviews focus on evaluating the impact of AI models on different groups and ensuring unbiased outcomes, which is not addressed by a longer password policy.
+Your answer is correct
+B. Evaluate results using real-world data from affected groups
+
+Explanation
+Evaluating results using real-world data from affected groups is the best step to improve fairness reviews before deployment. By analyzing how the AI model performs on data from diverse groups, the team can identify and address any biases or disparities in the model's predictions, leading to more fair and equitable outcomes.
+C. Increase the batch size during training
+
+Explanation
+Increasing the batch size during training may impact the efficiency and speed of model training, but it does not specifically address the need to improve fairness reviews before deployment. Fairness reviews require a focus on evaluating the model's performance on diverse datasets, not just on training parameters.
+D. Disable all user feedback collection
+
+Explanation
+Disabling all user feedback collection is not recommended for improving fairness reviews before deployment. User feedback can provide valuable insights into potential biases or issues with the AI model's predictions, which can help in identifying and addressing fairness concerns. Disabling this feedback collection may hinder the team's ability to improve the model's fairness.
+Overall explanation
+Evaluating results using real-world data from affected groups is the best practical step because Microsoft Learn explicitly highlights the importance of real-world data when assessing fairness. This helps teams see whether the system behaves equitably for the people who will actually be affected by it.
+
+
+
+This is also the most exam-authentic answer because AI-901 fairness questions usually focus on representative data, subgroup analysis, and unequal outcomes. Security, training optimization, and feedback policies can matter in broader system design, but they are not the most direct fairness review step here.
+
+
+
+Why the other options are incorrect:
+
+• A. A longer password policy is useful for access control and supports privacy and security. However, it does not help determine whether the model treats different groups fairly or whether its outputs are biased. The question asks for a fairness review step, and password policy is not one.
+
+• C. Increasing batch size is a machine learning tuning choice that can affect training behavior or efficiency. It does not directly tell the team whether real users or groups are being treated equitably by the resulting system. Fairness review requires evaluation of outcomes, not just optimization settings.
+
+• D. Disabling all user feedback collection could actually reduce opportunities to identify harms or uneven impacts after testing. While feedback is not the same as formal fairness evaluation, completely removing it does not improve fairness review. A much stronger action is to assess outcomes using representative real-world data from affected groups.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 13
+Correct
+A team deploys an AI model that helps prioritize insurance claims. Which practice best supports accountability in the solution?
+
+
+
+Select only one answer.
+
+A. Use a larger font in the app
+
+Explanation
+Using a larger font in the app does not directly support accountability in the AI model solution. Accountability is more related to tracking and documenting model changes, approvals, and decision-making processes.
+Your answer is correct
+B. Keep an audit trail of model changes and approvers
+
+Explanation
+Keeping an audit trail of model changes and approvers is crucial for accountability in the AI model solution. It helps in tracing back any modifications made to the model, who approved those changes, and ensures transparency and accountability in the decision-making process.
+C. Add multilingual voice output
+
+Explanation
+Adding multilingual voice output may enhance user experience and accessibility of the AI model, but it does not directly contribute to supporting accountability in the solution. Accountability is more focused on tracking and documenting model changes and approvals.
+D. Encrypt all stored data
+
+Explanation
+Encrypting all stored data is important for data security and privacy, but it is not directly related to supporting accountability in the AI model solution. Accountability is more about transparency, tracking, and documenting decision-making processes and model changes.
+Overall explanation
+Accountability in an AI solution means the people and teams who design, deploy, and operate the system remain answerable for how it behaves and for the outcomes it influences. Microsoft describes accountability as ensuring that people who design and deploy AI systems stay responsible for how those systems operate, rather than handing final authority to the AI system itself.
+
+
+
+An audit trail of model changes, approvals, and deployment history supports accountability because it creates traceability. Microsoft’s guidance highlights governance data, lineage, documented responsibilities, and approval processes as ways to make ownership, review, and follow-up clear across the AI lifecycle.
+
+
+
+Why the other options are incorrect:
+
+• A. Using a larger font can improve accessibility and inclusiveness, but it does not establish who is responsible for model behavior or deployment decisions. It helps some users interact more easily with the system, which is valuable, but that is a different responsible AI principle. It also does not create review, oversight, or audit evidence. For this question, it is not the best accountability measure.
+
+• C. Multilingual voice output is related to accessibility, speech capabilities, and potentially inclusiveness. It does not identify who approved the model, who changed it, or how decisions are reviewed after deployment. Accountability needs ownership and traceability, not just broader interaction methods. That makes this option plausible in AI design generally, but wrong here.
+
+• D. Encrypting stored data is an important privacy and security control. However, privacy and security are a separate responsible AI principle from accountability. Encryption protects data confidentiality, but by itself it does not document who made model decisions or who is responsible for operating the system. So it is good practice, but not the best answer to this question.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 14
+Incorrect
+A developer retrieves the definition of a prebuilt analyzer, edits the schema, and wants stable production behavior across API versions.
+
+
+
+What should the developer do next?
+
+A. Keep calling the prebuilt analyzer directly in production
+
+Explanation
+Keeping calling the prebuilt analyzer directly in production without creating a copy may lead to unexpected behavior and potential issues when changes are made to the schema. It is important to ensure stability and consistency in production environments, which can be achieved by creating a copy of the prebuilt analyzer.
+Correct answer
+B. Create a copy of the prebuilt analyzer and use the copy
+
+Explanation
+Creating a copy of the prebuilt analyzer and using the copy allows the developer to make edits to the schema while maintaining stable production behavior across API versions. By working with a copy, any changes or modifications made to the analyzer will not affect the original version, ensuring consistent and reliable performance in production.
+Your answer is incorrect
+C. Replace the analyzer with prebuilt-documentFields
+
+Explanation
+Replacing the analyzer with prebuilt-documentFields may not be the most suitable option for achieving stable production behavior across API versions. Editing the schema of the prebuilt analyzer and creating a copy to work with is a more effective approach to ensure stability and consistency in production environments.
+D. Change tableFormat to markdown
+
+Explanation
+Changing tableFormat to markdown is not directly related to achieving stable production behavior across API versions when working with a prebuilt analyzer. The focus should be on making edits to the schema and handling the analyzer appropriately to maintain consistency and reliability in production environments.
+Overall explanation
+Microsoft states that prebuilt analyzer definitions can change across API versions. To ensure consistent behavior, the documentation recommends making a copy of the prebuilt analyzer instead of relying on the prebuilt version directly in production.
+
+
+
+That makes B the strongest operational answer. The question is not asking about a specific field or output format; it is testing whether you understand the production-safe customization path for Content Understanding analyzers in Foundry Tools.
+
+
+
+Why the other options are incorrect:
+
+• A. Continuing to rely directly on the prebuilt analyzer in production ignores Microsoft’s warning that prebuilt definitions can change across API versions. That can introduce unexpected behavior after service or API changes. The safer documented path is to copy and customize the analyzer definition you intend to use.
+
+
+
+• C. prebuilt-documentFields is a utility analyzer for extracting key-value pairs, not a general replacement for the problem described in the question. The issue here is version stability of customized analyzer behavior, not a need to switch to a different utility analyzer. So this option changes the problem instead of solving it.
+
+
+
+• D. tableFormat controls output format for extracted tables, not production stability across API versions. Changing it from HTML to markdown may affect how tables are returned, but it does not address Microsoft’s specific guidance about copying prebuilt analyzers for consistent behavior. This is a configuration distraction, not the core answer.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 15
+Correct
+In responsible AI, ________ means that people remain answerable for how an AI system is designed, deployed, and monitored.
+
+
+
+Which answer best completes the sentence?
+
+
+
+Select only one answer.
+
+A. fairness
+
+Explanation
+Fairness in responsible AI refers to ensuring that AI systems do not exhibit bias or discrimination towards certain individuals or groups. While fairness is an important aspect of responsible AI, it does not directly address the concept of people remaining answerable for the design, deployment, and monitoring of AI systems.
+B. transparency
+
+Explanation
+Transparency in responsible AI involves making the decisions and processes of AI systems understandable and explainable to users and stakeholders. While transparency is crucial for building trust in AI systems, it does not specifically address the idea of people remaining accountable for the overall lifecycle of AI systems.
+Your answer is correct
+C. accountability
+
+Explanation
+Accountability in responsible AI emphasizes the importance of individuals and organizations taking responsibility for the ethical and legal implications of AI system design, deployment, and monitoring. It ensures that there are clear lines of responsibility and oversight throughout the AI system's lifecycle, making it the most suitable choice to complete the sentence.
+D. inclusiveness
+
+Explanation
+Inclusiveness in responsible AI focuses on ensuring that diverse perspectives and voices are considered in the development and deployment of AI systems. While inclusiveness is essential for creating AI systems that benefit all individuals, it does not directly relate to the concept of people remaining answerable for the entire AI system lifecycle.
+Overall explanation
+Accountability is the principle that best fits this sentence. Microsoft describes accountability as requiring the people who design and deploy AI systems to remain responsible for how those systems operate, including how decisions are reviewed and corrected when needed.
+
+
+
+This principle is important because AI systems are built and operated by people and organizations, not by technology acting independently of human responsibility. In practice, accountability shows up through governance, documented responsibilities, monitoring, review, and mechanisms that preserve human control over important decisions.
+
+
+
+Why the other options are incorrect:
+
+• A. Fairness is about avoiding unjust differences in treatment across similar people or groups. It asks whether the system behaves equitably, not whether the organization has clear ownership and answerability. Fairness absolutely matters in responsible AI, but it does not directly complete the sentence here. That is why it is a plausible distractor but still incorrect.
+
+• B. Transparency is about helping people understand how AI decisions are made and how data is used. That includes explainability, disclosure, and making system behavior clearer to users and stakeholders. However, transparency alone does not establish who is responsible for the system’s actions. Accountability is the stronger fit for this definition.
+
+• D. Inclusiveness focuses on designing AI systems that can be used effectively by people with diverse needs and abilities. It relates to accessibility and broad participation, not ownership of outcomes and governance. An inclusive system can still lack accountability if no one owns decisions, approvals, or incident response. So this option addresses a different principle.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 16
+Correct
+Which TWO practices best support accountability in an AI solution? (Select TWO.)
+
+Your selection is correct
+A. Record who approved each model deployment
+
+B. Add image captions to all charts
+
+Your selection is correct
+C. Define human review for high-impact outcomes
+
+D. Increase model token limits
+
+E. Use more training data sources
+
+Overall explanation
+Recording who approved a deployment supports accountability because it creates traceability and makes ownership visible. Microsoft’s guidance on accountability emphasizes governance data, lineage, approval history, and knowing who made changes and when those changes were deployed.
+
+
+
+Defining human review for high-impact outcomes also supports accountability because Microsoft states that AI systems should not be the final authority in decisions that affect people’s lives. Meaningful human oversight helps organizations stay responsible for important decisions instead of shifting responsibility to the model.
+
+
+
+Why the other options are incorrect:
+
+• B. Adding image captions is useful for accessibility and inclusiveness. It helps more users understand visual content, which is an important design goal in responsible AI. But it does not identify decision owners, approval paths, or review responsibilities. So it supports a different principle, not accountability directly.
+
+• D. Increasing token limits is a configuration choice, not an accountability control. It may change how much context a model can process, but it does not create governance, traceability, or human oversight. A system can have large token limits and still be poorly governed. That makes this unrelated to the principle being tested.
+
+• E. Using more training data sources might improve coverage in some situations, but quantity alone does not create accountability. In some cases it relates more to model quality or fairness, depending on the data used. Accountability requires clear ownership, controls, and review processes around the system. More data by itself does not provide those things.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 17
+Incorrect
+For each of the following statements, determine whether the statement is correct.
+
+
+
+Statement 1: In an accountable AI solution, the AI system should be the final authority for decisions that affect people’s lives.
+
+
+
+Statement 2: Logging who published a model and why it changed supports accountability.
+
+
+
+Statement 3: Governance sign-off before deployment supports accountability.
+
+
+
+Select the correct combination.
+
+Your answer is incorrect
+A. Yes / Yes / No
+
+B. Yes / No / Yes
+
+Correct answer
+C. No / Yes / Yes
+
+D. No / No / Yes
+
+Overall explanation
+Statement 1 is incorrect. Microsoft’s accountability guidance specifically says AI systems should not be the final authority on decisions that affect people’s lives and that humans should maintain meaningful control over highly autonomous systems.
+
+
+
+Statements 2 and 3 are correct. Microsoft identifies lineage and governance data such as who published models, why changes were made, and when models were deployed as accountability-supporting practices. Microsoft also recommends governance structures, review boards, reporting mandates, and sign-off processes so organizations can clearly assign responsibility and oversight.
+
+
+
+Why the other options are incorrect:
+
+• A. This option marks Statement 1 as Yes, which is the main problem. Accountability does not mean handing final authority to the AI model for high-impact decisions. It also marks Statement 3 as No, even though governance sign-off is one of the ways organizations formalize responsibility and oversight. Because two parts are wrong, the full combination is incorrect.
+
+• B. This option is incorrect because Statement 1 is still marked Yes. It also marks Statement 2 as No, even though Microsoft explicitly describes governance data and lineage, including who changed or published models and why, as part of accountability. So this combination misses two accountability signals.
+
+• D. This option correctly marks Statement 1 as No and Statement 3 as Yes, but it incorrectly marks Statement 2 as No. Logging who changed the model and why is a traceability practice that directly supports accountability. That one incorrect judgment makes the whole combination wrong.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 18
+Correct
+A bank uses AI to recommend whether a loan application should be escalated for manual review. Which design choice best reflects accountability?
+
+
+
+Select only one answer.
+
+A. Hide the escalation rules from reviewers
+
+Explanation
+Hiding the escalation rules from reviewers may lead to a lack of transparency and accountability in the decision-making process. Reviewers should have visibility into the rules and criteria used for escalation to ensure fairness and accuracy in the decision-making process.
+B. Replace all reviewers with automation
+
+Explanation
+Replacing all reviewers with automation eliminates the human oversight and accountability in the decision-making process. While automation can improve efficiency, having human reviewers is essential for accountability, especially in high-impact cases.
+C. Store outputs for fewer than 1 day
+
+Explanation
+Storing outputs for fewer than 1 day may not provide sufficient time for auditing and review of the decisions made by the AI system. Accountability requires retaining records of decisions for an appropriate period to ensure transparency and the ability to review and audit the decision-making process.
+Your answer is correct
+D. Require a human reviewer for high-impact cases
+
+Explanation
+Requiring a human reviewer for high-impact cases ensures accountability by introducing human oversight and judgment in critical decision-making processes. Human reviewers can provide explanations, justifications, and ensure that ethical considerations are taken into account when making decisions on high-impact cases.
+Overall explanation
+Requiring a human reviewer for high-impact cases best reflects accountability because it preserves meaningful human control over decisions that can materially affect people. Microsoft states that AI systems should not be the final authority on decisions that affect people’s lives and that humans should remain in control of highly autonomous systems.
+
+
+
+This matters especially in banking, healthcare, employment, and similar scenarios where decisions can have serious consequences. Accountability is not just about building the model; it is also about defining who reviews outcomes, who can override them, and who is responsible when the system behaves unexpectedly.
+
+
+
+Why the other options are incorrect:
+
+• A. Hiding escalation rules from reviewers works against good governance and weakens oversight. Reviewers need enough context to do meaningful review and take responsibility for outcomes. While transparency and accountability are distinct principles, hiding key decision logic makes accountable oversight harder. That is why this option is incorrect.
+
+• B. Replacing all reviewers with automation is the opposite of what Microsoft describes for accountability in high-impact decisions. It removes meaningful human control and makes it easier for organizations to defer responsibility to the model. Even if automation improves speed, accountability requires people to remain answerable for important outcomes. So this choice is not aligned to the principle.
+
+• C. Short data retention might relate to privacy practices in some contexts, but it does not directly establish accountability. A system can retain data for a short period and still have no clear owners, no sign-off process, and no monitoring. Since the question is about accountable design for decision-making, this is not the best answer.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 19
+Correct
+Even when an organization uses managed AI services, the organization remains ________ for how the AI solution is used and governed.
+
+
+
+Which answer best completes the sentence?
+
+
+
+Select only one answer.
+
+A. anonymous
+
+Explanation
+The term "anonymous" does not accurately reflect the responsibility and oversight that an organization retains when using managed AI services. Being anonymous implies a lack of identification or accountability, which is not the case when it comes to governing AI solutions.
+B. unbiased
+
+Explanation
+While being unbiased is important in AI solutions, especially in terms of data and algorithms, it does not directly relate to the organization's responsibility for how the AI solution is used and governed. The organization's accountability goes beyond just ensuring unbiased AI.
+C. encrypted
+
+Explanation
+Encryption is a security measure that protects data confidentiality, but it does not address the organization's accountability for the use and governance of AI solutions. Accountability involves taking responsibility for the outcomes and decisions made using AI technologies.
+Your answer is correct
+D. accountable
+
+Explanation
+The term "accountable" accurately reflects the concept that even when utilizing managed AI services, the organization is ultimately responsible for how the AI solution is used and governed. Accountability includes ensuring ethical use, compliance with regulations, and oversight of AI implementation and outcomes.
+Overall explanation
+The organization remains accountable for how the AI solution is applied, governed, monitored, and reviewed, even when parts of the technology stack are managed by a provider. Microsoft’s responsible AI guidance emphasizes that people and organizations must remain answerable for the behavior and use of the systems they deploy.
+
+
+
+This is why governance boards, sign-off processes, documented practices, and human oversight still matter when using managed services. Platform capabilities can help, but they do not remove the customer’s responsibility to define policies, review outcomes, and manage risk in their own use case.
+
+
+
+Why the other options are incorrect:
+
+• A. Anonymous does not fit the meaning of responsible AI accountability. In fact, accountability usually requires the opposite: named owners, approvers, and documented responsibilities. An anonymous governance process would make review and ownership harder, not easier. So this option contradicts the principle being tested.
+
+• B. Unbiased relates more closely to fairness than to accountability. A team should certainly aim to reduce unfair bias, but fairness does not replace the need for documented ownership and oversight. An AI solution can attempt fairness improvements and still lack clear accountability processes. Therefore this is not the best word for the blank.
+
+• C. Encrypted is a privacy and security concept, not an accountability concept. Encryption protects data, but it does not establish who is responsible for approvals, monitoring, or incident response. Because the sentence is about governance and use of the solution, this option is incorrect.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 20
+Correct
+A company collects short product reviews and wants to classify each review as positive, neutral, or negative.
+
+
+
+Which text analysis technique should they use?
+
+A. Keyword extraction
+
+Explanation
+Keyword extraction involves identifying and extracting important words or phrases from a text. While it can be useful for understanding the main topics or themes in a review, it does not directly classify the sentiment of the review as positive, neutral, or negative.
+B. Entity detection
+
+Explanation
+Entity detection focuses on identifying and categorizing named entities such as people, organizations, and locations in a text. While it can provide valuable information about the entities mentioned in a review, it does not classify the sentiment of the review as positive, neutral, or negative.
+Your answer is correct
+C. Sentiment analysis
+
+Explanation
+Sentiment analysis is the most appropriate text analysis technique for classifying reviews as positive, neutral, or negative. It involves analyzing the text to determine the sentiment expressed, making it ideal for categorizing product reviews based on their overall tone.
+D. Summarization
+
+Explanation
+Summarization involves condensing a text into a shorter version while preserving the main points and key information. While summarization can be helpful for understanding the content of a review, it does not directly classify the sentiment of the review as positive, neutral, or negative.
+Overall explanation
+Sentiment analysis is the best choice because it is designed to determine whether text expresses positive, neutral, or negative sentiment. Microsoft documents this as a core Azure Language capability, and it can return sentiment at both the document and sentence level with confidence scores.
+
+
+
+The other techniques solve different problems. Keyword extraction identifies main concepts, entity detection categorizes things like people or organizations, and summarization condenses longer content instead of classifying attitude.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. Keyword extraction is plausible because it also analyzes text content. However, it is meant to identify the main concepts or talking points in text, not emotional tone. It would help you find topics such as “battery life” or “customer service,” but not whether the reviewer felt positive or negative about them. That makes it the wrong fit for polarity classification.
+
+
+
+• B. Entity detection is useful when you need to identify and categorize items such as people, places, organizations, dates, or quantities. It does not assign positive, neutral, or negative labels to the overall text. In a product review scenario, it might detect a brand or location, but it would not tell you whether the customer liked the product. That is why it is not the right technique here.
+
+
+
+• D. Summarization creates a condensed version of longer content. It is valuable when users need a shorter overview of a long article, document, or conversation. A summary may preserve the main message, but it does not replace a dedicated sentiment label. The requirement here is classification of mood, not compression of text.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 21
+Correct
+You need to identify people, organizations, and locations mentioned in support emails.
+
+
+
+Which text analysis technique should you use?
+
+A. Summarization
+
+Explanation
+Summarization is a text analysis technique used to condense the main points or key information from a larger body of text into a shorter version. It is not specifically designed to identify people, organizations, and locations mentioned in the text, so it is not the most suitable technique for this task.
+Your answer is correct
+B. Entity detection
+
+Explanation
+Entity detection is the correct text analysis technique to use in this scenario. It is specifically designed to identify and extract entities such as people, organizations, and locations mentioned in the text. By using entity detection, you can accurately identify and extract the relevant entities from the support emails.
+C. Sentiment analysis
+
+Explanation
+Sentiment analysis is a text analysis technique used to determine the sentiment or emotion expressed in a piece of text, such as whether the text is positive, negative, or neutral. While sentiment analysis can provide valuable insights, it is not the most appropriate technique for identifying people, organizations, and locations mentioned in support emails.
+D. Keyword extraction
+
+Explanation
+Keyword extraction is a text analysis technique used to identify and extract important keywords or phrases from a body of text. While keyword extraction can help in understanding the main topics or themes in the text, it may not be as effective as entity detection in specifically identifying people, organizations, and locations mentioned in support emails.
+Overall explanation
+Entity detection is the correct answer because this requirement is about finding and categorizing named items in text. Microsoft documents this capability as named entity recognition, which identifies entities such as people, places, organizations, and quantities in unstructured text.
+
+
+
+The other techniques address different outcomes. Sentiment analysis measures attitude, keyword extraction finds main talking points, and summarization produces a condensed version of longer content. None of those directly categorize text spans as people, organizations, or locations.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. Summarization is about shortening content while preserving the central meaning. It does not label specific phrases as person, location, or organization entities. A summary of an email thread might still mention names, but summarization is not the technique used to extract and categorize them systematically. That makes it the wrong match for this requirement.
+
+
+
+• C. Sentiment analysis focuses on whether text is positive, neutral, or negative, and can also provide sentence-level sentiment with confidence scores. That is useful for customer satisfaction or review analysis, but not for categorizing names and places. Even if a message contains a person name, sentiment analysis does not exist to detect that entity type as its primary output. So it does not satisfy the requirement.
+
+
+
+• D. Keyword extraction finds the main concepts or phrases in text. Those phrases may sometimes look important, but the technique is not meant to classify them into entity categories such as Organization or Location. For example, a product issue could become a key phrase without being a named entity at all. The question requires categorization of entities, which points to entity detection instead.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 22
+Correct
+Which THREE pairs are correctly matched? (Select THREE.)
+
+Your selection is correct
+A. Keyword extraction — identifies main talking points in text
+
+B. Sentiment analysis — categorizes people, places, and organizations
+
+Your selection is correct
+C. Entity detection — identifies named items such as organizations and locations
+
+Your selection is correct
+D. Summarization — produces a condensed version of longer text
+
+E. Keyword extraction — assigns positive, neutral, or negative labels
+
+F. Summarization — extracts categorized named entities from text
+
+Overall explanation
+Keyword extraction is used to identify main concepts in text, entity detection identifies and categorizes named items, and summarization condenses longer content. Those three pairings align directly with Microsoft’s descriptions of the corresponding Azure Language capabilities.
+
+
+
+The incorrect pairs swap one technique for another. Sentiment analysis is about emotional polarity, not named entities, while keyword extraction and summarization do not replace sentiment labeling or entity categorization.
+
+
+
+Why the other options are incorrect:
+
+
+
+• B. This pair is wrong because sentiment analysis does not categorize people, places, or organizations. Its purpose is to determine emotional tone, such as positive, neutral, or negative sentiment, sometimes with sentence-level scores. Entity detection is the technique that identifies named items and assigns categories to them. The option is plausible because both work on text, but they answer different questions.
+
+
+
+• E. Keyword extraction does not assign polarity labels such as positive or negative. Instead, it identifies the main concepts or talking points that appear in the text. Sentiment analysis is the technique that produces sentiment labels and related confidence scores. So this option mixes up topic identification with attitude detection.
+
+
+
+• F. Summarization does not extract and categorize named entities. It generates a shorter representation of longer content, while entity detection identifies items like organizations and locations. A summary might still contain names, but that does not mean the technique performed entity categorization. Therefore this pairing is not correct.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 23
+Incorrect
+Which THREE pairs are correctly matched? (Select THREE.)
+
+Your selection is correct
+A. Fairness — avoid different treatment of similar groups
+
+Your selection is incorrect
+B. Transparency — encrypt all training data by default
+
+Correct selection
+C. Fairness — use representative data for evaluation
+
+D. Accountability — increase GPU capacity
+
+Correct selection
+E. Fairness — compare outcomes across sensitive groups
+
+Your selection is incorrect
+F. Reliability and safety — hide demographic results from reviewers
+
+Overall explanation
+A, C, and E are correct because they match Microsoft’s fairness guidance closely. Fairness is about treating similar groups fairly, using representative or real-world data for evaluation, and checking whether model behavior differs across groups that might be sensitive or impacted differently.
+
+
+
+These are the kinds of distinctions AI-901 expects candidates to recognize. Fairness questions are usually about bias, representation, and comparative outcomes rather than infrastructure choices, storage protections, or raw performance tuning.
+
+
+
+Why the other options are incorrect:
+
+• B. Transparency is about making an AI system understandable, including its capabilities, limitations, and how it behaves. Encrypting training data is a privacy and security control, not a transparency control. The pairing mixes two different responsible AI principles and is therefore incorrect.
+
+• D. Accountability is about ensuring that people remain responsible for AI systems and their impacts. Increasing GPU capacity is an infrastructure scaling decision, not an accountability mechanism. It does nothing by itself to assign responsibility, oversight, or governance for model outcomes.
+
+• F. Reliability and safety focuses on stable, safe, and robust system behavior. Hiding demographic results from reviewers would actually make fairness assessment harder, not improve reliability. The pairing is wrong because demographic result review is more relevant to fairness evaluation and oversight than to safety behavior.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 24
+Correct
+A manager wants a short condensed version of a long incident report. The most appropriate text analysis technique is ________.
+
+
+
+Which answer best completes the sentence?
+
+A. keyword extraction
+
+Explanation
+Keyword extraction involves identifying and extracting the most important words or phrases from a text. While this technique can help identify key terms in a document, it may not provide a concise summary of the entire report as requested by the manager.
+B. entity detection
+
+Explanation
+Entity detection focuses on identifying and categorizing entities such as people, organizations, and locations in a text. While this technique can be useful for understanding the entities mentioned in the incident report, it may not help in condensing the report into a shorter version.
+C. sentiment analysis
+
+Explanation
+Sentiment analysis is used to determine the sentiment or emotion expressed in a text, such as positive, negative, or neutral. While this technique can provide insights into the emotional tone of the incident report, it does not directly address the manager's request for a condensed version of the report.
+Your answer is correct
+D. summarization
+
+Explanation
+Summarization is the most appropriate text analysis technique for condensing a long document into a shorter, more concise version. This technique involves extracting the most important information from the report and presenting it in a summarized form, which aligns with the manager's request for a condensed version of the incident report.
+Overall explanation
+Summarization is the right answer because the requirement is to create a shorter version of longer content. Microsoft documentation describes summarization as a capability for producing summaries, and extractive summarization specifically identifies key sentences that convey the main idea of a document.
+
+
+
+The other techniques do not directly create a condensed version of the original text. Keyword extraction gives important phrases, entity detection identifies named items, and sentiment analysis determines attitude or polarity. Those outputs may be useful, but they are not substitutes for a summary.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. Keyword extraction can surface the main topics in a document, which makes it sound close to summarization. However, it returns important phrases rather than a condensed narrative or sentence-based overview. If a manager wants a readable short version of a long report, a list of phrases is not enough. That is why keyword extraction is not the best fit here.
+
+
+
+• B. Entity detection identifies named elements such as people, locations, and organizations. That can help with metadata or indexing, but it does not produce a shortened retelling of the document. A long incident report with extracted entities is still not a summary. Therefore this option does not meet the stated goal.
+
+
+
+• C. Sentiment analysis evaluates whether text is positive, neutral, or negative. That is useful for reviews, feedback, and opinion monitoring, but an incident report summary is about condensing information, not assigning emotional tone. Even if a report contains emotionally charged language, the user’s request is still for a shorter version of the content. So sentiment analysis is the wrong technique.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 25
+Correct
+Which statement best describes audio_url in a multimodal chat request?
+
+A. It requests spoken output from the model.
+
+Explanation
+This statement is incorrect as audio_url in a multimodal chat request is not used to request spoken output from the model. It is used for a different purpose related to audio processing.
+B. It deploys the model to Foundry.
+
+Explanation
+This statement is incorrect as audio_url in a multimodal chat request is not related to deploying the model to Foundry. It serves a different function in the context of the request.
+Your answer is correct
+C. It lets the model read audio from an accessible cloud location.
+
+Explanation
+This statement is correct as audio_url in a multimodal chat request allows the model to read audio data from a specified cloud location. This enables the model to process and analyze audio input provided through the specified URL.
+D. It records microphone input in the portal.
+
+Explanation
+This statement is incorrect as audio_url in a multimodal chat request is not used to record microphone input in the portal. It is specifically used for accessing audio data from a cloud location for processing by the model.
+Overall explanation
+Microsoft’s multimodal chat completions documentation states that the model can read audio content from an accessible cloud location by passing the payload as audio_url. The example shows a user content item with "type": "audio_url" and a URL pointing to an MP3 file.
+
+
+
+That means audio_url is an input method, not a deployment step and not an output-request setting. It is simply the URL-based alternative to sending encoded audio inline with input_audio.
+
+
+
+Why the other options are incorrect:
+
+• A. Requesting spoken output is handled through response settings such as modalities=["text", "audio"] and the audio block, not through audio_url. audio_url is about how the input audio is supplied to the model. So this option mixes up input transport with output configuration.
+
+• B. audio_url does not deploy anything. Deployment is done earlier in the Foundry workflow under Models + endpoints or by adding and configuring a supported model. Once the model is deployed, audio_url is just part of the request payload.
+
+• D. Recording microphone input in the portal is a Chat playground capability, not what the audio_url field does in an API request. audio_url points the model to a hosted audio file. Because it refers to an API content item rather than a portal recording feature, this option is incorrect.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 26
+Correct
+Which TWO outputs are commonly associated with sentiment analysis? (Select TWO.)
+
+A. Organization categories
+
+Your selection is correct
+B. Document-level sentiment label
+
+C. Key phrases
+
+D. Person and location entities
+
+Your selection is correct
+E. Confidence scores
+
+Overall explanation
+Sentiment analysis commonly returns a sentiment label and confidence scores. Microsoft documents that Azure Language sentiment analysis assigns labels such as positive, neutral, and negative, and provides confidence scores for each document and sentence.
+
+
+
+The other outputs belong to different text analysis techniques. Organization categories and person or location entities come from entity detection, while key phrases come from keyword extraction.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. Organization categories are associated with entity detection, not sentiment analysis. When a service labels a piece of text as an Organization or Location, it is performing named entity recognition. Sentiment analysis is concerned with emotional polarity rather than classifying text spans into entity types. That is why this option is incorrect in this context.
+
+
+
+• C. Key phrases come from keyword extraction, where the goal is to identify the main concepts discussed in text. That is helpful for topic discovery or search enrichment, but it is not the same as determining how positive or negative the author feels. Sentiment analysis may operate on the same input text, yet it produces different outputs. Therefore this is not a standard sentiment-analysis result.
+
+
+
+• D. Person and location entities are outputs of entity detection. They are useful for pulling structured information out of unstructured text, but they do not describe the author’s attitude or emotional tone. A text can contain many entities and still require a separate sentiment step to judge how the writer feels. So this option belongs to a different technique.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 27
+Correct
+You want a Python app to return the overall sentiment for each review.
+
+Snippet
+
+from azure.core.credentials import AzureKeyCredential
+from azure.ai.textanalytics import TextAnalyticsClient
+ 
+client = TextAnalyticsClient(endpoint=endpoint, credential=AzureKeyCredential(key))
+documents = ["The room was clean, but check-in was slow."]
+ 
+result = client.________(documents)
+for doc in result:
+    print(doc.sentiment)
+Which code should replace the missing section?
+
+A. extract_key_phrases
+
+Explanation
+The 'extract_key_phrases' method is used to extract key phrases from the provided text documents. It is not directly related to analyzing the overall sentiment of the text, so it is not the correct choice for this scenario.
+B. recognize_entities
+
+Explanation
+The 'recognize_entities' method is used to recognize named entities in the text, such as people, organizations, and locations. It is not specifically designed to analyze the sentiment of the text, so it is not the correct choice for this scenario.
+Your answer is correct
+C. analyze_sentiment
+
+Explanation
+The 'analyze_sentiment' method is specifically designed to analyze the sentiment of the text documents provided. It returns the overall sentiment (positive, negative, neutral) for each document, which aligns with the requirement of the Python app in this scenario.
+D. detect_language
+
+Explanation
+The 'detect_language' method is used to detect the language of the text documents provided. While language detection is an important step in text analytics, it does not directly address the requirement of returning the overall sentiment for each review in this scenario.
+Overall explanation
+The correct method is analyze_sentiment because the code needs to return doc.sentiment for each input document. Microsoft’s Python SDK documentation shows that analyze_sentiment determines whether text is positive, negative, neutral, or mixed and provides sentiment-focused results.
+
+
+
+The output property in the snippet is the biggest clue. A method that returns key phrases, entities, or language identification would not be the right match for printing a sentiment field as the primary result.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. extract_key_phrases is meant to identify the main talking points in text. It is useful for surfacing concepts, but it does not provide the overall positive or negative attitude of a review. The property the snippet intends to use is doc.sentiment, not doc.key_phrases. So the method and expected output do not align.
+
+
+
+• B. recognize_entities returns categorized entities such as people, organizations, locations, dates, and quantities. That is a valid text analysis task, but it is different from assessing how favorable or unfavorable a review is. If the requirement is review sentiment, entity detection is not enough. Therefore this method is incorrect for the snippet.
+
+
+
+• D. detect_language identifies the language of the input text. That can be helpful before downstream processing in multilingual scenarios, but it does not calculate emotional polarity. The question specifically asks for overall sentiment, so language detection is not the technique being tested. This makes the option a plausible but incorrect distractor.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 28
+Incorrect
+A retailer wants a short list of the main topics that appear in support tickets. They do not want a rewritten paragraph.
+
+
+
+Which text analysis technique should they use?
+
+Your answer is incorrect
+A. Summarization
+
+Explanation
+Summarization is the process of condensing a larger text into a shorter version while retaining the main points and key information. It is more focused on providing a concise overview of the entire text rather than extracting specific topics or keywords.
+B. Entity detection
+
+Explanation
+Entity detection involves identifying and categorizing entities such as people, organizations, locations, dates, and more within a text. While it can help in understanding the entities mentioned in support tickets, it may not directly address the retailer's need for a short list of main topics.
+C. Sentiment analysis
+
+Explanation
+Sentiment analysis is used to determine the sentiment or emotional tone expressed in a text, such as positive, negative, or neutral. While it can be valuable for understanding the overall sentiment in support tickets, it may not be the most suitable technique for extracting the main topics mentioned in the tickets.
+Correct answer
+D. Keyword extraction
+
+Explanation
+Keyword extraction is the process of identifying and extracting the most important words or phrases that represent the main topics or themes in a text. This technique is ideal for the retailer's requirement of obtaining a short list of main topics from support tickets without rewriting the content.
+Overall explanation
+Keyword extraction is the correct choice because the retailer wants the main topics from the tickets, not a rewritten narrative. Microsoft describes key phrase extraction as a capability that quickly identifies the main concepts in text.
+
+
+
+The phrase “They do not want a rewritten paragraph” is the important clue. That rules out summarization and points toward returning important phrases or talking points instead. Entity detection and sentiment analysis also miss the requirement because they focus on named items and polarity rather than topic keywords.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. Summarization sounds close because it also helps users deal with large amounts of text. However, it produces a condensed version of the content rather than a short list of main topics or phrases. The question explicitly says the user does not want a rewritten paragraph. That makes summarization the wrong fit.
+
+
+
+• B. Entity detection identifies named items such as people, organizations, and locations. Support tickets often contain names or product references, which makes this option seem plausible. But the requirement is to find the main topics across tickets, not categorize named entities. So this technique would not directly satisfy the stated goal.
+
+
+
+• C. Sentiment analysis measures whether the ticket text is positive, neutral, or negative. That is useful for satisfaction monitoring or complaint triage, but it does not surface the actual topics being discussed. A ticket could be highly negative without revealing its main themes through a sentiment score alone. Therefore sentiment analysis is not the best answer here.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 29
+Incorrect
+You are defining a custom field for InvoiceNumber in a document analyzer.
+
+Snippet
+
+from azure.ai.contentunderstanding.models import (
+    ContentFieldDefinition,
+    ContentFieldType,
+    GenerationMethod,
+)
+ 
+field = ContentFieldDefinition(
+    type=ContentFieldType.STRING,
+    ______,
+    description="Invoice number on the document",
+)
+Which code should replace the missing section?
+
+A. method=GenerationMethod.GENERATE
+
+Explanation
+GenerationMethod.GENERATE is not the correct choice for defining a custom field for InvoiceNumber in a document analyzer. This method is used for generating field values based on predefined rules or algorithms, which is not suitable for extracting the specific value of an InvoiceNumber from a document.
+B. method=GenerationMethod.CLASSIFY
+
+Explanation
+GenerationMethod.CLASSIFY is not the correct choice for defining a custom field for InvoiceNumber in a document analyzer. This method is used for classifying or categorizing content based on predefined criteria, rather than extracting a specific value like an InvoiceNumber.
+Correct answer
+C. method=GenerationMethod.EXTRACT
+
+Explanation
+GenerationMethod.EXTRACT is the correct choice for defining a custom field for InvoiceNumber in a document analyzer. This method is specifically designed for extracting specific values or information from documents, making it suitable for capturing the InvoiceNumber from the document.
+Your answer is incorrect
+D. enum=["Invoice"]
+
+Explanation
+Using enum=["Invoice"] is not the correct choice for defining a custom field for InvoiceNumber in a document analyzer. The enum parameter is typically used to specify a list of possible values for a field, which is not necessary for extracting a single InvoiceNumber value from a document.
+Overall explanation
+For a field like InvoiceNumber, the correct generation method is EXTRACT because the analyzer should pull a concrete value from the document rather than generate a summary or classify a category. Microsoft’s custom analyzer tutorial shows document fields such as names and totals using GenerationMethod.EXTRACT.
+
+
+
+This is an important distinction in Content Understanding schema design. Extracted fields are grounded in the source document, while generated or classified fields serve different purposes. That makes GenerationMethod.EXTRACT the right fit for document and form value capture.
+
+
+
+Why the other options are incorrect:
+
+• A. GenerationMethod.GENERATE is used when you want the model to produce a derived value such as a summary. An invoice number is not a generated interpretation of the document; it is a concrete field that should be pulled from the source. Using generate would blur the distinction between extraction and synthesis.
+
+
+
+• B. GenerationMethod.CLASSIFY is used when a field should be categorized into one of several classes, such as a document type or sentiment label. An invoice number is not a category. It is a direct field value, so classify is the wrong method.
+
+
+
+• D. enum=["Invoice"] is not a substitute for the method being tested. Enums are used with classification-style fields to define allowed categories, but the snippet is missing the field method for extracting a document value. Adding an enum alone would not turn this into a correct invoice-number extraction field.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 30
+Correct
+A solution must meet two requirements:
+
+• show whether each customer review is positive or negative
+
+• generate a short condensed version of a long meeting transcript
+
+
+
+Which TWO techniques should you use? (Select TWO.)
+
+A. Keyword extraction
+
+Your selection is correct
+B. Summarization
+
+C. Entity detection
+
+Your selection is correct
+D. Sentiment analysis
+
+E. Detect language
+
+Overall explanation
+Sentiment analysis is needed for the customer-review requirement because it is the technique that assigns positive, neutral, or negative sentiment labels. Summarization is needed for the transcript requirement because it produces a condensed version of longer content.
+
+
+
+The question intentionally combines two different text-analysis goals. One is about emotional polarity, and the other is about shortening content, so two distinct techniques are required rather than one.
+
+
+
+Why the other options are incorrect:
+
+
+
+• A. Keyword extraction identifies the main concepts or talking points in text. That can help highlight themes in reviews or transcripts, but it does not directly tell you whether a review is positive or negative. It also does not generate a condensed readable version of a long transcript. For those reasons, it cannot satisfy either requirement as precisely as the correct pair.
+
+
+
+• C. Entity detection categorizes named items such as people, locations, and organizations. That is useful for extracting structured information from unstructured text, but neither requirement asks for named entity categories. It would not replace review polarity detection, and it would not create a short summary of a transcript. So it is not one of the two required techniques.
+
+
+
+• E. Detect language can be a helpful preprocessing step in multilingual systems, but it is not one of the techniques named in this dot point’s core workload distinctions. It tells you what language the text is written in rather than whether the text is positive or how to condense it. Because the requirements are sentiment classification and summarization, this option is out of scope for the answer pair.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 31
+Correct
+You need to start a new model deployment in the current Foundry portal.
+
+
+
+Which path should you choose first?
+
+A. Build → Models
+
+Your answer is correct
+B. Discover → Models
+
+C. Playground → Code
+
+D. Agents → Knowledge
+
+Overall explanation
+Discover → Models is correct because Microsoft’s deployment instructions for the current Foundry portal say to sign in, ensure the New Foundry toggle is on, and then select Discover followed by Models to begin a new deployment. That is the documented entry point for deploying a model from the portal.
+
+
+
+This maps directly to the AI-901 objective because the skill is about deploying and interacting with a model in the Foundry portal, not starting from code or agent configuration. Knowing the correct portal path is part of the practical workflow Microsoft documents for this task.
+
+
+
+Why the other options are incorrect:
+
+• A. Build → Models is a real area of the Foundry portal, which is why it is a plausible distractor. However, Microsoft documents it as the place to manage existing deployments, not the place to start a brand-new deployment. Choosing it first would skip the documented model discovery step.
+
+• C. Playground → Code is used after a deployment already exists and you are interacting with the deployed model. Microsoft says the Code tab shows how to access the deployment programmatically, but it is not the starting point for creating the deployment. It belongs later in the workflow, not at the beginning.
+
+• D. Agents → Knowledge sounds reasonable because Foundry also supports agents, tools, and grounded responses. However, the documented deployment flow for models starts from Discover → Models, not from an agent knowledge configuration surface. This option confuses model deployment with agent setup.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 32
+Incorrect
+You want to benchmark two or three deployed models side by side in the portal by sending the same prompt to each one.
+
+
+
+Which feature should you use?
+
+A. Agents playground
+
+Explanation
+Agents playground is not the correct feature to use for benchmarking deployed models side by side. This feature is typically used for testing and training conversational agents or chatbots, not for comparing AI models.
+B. Video playground
+
+Explanation
+Video playground is not the correct feature to use for benchmarking deployed models side by side. This feature is typically used for testing and analyzing video-related AI models, not for comparing multiple models with the same prompt.
+Correct answer
+C. Compare models
+
+Explanation
+Compare models is the correct feature to use for benchmarking two or three deployed models side by side in the portal by sending the same prompt to each one. This feature allows you to compare the performance, accuracy, and other metrics of different models to make informed decisions.
+Your answer is incorrect
+D. Metrics
+
+Explanation
+Metrics is not the correct feature to use for benchmarking deployed models side by side. While metrics are important for evaluating model performance, the specific feature designed for comparing models side by side is "Compare models."
+Overall explanation
+Compare models is correct because Microsoft’s playground documentation says compare mode lets you run controlled, parallel evaluations across up to three models with synchronized input. It is specifically designed for side-by-side output comparison in the model playground.
+
+
+
+This is the best portal-native answer because the question is about interacting with deployed models in Foundry, not about agent orchestration or observability dashboards. Compare mode is the documented way to benchmark prompt responses across multiple model deployments in real time.
+
+
+
+Why the other options are incorrect:
+
+• A. Agents playground is a valid Foundry experience, but Microsoft describes it as the place for multi-turn agent prototyping with tools, knowledge, memory, tracing, and evaluation. That is different from the model playground feature used for parallel comparison of deployed model outputs. It is a workload mismatch for this question.
+
+• B. Video playground is one of the modalities of the model and agent playgrounds for video workflows. Microsoft presents it for video model experimentation, not as the general feature for comparing two or three deployed text/chat models side by side. The question asks for the comparison feature itself, which is Compare models.
+
+• D. Metrics is plausible because benchmarking often involves performance review, but Microsoft’s documentation identifies Compare models as the actual interaction mode for synced prompt comparison. Metrics and observability are related ideas, yet they are not the named playground feature used to compare live outputs across deployments.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 33
+Incorrect
+After deployment, you should verify that the deployment status shows ________ before treating the model as ready for normal use.
+
+
+
+Which answer best completes the sentence?
+
+A. Pending
+
+Explanation
+Pending status indicates that the deployment is still in progress and has not been completed yet. It is not advisable to treat the model as ready for normal use until the deployment has successfully finished.
+B. Draft
+
+Explanation
+Draft status typically refers to a preliminary version of the deployment that may still be undergoing changes or revisions. It is not a reliable indicator that the model is ready for normal use.
+Your answer is incorrect
+C. Running
+
+Explanation
+Running status suggests that the deployment is currently active and processing data. While the model may be operational, it is not a guarantee that the deployment has successfully completed and is ready for normal use.
+Correct answer
+D. Succeeded
+
+Explanation
+Succeeded status confirms that the deployment has been completed successfully without any errors or issues. It is the most reliable indicator that the model is ready for normal use and can be relied upon for AI operations.
+Overall explanation
+Succeeded is correct because Microsoft’s deployment guide tells you to verify that the deployment status shows Succeeded in the deployment list after the deployment completes. That is the documented ready state before you proceed with normal use in the portal.
+
+
+
+This is an exam-authentic distinction because AI-901 questions often test small but practical portal details rather than broad theory. A deployment that has not reached Succeeded should not be treated as fully ready for interactive testing or normal inference workflows.
+
+
+
+Why the other options are incorrect:
+
+• A. Pending is believable because deployments often move through intermediate provisioning states. However, Microsoft does not identify Pending as the completed state you should verify before using the deployment normally. It indicates work is still underway rather than confirmed readiness.
+
+• B. Draft sounds like a common software status, but it is not the status Microsoft calls out in the Foundry deployment steps. The documented target state is Succeeded. Draft would imply incompleteness, not a finished deployment.
+
+• C. Running may sound operationally reasonable, but Microsoft’s portal guidance does not use it as the verification state in this workflow. The deployment article explicitly says to check for Succeeded, so Running is not the best answer here.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 34
+Correct
+A team wants to deploy a partner or community model in the Foundry portal. Which TWO prerequisites are explicitly called out by Microsoft for that scenario? (Select TWO.)
+
+A. Azure AI Search index
+
+Your selection is correct
+B. Cognitive Services Contributor role or equivalent permissions
+
+C. Agents playground tracing
+
+D. Video playground access
+
+Your selection is correct
+E. Azure Marketplace subscription permissions
+
+Overall explanation
+B and E are correct because Microsoft’s deployment documentation says you need the Cognitive Services Contributor role or equivalent permissions on the Foundry resource to create and manage deployments. It also says partner and community models require Azure Marketplace access and the permissions needed to subscribe to model offerings.
+
+
+
+This is a strong AI-901 distinction because not every model has the same entitlement path. Microsoft specifically notes that models sold directly by Azure do not have the same Marketplace subscription requirement, which makes permissions and Marketplace access the right pair for this question.
+
+
+
+Why the other options are incorrect:
+
+• A. Azure AI Search index is relevant in retrieval and grounding scenarios, which makes it a believable distractor in the broader Foundry ecosystem. However, Microsoft does not list an Azure AI Search index as a prerequisite for deploying a model in this portal workflow. It belongs to a different solution pattern, not the core deployment prerequisites here.
+
+• C. Agents playground tracing is a real capability in Foundry and is associated with AgentOps-style analysis in the agents playground. However, it is not listed as a prerequisite for deploying a partner or community model from the model catalog. This option confuses agent prototyping features with deployment authorization requirements.
+
+• D. Video playground access is also a real Foundry concept, but Microsoft describes it as a modality for video workflows rather than a prerequisite for deployment. The deployment article focuses on subscription, project context, RBAC permissions, and Marketplace access where applicable. Video playground access is unrelated to the stated requirement.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 35
+Correct
+You deployed a model in the Foundry portal and copied a sample from the Code tab. The deployment name is stored in deployment_name.
+
+Snippet
+
+payload = {
+    # missing fragment
+    "input": "Summarize this support ticket."
+}
+Which code should replace the missing section?
+
+Your answer is correct
+A. "model": deployment_name,
+
+Explanation
+The correct choice is to replace the missing section with "model": deployment_name. This is because the model name is typically used to identify the deployed model in the Foundry portal, and specifying the model name as the input key is necessary for the model to process the input data correctly.
+B. "endpoint": deployment_name,
+
+Explanation
+The choice to replace the missing section with "endpoint": deployment_name is incorrect. The endpoint typically refers to the URL or address where the model is deployed and accessed, not the model name itself. Therefore, using "endpoint" as the input key would not provide the necessary information for the model to process the input data.
+C. "deployment_type": deployment_name,
+
+Explanation
+The choice to replace the missing section with "deployment_type": deployment_name is incorrect. The deployment type is a different attribute that describes the type or category of the deployment, not the specific name of the model. Therefore, using "deployment_type" as the input key would not provide the necessary information for the model to process the input data.
+D. "project": deployment_name,
+
+Explanation
+The choice to replace the missing section with "project": deployment_name is incorrect. The project typically refers to the larger context or environment in which the model is deployed, not the specific name of the model itself. Therefore, using "project" as the input key would not provide the necessary information for the model to process the input data.
+Overall explanation
+"model": deployment_name, is correct because Microsoft says the deployment name is used in the model parameter during inference to route requests to that particular deployment. When you copy a sample from the portal’s Code tab, the deployment name maps to the model field used by the request.
+
+
+
+This still fits the portal-focused objective because the Code tab is part of the post-deployment portal experience. AI-901 often tests the bridge between portal actions and the minimal code needed to call what you just deployed.
+
+
+
+Why the other options are incorrect:
+
+• B. endpoint sounds plausible because deployed models do expose endpoint information. However, Microsoft’s deployment guide specifically says the deployment name is used in the model parameter for inference routing. Endpoint details are related but they are not the documented parameter requested here.
+
+• C. deployment_type is also believable because Microsoft discusses deployment types such as Global Standard. However, deployment type refers to characteristics such as deployment behavior, residency, or throughput guarantees, not the runtime parameter used to identify a specific deployment in inference calls. It is the wrong concept for this code fragment.
+
+• D. project is a real Foundry concept because the portal is organized around projects and resources. However, project context is not the same thing as the parameter that routes an inference request to the correct deployed model. Microsoft explicitly identifies model as the relevant field for that purpose.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 36
+Incorrect
+You are creating a custom analyzer for business forms in Python.
+
+Snippet
+
+from azure.ai.contentunderstanding.models import ContentAnalyzer
+ 
+analyzer = ContentAnalyzer(
+    base_analyzer_id="_____",
+    description="Custom analyzer for vendor forms",
+    field_schema=field_schema,
+    models={"completion": "gpt-4.1"}
+)
+Which code should replace the missing section?
+
+Correct answer
+A. prebuilt-document
+
+Explanation
+The correct choice is A. prebuilt-document because when creating a custom analyzer for business forms in Python using the Azure Content Understanding service, the base_analyzer_id should be set to "prebuilt-document" to indicate that the analyzer is designed for processing document content specifically.
+B. prebuilt-image
+
+Explanation
+Choice B. prebuilt-image is incorrect as it is not relevant to creating a custom analyzer for business forms. This choice is more suitable for analyzing image content, not document content as required in this scenario.
+C. prebuilt-audio
+
+Explanation
+Choice C. prebuilt-audio is incorrect as it is not applicable for creating a custom analyzer for business forms. This choice is more suitable for analyzing audio content, not document content as required in this scenario.
+Your answer is incorrect
+D. prebuilt-documentFields
+
+Explanation
+Choice D. prebuilt-documentFields is incorrect as it is not a valid option for the base_analyzer_id parameter when creating a custom analyzer for business forms in Python. The correct option for this scenario is "prebuilt-document" to indicate that the analyzer is designed for processing document content.
+Overall explanation
+For custom document extraction, Microsoft’s tutorial shows using prebuilt-document as the base analyzer when creating a custom document analyzer. That is the correct parent analyzer for documents and forms.
+
+
+
+This matters because the base analyzer determines the content type and supported configuration path. Since the dot point is about extracting information from documents and forms, the document base analyzer is the right foundation.
+
+
+
+Why the other options are incorrect:
+
+• B. prebuilt-image is for image analyzers rather than document analyzers. Although documents can contain images, this question is about building a document-and-form extraction workflow, where Microsoft’s custom analyzer examples use the document base analyzer. Choosing the image base analyzer would point the analyzer at the wrong modality.
+
+
+
+• C. prebuilt-audio is intended for audio content. It is not the correct base analyzer for forms, PDFs, or document field extraction. Using it would shift the workflow toward transcription-style inputs instead of document structure and form fields.
+
+
+
+• D. prebuilt-documentFields is a utility analyzer for extracting key-value pairs, not the base analyzer used to define a custom document analyzer. The code is building a new analyzer object, so it needs a base analyzer like prebuilt-document, not a utility analyzer ID in the base slot. That is the key distinction being tested here.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 37
+Incorrect
+For each of the following statements, determine whether the statement is correct.
+
+
+
+Statement 1: Every Foundry model requires an Azure Marketplace subscription before deployment.
+
+Statement 2: After deployment, you can type a prompt and see outputs in the playground.
+
+Statement 3: The Code tab shows details about programmatic access to the deployment.
+
+
+
+Select the correct combination.
+
+A. Yes / Yes / No
+
+Your answer is incorrect
+B. Yes / No / Yes
+
+Correct answer
+C. No / Yes / Yes
+
+D. No / No / Yes
+
+Overall explanation
+Statement 1 is incorrect because Microsoft says partner and community models require Azure Marketplace subscription, but models sold directly by Azure do not. That makes the word “every” wrong in this statement.
+
+
+
+Statement 2 is correct because Microsoft says you can type your prompt and see the outputs in the playground after opening the deployed model. Statement 3 is also correct because the same guide says the Code tab shows details about how to access the deployment programmatically. That makes the correct combination No / Yes / Yes.
+
+
+
+Why the other options are incorrect:
+
+• A. This option incorrectly marks Statement 1 as Yes even though Microsoft explicitly distinguishes partner/community models from models sold directly by Azure. It also marks Statement 3 as No even though the Code tab is documented for programmatic access details. Because two judgments are wrong, the combination fails.
+
+• B. This option repeats the mistake of treating Marketplace subscription as universal for every Foundry model. It also marks Statement 2 as No, which conflicts with Microsoft’s description of typing prompts and seeing outputs in the playground. Both errors make the combination incorrect.
+
+• D. This option gets Statement 1 right, but it marks Statement 2 as No even though prompt testing in the playground is a core documented step. It also marks Statement 3 as Yes correctly, but one correct judgment is not enough to make the whole combination right.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 38
+Correct
+To follow the current portal instructions in Microsoft’s documentation, which banner toggle should be on?
+
+
+
+Select only one answer.
+
+A. AgentOps
+
+Explanation
+The banner toggle for "AgentOps" is not mentioned in Microsoft's documentation for following current portal instructions. It is not relevant to the current portal instructions provided by Microsoft.
+Your answer is correct
+B. New Foundry
+
+Explanation
+The banner toggle for "New Foundry" should be on to follow the current portal instructions in Microsoft's documentation. This toggle is likely related to new features or functionalities that are part of the updated portal instructions.
+C. Global Standard
+
+Explanation
+The banner toggle for "Global Standard" is not specified in Microsoft's documentation for following current portal instructions. It is not mentioned as a requirement or setting to be enabled for the current portal instructions.
+D. Compare models
+
+Explanation
+The banner toggle for "Compare models" is not mentioned in Microsoft's documentation for following current portal instructions. It is not related to the specific instructions provided by Microsoft for using the portal effectively.
+Overall explanation
+New Foundry is correct because Microsoft’s deployment article says to make sure the New Foundry toggle is on, and the “What is Microsoft Foundry?” page repeats that the current version of the portal uses the New Foundry toggle in the banner. This is the documented switch for the current portal experience.
+
+
+
+This matters for AI-901 because portal navigation can change between classic and current experiences. Using the correct portal version keeps the deployment flow aligned with the live Microsoft Learn steps for this exact skill area.
+
+
+
+Why the other options are incorrect:
+
+• A. AgentOps is a real Foundry concept tied to tracing and evaluation in the agents playground. However, Microsoft does not identify it as the banner toggle used to switch to the current portal experience. It is a capability area, not the portal version control.
+
+• C. Global Standard is mentioned in Microsoft’s deployment documentation as an example deployment type. That makes it a plausible distractor, but it is not a banner toggle and it does not switch the portal to the current Foundry experience. This option mixes deployment configuration with portal UI versioning.
+
+• D. Compare models is a feature in the model playground used for side-by-side output evaluation. It is not the portal banner setting Microsoft tells you to turn on before following the current deployment steps. This option confuses a runtime comparison feature with a portal experience toggle.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 39
+Correct
+You deployed an audio-capable multimodal model in Microsoft Foundry. You want to test spoken prompts in the portal without writing code. Which interface should you use?
+
+A. Agents playground
+
+Explanation
+The Agents playground in Microsoft Foundry is not specifically designed for testing spoken prompts. It is more focused on creating and managing conversational agents and their interactions.
+Your answer is correct
+B. Chat playground
+
+Explanation
+The Chat playground in Microsoft Foundry is the interface where you can test spoken prompts without writing any code. It allows you to interact with your multimodal model using text and voice inputs, making it the correct choice for testing spoken prompts.
+C. Model catalog
+
+Explanation
+The Model catalog in Microsoft Foundry is a repository where you can discover, explore, and manage various AI models and resources. It is not the interface for testing spoken prompts directly.
+D. Speech Studio
+
+Explanation
+Speech Studio in Microsoft Foundry is a tool for building and customizing speech models, but it is not the interface designed for testing spoken prompts without writing code. The Chat playground is the correct interface for this specific task.
+Overall explanation
+The correct answer is Chat playground. Microsoft’s audio generation quickstart says that after you deploy the model, you can interact with it in the Foundry portal Chat playground, and it specifically directs you to select Audio playground > Try the Chat playground for gpt-4o-mini-audio-preview.
+
+
+
+The same Microsoft documentation also says the Chat playground lets you record audio prompts, attach audio files, and enter text prompts. That makes it the right place to test spoken prompts against a deployed audio-capable model in the Foundry portal.
+
+
+
+Why the other options are incorrect:
+
+• A. Agents playground is used for agent scenarios, which is a different implementation pattern. A learner might choose it because agents can also be conversational, but this question is about directly testing a deployed multimodal model with spoken input. Microsoft’s documented workflow for this model points to the Chat playground instead.
+
+• C. Model catalog is where you browse models, not where you interact with a deployed model by speaking to it. It helps you discover and choose models, but it is not the portal surface used to send spoken prompts and receive responses. That is why it is not correct here.
+
+• D. Speech Studio is associated with Azure Speech experiences, not the documented Chat playground workflow for this deployed audio-capable model in Foundry. The quickstart for this scenario tells you to use the Chat playground after deployment. So this option is a plausible service-family distraction, but not the right answer.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 40
+Incorrect
+You are building a lightweight client that sends a spoken prompt as inline audio data.
+
+Snippet
+
+messages = [
+    {
+        "role": "user",
+        "content": [
+            {"type": "text", "text": "Answer the spoken request."},
+            # Missing line
+        ],
+    }
+]
+Which code should replace the missing section?
+
+A. {"type": "audio", "data": encoded_string}
+
+Explanation
+Choice A is incorrect because it uses the "audio" type, which is not a standard type for sending inline audio data in this context. The missing section should specify the type of input as "input_audio" for inline audio data.
+B. {"type": "speech_input", "format": "wav", "data": encoded_string}
+
+Explanation
+Choice B is incorrect because it uses the "speech_input" type, which is not a standard type for sending inline audio data in this context. The missing section should specify the type of input as "input_audio" for inline audio data.
+Your answer is incorrect
+C. {"type": "audio_url", "audio_url": {"url": encoded_string}}
+
+Explanation
+Choice C is incorrect because it uses the "audio_url" type, which is intended for referencing audio files via URLs, not for sending inline audio data. The missing section should specify the type of input as "input_audio" for inline audio data.
+Correct answer
+D. {"type": "input_audio", "input_audio": {"data": encoded_string, "format": "wav"}}
+
+Explanation
+Choice D is correct because it uses the "input_audio" type, which is suitable for sending inline audio data along with the format information. This choice aligns with the requirement of sending a spoken prompt as inline audio data in the lightweight client.
+Overall explanation
+The correct structure for inline spoken audio is an input_audio content item that contains the encoded audio data and its format. Microsoft’s audio generation quickstart shows this exact request shape with {"type": "input_audio", "input_audio": {"data": encoded_string, "format": "wav"}}.
+
+
+
+This matters because the model needs both the audio bytes and the format to process the spoken prompt correctly. Microsoft’s multimodal documentation also shows that deployed Foundry chat completion models can accept audio input alongside text, which is exactly what this snippet is doing.
+
+
+
+Why the other options are incorrect:
+
+• A. This option looks compact, but it does not match Microsoft’s documented request structure. The docs do not show a plain audio content type with only raw data for inline spoken input in chat completions. Because it leaves out the correct nested input_audio object and format field, it is wrong.
+
+• B. speech_input sounds reasonable in plain English, but it is not the documented field name used by Microsoft in the chat completions examples. Certification questions often use believable fake parameter names like this. The real structure uses input_audio, not speech_input.
+
+• C. audio_url is real, but it is used when the model should read audio from an accessible cloud location by URL. It is not the inline base64-style payload used in this snippet. That makes it a strong distractor, but still incorrect here.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 41
+Correct
+You want a deployed model to accept a spoken prompt and return a spoken answer. Which TWO request elements should you include? (Select TWO.)
+
+A. image_url in the user content
+
+B. OCR capability selection
+
+Your selection is correct
+C. input_audio in the user content
+
+D. Foundry Agent Service memory
+
+Your selection is correct
+E. modalities=["text", "audio"]
+
+Overall explanation
+To send a spoken prompt, you need to include input_audio in the user content. Microsoft’s examples show spoken input being passed as an input_audio item with audio data and format inside the message content.
+
+
+
+To request spoken output, Microsoft’s audio generation examples use modalities=["text", "audio"] together with an audio configuration block. That tells the model to produce an audio response instead of acting as a text-only interaction.
+
+
+
+Why the other options are incorrect:
+
+• A. image_url is for image input, not spoken input. It belongs to multimodal image scenarios, not audio-prompt scenarios. Since this question is specifically about a spoken prompt, using image_url would be the wrong input type.
+
+• B. OCR is for extracting text from images or documents. It is a common Microsoft distractor because it also involves input processing, but it is not part of the chat request structure for audio prompts. This question is about multimodal speech interaction, not image text extraction.
+
+• D. Foundry Agent Service memory can matter in agent workflows, but it is not a required request element for a direct spoken-prompt interaction with a deployed multimodal model. Microsoft’s audio request examples focus on message content, modalities, voice, and format instead. So this is the wrong implementation concept for the task.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 42
+Correct
+A developer wants to preserve a simple review record before deploying an AI model.
+
+Snippet
+
+audit_log = []
+ 
+review = {
+    "model": "claims-priority-v2",
+    "approved_by": reviewer,
+    "reason": change_reason
+}
+ 
+# Missing line
+ 
+deploy_model("claims-priority-v2")
+Which code should replace the missing section?
+Select only one answer.
+
+A. print(review)
+
+Explanation
+Printing the review record using the print() function does not preserve the record for future reference or auditing. It simply displays the information on the console and does not store it in a persistent manner.
+Your answer is correct
+B. audit_log.append(review)
+
+Explanation
+Appending the review record to the audit_log list using the append() method ensures that the review information is stored for auditing purposes. This choice correctly preserves the review record before deploying the AI model.
+C. reviewer = "system"
+
+Explanation
+Changing the value of the reviewer variable to "system" does not address the need to preserve the review record. It alters the reviewer's identity but does not store the review information for auditing purposes.
+D. change_reason = None
+
+Explanation
+Setting the change_reason variable to None does not address the requirement to preserve the review record. It removes the reason for the change but does not store the review information for future reference.
+Overall explanation
+Appending the review record to an audit log is the best choice because accountability depends on traceability. Microsoft’s guidance on accountability highlights governance data and lineage, including who made changes, why they were made, and when deployments occurred.
+
+
+
+This example is intentionally simple, but the principle is realistic: accountable AI solutions keep records that make approvals and changes reviewable later. Without a record of the approver and reason, it becomes harder to investigate issues, justify decisions, or show that governance processes were followed.
+
+
+
+Why the other options are incorrect:
+
+• A. Printing the review data to the console does not create a reliable audit trail by itself. Console output is typically temporary and is not the same as maintaining structured governance records for later review. It might help during debugging, but it does not meaningfully support accountability in the way logged change history does. That is why it is not the best answer.
+
+• C. Overwriting the reviewer with the string "system" reduces accountability instead of improving it. The goal is to preserve who actually approved the deployment, not erase that information. A vague or generic reviewer label weakens traceability and makes later review harder. So this choice works against the accountability principle.
+
+• D. Setting the change reason to None removes useful governance context. Microsoft’s accountability guidance emphasizes tracking why changes were made, not discarding that information. A deployment record without a reason is less useful for audit, investigation, and cross-team review. That makes this option incorrect.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 43
+Correct
+When the audio file is stored at an accessible cloud location, the content item type used in the request is ________.
+
+
+
+Which answer best completes the sentence?
+
+A. input_voice
+
+Explanation
+The content item type "input_voice" does not accurately describe the type of content being used in the request. It is not a standard term used for referencing audio files stored in a cloud location.
+B. speech_url
+
+Explanation
+The content item type "speech_url" does not accurately describe the type of content being used in the request. It specifically mentions a URL, which may not be the only way to access audio files in a cloud location.
+Your answer is correct
+C. audio_url
+
+Explanation
+The content item type "audio_url" accurately describes the type of content being used in the request when the audio file is stored at an accessible cloud location. It specifies that the content is an audio file accessible via a URL, which is a common method for accessing audio files in cloud storage.
+D. audio_input
+
+Explanation
+The content item type "audio_input" does not accurately describe the type of content being used in the request. It is a generic term that does not specify the location or accessibility of the audio file, which is crucial when the file is stored in a cloud location.
+Overall explanation
+The correct answer is audio_url. Microsoft’s multimodal chat completions documentation shows that when the audio is available at an accessible cloud location, you can pass it using a content item with "type": "audio_url" and an audio_url object containing the URL.
+
+
+
+This is different from input_audio, which is used when you send the encoded audio data directly in the request body. AI-901 questions often test whether you can distinguish URL-based input from inline data input, and this is exactly that distinction.
+
+
+
+Why the other options are incorrect:
+
+• A. input_voice sounds plausible, but Microsoft does not use that field name in the documented multimodal request format. It looks like something related to audio, which is why it works as a distractor. However, it is not the correct request type for cloud-hosted audio input.
+
+• B. speech_url also sounds intuitive, but it is not the field Microsoft documents for chat completions audio input. The official examples use audio_url, not speech_url. This kind of near-correct naming is a common exam-style distraction.
+
+• D. audio_input is close in meaning to the real concept, but it is not the actual content item type used for URL-based audio input. Microsoft distinguishes input_audio for inline encoded audio and audio_url for accessible cloud locations. Because this question is about the URL case, audio_input is incorrect.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 44
+Correct
+For each of the following statements, determine whether the statement is correct.
+
+
+
+Statement 1: Audio-enabled models introduce the audio modality into the existing /chat/completions API.
+
+
+
+Statement 2: In the Foundry Chat playground, you can record audio prompts and attach audio files.
+
+
+
+Statement 3: The documented place to test gpt-4o-mini-audio-preview is the Audio playground, not the Chat playground.
+
+
+
+Select the correct combination.
+
+Your answer is correct
+A. Yes / Yes / No
+
+B. Yes / No / Yes
+
+C. No / Yes / Yes
+
+D. No / No / Yes
+
+Overall explanation
+Statement 1 is correct. Microsoft explicitly says that audio-enabled models introduce the audio modality into the existing /chat/completions API and that supported modalities include text, audio, and text + audio.
+
+
+
+Statement 2 is also correct because Microsoft says the Chat playground lets you record audio prompts, attach audio files, and enter text prompts. Statement 3 is incorrect because the quickstart says the Audio playground does not support gpt-4o-mini-audio-preview and that you should use the Chat playground instead.
+
+
+
+Why the other options are incorrect:
+
+• B. This option marks Statement 2 as No even though Microsoft clearly says you can record audio prompts and attach audio files in the Chat playground. It also marks Statement 3 as Yes even though the doc says to use the Chat playground rather than the Audio playground for this model. Because two statements are wrong, the full combination is incorrect.
+
+• C. This option incorrectly marks Statement 1 as No even though Microsoft states that audio-enabled models add audio to the existing chat completions API. It also incorrectly marks Statement 3 as Yes, which reverses the documented playground guidance. That makes the combination wrong on two separate points.
+
+• D. This option marks Statement 1 as No and Statement 2 as No, but both of those statements are supported directly by Microsoft documentation. Since the first two judgments are wrong, the combination cannot be correct. The issue is not a subtle edge case here; it directly contradicts the documented workflow.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 45
+Incorrect
+Before you use chat completions with audio in Foundry Models, which prerequisite is required?
+
+A. Azure AI Search index
+
+Explanation
+An Azure AI Search index is not a prerequisite for using chat completions with audio in Foundry Models. The Azure AI Search index is used for creating a search solution for your data, not for enabling chat completions with audio.
+B. OCR model training
+
+Explanation
+OCR model training is not a prerequisite for using chat completions with audio in Foundry Models. OCR (Optical Character Recognition) is used for converting different types of documents, such as scanned paper documents, PDF files, or images captured by a digital camera, into editable and searchable data.
+Your answer is incorrect
+C. Foundry Agent Service
+
+Explanation
+The Foundry Agent Service is not a prerequisite for using chat completions with audio in Foundry Models. The Foundry Agent Service is a service that provides conversational AI capabilities, but it is not specifically required for enabling chat completions with audio in Foundry Models.
+Correct answer
+D. A chat completions model deployment with support for audio and images
+
+Explanation
+A chat completions model deployment with support for audio and images is the prerequisite required before using chat completions with audio in Foundry Models. This deployment ensures that the chat completions model is capable of processing audio inputs and generating appropriate responses, enhancing the user experience with audio interactions.
+Overall explanation
+Microsoft’s multimodal chat completions documentation lists a required prerequisite: a chat completions model deployment with support for audio and images. If you do not already have one, the article tells you to add and configure a supported Foundry model first.
+
+
+
+That requirement matches the skill being tested because the dot point is specifically about responding to spoken prompts by using a deployed multimodal model. Without a supported deployment, there is nothing for the application to call when sending audio input.
+
+
+
+Why the other options are incorrect:
+
+• A. Azure AI Search is useful for retrieval scenarios, but it is not a prerequisite for basic multimodal chat completions with audio input. A learner might choose it because search often appears in Foundry architectures, but Microsoft’s audio-input prerequisite list does not require it here. So it is outside the immediate task.
+
+• B. OCR model training belongs to vision and text extraction scenarios. This question is about speech input to a deployed multimodal chat model, not document text recognition. Because OCR is a different workload family, it is not the required prerequisite.
+
+• C. Foundry Agent Service is not required just to use chat completions with audio on a deployed multimodal model. The Microsoft article discusses endpoint URL, credential, and a supported deployment, not agent configuration. That makes this a plausible Foundry distraction, but not the correct answer.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 46
+Incorrect
+Which THREE pairs are correctly matched? (Select THREE.)
+
+A. input_audio — reference an accessible cloud audio file by URL
+
+Your selection is correct
+B. audio_url — pass audio from an accessible cloud location
+
+C. Chat playground — deploy a base model
+
+Your selection is correct
+D. modalities=["text", "audio"] — request text and audio response
+
+Correct selection
+E. input_audio — send encoded audio data inline
+
+Your selection is incorrect
+F. Audio playground — documented test surface for gpt-4o-mini-audio-preview
+
+Overall explanation
+Pairs B, D, and E are correct. Microsoft’s multimodal documentation shows audio_url for cloud-hosted audio input, and Microsoft’s audio quickstart shows modalities=["text", "audio"] for requesting both text and audio responses. Microsoft also shows input_audio for sending encoded audio data inline inside the user content.
+
+
+
+These three pairs reflect the main distinctions AI-901 wants you to recognize: URL-based audio input versus inline audio input, and response settings that enable spoken output. They are practical implementation details rather than abstract speech theory, which is why they fit this Foundry objective well.
+
+
+
+Why the other options are incorrect:
+
+• A. This pair swaps the roles of input_audio and audio_url. Microsoft uses input_audio when you embed the audio bytes directly in the request, not when you reference a cloud-hosted file by URL. Because the pairing reverses the documented behavior, it is incorrect.
+
+• C. Chat playground is where you interact with the already deployed model, not where you deploy the base model itself. The deployment steps happen under Models + endpoints, and then you go to the Chat playground to test the deployment. So this pair confuses deployment workflow with interaction workflow.
+
+• F. Microsoft explicitly says the Audio playground does not support gpt-4o-mini-audio-preview and tells you to use the Chat playground instead. That makes this pair the opposite of the documented testing workflow. It sounds believable because of the name “Audio playground,” but the doc says not to use it for this model.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 47
+Correct
+You want the model to return spoken audio in addition to text.
+
+Snippet
+
+completion = client.chat.completions.create(
+    model="gpt-4o-mini-audio-preview",
+    # Missing line
+    messages=[
+        {"role": "user", "content": "Reply aloud to this request."}
+    ],
+)
+Which code should replace the missing section?
+
+A. modalities=["text"]
+
+Explanation
+This choice specifies only the "text" modality, which means the model will only return text responses. It does not include the "audio" modality required to return spoken audio.
+Your answer is correct
+B. modalities=["text", "audio"], audio={"voice": "alloy", "format": "wav"},
+
+Explanation
+This choice includes both "text" and "audio" modalities, which allows the model to return both text and spoken audio responses. It also specifies the audio settings such as the voice ("alloy") and format ("wav"), enabling the model to generate spoken audio in WAV format.
+C. audio={"format": "wav"},
+
+Explanation
+This choice only includes the audio settings for the response format, specifying the format as "wav". However, it does not include the necessary information about the modalities or voice settings required for the model to return spoken audio in addition to text.
+D. response_format="audio/wav",
+
+Explanation
+This choice specifies the response format as "audio/wav", but it does not include the necessary information about modalities or voice settings required for the model to return spoken audio in addition to text. It is essential to include the modalities and audio settings to enable the model to generate spoken audio responses.
+Overall explanation
+Microsoft’s audio generation quickstart shows the documented pattern for spoken output: set modalities=["text", "audio"] and provide an audio object such as {"voice": "alloy", "format": "wav"}. That is how the request asks the model to return audio instead of acting as a text-only completion.
+
+
+
+This is an important AI-901 implementation distinction. Input audio is handled in the message content, but spoken output is requested through response settings like modalities and audio. Mixing those two ideas up is a very common exam mistake.
+
+
+
+Why the other options are incorrect:
+
+• A. modalities=["text"] would keep the response text-only. Even though the request still mentions audio as a concept, Microsoft’s examples use ["text", "audio"] when spoken output is needed. So this option is incomplete for the scenario.
+
+• C. The audio object alone is not the full documented request pattern shown in the quickstart for text-plus-audio output. Microsoft’s examples pair the audio settings with modalities=["text", "audio"]. Leaving out modalities makes this option weaker than the documented approach.
+
+• D. response_format="audio/wav" looks like a convenient shortcut, but it is not the documented pattern in the Microsoft examples for audio chat completions. The docs show explicit modalities and audio settings instead. That makes this a plausible fake parameter, but not the right answer.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 48
+Incorrect
+Which THREE pairs are correctly matched? (Select THREE.)
+
+Your selection is incorrect
+A. New Foundry toggle — required only for classic portal steps
+
+Your selection is correct
+B. Discover → Models — start a new model deployment
+
+C. Build → Models — subscribe to Azure Marketplace offers
+
+Correct selection
+D. Deployment details page — view endpoint details and keys
+
+E. Video playground — default destination for every deployed text model
+
+Your selection is correct
+F. Code tab — view programmatic access details
+
+Overall explanation
+B, D, and F are the correct pairs. Microsoft’s deployment guide says Discover → Models is the starting path for deployment, the deployment details page lets you view endpoint details and keys, and the Code tab shows details about how to access the model deployment programmatically.
+
+
+
+These are strong AI-901-style portal distinctions because they separate starting deployment, managing an existing deployment, and moving from portal interaction into code. The exam objective is not just about recognizing Foundry terminology, but about using the correct portal surface for the correct task.
+
+
+
+Why the other options are incorrect:
+
+• A. Microsoft does say the New Foundry toggle should be on for the current portal steps. That means the pair is wrong because it says the toggle is required only for classic portal steps, which reverses the documented meaning. The toggle is specifically tied to using the current Foundry experience, not the classic one.
+
+• C. Build → Models is a real path, but Microsoft describes it as the area used to see and manage existing deployments. Azure Marketplace subscription is handled when required for partner or community models during deployment flow, not as the purpose of Build → Models. This option incorrectly mixes deployment management with Marketplace subscription workflow.
+
+• E. Video playground is a valid Foundry modality, but Microsoft explains that it appears for video models such as Sora-2. It is not the default destination for every deployed text model, and a standard deployed model lands on its relevant playground experience. This option overgeneralizes a specialized modality.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 49
+Incorrect
+Which TWO actions align with sending a spoken prompt to a deployed multimodal model? (Select TWO.)
+
+Your selection is incorrect
+A. Use image_url for WAV audio bytes
+
+Correct selection
+B. Add an input_audio content item with data and format
+
+C. Replace chat completions with OCR
+
+Correct selection
+D. Add a text content item to guide the model
+
+Your selection is incorrect
+E. Put the audio format inside the model name
+
+Overall explanation
+Adding an input_audio content item with encoded data and format is one correct action because Microsoft’s examples use that exact structure for inline spoken input. That is the request shape that lets the deployed model process the audio prompt directly.
+
+
+
+Adding a text content item is also valid and common. Microsoft’s examples show a text instruction alongside the audio input, such as asking the model to describe, translate, or respond to the spoken audio. That means text guidance and audio input can be combined in the same user message.
+
+
+
+Why the other options are incorrect:
+
+• A. image_url is designed for image input, not audio bytes. Even though it is part of multimodal chat, it belongs to vision scenarios rather than spoken-prompt scenarios. Using it for WAV audio would be the wrong content type.
+
+• C. OCR is a separate workload for extracting text from images and documents. It is not a replacement for chat completions when the goal is to send spoken input to a deployed multimodal model. This option confuses speech interaction with document text extraction.
+
+• E. The audio format belongs in the input payload or output audio settings, not inside the model name. Microsoft’s examples show format fields such as "wav" inside input_audio or inside the audio configuration block. So this option is structurally incorrect.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 50
+Correct
+For each of the following statements, determine whether the statement is correct.
+
+
+
+Statement 1: Keyword extraction identifies main concepts in text.
+
+Statement 2: Entity detection can categorize items such as people and organizations.
+
+Statement 3: Summarization is the best technique for assigning positive, neutral, or negative labels.
+
+
+
+Select the correct combination.
+
+Your answer is correct
+A. Yes / Yes / No
+
+B. Yes / No / Yes
+
+C. No / Yes / Yes
+
+D. No / No / Yes
+
+Overall explanation
+Statement 1 is correct. Keyword extraction is designed to identify the main concepts or talking points in text, which is exactly what Microsoft documents for the feature.
+
+
+
+Statement 2 is also correct because entity detection, documented as named entity recognition, identifies and categorizes entities such as people, places, and organizations. Statement 3 is incorrect because positive, neutral, and negative labels come from sentiment analysis, not summarization. Summarization condenses content, while sentiment analysis evaluates attitude and can return sentiment labels and confidence scores.
+
+
+
+Why the other options are incorrect:
+
+
+
+• B. This combination gets Statement 2 wrong and Statement 3 wrong. Entity detection absolutely is used to categorize named items such as people and organizations, so Statement 2 should be Yes. Summarization does not assign sentiment polarity labels, so Statement 3 should be No. Because it misses both of those judgments, this option cannot be correct.
+
+
+
+• C. This option incorrectly marks Statement 1 as No. Microsoft’s key phrase extraction documentation clearly frames the technique as identifying the main concepts or talking points in text. It also incorrectly marks Statement 3 as Yes, even though polarity labeling belongs to sentiment analysis rather than summarization. So two of the three judgments are wrong here.
+
+
+
+• D. This option marks both Statement 1 and Statement 2 as No, which conflicts with Microsoft’s descriptions of keyword extraction and named entity recognition. It also marks Statement 3 as Yes, even though summarization is not the technique for assigning sentiment labels. In other words, all three judgments are incorrect. That makes this the least defensible option.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 51
+Correct
+Which TWO questions should a team ask when reviewing an AI solution for accountability? (Select TWO.)
+
+Your selection is correct
+A. Who owns incident response for model failures?
+
+Your selection is correct
+B. Who approves deployment to production?
+
+C. Which accent color should the app use?
+
+D. Which voice is most natural for speech output?
+
+E. How many emojis are shown in the chat UI?
+
+Overall explanation
+Accountability review starts with ownership and governance. Asking who owns incident response and who approves production deployment helps confirm that responsibility is assigned before something goes wrong and that review authority is clear before the system is released.
+
+
+
+Microsoft’s guidance on responsible AI governance emphasizes documented responsibilities, sign-off processes, reporting mandates, and clear operational ownership. Those are the kinds of questions that show whether accountability exists in practice rather than only in policy language.
+
+
+
+Why the other options are incorrect:
+
+• C. Accent color is a design preference, not an accountability control. It can affect branding or usability, but it does not define who is answerable for model behavior or deployment decisions. A visually polished product can still have weak governance. So this option is unrelated to the principle being tested.
+
+• D. Choosing a natural-sounding voice relates to speech experience and user experience, not accountability. It might matter for quality or accessibility in some cases, but it does not establish approval paths, monitoring ownership, or auditability. The responsible AI issue in this question is governance, not voice design. That makes this distractor plausible but wrong.
+
+• E. Emoji count is a user interface choice with no direct connection to responsible AI accountability. It does not help an organization determine who reviews decisions, who approves releases, or who responds to failures. Because it has no governance value here, it is clearly not one of the two correct options.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 52
+Incorrect
+You need a Foundry Tools solution that extracts structured fields such as vendor name, invoice date, and invoice total from invoices with minimal setup.
+
+
+
+Which analyzer should you use?
+
+A. prebuilt-documentSearch
+
+Explanation
+The prebuilt-documentSearch analyzer is not specifically designed to extract structured fields such as vendor name, invoice date, and invoice total from invoices. It is more focused on searching and retrieving documents based on keywords or phrases within the document content.
+Your answer is incorrect
+B. prebuilt-documentFieldSchema
+
+Explanation
+The prebuilt-documentFieldSchema analyzer is not tailored for extracting structured fields from invoices. It is used to define the schema or structure of document fields within a document, rather than extracting specific fields like vendor name, invoice date, and invoice total.
+Correct answer
+C. prebuilt-invoice
+
+Explanation
+The prebuilt-invoice analyzer is the correct choice for extracting structured fields such as vendor name, invoice date, and invoice total from invoices with minimal setup. This analyzer is specifically designed to recognize and extract common fields found in invoices, making it suitable for the given scenario.
+D. prebuilt-documentFields
+
+Explanation
+The prebuilt-documentFields analyzer is not specialized for extracting structured fields from invoices. It is more general in nature and may not have the specific capabilities required to accurately extract fields like vendor name, invoice date, and invoice total from invoices.
+Overall explanation
+prebuilt-invoice is the best choice because Azure Content Understanding includes domain-specific analyzers for common document categories, and Microsoft specifically lists prebuilt-invoice for invoices. The quickstart also uses prebuilt-invoice to extract structured data from an invoice document.
+
+
+
+This dot point is about extracting information from documents and forms in Foundry Tools, so the strongest answer is the analyzer already tuned for invoice extraction rather than a generic schema-discovery or key-value workflow. That is exactly the type of task domain-specific analyzers are intended to solve.
+
+
+
+Why the other options are incorrect:
+
+• A. prebuilt-documentSearch is useful for document content extraction with layout-aware markdown output and is optimized for search and RAG-style scenarios. That makes it valuable when you want broad document understanding, but the question asks for structured invoice fields with minimal setup. A domain-specific invoice analyzer is a closer fit than a general document-search analyzer.
+
+
+
+• B. prebuilt-documentFieldSchema proposes an appropriate field schema for a new document type. That is useful when you are discovering structure and deciding what fields to extract, but it is not the main answer when Microsoft already provides a dedicated invoice analyzer. The requirement is production-style field extraction from invoices, not schema suggestion.
+
+
+
+• D. prebuilt-documentFields extracts key-value pairs from documents and is used internally when some inputs do not match predefined schemas. That can be helpful in some generic form scenarios, but the question is specifically about invoices, where Microsoft provides prebuilt-invoice as the purpose-built analyzer. Using the specialized analyzer is the more accurate and more direct choice here.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 53
+Correct
+An AI system recommends loan approvals. Two applicants with similar financial circumstances receive different outcomes because they belong to different demographic groups.
+
+
+
+Which responsible AI consideration is most directly affected?
+
+
+
+Select only one answer.
+
+A. Transparency
+
+Explanation
+Transparency in AI refers to the ability to understand and explain how AI systems make decisions. In this scenario, the lack of transparency in the decision-making process, where similar applicants receive different outcomes based on demographic factors, is not the primary concern.
+B. Reliability and safety
+
+Explanation
+Reliability and safety in AI focus on ensuring that AI systems perform as intended and do not cause harm. While the differing outcomes for similar applicants may raise concerns about reliability, the primary issue in this scenario is not related to safety.
+Your answer is correct
+C. Fairness
+
+Explanation
+Fairness in AI is the responsible consideration most directly affected in this scenario. The fact that applicants with similar financial circumstances receive different outcomes based on demographic factors highlights a potential bias in the AI system's decision-making process.
+D. Privacy and security
+
+Explanation
+Privacy and security in AI pertain to protecting user data and ensuring the security of AI systems. While these considerations are important, they are not the primary concern in this scenario where the focus is on the fairness of loan approval decisions based on demographic factors.
+Overall explanation
+Fairness is the correct answer because Microsoft describes fairness as treating people fairly and avoiding different effects on similar groups. A loan system that gives different recommendations to applicants with similar financial circumstances raises a direct fairness concern.
+
+
+
+This is also aligned with the current AI-901 study guide, which lists “Describe considerations for fairness in an AI solution” as a tested skill under responsible AI principles. In exam-style questions, fairness usually appears when a system treats similarly situated people differently based on sensitive or demographic characteristics.
+
+
+
+Why the other options are incorrect:
+
+• A. Transparency is about helping people understand how and why an AI system behaves the way it does, along with its capabilities and limitations. A lack of explanation could be a separate issue, but the scenario here is primarily about unequal outcomes for similar applicants. That makes fairness the most direct principle being tested, not transparency.
+
+• B. Reliability and safety focuses on whether a system performs consistently, operates as designed, responds safely to unexpected conditions, and resists harmful manipulation. The question does not describe instability, unsafe behavior, or system failure. It describes unequal treatment across groups, which points to fairness instead.
+
+• D. Privacy and security concerns protecting data, preserving privacy, and safeguarding systems and models. Those issues matter in AI systems, but the scenario does not mention data exposure, unauthorized access, or misuse of private information. The key concern is different outcomes for similar people, which is a fairness issue.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 54
+Incorrect
+Which action is most closely related to accountability rather than transparency, privacy, or inclusiveness?
+
+
+
+Select only one answer.
+
+Correct answer
+A. Document who changed the model and why
+
+Explanation
+Documenting who changed the model and why is closely related to accountability as it helps track the individuals responsible for any modifications made to the model. This information is crucial for ensuring transparency and accountability in the decision-making process.
+B. Explain to users how recommendations are generated
+
+Explanation
+Explaining to users how recommendations are generated is more closely related to transparency rather than accountability. Transparency focuses on providing clear and understandable information to users about the processes and algorithms used to generate recommendations.
+Your answer is incorrect
+C. Encrypt sensitive data at rest
+
+Explanation
+Encrypting sensitive data at rest is more closely related to privacy rather than accountability. Privacy involves protecting sensitive information from unauthorized access or disclosure, while accountability focuses on tracking and attributing actions to individuals.
+D. Support keyboard-only navigation
+
+Explanation
+Supporting keyboard-only navigation is more closely related to inclusiveness rather than accountability. Inclusiveness aims to ensure that all users, including those with disabilities, can access and use the system effectively. Accountability, on the other hand, focuses on tracking and attributing actions to individuals.
+Overall explanation
+Documenting who changed the model and why is an accountability practice because it creates ownership, traceability, and review history. Microsoft specifically points to governance data, lineage, and change information as part of better accountability for AI systems.
+
+
+
+The other options map more naturally to other responsible AI principles. Explaining recommendations supports transparency, encrypting sensitive data supports privacy and security, and keyboard-only navigation supports accessibility and inclusiveness.
+
+
+
+Why the other options are incorrect:
+
+• B. Explaining how recommendations are generated is important, but it is primarily a transparency measure. It helps users understand the system and build trust through clarity about behavior and data usage. However, it does not by itself show who approved the system, who changed it, or who is responsible for its outcomes. That is why it is not the best answer here.
+
+• C. Encrypting sensitive data at rest is a privacy and security control. It protects information against unauthorized access, but it does not create governance or change accountability. A secure system can still be poorly governed if no one owns review and incident response. So this option addresses a different principle.
+
+• D. Supporting keyboard-only navigation helps make the solution more accessible to a wider range of users. That aligns with inclusiveness and usability rather than answerability for system outcomes. It is an important design practice, but it does not establish audit trails or ownership structures. Therefore it is incorrect for this question.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 55
+Correct
+You are building a Python app that sends an invoice document to Azure Content Understanding and returns structured invoice fields.
+
+Snippet
+
+from azure.ai.contentunderstanding import ContentUnderstandingClient
+from azure.ai.contentunderstanding.models import AnalysisInput
+from azure.core.credentials import AzureKeyCredential
+ 
+client = ContentUnderstandingClient(endpoint=endpoint, credential=AzureKeyCredential(key))
+ 
+poller = client.begin_analyze(
+    ______,
+    inputs=[AnalysisInput(url=file_url)]
+)
+result = poller.result()
+Which code should replace the missing section?
+
+A. analyzer_id="prebuilt-documentFieldSchema"
+
+Explanation
+The "prebuilt-documentFieldSchema" analyzer_id is not specifically designed for analyzing invoice documents. It is more suitable for analyzing general document structures and schemas, not for extracting structured invoice fields.
+B. analyzer_id="prebuilt-documentFields"
+
+Explanation
+The "prebuilt-documentFields" analyzer_id is not tailored for invoice document analysis. It is more focused on extracting general document fields, not specifically invoice-related fields.
+Your answer is correct
+C. analyzer_id="prebuilt-invoice"
+
+Explanation
+The "prebuilt-invoice" analyzer_id is the correct choice for analyzing invoice documents. It is specifically designed to extract structured invoice fields, making it the most appropriate option for the given scenario.
+D. analyzer_id="prebuilt-document"
+
+Explanation
+The "prebuilt-document" analyzer_id is not specialized for invoice document analysis. It is more suitable for analyzing general document content, not specifically invoice-related fields.
+Overall explanation
+The Python SDK examples show begin_analyze with an analyzer_id, and the invoice example uses analyzer_id="prebuilt-invoice" to extract structured invoice fields. That matches this scenario exactly.
+
+
+
+The key clue is that the snippet is intended to analyze an invoice and return structured fields, not just propose a schema or return generic document content. In Foundry Tools, the prebuilt invoice analyzer is the direct match for that requirement.
+
+
+
+Why the other options are incorrect:
+
+• A. prebuilt-documentFieldSchema is for proposing an appropriate field schema for new document types. It helps you understand what fields you might want to extract, but it is not the analyzer you choose when you already know the target scenario is invoice extraction. The code here is performing analysis of a live invoice, not schema discovery.
+
+
+
+• B. prebuilt-documentFields extracts key-value pairs from documents. That can be useful in generic document scenarios, but it is not the strongest Microsoft-matched option for invoices when prebuilt-invoice is available. The question is testing correct analyzer selection, not merely whether the document contains field-like text.
+
+
+
+• D. prebuilt-document is the base analyzer used as a parent for custom document analyzers. It is not the domain-specific invoice analyzer used in the quickstart for extracting invoice fields. Choosing the base analyzer here would skip the specialized invoice extraction path the question is asking about.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 56
+Correct
+For each of the following statements, determine whether the statement is correct.
+
+
+
+Statement 1: Fairness means an AI system should avoid affecting similar groups differently.
+
+Statement 2: Using real-world evaluation data can help assess fairness.
+
+Statement 3: Fairness is mainly about making model internals visible to end users.
+
+
+
+Select the correct combination.
+
+Your answer is correct
+A. Yes / Yes / No
+
+B. Yes / No / Yes
+
+C. No / Yes / Yes
+
+D. No / No / Yes
+
+Overall explanation
+Statement 1 is correct. Microsoft describes fairness as making sure AI systems treat everyone fairly and avoid affecting similarly situated groups in different ways. That definition is directly relevant to AI-901 fairness questions.
+
+
+
+Statement 2 is also correct because Microsoft Learn highlights the importance of using real-world data to evaluate fairness. Statement 3 is incorrect because making model internals or behavior understandable is primarily a transparency concern, not the core definition of fairness.
+
+
+
+Why the other options are incorrect:
+
+• B. This option gets Statement 1 right but marks Statement 2 as false and Statement 3 as true. That reverses two important Microsoft distinctions: fairness evaluation does use real-world data, and visibility into how a system works is more aligned with transparency. Because those two judgments are wrong, the full combination is incorrect.
+
+• C. This option marks Statement 1 as false even though it matches Microsoft’s fairness framing closely. It also marks Statement 3 as true, which incorrectly turns transparency into the main definition of fairness. With two incorrect judgments, this combination cannot be right.
+
+• D. This option incorrectly marks both Statement 1 and Statement 2 as false. Microsoft explicitly supports both ideas: fair treatment across similar groups and evaluation using real-world data. It also repeats the mistake of making transparency the main definition of fairness.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 57
+Incorrect
+A business has mixed forms and wants to pull loose key-value pairs from each document without starting from a predefined domain schema.
+
+
+
+Which analyzer should they use?
+
+Correct answer
+A. prebuilt-documentFields
+
+Explanation
+The 'prebuilt-documentFields' analyzer is the correct choice for pulling loose key-value pairs from mixed forms without starting from a predefined domain schema. This analyzer is specifically designed to extract key-value pairs from documents without the need for a predefined schema, making it suitable for the given scenario.
+B. prebuilt-documentFieldSchema
+
+Explanation
+The 'prebuilt-documentFieldSchema' analyzer is not the correct choice for the scenario described. This analyzer focuses on extracting fields based on a predefined schema, which is not applicable when dealing with mixed forms and loose key-value pairs without a predefined domain schema.
+Your answer is incorrect
+C. prebuilt-invoice
+
+Explanation
+The 'prebuilt-invoice' analyzer is not the correct choice for the scenario. This analyzer is specifically designed for extracting information from invoices, which may not be suitable for pulling loose key-value pairs from mixed forms that do not follow a predefined schema.
+D. prebuilt-documentSearch
+
+Explanation
+The 'prebuilt-documentSearch' analyzer is not the correct choice for the scenario. This analyzer is focused on enabling document search capabilities, rather than extracting loose key-value pairs from mixed forms without a predefined domain schema.
+Overall explanation
+prebuilt-documentFields is the best answer because Microsoft describes it as the utility analyzer that extracts key-value pairs from documents. That matches the requirement directly.
+
+
+
+The other options serve different purposes. One proposes a schema, one is specialized for invoices, and one is optimized for broader document-search style extraction rather than straightforward key-value field extraction.
+
+
+
+Why the other options are incorrect:
+
+• B. prebuilt-documentFieldSchema suggests an appropriate schema for a new document type. That is useful when designing a custom analyzer, but it does not directly answer the requirement to extract loose key-value pairs from documents now. The question is asking for field extraction, not schema suggestion.
+
+
+
+• C. prebuilt-invoice is powerful for invoice scenarios, but it is domain-specific. The requirement describes mixed forms without a predefined domain schema, so a more generic field-extraction utility is the better fit. Choosing the invoice analyzer would narrow the solution unnecessarily.
+
+
+
+• D. prebuilt-documentSearch produces structured markdown and document content useful for search and broader document understanding. It is not the utility analyzer Microsoft documents for extracting loose key-value pairs. In this question, field extraction is more central than search-style content output.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 58
+Correct
+You are building a Python app that needs to return the main talking points from text.
+
+Snippet
+
+from azure.core.credentials import AzureKeyCredential
+from azure.ai.textanalytics import TextAnalyticsClient
+ 
+client = TextAnalyticsClient(endpoint=endpoint, credential=AzureKeyCredential(key))
+documents = ["The hotel lobby was elegant and the breakfast buffet was excellent."]
+ 
+result = client.________(documents)
+for doc in result:
+    print(doc.key_phrases)
+Which code should replace the missing section?
+
+Your answer is correct
+A. extract_key_phrases
+
+Explanation
+The correct code to replace the missing section is "extract_key_phrases" as it is the method used to extract key phrases from the provided text. This method will analyze the text and return the main talking points or key phrases present in the text.
+B. analyze_sentiment
+
+Explanation
+The "analyze_sentiment" method is used to analyze the sentiment of the provided text, not to extract key phrases. It is not the correct choice for returning the main talking points from the text in this scenario.
+C. recognize_entities
+
+Explanation
+The "recognize_entities" method is used to recognize named entities in the provided text, such as people, organizations, or locations. It is not the correct choice for extracting key phrases or main talking points from the text.
+D. detect_language
+
+Explanation
+The "detect_language" method is used to detect the language of the provided text, not to extract key phrases. It is not the correct choice for returning the main talking points from the text in this scenario.
+Overall explanation
+The correct method is extract_key_phrases because the app needs the main talking points from text. Microsoft’s Python SDK documentation shows that extract_key_phrases determines the main talking points in the input and returns key phrases for each document.
+
+
+
+The rest of the snippet also supports that conclusion. The code prints doc.key_phrases, which matches the output shape of key phrase extraction rather than sentiment labels, entity collections, or language detection results.
+
+
+
+Why the other options are incorrect:
+
+
+
+• B. analyze_sentiment is a valid SDK method, so it is a plausible distractor. However, it returns sentiment-oriented results such as document and sentence sentiment, not key_phrases. If you used it here, the method’s purpose would not align with the requirement to find main talking points. The output object would also not match the intended printed property.
+
+
+
+• C. recognize_entities is another real method, but it is used to detect named entities and their categories. That means it is intended for things like people, places, organizations, and quantities. The requirement here is not to categorize named items; it is to extract the most important phrases. So this method is the wrong choice for the code.
+
+
+
+• D. detect_language identifies the language of the input text. That is useful when you need language metadata before other processing, but it does not return the main concepts discussed in the content. The code is clearly aiming to print key phrases, not language codes or language names. Therefore this method would not satisfy the scenario.
+
+Resources
+Domain
+Identify AI concepts and capabilities (40–45%)
+Question 59
+Incorrect
+Which THREE pairs are correctly matched? (Select THREE.)
+
+Your selection is correct
+A. prebuilt-invoice — extracts structured invoice data
+
+Your selection is incorrect
+B. prebuilt-documentFields — proposes a field schema for a new form type
+
+Your selection is correct
+C. prebuilt-documentFieldSchema — proposes an appropriate field schema
+
+Correct selection
+D. enableOcr — useful for scanned documents and image-based PDFs
+
+E. estimateFieldSourceAndConfidence — adds speaker diarization to audio
+
+F. prebuilt-document — base analyzer for custom audio analyzers
+
+Overall explanation
+A, C, and D are the correctly matched pairs. Microsoft documents prebuilt-invoice as the invoice-focused analyzer, prebuilt-documentFieldSchema as the analyzer that proposes an appropriate field schema, and enableOcr as the option used to extract text from scanned documents and images.
+
+
+
+The incorrect pairs deliberately swap roles between utilities, document settings, and non-document scenarios. That is a common AI-901-style confusion pattern, especially when similar analyzer names look interchangeable at first glance.
+
+
+
+Why the other options are incorrect:
+
+• B. prebuilt-documentFields does not propose a field schema. Microsoft describes it as the utility analyzer that extracts key-value pairs from documents. Schema proposal belongs to prebuilt-documentFieldSchema, not prebuilt-documentFields.
+
+
+
+• E. estimateFieldSourceAndConfidence does not add speaker diarization. Microsoft documents it as returning source location and confidence for extracted field values in document analyzers. Speaker diarization is related to audio transcription scenarios, not document field provenance.
+
+
+
+• F. prebuilt-document is the document base analyzer used when building custom document analyzers. It is not the base analyzer for custom audio analyzers, which use audio-specific foundations instead. This option is wrong because it mixes the correct idea of a base analyzer with the wrong modality.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
+Question 60
+Incorrect
+For each of the following statements, determine whether the statement is correct.
+
+
+
+Statement 1: prebuilt-documentFieldSchema can propose a field schema for a new document type.
+
+Statement 2: estimateFieldSourceAndConfidence can return page number, bounding box, and confidence for extracted fields.
+
+Statement 3: prebuilt-documentFields is mainly used to transcribe audio recordings.
+
+
+
+Select the correct combination.
+
+Correct answer
+A. Yes / Yes / No
+
+B. Yes / No / Yes
+
+Your answer is incorrect
+C. No / Yes / Yes
+
+D. No / No / Yes
+
+Overall explanation
+Statement 1 is correct. Microsoft describes prebuilt-documentFieldSchema as a utility analyzer that analyzes documents to propose an appropriate field schema, and says it is useful for discovering structure in new document types.
+
+
+
+Statement 2 is also correct because estimateFieldSourceAndConfidence returns source location information and confidence for extracted field values. Statement 3 is incorrect because prebuilt-documentFields is documented as a document key-value extraction utility, not an audio transcription analyzer.
+
+
+
+Why the other options are incorrect:
+
+• B. This option gets Statement 2 wrong and Statement 3 wrong. Microsoft explicitly documents field-source and confidence output for estimateFieldSourceAndConfidence, so Statement 2 should be Yes. Microsoft also describes prebuilt-documentFields as a document field-extraction utility, not an audio transcription tool, so Statement 3 should be No.
+
+
+
+• C. This option incorrectly marks Statement 1 as No, even though Microsoft clearly says prebuilt-documentFieldSchema proposes an appropriate field schema for documents. It also incorrectly marks Statement 3 as Yes, which would confuse document field extraction with audio transcription. That makes two of the three judgments incorrect.
+
+
+
+• D. This option marks all three statements incorrectly. Statement 1 should be Yes, Statement 2 should be Yes, and Statement 3 should be No based on the analyzer and configuration documentation. Because it reverses the documented roles of the schema utility and the field-source option, this combination is not defensible.
+
+Resources
+Domain
+Implement AI solutions by using Microsoft Foundry (55–60%)
